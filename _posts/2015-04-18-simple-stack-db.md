@@ -1,12 +1,13 @@
 ---
 layout: page
 title: "Simple stack database"
-category: workflow
+category: post
 date: 2015-02-21 22:46:33
 order: 2
 tags:
 - Imaging core
 - Workflow
+- Posts
 ---
 
 ###Workflow

@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
 
-        <title>Map Manager : Map Manager Documentation</title>
+        <title>Map Manager : Annotating a stack</title>
         <meta name="description" content="">
 
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
@@ -134,31 +134,114 @@
                     </div>
 
                     <div id=content class=span10>
-                        <h3 id="documentation-for-map-manager">Documentation For Map Manager</h3>
+                        <div class=page-header>
+    <h3>Annotating a stack
+        
+    </h3>
+</div>
 
-<p><IMG class="img-float-right" SRC="/mapmanager/images/imagingcore/stack_example_spines.jpg" width="400"></p>
+<p><IMG class="img-float-left" SRC="../images/mm3/mm3-stackdb-plot.png" WIDTH="500"></p>
 
-<p>This website is documentation for software that analyzes and annotates <BR> timeseries of 3D image stacks.  </p>
+<div class="print-page-break"></div>
+
+<p>Stacks are annotated with 3D objects and line segments. Taken together, these line segments and 3D objects make a stack database (<strong>stack db</strong>).</p>
+
+<p>This example shows a stack window and its stack db with three line segments and a number of 3D objects, spines in this case.</p>
+
+<p>Open the stack db interface from any <a href="/mapmanager/stack/">stack</a> window using keyboard &#39;[&#39;</p>
+
+<h3 id="creating-a-3d-object">Creating a 3D object</h3>
+
+<p>Choose the type of object in the &#39;New Object&#39; group and shift+click in the image to create the object.</p>
+
+<p>Each object has a type:</p>
+
+<p><IMG class="img-float-right" SRC="../images/mm3/mm3-object-types.png" WIDTH="100">
+- Spine<br>
+- Bouton<br>
+- Other<br>
+    - Spine<br>
+    - Bouton<br>
+    - vBranch<br>
+    - soma<br>
+    - peri<br>
+    - control<br>
+    - other  </p>
+
+<p>All object types are 3D points. The different names allow you to organize your annotations into different groups.</p>
+
+<p>These groups can then be <a href="/mapmanager/search-panel/">searched</a>, <a href="/mapmanager/stack-plot/">plotted</a> and connect together in a <a href="/mapmanager/map-plot/">map</a>.</p>
+
+<p>Spine and Boutons are special because they associate with a line segment.</p>
+
+<h5 id="selecting-an-object">Selecting an object</h5>
 
 <ul>
-<li>In vivo, ex vivo and fixed tissue</li>
-<li>Three dimensional image stacks</li>
-<li>One or two color channels</li>
-<li>Multiple timepoints</li>
-<li>Automatically registers image stacks across timepoints</li>
-<li>Written in <a href="http://wavemetrics.com">Igor Pro</a></li>
+<li>Single-click on the object</li>
 </ul>
 
-<p>All code and documentation written by <a href="http://robertcudmore.org">Robert Cudmore</a></p>
-
-<h4 id="getting-started">Getting started</h4>
-
-<p>Have a look at some of the workflows including  </p>
+<h5 id="moving-an-object">Moving an object</h5>
 
 <ul>
-<li><a href="/mapmanager/making-a-map/" title="making-a-map">Making a map</a></li>
-<li><a href="/mapmanager/simple-stack-db/" title="simple-stack-db">Simple stack database</a></li>
+<li>Select the object (single click), right-click and select &#39;Move&#39;. Your next click will be the new 3D position of the object. You are given feedback in the bottom of the stack window. Press &#39;esc&#39; to cancel a move.</li>
 </ul>
+
+<h5 id="deleting-an-object">Deleting an object</h5>
+
+<ul>
+<li>Select the object (single click), right-click and select &#39;Delete&#39;. </li>
+<li>Select the object (single-click) and hit the &#39;del&#39; key.</li>
+</ul>
+
+<h3 id="creating-a-line-segment">Creating a line segment</h3>
+
+<p>Line segments are created in three steps:</p>
+
+<ol>
+<li><p>Create a new (empty) line segment<br>
+Click &#39;+&#39; button in the &#39;Line Segment&#39; group. This will create an empty line segment.</p></li>
+<li><p>Make a series of <strong>control point</strong> objects along your dendrite/axon  </p>
+
+<ul>
+<li>Select &#39;New Object -&gt; Other -&gt; Control Point&#39;<br></li>
+<li>Shift-click in the image to create a <strong>control point</strong>.</li>
+<li>Continue making <strong>control points</strong> along the desired line segment in the image.</li>
+</ul></li>
+<li><p>Fit the line in FIJI and import the resulting line segment back into map manager  </p>
+
+<ul>
+<li>Right-click on the line segment (in the list) and select &#39;Make From Control Points - FIJI&#39;. This will open the xxx plugin in FIJI, fit a line to your <strong>control points</strong> and open the fitted line segment in the map manager stack window.</li>
+</ul></li>
+</ol>
+
+<h4 id="creating-a-line-segment">Creating a line segment</h4>
+
+
+<div class="post-tags">
+  
+    
+  
+  
+  
+    <b>Tags:</b>  
+  
+  
+  
+    <a href="/mapmanager/tags/#Workflow">Workflow</a>
+  
+
+   <!--
+   <a href="javascript:window.print()">print</a>
+    -->
+
+   <!--
+   <BR>
+   <a href="_posts/2015-04-20-annotating-a-stack.pdf">print pdf</a>
+   <BR>
+   -->
+    
+</div>
+
 
                     </div>
                 
