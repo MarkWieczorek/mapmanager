@@ -1,2 +1,2 @@
 
-Read the docs: http://cudmore.github.io/Vascular-Analysis/
+Read the docs: http://cudmore.github.io/mapmanager/
