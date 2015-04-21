@@ -8,30 +8,35 @@ tags:
 - Workflow
 ---
 
-Map Manager allows you to build a database of 3D objects within a single [stack][1] and then to connect these objects through time into a [map][2]. 
+Map Manager builds a database of 3D objects and line segments within a single [stack][1]. Stacks and their associated 3D objects and line segments can then be connected together into a time-series with a [map][2].
+
+Manage a stack db for a single stack with the [stack db interface][3].
+
+Manage a map with the [map making interface][4].
 
 ###Definitions
 
 ####Stack
 
-A 3D image
+A 3D image.
 
-####Stack DB
+####Stack Database (**stack db**)
 
-A collection of 3D points within a single stack.
+A collection of 3D points and line segments within a single stack.
 
 ####Line Segment
 
-A line tracing within a single stack
+A line tracing within a single stack.
 
 ####Map
 
-A collection of stacks.
+A time-series of stacks and their associated stack db(s).
 
 ####Run
 
-A sequence of stacks. A run can follow either points or line segments in a stack db.
+A sequence of stacks. A run can follow either 3D points or line segments for each stack in a map.
 
 [1]: /mapmanager/stack/
 [2]: /mapmanager/map-plot/
-[3]: /mapmanager/stack-browser/
+[3]: /mapmanager/annotating-a-stack/
+[4]: /mapmanager/making-a-map/
