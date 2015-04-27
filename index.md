@@ -25,6 +25,14 @@ Have a look at some of the workflows including
 - [Making a map][3]
 - [Simple stack database][4]
 
+####Links
+
+- <A HREF="http://cudmore.github.io/mapmanager/">Map Manager</A> (This page)
+- <A HREF="https://github.com/cudmore/bob-fiji-plugins">Fiji macros and plugins</A>
+- <A HREF="http://robertcudmore.org/">Home Page</A>
+- <A HREF="http://cudmore.github.io/">Blog</A>
+- <A HREF="http://cudmore.github.io/Vascular-Analysis/">Vascular Analysis</A>
+
 [1]: http://wavemetrics.com
 [2]: http://robertcudmore.org
 [3]: /mapmanager/making-a-map/ "making-a-map"
