@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
 
-        <title>Map Manager : Fitting segments in Fiji</title>
+        <title>Map Manager : File format</title>
         <meta name="description" content="">
 
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
@@ -121,7 +121,10 @@
             
                 <li class=nav-header>Blog Posts</li>
             
-            <li data-order=""><a href="/mapmanager/FItting-segments-in-Fiji">Fitting segments in Fiji</a></li>
+            <li data-order=""><a href="/mapmanager/File-format">File format</a></li>
+        
+            
+            <li data-order=""><a href="/mapmanager/FItting-segments-in-Fiji%20copy">Fitting segments in Fiji</a></li>
         
             
             <li data-order="3"><a href="/mapmanager/user-files">User files</a></li>
@@ -138,28 +141,126 @@
 
                     <div id=content class=span10>
                         <div class=page-header>
-    <h3>Fitting segments in Fiji
+    <h3>File format
         
     </h3>
 </div>
 
-<p>Having some problems with FIji</p>
+<p>Map Manager 3 can save two different types of files</p>
 
-<p>You are required to use &#39;Fiji Life-Line version, 2014 June 2&#39;</p>
+<ul>
+<li>Text</li>
+<li>HDF5</li>
+</ul>
 
-<p>ImageJ 1.49b</p>
+<h3 id="hdf5">HDF5</h3>
 
-<p>Mac</p>
+<p><a href="https://www.hdfgroup.org/HDF5/">HDF5</a> is an open source cross platform binary file format. It can be read from <a href="http://www.mathworks.com/help/matlab/hdf5-files.html">Matlab</a>, <a href="http://www.h5py.org">Python</a>, <a href="http://www.wavemetrics.com/products/igorpro/dataaccess/hdf5.htm">Igor Pro</a> and from a <a href="https://www.hdfgroup.org/products/hdf5_tools/#h5dist">command line</a>.</p>
 
-<p><a href="http://fiji.sc/downloads/Life-Line/fiji-macosx-20140602.dmg">http://fiji.sc/downloads/Life-Line/fiji-macosx-20140602.dmg</a></p>
+<h4 id="python">Python</h4>
 
-<p>Windows</p>
+<p>It is suggested that you use the <a href="https://store.continuum.io/cshop/anaconda/">Anaconda</a> python distribution as it comes with many useful packages pre-installed including hdf5 for python. Download Anaconda it <a href="http://continuum.io/downloads">here</a>.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">import h5py
+import numpy as np
 
-<p><a href="http://fiji.sc/downloads/Life-Line/fiji-win64-20140602.zip">http://fiji.sc/downloads/Life-Line/fiji-win64-20140602.zip</a></p>
+#open h5 file
+f = h5py.File(&#39;a5n.hdf5&#39;, &#39;r&#39;)
 
-<p>From</p>
+#get list of top level groups (these are mm3 maps)
+for g in f:
+    print g
 
-<p><a href="http://fiji.sc/Downloads">http://fiji.sc/Downloads</a></p>
+#assign myMap to top level map
+for myMap in f: print myMap
+
+#get list of objects within a map
+#these objects include {objmap, stackdb, int, line, linedb}
+#keys() returns a list [0], [1], [2], ...
+for key in f[myMap].keys():
+    print key
+
+#datasets within group &#39;a104&#39;
+for ds in f[myMap].values():
+    print ds
+
+
+# get an object
+objectIndex = 4
+f[myMap].values()[objectIndex][:][:]
+
+# get the value of a spine from an object
+objectIndex = 4
+spineIndex = 10
+f[myMap].values()[objectIndex][spineIndex]
+
+#attributes of a dataset
+objectIndex= 4
+for a in f[myMap].values()[objectIndex].attrs:
+    print a
+
+#this is trying to pull form an intensity object
+#for some reaosn i can&#39;t transpose the rows
+f[myMap].values()[9].values()[0][0][:]
+
+#spine 0, spineLen2 (spineLen2 is in column 1)
+f[myMap].values()[9].values()[0][0][1]
+
+#spine 1, spineLen2
+f[myMap].values()[9].values()[0][1][1]
+</code></pre></div>
+<p>In [64]: f[myMap].values()[9].values()
+Out[64]: 
+[<HDF5 dataset "a5n_s0_Int1": shape (385, 41), type "<f4">,
+ <HDF5 dataset "a5n_s0_Int2": shape (385, 41), type "<f4">,
+ <HDF5 dataset "a5n_s0_db2": shape (385, 44), type "|O8">,
+ <HDF5 dataset "a5n_s0_l": shape (3903, 19), type "<f4">,
+ <HDF5 dataset "a5n_s1_Int1": shape (378, 41), type "<f4">,
+ <HDF5 dataset "a5n_s1_Int2": shape (378, 41), type "<f4">,
+ <HDF5 dataset "a5n_s1_db2": shape (378, 44), type "|O8">,
+ <HDF5 dataset "a5n_s1_l": shape (3871, 19), type "<f4">,
+ <HDF5 dataset "a5n_s2_Int1": shape (369, 41), type "<f4">,
+ <HDF5 dataset "a5n_s2_Int2": shape (369, 41), type "<f4">,
+ <HDF5 dataset "a5n_s2_db2": shape (369, 44), type "|O8">,
+ <HDF5 dataset "a5n_s2_l": shape (3742, 19), type "<f4">,
+ <HDF5 dataset "a5n_s3_Int1": shape (364, 41), type "<f4">,
+ <HDF5 dataset "a5n_s3_Int2": shape (364, 41), type "<f4">,
+ <HDF5 dataset "a5n_s3_db2": shape (364, 44), type "|O8">,
+ <HDF5 dataset "a5n_s3_l": shape (3837, 19), type "<f4">]</p>
+
+<p>i got 385 from shape (how do i do this with code?)</p>
+
+<p>In [82]: for a in range(385):
+    print f[myMap].values()[9].values()[0]<a href="https://www.hdfgroup.org/HDF5/">a</a></p>
+
+<h3 id="this-is-working">this is working</h3>
+<div class="highlight"><pre><code class="language-text" data-lang="text">mya=np.arange(385, dtype=np.float32)
+for a in range(385):
+    mya[a] = f[myMap].values()[9].values()[0][a][1]
+
+import matplotlib.pyplot as plt
+plt.plot(mya, &#39;ro&#39;)
+plt.xlabel(&#39;Spine Index&#39;)
+plt.ylabel(&#39;Spine Length 2D (um)&#39;)
+plt.show()
+</code></pre></div>
+<h4 id="use-the-python-hdf5manager">Use the Python hdf5Manager</h4>
+
+<p>For now this is not very useful for my hdf5 files but is a proof of concept.</p>
+
+<ol>
+<li><p>Download hdf5 manager <a href="https://github.com/mgraupe/hdf5Manager">here</a>.</p></li>
+<li><p>Run it</p>
+
+<p>python h5_manager.py </p></li>
+<li><p>Getting h5_manager to work  </p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">#install pyqt4 in anaconda
+conda install pyqt
+#update anaconda (h5_manager was failing to import matplotlib)
+conda update --prefix /Users/cudmore/anaconda anaconda
+#run h5_manager
+python h5_manager.py 
+</code></pre></div></li>
+</ol>
 
 
 <div class="post-tags">
@@ -181,7 +282,7 @@
 
    <!--
    <BR>
-   <a href="_posts/2015-05-21-FItting-segments-in-Fiji.pdf">print pdf</a>
+   <a href="_posts/2015-05-28-File-format.pdf">print pdf</a>
    <BR>
    -->
     
