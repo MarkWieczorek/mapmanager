@@ -155,6 +155,8 @@
 
 <p>Make map plots from the main <a href="/mapmanager/plot-panel/">plot panel</a></p>
 
+<h3 id="interface">Interface</h3>
+
 <h4 id="colors">Colors</h4>
 
 <ul>
@@ -164,14 +166,16 @@
 <li>White : Bad</li>
 </ul>
 
-<h4 id="interface">Interface</h4>
+<h4 id="top-control-bar">Top control bar</h4>
+
+<p>Toggle the top control bar on and off with keyboard &#39;c&#39;. </p>
 
 <ul>
 <li>Segment ID. Plot individual segments. Use &#39;All Segments&#39; to plot all segment.</li>
-<li><p>Bad. Toggle display of bad objects.</p></li>
-<li><p>Stats. Display a table of statistics for plotted data.</p></li>
-<li><p>Raw. Display a table of raw data.</p></li>
-<li><p>Line fit.</p></li>
+<li>Bad. Toggle display of bad objects.</li>
+<li>Stats. Display a table of statistics for plotted data.</li>
+<li>Raw. Display a table of raw data.</li>
+<li>Line fit.</li>
 </ul>
 
 <h4 id="keyboard">Keyboard</h4>
@@ -182,25 +186,27 @@
 <li>R : Refresh the plot</li>
 </ul>
 
-<h4 id="examples">Examples</h4>
+<h3 id="examples">Examples</h3>
+
+<p>All plots can be generated using the <a href="/mapmanager/plot-panel/">plot panel</a>. There are two special plots provided in the main <a href="/mapmanager/main-panel/">map manager panel</a>: Spine Map and Segment Map.</p>
 
 <p><IMG class="img-float-left" SRC="../images/mm3/mm3-map-plot.png" WIDTH="300"></p>
 
-<p>This is a special case of a map plot to show the position of each spine on its dendritic segment.</p>
+<p>This is an example of a &#39;Spine Map&#39;. It shows the position of each spine on its dendritic segment. The lines connect the same spine through time across sessions.</p>
 
-<p>Other map plots can be generated with the <a href="/mapmanager/plot-panel/">plots</a> panel.</p>
+<p>Other map plots can be generated with the <a href="/mapmanager/plot-panel/">plot</a> panel.</p>
 
 <div class="print-page-break"></div>
 
 <p><IMG class="img-float-left" SRC="../images/mm3/mm3-map1-plot.png" WIDTH="250"></p>
 
-<p>A map plot of sLen2d versus session.</p>
+<p>A map plot of spine length in &mu;m (sLen2d) versus map session. The lines connect the same spine through time across sessions.</p>
 
 <div class="print-page-break"></div>
 
 <p><IMG class="img-float-left" SRC="../images/mm3/mm3-map2-plot.png" WIDTH="250"></p>
 
-<p>A map plot of sLen2d for session 1 versus sLen2d for session 0.</p>
+<p>A map plot of spine length in &mu;m (sLen2d) for session 1 versus session 0. Each point is the length of a single spine measured in session 0 (bottom axis) and again in session 1 (left axis).</p>
 
 <div class="print-page-break"></div>
 
