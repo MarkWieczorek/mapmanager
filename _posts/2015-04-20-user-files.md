@@ -68,3 +68,6 @@ Here is an example user file...
 	root:bProcess:gColorTable2="Grays"
 
 	#“”
+	
+####Specify default user file to save maps:
+    root:MapManager3:gMapDriveDir = "vasculature:Users:cudmore:Documents:MapManager3:"
