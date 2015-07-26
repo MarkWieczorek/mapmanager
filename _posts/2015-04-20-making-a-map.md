@@ -69,7 +69,7 @@ Date, Days and Hours require your imported stack to have a date specified. The X
     
 ####Panel Group
 
-Each of these buttons will open a different Map MAnager panel.
+Each of these buttons will open a different Map Manager panel.
 
 <B>Search.</B> Open the [search panel][5].
 
