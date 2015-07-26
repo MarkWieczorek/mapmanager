@@ -3,7 +3,7 @@ layout: page
 title: "Stack plot"
 category: plot
 date: 2015-04-20 22:46:33
-order: 3
+order: 1
 tags:
 - Plots
 ---

@@ -89,7 +89,7 @@
             <li data-order="5"><a href="/mapmanager/hdd-paths">Hard Drive Paths</a></li>
         
             
-            <li data-order="3"><a href="/mapmanager/stackdb-options-panel">Stack DB Options</a></li>
+            <li data-order="4"><a href="/mapmanager/stackdb-options-panel">Stack DB Options</a></li>
         
             
             <li data-order="2"><a href="/mapmanager/search-panel">Search panel</a></li>
@@ -108,13 +108,26 @@
             
                 <li class=nav-header>Plots</li>
             
-            <li data-order="3"><a href="/mapmanager/stack-plot">Stack plot</a></li>
+            <li data-order="1"><a href="/mapmanager/stack-plot">Stack plot</a></li>
         
             
             <li data-order="3"><a href="/mapmanager/run-plot">Run plot</a></li>
         
             
-            <li data-order="3"><a href="/mapmanager/map-plot">Map plot</a></li>
+            <li data-order="2"><a href="/mapmanager/map-plot">Map plot</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Analysis</li>
+            
+            <li data-order="1"><a href="/mapmanager/spine-dynamics">Spine Dynamics</a></li>
+        
+            
+            <li data-order="2"><a href="/mapmanager/intensity">Intensity</a></li>
         
     
         
@@ -149,13 +162,28 @@
     </h3>
 </div>
 
-<p>A map plot shows a map of spines across multiple imaging sessions.</p>
+<p>A map plot shows objects across multiple imaging sessions. Objects persisting from one session to the next are connected with a line.</p>
 
 <p>All map plots are interactive. Selecting an object will propagate this selection to other map and <a href="/mapmanager/stack-plot/">stack plots</a>.</p>
 
-<p>Make map plots from the main <a href="/mapmanager/plot-panel/">plot panel</a></p>
+<p>A large number of map plots can be generated using the <a href="/mapmanager/plot-panel/">plot panel</a>.</p>
+
+<p>There are two special plots provided in the main <a href="/mapmanager/main-panel/">map manager panel</a>: Spine Map and Segment Map.</p>
 
 <h3 id="interface">Interface</h3>
+
+<h4 id="keyboard">Keyboard</h4>
+
+<ul>
+<li>esc : Remove all selections (including masks)</li>
+<li>c : Toggle top control bar</li>
+<li>d : Toggle dynamic colors</li>
+<li>e : Edit raw data in table</li>
+<li>r : Refresh the plot</li>
+<li>arrows : pan</li>
+<li>+/- : zoom in and out</li>
+<li>enter : return to full zoom</li>
+</ul>
 
 <h4 id="colors">Colors</h4>
 
@@ -178,29 +206,19 @@
 <li>Line fit.</li>
 </ul>
 
-<h4 id="keyboard">Keyboard</h4>
-
-<ul>
-<li>C : toggle top control bar</li>
-<li>E : Edit raw data in table</li>
-<li>R : Refresh the plot</li>
-</ul>
-
 <h3 id="examples">Examples</h3>
 
 <p>All plots can be generated using the <a href="/mapmanager/plot-panel/">plot panel</a>. There are two special plots provided in the main <a href="/mapmanager/main-panel/">map manager panel</a>: Spine Map and Segment Map.</p>
 
 <p><IMG class="img-float-left" SRC="../images/mm3/mm3-map-plot.png" WIDTH="300"></p>
 
-<p>This is an example of a &#39;Spine Map&#39;. It shows the position of each spine on its dendritic segment. The lines connect the same spine through time across sessions.</p>
-
-<p>Other map plots can be generated with the <a href="/mapmanager/plot-panel/">plot</a> panel.</p>
+<p>This is an example of a &#39;Spine Map&#39;. It shows the position of each spine on its dendritic segment. The lines connect persistent spines across sessions.</p>
 
 <div class="print-page-break"></div>
 
 <p><IMG class="img-float-left" SRC="../images/mm3/mm3-map1-plot.png" WIDTH="250"></p>
 
-<p>A map plot of spine length in &mu;m (sLen2d) versus map session. The lines connect the same spine through time across sessions.</p>
+<p>A map plot of spine length in &mu;m (sLen2d) versus map session. The lines connect persistent spines across sessions.</p>
 
 <div class="print-page-break"></div>
 

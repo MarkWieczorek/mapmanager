@@ -89,7 +89,7 @@
             <li data-order="5"><a href="/mapmanager/hdd-paths">Hard Drive Paths</a></li>
         
             
-            <li data-order="3"><a href="/mapmanager/stackdb-options-panel">Stack DB Options</a></li>
+            <li data-order="4"><a href="/mapmanager/stackdb-options-panel">Stack DB Options</a></li>
         
             
             <li data-order="2"><a href="/mapmanager/search-panel">Search panel</a></li>
@@ -108,13 +108,26 @@
             
                 <li class=nav-header>Plots</li>
             
-            <li data-order="3"><a href="/mapmanager/stack-plot">Stack plot</a></li>
+            <li data-order="1"><a href="/mapmanager/stack-plot">Stack plot</a></li>
         
             
             <li data-order="3"><a href="/mapmanager/run-plot">Run plot</a></li>
         
             
-            <li data-order="3"><a href="/mapmanager/map-plot">Map plot</a></li>
+            <li data-order="2"><a href="/mapmanager/map-plot">Map plot</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Analysis</li>
+            
+            <li data-order="1"><a href="/mapmanager/spine-dynamics">Spine Dynamics</a></li>
+        
+            
+            <li data-order="2"><a href="/mapmanager/intensity">Intensity</a></li>
         
     
         
@@ -170,13 +183,15 @@
 <h4 id="important">Important</h4>
 
 <ul>
-<li>When you make a new map with &#39;<span style="color:green">New Map</span>&#39;, the map is saved to a default hard-drive folder. Right-click on a map name and select &#39;Show On HDD&#39; to see the hard-drive folder where the map is saved. The default folder can be specified in a <a href="/mapmanager/user-files/">user file</a> file.
+<li>Make sure the sessions in your map are imported in the correct order. It is hard to change the order later.</li>
+<li>Make sure the scale of each imported stack is correct. It is hard to change the scale later.</li>
+<li>New maps are saved to a default hard-drive folder. The default folder can be specified in a <a href="/mapmanager/user-files/">user file</a> file. Right-click on a map name and select &#39;Show On HDD&#39; to see the hard-drive folder where the map is saved.
 
 <ul>
 <li>On Windows, the default folder is &#39;My Documents&#39;.</li>
 <li>On OSX, the default folder is &#39;Documents&#39;.</li>
 </ul></li>
-<li>As you import stacks from the <a href="/mapmanager/stack-browser/">stack browser</a> there are some rules that must be followed. You will be prompted when you break these rules.
+<li>As you import stacks from the <a href="/mapmanager/stack-browser/">stack browser</a> there are some rules that must be followed. You will be prompted when you break these rules. In particular:
 
 <ol>
 <li>The stack scale must be set. Set the scale of a <a href="/mapmanager/stack/">stack</a> in a stack window with shift+p.</li>
@@ -192,9 +207,73 @@
 
 <p>Online help is available with the &#39;?&#39; button.</p>
 
+<p>The <span style="color:blue">blue</span> buttons operate on the selected map.</p>
+
+<p><B>Load Map.</B> Load a map from the hard-drive. </p>
+
+<p><B>Save Map.</B> Save the selected map.</p>
+
+<p><B>?.</B> Open map manager 3 documentation in your default web browser.</p>
+
+<h4 id="plot-group">Plot Group</h4>
+
+<p><B>Spine Map.</B> Open a <a href="/mapmanager/map-plot/">map plot</a> showing the position of spines along dendritic segments vs, session.</p>
+
+<p><B>Segment Map.</B>  Open a <a href="/mapmanager/map-plot/">map plot</a> showing the segments within each session and the connectivity of segments across sessions.</p>
+
+<p><B>X-Axis.</B> Choose different X-Axis for Spine and Segment map plots. Available X-Axis are:</p>
+
+<ul>
+<li>Sessions </li>
+<li>Datetime</li>
+<li>Days</li>
+<li>Hours</li>
+<li>Zero Sessions</li>
+<li>Zero Days</li>
+<li>Zero Hours</li>
+</ul>
+
+<p>Date, Days and Hours require your imported stack to have a date specified. The X-Axis options starting with &#39;Zero&#39; use a session in the map as a zero timepoint. Specify this with &#39;Zero Session&#39; and &#39;Rebuild&#39; in the expanded map manager 3 panel.</p>
+
+<h4 id="panel-group">Panel Group</h4>
+
+<p>Each of these buttons will open a different Map MAnager panel.</p>
+
+<p><B>Search.</B> Open the <a href="/mapmanager/search-panel/">search panel</a>.</p>
+
+<p><B>Plot.</B> Open the <a href="/mapmanager/plot-panel/">plot panel</a>.</p>
+
+<p><B>Buttons.</B> Open a button toolbar with other useful buttons.</p>
+
+<p><B>Options.</B> Open the <a href="/mapmanager/stackdb-options-panel/">options panel</a>.</p>
+
+<p><B>Utilities.</B> Only for advanced users. Do not use.</p>
+
+<p><B>Process.</B> Open the <a href="/mapmanager/process-panel/">process panel</a> to set image contrast.</p>
+
+<p><B>Stack Browser.</B> Open the <a href="/mapmanager/stack-browser/">stack browser panel</a>.</p>
+
+<p><B>HDD Paths.</B> Open a panel to <a href="/mapmanager/hdd-paths/">edit hard-drive paths</a> like the default folder to save and load maps.</p>
+
+<h4 id="miscellaneous">Miscellaneous</h4>
+
+<p><B>Connect Segments.</B> When checked, all editing in a <a href="/mapmanager/run-plot/">run plot</a> will edit the persistence of segments (addition, subtraction, and persistent).</p>
+
+<p><B>Unload stacks.</B> Unload all stacks in the selected map (from Igor memory).</p>
+
+<p><B>Close Windows.</B> Close all windows associated with the selected map.</p>
+
 <p>Right-click on a map name in the list for a contextual menu.</p>
 
 <p><IMG class="img-float-left" SRC="../images/mm3/mm3-main-panel-map-right-click.png" WIDTH="100"></p>
+
+<p><B>Show on HDD.</B></p>
+
+<p><B>Map stats.</B></p>
+
+<p><B>Edit map NV.</B></p>
+
+<p><B>Close map.</B> Close a map, removing it and all associated analysis from Igor memory.</p>
 
 <div class="print-page-break"></div>
 

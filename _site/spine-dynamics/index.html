@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
 
-        <title>Map Manager : Map Manager Documentation</title>
+        <title>Map Manager : Spine Dynamics</title>
         <meta name="description" content="">
 
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
@@ -156,49 +156,105 @@
                     </div>
 
                     <div id=content class=span10>
-                        <p><BR></p>
+                        <div class=page-header>
+    <h3>Spine Dynamics
+        
+    </h3>
+</div>
 
-<p style="font-size:20px">
-Map Manager is software that annotates and analyzes time-series of 3D image stacks.
-</p>
+<h3 id="concepts">Concepts</h3>
 
-<p><BR></p>
+<h4 id="stack">Stack</h4>
 
-<p><IMG class="img-float-right" SRC="/mapmanager/images/imagingcore/stack_example_spines.jpg" width="400"></p>
-
-<h4 id="main-features">Main features</h4>
-
-<ul>
-<li>In vivo, ex vivo, and fixed tissue</li>
-<li>Three dimensional image stacks</li>
-<li>One or two color channels</li>
-<li>Multiple timepoints</li>
-<li>Automatically registers image stacks across timepoints</li>
-<li>Written in <a href="http://wavemetrics.com">Igor Pro</a></li>
-</ul>
-
-<h4 id="getting-started">Getting started</h4>
-
-<p>Have a look at some of the workflows including ... </p>
+<p>Each segment within a stack has a number of spines and a total traced dendritic length. From this we can calculate spine density.</p>
 
 <ul>
-<li><a href="/mapmanager/making-a-map/" title="making-a-map">Making a map</a></li>
-<li><a href="/mapmanager/simple-stack-db/" title="simple-stack-db">Simple stack database</a></li>
+<li>Number of spines</li>
+<li>Dendrite length</li>
+<li>Spine density : number of spines / dendrite length</li>
 </ul>
 
-<h4 id="about">About</h4>
+<h4 id="map">Map</h4>
 
-<p>All code and documentation written by <a href="http://robertcudmore.org">Robert Cudmore</a></p>
-
-<h4 id="links">Links</h4>
+<p>From one session to the next, the number of added and subtracted spines are counted. From this, the percent and density changes are calculated.</p>
 
 <ul>
-<li><A HREF="http://cudmore.github.io/mapmanager/">Map Manager</A> (This page)</li>
-<li><A HREF="https://github.com/cudmore/bob-fiji-plugins">Fiji macros and plugins</A> (GitHub)</li>
-<li>Robert Cudmore&#39;s <A HREF="http://robertcudmore.org/">Home Page</A></li>
-<li>Robert Cudmore&#39;s blog <A HREF="http://cudmore.github.io/">Blog</A></li>
-<li>Software for <A HREF="http://cudmore.github.io/Vascular-Analysis/">Vascular Analysis</A></li>
+<li># Added </li>
+<li># Subtracted</li>
+<li>% Added : # added / (number of spines in pervious session) * 100</li>
+<li>% Subtracted :</li>
+<li>Turn-over-ratio : A measure of total dynamics (both addition and subtraction)</li>
+<li>Density Added : </li>
+<li>Density Subtracted : </li>
 </ul>
+
+<h4 id="map-lifetime">Map Lifetime</h4>
+
+<p>Observed </p>
+
+<ul>
+<li>observed sessions</li>
+<li>observed seconds</li>
+<li>observed days</li>
+<li>observed hours</li>
+</ul>
+
+<p>Lifetime</p>
+
+<ul>
+<li>sessions</li>
+<li>seconds</li>
+<li>days</li>
+<li>hours</li>
+</ul>
+
+<p>Age</p>
+
+<ul>
+<li>sessions</li>
+<li>seconds</li>
+<li>days</li>
+<li>hours</li>
+</ul>
+
+<h4 id="svoboda-style-persistent-and-transient">Svoboda style persistent and transient</h4>
+
+<p>Threshold time can be specified as: sessions, seconds, days, or hours.</p>
+
+<ul>
+<li>New Persistent : New spine that persists for &gt; threshold time</li>
+<li>New Transient :</li>
+<li>Lost Persistent :</li>
+<li>Lost Transient :</li>
+<li>Always Present : Spines present in all sessions</li>
+</ul>
+
+
+<div class="post-tags">
+  
+    
+  
+  
+  
+    <b>Tags:</b>  
+  
+  
+  
+    <a href="/mapmanager/tags/#Analysis">Analysis</a>
+  
+
+   <!--
+   <a href="javascript:window.print()">print</a>
+    -->
+
+   <!--
+   <BR>
+   <a href="_posts/2015-07-25-spine-dynamics.pdf">print pdf</a>
+   <BR>
+   -->
+    
+</div>
+
 
                     </div>
                 

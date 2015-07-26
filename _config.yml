@@ -25,6 +25,7 @@ sections: [
     ['imagingcore', 'Imaging Core'],
     ['interface', 'Interface Windows'],
     ['plot', 'Plots'],
+    ['analysis', 'Analysis'],
     ['post', 'Blog Posts']
 ]
 

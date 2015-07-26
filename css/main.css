@@ -164,7 +164,7 @@ p.tip {
     float: left;
     margin-left: 6px;
     margin-top: 6px;
-    margin-right: 6px;
+    margin-right: 20px;
     margin-bottom: 6px;
 	page-break-inside: avoid;
 }
