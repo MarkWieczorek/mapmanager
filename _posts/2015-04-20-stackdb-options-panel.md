@@ -51,6 +51,47 @@ Here you can toggle options on and off when annotating a [stack][1] with a [stac
 **Radii.**
 **Line Mask.**
 
+**Display Control Points**
+**Control Point Help**
+**Grid Spacing (um)**
+
+####Points
+
+**fill this in and make sure it works**
+
+####Lines
+
+**fill this in and make sure it works**
+
+####Miscellaneous
+
+**Warn On New Objects (shift-click)**
+**New Objects On Mouse Click (no shift)**
+**Line points to search when connecting spine/bouton**
+**Left/Right arrows will scroll through line (otherwise pan)**
+**Default Segment Radius (um)**
+
+####Importing Segments From FIJI
+
+**On import, Filter SWC Box Width**
+**Filter Radius, Box Width**
+**Convert To 8-bit**. Will convert to 8-bit (in Fiji). This makes line fit much faster.
+**Close Fiji When Done**
+
+####Intensity Analysis
+
+**Width (um)**
+**Extend Head (um)**
+
+####Object Map
+**Default Run +/-**. Set the number of sessions to display when selecting right-click menu 'Plot Run +- n'.
+**Run Window Width (pixels)**. The size of each window in a spine run.
+**Maximum Allowed Connection Distance (um)**. When using '', the threshold distance to allow an auto-connection between spines.
+**Default Zoom Width (um)**. When snapping to a spine, the default zoom. The width of the window view in um.
+**Default Zoom Height (um)**
+
+
+
 [1]: /mapmanager/stack/
 [2]: /mapmanager/annotating-a-stack/
 [3]: /mapmanager/user-files/
