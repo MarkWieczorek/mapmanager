@@ -51,10 +51,10 @@
             <li data-order="1"><a href="/mapmanager/making-a-map">Making a map</a></li>
         
             
-            <li data-order="1"><a href="/mapmanager/database-overview">Database overview</a></li>
+            <li data-order="3"><a href="/mapmanager/database-overview">Database overview</a></li>
         
             
-            <li data-order="3"><a href="/mapmanager/annotating-a-stack">Annotating a stack</a></li>
+            <li data-order="2"><a href="/mapmanager/annotating-a-stack">Annotating a stack</a></li>
         
     
         
@@ -170,13 +170,23 @@
 
 <p>The original documentation is <a href="http://www.robertcudmore.org/maptracker/v2/stack-browser/">here</a></p>
 
+<p>In general, the list on the left represents folders of loaded stacks. Select a folder of stacks on the left and the list on the right will show the individual stacks within that folder.</p>
+
+<p>Double click on a stack in the list on the right and it will open a <a href="/mapmanager/stack/">stack</a> window to view the actual stack.</p>
+
 <h3 id="loading-stacks">Loading stacks</h3>
 
-<p>Load ScanImage Directory.</p>
+<p>The simplest way to load a stack is to drag and drop a .tif file onto the Igor program icon. Stacks opened in this way will appear in a special folder (in the list on the left) called &#39;DragAndDrop&#39;.</p>
 
-<p>Load Generic Directory.</p>
+<p><strong>Load ScanImage Directory.</strong> Load a folder of ScanImage .tif stack. The name of the folder will appear in the list on the left. Selecting this folder will populate the list of stacks imported. Double click on a stack (in the list on the right) to view the <a href="/mapmanager/stack/">stack</a>.</p>
 
-<p>Drag and drop a single .tif stack from the hard-drive.</p>
+<p><strong>Load Generic Directory.</strong> Load a folder of .tif stacks ignoring any .tif header information. This has some consequences:</p>
+
+<ol>
+<li>The stack will not have a scale. Set this with xxx</li>
+<li>If the source .tif stack are multi-channel stacks, Map Manager will blindly import them as one big stack (usually with channels interleaved from slice to slice). Please see bAlignBatch to pre-process your .tif stacks into ch1/ch2 file pairs.</li>
+<li>The stacks will not have a date. Thus, <a href="/mapmanager/map-plot/">map plots</a> with date/days/hours will not be possible.</li>
+</ol>
 
 <h3 id="browsing-loaded-data">Browsing loaded data</h3>
 

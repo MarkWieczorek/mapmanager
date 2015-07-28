@@ -51,10 +51,10 @@
             <li data-order="1"><a href="/mapmanager/making-a-map">Making a map</a></li>
         
             
-            <li data-order="1"><a href="/mapmanager/database-overview">Database overview</a></li>
+            <li data-order="3"><a href="/mapmanager/database-overview">Database overview</a></li>
         
             
-            <li data-order="3"><a href="/mapmanager/annotating-a-stack">Annotating a stack</a></li>
+            <li data-order="2"><a href="/mapmanager/annotating-a-stack">Annotating a stack</a></li>
         
     
         
@@ -166,7 +166,7 @@
 
 <div class="print-page-break"></div>
 
-<p>A map is a sequence of <a href="/mapmanager/stack/">stacks</a>. You create a map by appending stacks from the <a href="/mapmanager/stack-browser/">stack browser</a>. Once a map is made it can be saved, opened/loaded, annotated, and browsed.</p>
+<p>A map is a sequence of <a href="/mapmanager/stack/">stacks</a>. You create a map by appending stacks from the <a href="/mapmanager/stack-browser/">stack browser</a>. Once a map is made it can be opened, saved, annotated, and browsed using the main <a href="/mapmanager/main-panel/">map maker panel</a>.</p>
 
 <p>In the Map Manager 3 window, the list of open maps is on the left. When a map is selected, a list of sessions within the map is shown on the right.</p>
 
@@ -178,11 +178,13 @@
 <li>Create a new map with &#39;<span style="color:green">New Map</span>&#39;.</li>
 <li>Append a stack from the <a href="/mapmanager/stack-browser/">Stack Browser</a> with &#39;Append Stack&#39;.</li>
 <li>Repeat #2 for each stack.</li>
+<li>Save the map with &#39;Save Map&#39; button.</li>
 </ol>
 
-<h4 id="important">Important</h4>
+<h4 id="important"><span style="color:red">Important</span></h4>
 
 <ul>
+<li>When you make a map, you need to choose the &#39;number of channels&#39; in each stack/session. Map Manager will only allow one choice of &#39;number of channels&#39; per map. You cannot mix one and two channel stacks within a map.</li>
 <li>Make sure the sessions in your map are imported in the correct order. It is hard to change the order later.</li>
 <li>Make sure the scale of each imported stack is correct. It is hard to change the scale later.</li>
 <li>New maps are saved to a default hard-drive folder. The default folder can be specified in a <a href="/mapmanager/user-files/">user file</a> file. Right-click on a map name and select &#39;Show On HDD&#39; to see the hard-drive folder where the map is saved.
@@ -199,99 +201,34 @@
 </ol></li>
 </ul>
 
-<h4 id="general-usage">General usage</h4>
-
-<p><IMG class="img-float-left" SRC="../images/mm3/mm3-main-panel-small.png" WIDTH="200"></p>
-
-<p>Once a map is created and saved, the map maker 3 panel can be minimized with the disclosure triangle (at the top of the window near the help/? button).</p>
-
-<p>Online help is available with the &#39;?&#39; button.</p>
-
-<p>The <span style="color:blue">blue</span> buttons operate on the selected map.</p>
-
-<p><B>Load Map.</B> Load a map from the hard-drive. </p>
-
-<p><B>Save Map.</B> Save the selected map.</p>
-
-<p><B>?.</B> Open map manager 3 documentation in your default web browser.</p>
-
-<h4 id="plot-group">Plot Group</h4>
-
-<p><B>Spine Map.</B> Open a <a href="/mapmanager/map-plot/">map plot</a> showing the position of spines along dendritic segments vs, session.</p>
-
-<p><B>Segment Map.</B>  Open a <a href="/mapmanager/map-plot/">map plot</a> showing the segments within each session and the connectivity of segments across sessions.</p>
-
-<p><B>X-Axis.</B> Choose different X-Axis for Spine and Segment map plots. Available X-Axis are:</p>
-
-<ul>
-<li>Sessions </li>
-<li>Datetime</li>
-<li>Days</li>
-<li>Hours</li>
-<li>Zero Sessions</li>
-<li>Zero Days</li>
-<li>Zero Hours</li>
-</ul>
-
-<p>Date, Days and Hours require your imported stack to have a date specified. The X-Axis options starting with &#39;Zero&#39; use a session in the map as a zero timepoint. Specify this with &#39;Zero Session&#39; and &#39;Rebuild&#39; in the expanded map manager 3 panel.</p>
-
-<h4 id="panel-group">Panel Group</h4>
-
-<p>Each of these buttons will open a different Map Manager panel.</p>
-
-<p><B>Search.</B> Open the <a href="/mapmanager/search-panel/">search panel</a>.</p>
-
-<p><B>Plot.</B> Open the <a href="/mapmanager/plot-panel/">plot panel</a>.</p>
-
-<p><B>Buttons.</B> Open a button toolbar with other useful buttons.</p>
-
-<p><B>Options.</B> Open the <a href="/mapmanager/stackdb-options-panel/">options panel</a>.</p>
-
-<p><B>Utilities.</B> Only for advanced users. Do not use.</p>
-
-<p><B>Process.</B> Open the <a href="/mapmanager/process-panel/">process panel</a> to set image contrast.</p>
-
-<p><B>Stack Browser.</B> Open the <a href="/mapmanager/stack-browser/">stack browser panel</a>.</p>
-
-<p><B>HDD Paths.</B> Open a panel to <a href="/mapmanager/hdd-paths/">edit hard-drive paths</a> like the default folder to save and load maps.</p>
-
-<h4 id="miscellaneous">Miscellaneous</h4>
-
-<p><B>Connect Segments.</B> When checked, all editing in a <a href="/mapmanager/run-plot/">run plot</a> will edit the persistence of segments (addition, subtraction, and persistent).</p>
-
-<p><B>Unload stacks.</B> Unload all stacks in the selected map (from Igor memory).</p>
-
-<p><B>Close Windows.</B> Close all windows associated with the selected map.</p>
-
-<p>Right-click on a map name in the list for a contextual menu.</p>
-
-<p><IMG class="img-float-left" SRC="../images/mm3/mm3-main-panel-map-right-click.png" WIDTH="100"></p>
-
-<p><B>Show on HDD.</B></p>
-
-<p><B>Map stats.</B></p>
-
-<p><B>Edit map NV.</B></p>
-
-<p><B>Close map.</B> Close a map, removing it and all associated analysis from Igor memory.</p>
-
-<div class="print-page-break"></div>
-
-<h4 id="importing-a-bspine-map">Importing a bSpine map</h4>
+<h3 id="importing-a-bspine-map">Importing a bSpine map</h3>
 
 <p><IMG class="img-float-left" SRC="../images/mm3/mm3-import-bspine.png" WIDTH="275"></p>
 
-<p>Importing one by one</p>
+<p>Importing bSpine maps is tricky. The problem is if your original maps for one time-series (_d1, _d2, etc.) have different sessions. For example, _d1 has sessions from dates 1,2,3 but _d2 has sessions from dates 1,2,6,12 there <span style="color:red">will be an error</span>.</p>
+
+<p>Thus, there are two cases:</p>
+
+<ol>
+<li><p>Your maps _d1, _d2 etc. all have the same exact sessions
+This is simple, use &#39;Batch import bSpine map&#39;. You will be prompted for the first map (you should select _d1). Once this is done, you need to hit all the buttons in &#39;(2) fix&#39; to complete the import and then &#39;save map&#39; in the main map manager 3 panel.</p></li>
+<li><p>Your maps _d1, _d2 etc. have different sessions.
+<span style="color:red">This DOES NOT WORK.</span></p></li>
+</ol>
+
+<p><strong>This documentation is not done</strong></p>
+
+<p>####Import group</p>
 
 <ul>
-<li><p>Import One bSpine map.</p></li>
-<li><p>Append One bSpine map.</p></li>
+<li><p><strong>Import One bSpine map.</strong> ... not done</p></li>
+<li><p><strong>Append One bSpine map.</strong> ... not done</p></li>
 </ul>
 
-<p>Batch import</p>
+<p>#### Fix group</p>
 
 <ul>
-<li>Batch Import bSPine map.</li>
+<li>** I am sick of writing documentation. Please see Bob for instructions. **</li>
 </ul>
 
 

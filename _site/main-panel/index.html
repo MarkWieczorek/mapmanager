@@ -51,10 +51,10 @@
             <li data-order="1"><a href="/mapmanager/making-a-map">Making a map</a></li>
         
             
-            <li data-order="1"><a href="/mapmanager/database-overview">Database overview</a></li>
+            <li data-order="3"><a href="/mapmanager/database-overview">Database overview</a></li>
         
             
-            <li data-order="3"><a href="/mapmanager/annotating-a-stack">Annotating a stack</a></li>
+            <li data-order="2"><a href="/mapmanager/annotating-a-stack">Annotating a stack</a></li>
         
     
         
@@ -162,46 +162,83 @@
     </h3>
 </div>
 
-<p><IMG class="img-float-left" SRC="../images/mm3/mm3-main-panel-small.png" WIDTH="200"></p>
-
-<p>The main panel provides an interface to load, save and browse map manager maps.</p>
-
-<p>Load map.</p>
-
-<p>Save map.</p>
-
-<p>Close map.  </p>
-
-<h4 id="plot">Plot</h4>
-
-<p>Spine map.</p>
-
-<p>Segment map.</p>
-
-<p>Unload all stacks.</p>
-
-<p>Cose all windows.</p>
-
-<h4 id="panels">Panels</h4>
-
-<p>Plot.</p>
-
-<p>Search.</p>
-
-<p>Buttons.</p>
-
-<p>Options.</p>
-
-<p>Utilities.</p>
-
-<p>Process.</p>
+<p>The main panel provides an interface to load, save and browse map manager maps. Open the main panel using the menu &#39;mm3 -&gt; Map Manager 3&#39;</p>
 
 <p>Expand the main map maker panel to access the <a href="/mapmanager/making-a-map/">map making</a> interface.</p>
 
-<p>Plot a <a href="/mapmanager/run-plot/">run</a> of stacks by selecting a session on the right and clicking &#39;Plot Run&#39;</p>
+<p>Once a map is created and saved, the map maker 3 panel can be minimized with the disclosure triangle (at the top of the window near the help/? button).</p>
 
-<p><IMG class="img-float-left" SRC="../images/mm3/mm3-main-panel.png" WIDTH="700">
-<div class="print-page-break"></div></p>
+<p>The <span style="color:blue">blue</span> buttons operate on the selected map.</p>
+
+<p><IMG class="img-float-left" SRC="../images/mm3/mm3-main-panel-small.png" WIDTH="200"></p>
+
+<p><B>Load Map.</B> Load a map from the hard-drive. </p>
+
+<p><B>Save Map.</B> Save the selected map.</p>
+
+<p><B>?.</B> Open map manager 3 documentation in your default web browser.</p>
+
+<h4 id="plot-group">Plot Group</h4>
+
+<p><B>Spine Map.</B> Open a <a href="/mapmanager/map-plot/">map plot</a> showing the position of spines along dendritic segments vs. session.</p>
+
+<p><B>Segment Map.</B>  Open a <a href="/mapmanager/map-plot/">map plot</a> showing the segments within each session and the connectivity of segments across sessions.</p>
+
+<p><B>X-Axis.</B> Choose different X-Axis for Spine and Segment map plots. Available X-Axis are:</p>
+
+<ul>
+<li>Sessions </li>
+<li>Datetime</li>
+<li>Days</li>
+<li>Hours</li>
+<li>Zero Sessions</li>
+<li>Zero Days</li>
+<li>Zero Hours</li>
+</ul>
+
+<p>Date, Days and Hours require your imported stack to have a date specified. The X-Axis options starting with &#39;Zero&#39; use a session in the map as a zero timepoint. Specify this with &#39;Zero Session&#39; and &#39;Rebuild&#39; in the expanded map manager 3 panel.</p>
+
+<h4 id="panel-group">Panel Group</h4>
+
+<p>Each of these buttons will open a different Map Manager panel.</p>
+
+<p><B>Search.</B> Open the <a href="/mapmanager/search-panel/">search panel</a>.</p>
+
+<p><B>Plot.</B> Open the <a href="/mapmanager/plot-panel/">plot panel</a>.</p>
+
+<p><B>Buttons.</B> Open a button toolbar with other useful buttons.</p>
+
+<p><B>Options.</B> Open the <a href="/mapmanager/stackdb-options-panel/">options panel</a>.</p>
+
+<p><B>Utilities.</B> Only for advanced users. Do not use.</p>
+
+<p><B>Process.</B> Open the <a href="/mapmanager/process-panel/">process panel</a> to set image contrast.</p>
+
+<p><B>Stack Browser.</B> Open the <a href="/mapmanager/stack-browser/">stack browser panel</a>.</p>
+
+<p><B>HDD Paths.</B> Open a panel to <a href="/mapmanager/hdd-paths/">edit hard-drive paths</a> like the default folder to save and load maps.</p>
+
+<h4 id="miscellaneous">Miscellaneous</h4>
+
+<p><B>Connect Segments.</B> When checked, all editing in a <a href="/mapmanager/run-plot/">run plot</a> will edit the persistence of segments (addition, subtraction, and persistent).</p>
+
+<p><B>Unload stacks.</B> Unload all stacks in the selected map (from Igor memory).</p>
+
+<p><B>Close Windows.</B> Close all windows associated with the selected map.</p>
+
+<p>Right-click on a map name in the list for a contextual menu.</p>
+
+<p><IMG class="img-float-left" SRC="../images/mm3/mm3-main-panel-map-right-click.png" WIDTH="100"></p>
+
+<p><B>Show on HDD.</B> Shows the hard-drive folder where the map is saved.</p>
+
+<p><B>Map stats.</B> Not implemented</p>
+
+<p><B>Edit map NV.</B> <span style="color:red">ADVANCED USERS</span>, this shows a map as a text table.</p>
+
+<p><B>Close map.</B> Close a map, removing it and all associated analysis from Igor memory.</p>
+
+<div class="print-page-break"></div>
 
 <div class="print-page-break"></div>
 

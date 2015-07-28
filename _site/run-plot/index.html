@@ -51,10 +51,10 @@
             <li data-order="1"><a href="/mapmanager/making-a-map">Making a map</a></li>
         
             
-            <li data-order="1"><a href="/mapmanager/database-overview">Database overview</a></li>
+            <li data-order="3"><a href="/mapmanager/database-overview">Database overview</a></li>
         
             
-            <li data-order="3"><a href="/mapmanager/annotating-a-stack">Annotating a stack</a></li>
+            <li data-order="2"><a href="/mapmanager/annotating-a-stack">Annotating a stack</a></li>
         
     
         
@@ -162,23 +162,54 @@
     </h3>
 </div>
 
-<p>A run plot is a sequence of stack plots that follow a stack db point or line segment through a map.</p>
+<p>A run plot is a sequence of <a href="/mapmanager/stackdb-plot/">stack</a> plots, one for each session in a map.</p>
+
+<p>There are three types of run plots:</p>
+
+<ol>
+<li><strong>Stack Run.</strong> In its simplest form, a run plot showing the sequence of stacks in a map.</li>
+<li><strong>Segment Run.</strong> The same as a stack run plot but connected segments are selected, displayed, and optionally zoomed.</li>
+<li><strong>Object Run.</strong> The same as a stack run plot but individual 3D point annotations are followed across sessions in a map. One example is a run of spine objects across all stacks/sessions in a map.</li>
+</ol>
 
 <h4 id="opening-a-run-plot">Opening a run plot</h4>
 
-<p>A run plot can be opened in various ways</p>
+<p><IMG class="img-float-left" SRC="../images/mm3/run-plot-menu.png" WIDTH="120"></p>
+
+<p>A run plot can be opened from multiple places in the interface. In general, a right-click on a session or object will open a contextual popup-menu (shown on the left).</p>
+
+<div class="print-page-break"></div>
 
 <ul>
-<li>Right-click an object in a <a href="/mapmanager/map-plot/">map plot</a></li>
-<li>Double-click an object in a <a href="/mapmanager/search-panel/">search</a></li>
-<li>Select &#39;plot run&#39; in the main <a href="/mapmanager/main-panel/">map maker panel</a></li>
+<li>Right-click an object in a <a href="/mapmanager/map-plot/">map plot</a>.</li>
+<li>Right-click an object in a <a href="/mapmanager/search-panel/">search</a> results.</li>
+<li>Right-click a session in the expanded main <a href="/mapmanager/main-panel/">map maker panel</a></li>
 </ul>
 
 <h4 id="navigating-a-run-plot">Navigating a run plot</h4>
 
-<p>Keyboard &#39;l&#39; will ink all stacks in a run plot allowing them to be zoomed and panned in synch.</p>
+<p>Each <a href="/mapmanager/stackdb-plot/">stack-db plot</a> plot in a run plot behaves exactly like an individual stack-db plot. For example, left-click to select individual objects in any of the stack-db plots within a run plot.</p>
 
-<p>Ctrol+click on an object in one stack plot of a run plot will select that object in all other stack plots of the run plot.</p>
+<p>There are additional interface elements available in a run plot.</p>
+
+<ol>
+<li><p><strong>Control+click</strong> on an object in one stack plot of a run plot will select that object in all other stack plots of the run plot. If a stack plot at a given session is missing the object (for example, the object was subtracted), the image will snap to the region where the point &#39;would be&#39;.</p></li>
+<li><p><strong>Keyboard-l</strong> (that is lower-case &#39;l&#39; as in &#39;larry&#39;) will link all stacks in a run plot allowing them to be zoomed and panned in synch. Linking can be turned on and off again by pressing keyboard-l.</p></li>
+<li><p><strong>keyboard a/s/p/b</strong>, see below</p></li>
+</ol>
+
+<h4 id="editing-dynamics-in-a-run-plot">Editing dynamics in a run plot</h4>
+
+<p>The dynamics between stack-db objects and segments can be edited in a run plot.</p>
+
+<ul>
+<li><strong>a</strong> : The selected object is marked as <strong>A</strong>ddition.</li>
+<li><strong>s</strong> : The selected object is marked as <strong>S</strong>ubtraction</li>
+<li><p><strong>p</strong> : The selected object is marked as <strong>P</strong>ersistent. This is a special case, the source and destination objects need to be specified. To do this: (i) click in the source stack window and select an object, (ii) click in the destination stack window and select an object, and (iii) hit keyboard &#39;p&#39;.</p></li>
+<li><p><strong>b</strong> : The selected object is marked as <strong>B</strong>ad. This is only available for stack-db objects, it is not available for segments.</p></li>
+</ul>
+
+<p><span style="color:red">Important:</span> The keyboard commands above will default to editing the dynamics of stack-db objects. To edit the dynamics between segments, turn on the global option in the map manager 3 panel by checking &#39;Connect Segments&#39;.</p>
 
 <p><IMG class="img-float-left" SRC="../images/mm3/mm3-run-segment-example.png" WIDTH="700"></p>
 
@@ -190,7 +221,7 @@
 
 <div class="print-page-break"></div>
 
-<p>Same run plot as above after zooming in.</p>
+<p>Same run plot as above after zooming in. All stacks in a run plot can be synchronized with keyboard &#39;l&#39; (as in larry) so that zooming, panning, and setting the slice in one stack plot of a run will propagate to all other stack plots of that run.</p>
 
 <div class="print-page-break"></div>
 
