@@ -169,11 +169,13 @@
 
 <h4 id="overview">Overview</h4>
 
+<p>A stack window displays a 3D image stack, one image plane (slice) at a time.</p>
+
 <ul>
-<li>Mouse wheel to scroll up and down through images, arrow keys to pan, +/- to zoom</li>
-<li>Image contrast is critical, open contrast bar with keyboard &#39;c&#39;, adjust min/max contrast with sliders.</li>
-<li>View a histogram with keyboard &#39;h&#39;</li>
-<li>Closing a stack window does not remove it from memory (the stack remains open)</li>
+<li>Use the mouse-wheel to scroll up and down through images, arrow keys to pan, +/- to zoom.</li>
+<li>Image contrast is critical, open the contrast control bar with keyboard &#39;c&#39; and adjust min/max contrast with sliders.</li>
+<li>View a pixel intensity histogram with keyboard &#39;h&#39;.</li>
+<li>Closing a stack window does not remove it from memory (the stack remains open).</li>
 </ul>
 
 <h4 id="keyboard-commands">Keyboard commands</h4>
@@ -190,7 +192,7 @@ Esc : cancel selection
 3 : view a sliding maximal z-projection of channel 1 
 4 : view a sliding maximal z-projection of channel 2 
 
-c : toggle contrast control bar
+c : toggle contrast control bar (top control bar)
 h : open histogram window
 ] : toggle between two different window sizes
 
@@ -198,8 +200,16 @@ sift+c : cycle through 4 different window &#39;candy&#39; displays
 
 shift+p : Set pixel/voxel size
 
-shift+? : open the &#39;Point Info&#39; window  
+i : open the &#39;Point Info&#39; panel  
     Object notes can be set in the Point Info window.  
+shift+i : open the &#39;Stack Info&#39; panel  
+
+[ : open the stack db panel (left contorl bar)
+
+When displayed in a run plot
+    a : set selected object as addition
+    s : set selected object as subtraction
+    p : set selected object as persistent. This requires a selection in the previous timepoint.
 </code></pre></div>
 <h4 id="contrast-bar">Contrast bar</h4>
 

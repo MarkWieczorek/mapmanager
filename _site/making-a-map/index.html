@@ -172,12 +172,19 @@
 
 <p>Double-click a session to open a <a href="/mapmanager/stack/">stack</a> window and begin adding <a href="/mapmanager/annotating-a-stack/">3D annotations</a>.</p>
 
-<h4 id="making-a-new-map">Making a new map</h4>
+<h4 id="1.-pre-process-your-raw-data-so-map-manager-can-import-it">1. Pre-process your raw data so Map Manager can import it</h4>
+
+<ul>
+<li>Map manager will only import single channel stacks. If your stacks are two color channels, they need to be de-interleaved into two different .tif files (one for each color channel). See <a href="https://github.com/cudmore/bob-fiji-plugins">bALignBatch</a> for a Fiji plugin that does this.</li>
+</ul>
+
+<h4 id="2.-make-a-new-map">2. Make a new map</h4>
 
 <ol>
+<li>Choose the number of channels for each stack in your map and fill in a new map name.</li>
 <li>Create a new map with &#39;<span style="color:green">New Map</span>&#39;.</li>
 <li>Append a stack from the <a href="/mapmanager/stack-browser/">Stack Browser</a> with &#39;Append Stack&#39;.</li>
-<li>Repeat #2 for each stack.</li>
+<li>Repeat #3 for each stack.</li>
 <li>Save the map with &#39;Save Map&#39; button.</li>
 </ol>
 
@@ -201,7 +208,85 @@
 </ol></li>
 </ul>
 
-<h3 id="importing-a-bspine-map">Importing a bSpine map</h3>
+<h4 id="3.-create-a-line-segment-in-each-session/stack-of-the-map">3. Create a line segment in each session/stack of the map</h4>
+
+<ol>
+<li>Double-click the first session in your map (in the main Map Manager panel) to open a <a href="/mapmanager/stack/">stack</a> window.</li>
+<li>Create a line segment by follow the instruction in <a href="/mapmanager/annotating-a-stack/">annotating a stack</a>.</li>
+<li>Repeat steps #1 and #2 for each session in your map. Making the same line segment in each session. As you make control points, be sure they are in the same direction along the segment for each session. For some help with the ordering of your control points, open the &#39;stack db options&#39; panel and turn &#39;Control Point Help&#39; &#39;On&#39;.</li>
+<li>Set a pivot point in each line segment. Do this by clicking a point in the segment, right-click and select the &#39;Set As Pivot&#39; menu. The pivot point should refer to the same region of the segment across all session. A good strategy is to choose a region of the segment near an obvious spine that is present in all sessions. Another strategy is to choose a pivot point where some other segment (dendrite) crosses near your segment as these tend to remain stable across time. Try and put the pivot point near the center of the segment, do not place it at either end. The pivot point is used to calculate a line distance along the segment (in um) which in turn will be used to auto-guess connections between spines across sessions.</li>
+</ol>
+
+<p class="tip"><B>Tip.</B> You can open a stack run by right-clicking on a session and selecting 'Plot Run +- All'. Bring up the left control panel for each stack with keyboard'[' and follow the steps above. This way, you can see the line segments you are making in each session of your map.</p>
+
+<h4 id="4.-connect-your-line-segments-together">4. Connect your line segments together</h4>
+
+<ol>
+<li>Close all stack windows using the <span style="color:blue">Close Windows</span> button in the main Map Manager panel.</li>
+<li>Open a new stack run by right-clicking a session in your map and selecting the &#39;Plot Run +- All&#39; menu.</li>
+<li>Turn on the &#39;Connect Segments&#39; checkbox in the main Map Manager panel. It is in the lower left of the panel.</li>
+<li>Sequentialy connect your line segment from one timepoint to the next
+
+<ul>
+<li>Select the source timepoint segment (for example, timepoint 1)</li>
+<li>Select the destination timepoint segment (for example, timepoint 2)</li>
+<li>In the destination timepoint (e.g. timepoint 2), press keyboard &#39;p&#39; for Persistent.</li>
+</ul></li>
+</ol>
+
+<p class="tip"><B>Tip.</B> You can see how your segments are connected using the 'Segment Map' button in the main Map Manager panel.</p>
+   
+
+<h4 id="5.-mark-spines-in-each-timepoint">5. Mark spines in each timepoint</h4>
+
+<ol>
+<li>open a single timepoint by double clicking a session in the list.</li>
+<li>Follow <a href="/mapmanager/annotating-a-stack/">annotating a stack</a> to mark spines along your new segment.</li>
+</ol>
+
+<p class="tip"><B>Tip.</B> As you are working, keep your eye on the Igor command window. Any small warnings will show up here. For example ...</p>
+   
+
+<h4 id="6.-auto-connect-spines-from-one-timepoint-to-the-next">6. Auto connect spines from one timepoint to the next</h4>
+
+<ul>
+<li>Open a &#39;Spine Map&#39; from the main Map Manager Panel.</li>
+<li>In the spine map, select a spine in the first timepoint, right click and select &#39;Connect To Next&#39;.
+This will make automatic connections of all spines from the first session to the next session.</li>
+<li>Repeat this process for each pairwise session in your stack. You can right-click and select &#39;Connect All&#39; to connect spines/objects through the entire map.</li>
+</ul>
+
+<h4 id="7.-check-the-auto-spine-connections-and-edit-as-necessary">7. Check the auto spine connections and edit as necessary</h4>
+
+<p>This is the core of Map Manager and you will spend most of your time doing this. You need to verify the auto connections of each spine and you need to do this between <strong>each</strong> timepoint in your map. If your map has 4 timepoints, you need to verify the auto spine connections between timepoint 1-2, timepoint 2-3, and timepoint 3-4.</p>
+
+<ul>
+<li>Open a map run of three sequential timepoints by selecting a spine in the spine map and selecting &#39;plot run +- 1&#39;.</li>
+<li>In the stack run windows, select a spine in the middle timepoint with ctrl+click. This will bring up the spine and its associated connections in all windows of the spine run. If there is no spine in a given timepoint, the image will be snapped to where the spine &#39;would-be&#39;.</li>
+<li>From the middle timepoint spine selection, go to the next spine along the segment using keyboard ctrl+right. Go to the previous spine along the segment using keyboard ctrol+left.</li>
+<li>Correct any errors in the spine dynamics using keyboard &#39;a&#39; for addition, &#39;s&#39; for subtraction, and &#39;p&#39; for persistence. See <a href="/mapmanager/annotating-a-stack/">annotating a stack</a> for details.</li>
+</ul>
+
+<h4 id="8.-review-your-work-by-using-search-to-query-all-additions-and-subtractions">8. Review your work by using search to query all additions and subtractions</h4>
+
+<ul>
+<li>Open the <a href="/mapmanager/search-panel/">search panel</a> from the main Map Manager panel with the &#39;Search&#39; button.</li>
+<li>In the search panel, make sure &#39;map&#39; is slected and search for all spine additions with the &#39;Additions&#39; button.</li>
+<li>All added spines will appear as a list in the search results.</li>
+<li>Right-click on a spine and select &#39;plot run +- 1&#39; to bring up a spine run. [HERE I NEED TO CHANGE THE INTERFACE. I NEED A QUICKER WAY OF BRINING UP A SPINE RUN!!!]</li>
+</ul>
+
+<p><strong>THIS IS WHERE I AM ENDING FOR NOW ON July 29 ... THIS NEEDS TO BE EXPANDED</strong></p>
+
+<p><BR>
+<BR>
+<BR>
+<BR>
+<BR></p>
+
+<h2 id="do-not-read-below-here-!!!!">DO NOT READ BELOW HERE !!!!</h2>
+
+<h3 id="[advanced]:-importing-a-bspine-map">[ADVANCED]: Importing a bSpine map</h3>
 
 <p><IMG class="img-float-left" SRC="../images/mm3/mm3-import-bspine.png" WIDTH="275"></p>
 
