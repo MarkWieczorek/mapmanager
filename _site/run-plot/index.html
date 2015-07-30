@@ -172,7 +172,7 @@
 <li><strong>Object Run.</strong> The same as a stack run plot but individual 3D point annotations are followed across sessions in a map. One example is a run of spine objects across all stacks/sessions in a map.</li>
 </ol>
 
-<h4 id="opening-a-run-plot">Opening a run plot</h4>
+<h3 id="opening-a-run-plot">Opening a run plot</h3>
 
 <p><IMG class="img-float-left" SRC="../images/mm3/run-plot-menu.png" WIDTH="120"></p>
 
@@ -186,7 +186,7 @@
 <li>Right-click a session in the expanded main <a href="/mapmanager/main-panel/">map maker panel</a></li>
 </ul>
 
-<h4 id="navigating-a-run-plot">Navigating a run plot</h4>
+<h3 id="navigating-a-run-plot">Navigating a run plot</h3>
 
 <p>Each <a href="/mapmanager/stackdb-plot/">stack-db plot</a> plot in a run plot behaves exactly like an individual stack-db plot. For example, left-click to select individual objects in any of the stack-db plots within a run plot.</p>
 
@@ -198,18 +198,30 @@
 <li><p><strong>keyboard a/s/p/b</strong>, see below</p></li>
 </ol>
 
-<h4 id="editing-dynamics-in-a-run-plot">Editing dynamics in a run plot</h4>
+<h3 id="editing-dynamics-in-a-run-plot">Editing dynamics in a run plot</h3>
 
 <p>The dynamics between stack-db objects and segments can be edited in a run plot.</p>
 
 <ul>
 <li><strong>a</strong> : The selected object is marked as <strong>A</strong>ddition.</li>
 <li><strong>s</strong> : The selected object is marked as <strong>S</strong>ubtraction</li>
-<li><p><strong>p</strong> : The selected object is marked as <strong>P</strong>ersistent. This is a special case, the source and destination objects need to be specified. To do this: (i) click in the source stack window and select an object, (ii) click in the destination stack window and select an object, and (iii) hit keyboard &#39;p&#39;.</p></li>
-<li><p><strong>b</strong> : The selected object is marked as <strong>B</strong>ad. This is only available for stack-db objects, it is not available for segments.</p></li>
+<li><strong>p</strong> : The selected object is marked as <strong>P</strong>ersistent.</li>
+<li><strong>b</strong> : The selected object is marked as <strong>B</strong>ad. This is only available for stack-db objects, it is not available for segments.</li>
 </ul>
 
-<p><span style="color:red">Important:</span> The keyboard commands above will default to editing the dynamics of stack-db objects. To edit the dynamics between segments, turn on the global option in the map manager 3 panel by checking &#39;Connect Segments&#39;.</p>
+<p>Persistent is a special case, the source and destination objects need to be specified. To do this:</p>
+
+<ul>
+<li>Click in the source stack window and select an object. For example, timepoint 2.</li>
+<li>Click in the destination stack window and select an object. For example, timepoint 3.</li>
+<li>Press keyboard &#39;p&#39; in the destination stack window. In this example, timepoint 3.</li>
+</ul>
+
+<h3 id="using-stack-db-object-tags-in-a-run-plot">Using stack db object tags in a run plot</h3>
+
+<p>Turn on object tags for a given stack window using keyboard &#39;t&#39;. The dynamics of each object is encoded in the color of the tag, <span style="color:green">green</span> for addition, <span style="color:red">red</span> for subtraction, and <span style="color:yellow">yellow</span> for persistent. Objects that are in the same run will have the same number in each of the stack plots. Added objects get a new number. This system is designed to quickly visualize the connectivity between stack db objects.</p>
+
+<p><span style="color:red">Important:</span> The keyboard commands above will default to editing the dynamics of stack-db objects. To edit the dynamics between segments, turn on the global option in the main Map MAnager panel by checking &#39;Connect Segments&#39;.</p>
 
 <p><IMG class="img-float-left" SRC="../images/mm3/mm3-run-segment-example.png" WIDTH="700"></p>
 
@@ -221,7 +233,7 @@
 
 <div class="print-page-break"></div>
 
-<p>Same run plot as above after zooming in. All stacks in a run plot can be synchronized with keyboard &#39;l&#39; (as in larry) so that zooming, panning, and setting the slice in one stack plot of a run will propagate to all other stack plots of that run.</p>
+<p>Same run plot as above after zooming in. All stacks in a run plot can be synchronized with keyboard &#39;l&#39; (as in Link) so that zooming, panning, and setting the slice in one stack plot of a run will propagate to all other stack plots of that run.</p>
 
 <div class="print-page-break"></div>
 

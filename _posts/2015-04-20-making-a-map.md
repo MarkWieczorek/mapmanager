@@ -85,10 +85,10 @@ See [Fitting Segment In Fiji][15] for help on FIJI versions, installing the plug
 
 This is the core of Map Manager and you will spend most of your time doing this. You need to verify the auto connections of each spine and you need to do this between **each** timepoint in your map. If your map has 4 timepoints, you need to verify the auto spine connections between timepoint 1-2, timepoint 2-3, and timepoint 3-4.
 
- - Open a map run of three sequential timepoints by selecting a spine in the spine map and selecting 'plot run +- 1'.
- - In the stack run windows, select a spine in the middle timepoint with ctrl+click. This will bring up the spine and its associated connections in all windows of the spine run. If there is no spine in a given timepoint, the image will be snapped to where the spine 'would-be'.
+ - Open a [run plot][11] of three sequential timepoints by right-clicking a spine in the spine map and selecting 'plot run +- 1'.
+ - In the run plot windows, select a spine in the middle timepoint with ctrl+click. This will bring up the spine and its associated connections in all windows of the spine run. If there is no spine in a given timepoint, the image will be snapped to where the spine 'would-be'.
  - From the middle timepoint spine selection, go to the next spine along the segment using keyboard ctrl+right. Go to the previous spine along the segment using keyboard ctrol+left.
- - Correct any errors in the spine dynamics using keyboard 'a' for addition, 's' for subtraction, and 'p' for persistence. See [annotating a stack][4] for details.
+ - Correct any errors in the spine dynamics using keyboard 'a' for addition, 's' for subtraction, and 'p' for persistence. See [run plot][11] for details.
  
 ####8. Review your work by using search to query all additions and subtractions
 
