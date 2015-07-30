@@ -1,18 +1,16 @@
 ---
 layout: page
 title: "Simple stack database"
-category: post
+category: workflow
 date: 2015-02-21 22:46:33
-order: 2
+order: 1
 tags:
 - Imaging core
 - Workflow
 - Posts
 ---
 
-###Workflow
-
-This documents describes a very simple workflow for annotating 3D points in a stack.
+This describes a workflow for annotating 3D points in a single stack. Please see [making a map][3] to collect a sequence of stacks into a timeseries map.
 
 ####1. Open and initialize bStack
 
@@ -120,3 +118,4 @@ Open the Options panel from the stack db toolbar using the 'Options' button.
 
 [1]: /mapmanager/stack/
 [2]: /mapmanager/stack-browser/
+[3]: /mapmanager/making-a-map/
