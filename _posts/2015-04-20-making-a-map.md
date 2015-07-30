@@ -147,4 +147,4 @@ Thus, there are two cases:
 [12]: /mapmanager/map-plot/
 [13]: /mapmanager/main-panel/
 [14]: https://github.com/cudmore/bob-fiji-plugins
-[15]: /mapmanager/fitting-segments-in-fiji
+[15]: /mapmanager/fitting-segments-in-fiji/
