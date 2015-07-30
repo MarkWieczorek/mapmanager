@@ -140,7 +140,7 @@
             <li data-order=""><a href="/mapmanager/File-format">File format</a></li>
         
             
-            <li data-order=""><a href="/mapmanager/FItting-segments-in-Fiji">Fitting segments in Fiji</a></li>
+            <li data-order=""><a href="/mapmanager/fItting-segments-in-fiji">Fitting segments in Fiji</a></li>
         
             
             <li data-order="3"><a href="/mapmanager/user-files">User files</a></li>
@@ -164,21 +164,39 @@
 
 <p>Line segments are fit in FIJI using Map Manager specified control points.</p>
 
-<h4 id="fiji-version">FIJI Version</h4>
+<h3 id="fiji-version">FIJI Version</h3>
 
-<p>You are required to use ImageJ 1.47v, this corresponds to the &#39;Fiji Life-Line version, 2013 July 15&#39; on the main <a href="http://fiji.sc/Downloads">FIJI download page</a></p>
+<p>You are required to use ImageJ 1.47v, this corresponds to the &#39;Fiji Life-Line version, 2013 July 15&#39; on the main <a href="http://fiji.sc/Downloads">FIJI download page</a>.</p>
 
-<p>Platform specific ersion can be downloaded here</p>
+<p>The reason we use this older version of FIJI is that newer versions of FIJI have undocumented changes to the backend JAVA programming interface. Until this is resolved, e will use an older version of FIJI.</p>
+
+<p>Platform specific version can be downloaded here (these are slightly newer but seem to work)</p>
 
 <ul>
 <li>Mac: <a href="http://fiji.sc/downloads/Life-Line/fiji-macosx-20140602.dmg">http://fiji.sc/downloads/Life-Line/fiji-macosx-20140602.dmg</a></li>
 <li>Windows: <a href="http://fiji.sc/downloads/Life-Line/fiji-win64-20140602.zip">http://fiji.sc/downloads/Life-Line/fiji-win64-20140602.zip</a></li>
 </ul>
 
-<h4 id="installing-the-xxx-plugin">Installing the xxx plugin</h4>
+<h3 id="installing-the-&#39;bob-neurite-tracer&#39;-plugin">Installing the &#39;Bob Neurite Tracer&#39; plugin</h3>
 
-<p>When you fit a line in FIJI from within Map MAnager, you are using the FIJI plugin xxx.</p>
+<p>When you fit a line in FIJI from within Map Manager, you are using the FIJI plugin Bob_Neurite_Tracer_v3.java</p>
 
+<p>To install this plugin</p>
+
+<ol>
+<li>Download Bob_Neurite_Tracer_v3.java <a href="../images/Bob_Neurite_Tracer_v3.java">here</a> or from a Github repository <a href="https://github.com/cudmore/bob-fiji-plugins">here</a>.</li>
+<li>Copy Bob_Neurite_Tracer_v3.java into your FIJI plugins directory.</li>
+</ol>
+
+<h3 id="configuring-map-manager-to-fit-a-line-in-fiji">Configuring Map Manager to fit a line In FIJI</h3>
+
+<p>You need to specify the location of your FIJI program. This is most easily done with a Map Manager <a href="/mapmanager/user-files/">User File</a>. The file needs to contain a line like this...</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text"># specify the location of your FIJI executable. Please use a lifeline version for now.
+#mac
+root:stackdb2:options:gFijiPath=&quot;/Users/cudmore/Fiji.app/Contents/MacOS/Imagej-macosx&quot;
+#windows
+#root:stackdb2:options:gFijiPath=&quot;C:\Users\cudmore.linden-image2\Desktop\Fiji.app\fiji-win64.exe&quot;
+</code></pre></div>
 
 <div class="post-tags">
   
@@ -199,7 +217,7 @@
 
    <!--
    <BR>
-   <a href="_posts/2015-05-21-FItting-segments-in-Fiji.pdf">print pdf</a>
+   <a href="_posts/2015-05-21-fItting-segments-in-fiji.pdf">print pdf</a>
    <BR>
    -->
     

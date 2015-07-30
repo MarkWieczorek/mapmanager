@@ -22,7 +22,7 @@ The main Map Manager panel shows a list of open maps on the left. When a map is 
  2. Initialize Map Manager with the main menu 'mm3 -> Load User File'
  
 ####1. Pre-process your raw data so Map Manager can import it
- - Map manager will only import single channel stacks. If your stacks have two color channels, they need to be de-interleaved into two different .tif files (one for each color channel). See [bALignBatch][14] for a Fiji plugin that does this.
+ - Map manager will only import single channel stacks. If your stacks have two color channels, they need to be de-interleaved into two different .tif files (one for each color channel). See [bAlignBatch][14] for a Fiji plugin that does this.
 
 ####2. Make a new map
  1. Fill in a new map name and choose the number of channels for each stack in your map.
@@ -45,7 +45,9 @@ The main Map Manager panel shows a list of open maps on the left. When a map is 
 
 ####3. Create a line segment in each session/stack of the map
 Line segments are first specified with control points and then fit using a custom FIJI plugin. Before fitting a line in FIJI, you need to install  the [Bob_Neurite_Tracer_v3][14] plugin in FIJI and you need to specify the path to your FIJI application in a [user file][3].
- 
+
+See [Fitting Segment In Fiji][15] for help on FIJI versions, installing the plugin and specifying the FIJI application path in Map Manager.
+
  1. Double-click the first session in your map (in the main Map Manager panel) to open a [stack][2] window.
  2. Create a line segment by follow the instruction in [annotating a stack][4].
  3. Repeat steps #1 and #2 for each session in your map. Making the same line segment in each session. As you make control points, be sure they are in the same direction along the segment for each session. For some help with the ordering of your control points, open the 'stack db options' panel and turn 'Control Point Help' 'On'.
@@ -145,3 +147,4 @@ Thus, there are two cases:
 [12]: /mapmanager/map-plot/
 [13]: /mapmanager/main-panel/
 [14]: https://github.com/cudmore/bob-fiji-plugins
+[15]: /mapmanager/fitting-segments-in-fiji

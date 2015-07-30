@@ -140,7 +140,7 @@
             <li data-order=""><a href="/mapmanager/File-format">File format</a></li>
         
             
-            <li data-order=""><a href="/mapmanager/FItting-segments-in-Fiji">Fitting segments in Fiji</a></li>
+            <li data-order=""><a href="/mapmanager/fItting-segments-in-fiji">Fitting segments in Fiji</a></li>
         
             
             <li data-order="3"><a href="/mapmanager/user-files">User files</a></li>
@@ -180,7 +180,7 @@
 <h4 id="1.-pre-process-your-raw-data-so-map-manager-can-import-it">1. Pre-process your raw data so Map Manager can import it</h4>
 
 <ul>
-<li>Map manager will only import single channel stacks. If your stacks have two color channels, they need to be de-interleaved into two different .tif files (one for each color channel). See <a href="https://github.com/cudmore/bob-fiji-plugins">bALignBatch</a> for a Fiji plugin that does this.</li>
+<li>Map manager will only import single channel stacks. If your stacks have two color channels, they need to be de-interleaved into two different .tif files (one for each color channel). See <a href="https://github.com/cudmore/bob-fiji-plugins">bAlignBatch</a> for a Fiji plugin that does this.</li>
 </ul>
 
 <h4 id="2.-make-a-new-map">2. Make a new map</h4>
@@ -216,6 +216,8 @@
 <h4 id="3.-create-a-line-segment-in-each-session/stack-of-the-map">3. Create a line segment in each session/stack of the map</h4>
 
 <p>Line segments are first specified with control points and then fit using a custom FIJI plugin. Before fitting a line in FIJI, you need to install  the <a href="https://github.com/cudmore/bob-fiji-plugins">Bob_Neurite_Tracer_v3</a> plugin in FIJI and you need to specify the path to your FIJI application in a <a href="/mapmanager/user-files/">user file</a>.</p>
+
+<p>See <a href="/mapmanager/fitting-segments-in-fiji">Fitting Segment In Fiji</a> for help on FIJI versions, installing the plugin and specifying the FIJI application path in Map Manager.</p>
 
 <ol>
 <li>Double-click the first session in your map (in the main Map Manager panel) to open a <a href="/mapmanager/stack/">stack</a> window.</li>
