@@ -140,7 +140,7 @@
             <li data-order=""><a href="/mapmanager/File-format">File format</a></li>
         
             
-            <li data-order=""><a href="/mapmanager/FItting-segments-in-Fiji%20copy">Fitting segments in Fiji</a></li>
+            <li data-order=""><a href="/mapmanager/FItting-segments-in-Fiji">Fitting segments in Fiji</a></li>
         
             
             <li data-order="3"><a href="/mapmanager/user-files">User files</a></li>
@@ -168,20 +168,25 @@
 
 <p>A map is a sequence of <a href="/mapmanager/stack/">stacks</a>. You create a map by appending stacks from the <a href="/mapmanager/stack-browser/">stack browser</a>. Once a map is made it can be opened, saved, annotated, and browsed using the main <a href="/mapmanager/main-panel/">map maker panel</a>.</p>
 
-<p>In the Map Manager 3 window, the list of open maps is on the left. When a map is selected, a list of sessions within the map is shown on the right.</p>
+<p>The main Map Manager panel shows a list of open maps on the left. When a map is selected (rr22 in this example), a list of sessions in the map are shown on the right (in this example there are 6 sessions).</p>
 
-<p>Double-click a session to open a <a href="/mapmanager/stack/">stack</a> window and begin adding <a href="/mapmanager/annotating-a-stack/">3D annotations</a>.</p>
+<h4 id="open-and-initialize-map-manager">Open and initialize Map Manager</h4>
+
+<ol>
+<li>Open Igor Pro with bStack.ipf</li>
+<li>Initialize Map Manager with the main menu &#39;mm3 -&gt; Load User File&#39;</li>
+</ol>
 
 <h4 id="1.-pre-process-your-raw-data-so-map-manager-can-import-it">1. Pre-process your raw data so Map Manager can import it</h4>
 
 <ul>
-<li>Map manager will only import single channel stacks. If your stacks are two color channels, they need to be de-interleaved into two different .tif files (one for each color channel). See <a href="https://github.com/cudmore/bob-fiji-plugins">bALignBatch</a> for a Fiji plugin that does this.</li>
+<li>Map manager will only import single channel stacks. If your stacks have two color channels, they need to be de-interleaved into two different .tif files (one for each color channel). See <a href="https://github.com/cudmore/bob-fiji-plugins">bALignBatch</a> for a Fiji plugin that does this.</li>
 </ul>
 
 <h4 id="2.-make-a-new-map">2. Make a new map</h4>
 
 <ol>
-<li>Choose the number of channels for each stack in your map and fill in a new map name.</li>
+<li>Fill in a new map name and choose the number of channels for each stack in your map.</li>
 <li>Create a new map with &#39;<span style="color:green">New Map</span>&#39;.</li>
 <li>Append a stack from the <a href="/mapmanager/stack-browser/">Stack Browser</a> with &#39;Append Stack&#39;.</li>
 <li>Repeat #3 for each stack.</li>
@@ -191,7 +196,7 @@
 <h4 id="important"><span style="color:red">Important</span></h4>
 
 <ul>
-<li>When you make a map, you need to choose the &#39;number of channels&#39; in each stack/session. Map Manager will only allow one choice of &#39;number of channels&#39; per map. You cannot mix one and two channel stacks within a map.</li>
+<li>When you make a map, you need to choose the &#39;Number Of Channels&#39; in each stack/session. Map Manager will only allow one choice of &#39;Number Of Channels&#39; per map. You cannot mix one and two channel stacks within a map.</li>
 <li>Make sure the sessions in your map are imported in the correct order. It is hard to change the order later.</li>
 <li>Make sure the scale of each imported stack is correct. It is hard to change the scale later.</li>
 <li>New maps are saved to a default hard-drive folder. The default folder can be specified in a <a href="/mapmanager/user-files/">user file</a> file. Right-click on a map name and select &#39;Show On HDD&#39; to see the hard-drive folder where the map is saved.
@@ -209,6 +214,8 @@
 </ul>
 
 <h4 id="3.-create-a-line-segment-in-each-session/stack-of-the-map">3. Create a line segment in each session/stack of the map</h4>
+
+<p>Line segments are first specified with control points and then fit using a custom FIJI plugin. Before fitting a line in FIJI, you need to install  the <a href="https://github.com/cudmore/bob-fiji-plugins">Bob_Neurite_Tracer_v3</a> plugin in FIJI and you need to specify the path to your FIJI application in a <a href="/mapmanager/user-files/">user file</a>.</p>
 
 <ol>
 <li>Double-click the first session in your map (in the main Map Manager panel) to open a <a href="/mapmanager/stack/">stack</a> window.</li>
@@ -234,7 +241,7 @@
 </ul></li>
 </ol>
 
-<p class="tip"><B>Tip.</B> You can see how your segments are connected using the 'Segment Map' button in the main Map Manager panel.</p>
+<p class="tip"><B>Tip.</B> You can see how your segments are connected by plotting a 'Segment Map' from the main Map Manager panel.</p>
    
 
 <h4 id="5.-mark-spines-in-each-timepoint">5. Mark spines in each timepoint</h4>
@@ -296,7 +303,7 @@ This will make automatic connections of all spines from the first session to the
 
 <ol>
 <li><p>Your maps _d1, _d2 etc. all have the same exact sessions
-This is simple, use &#39;Batch import bSpine map&#39;. You will be prompted for the first map (you should select _d1). Once this is done, you need to hit all the buttons in &#39;(2) fix&#39; to complete the import and then &#39;save map&#39; in the main map manager 3 panel.</p></li>
+This is simple, use &#39;Batch import bSpine map&#39;. You will be prompted for the first map (you should select _d1). Once this is done, you need to hit all the buttons in &#39;(2) fix&#39; to complete the import and then &#39;save map&#39; in the main Map Manager panel.</p></li>
 <li><p>Your maps _d1, _d2 etc. have different sessions.
 <span style="color:red">This DOES NOT WORK.</span></p></li>
 </ol>

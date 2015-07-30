@@ -14,22 +14,25 @@ tags:
 
 A map is a sequence of [stacks][2]. You create a map by appending stacks from the [stack browser][1]. Once a map is made it can be opened, saved, annotated, and browsed using the main [map maker panel][13].
 
-In the Map Manager 3 window, the list of open maps is on the left. When a map is selected, a list of sessions within the map is shown on the right.
+The main Map Manager panel shows a list of open maps on the left. When a map is selected (rr22 in this example), a list of sessions in the map are shown on the right (in this example there are 6 sessions).
 
-Double-click a session to open a [stack][2] window and begin adding [3D annotations][4].
+####Open and initialize Map Manager 
 
+ 1. Open Igor Pro with bStack.ipf
+ 2. Initialize Map Manager with the main menu 'mm3 -> Load User File'
+ 
 ####1. Pre-process your raw data so Map Manager can import it
- - Map manager will only import single channel stacks. If your stacks are two color channels, they need to be de-interleaved into two different .tif files (one for each color channel). See [bALignBatch][14] for a Fiji plugin that does this.
+ - Map manager will only import single channel stacks. If your stacks have two color channels, they need to be de-interleaved into two different .tif files (one for each color channel). See [bALignBatch][14] for a Fiji plugin that does this.
 
 ####2. Make a new map
- 1. Choose the number of channels for each stack in your map and fill in a new map name.
+ 1. Fill in a new map name and choose the number of channels for each stack in your map.
  2. Create a new map with '<span style="color:green">New Map</span>'.
  3. Append a stack from the [Stack Browser][1] with 'Append Stack'.
  4. Repeat #3 for each stack.
  5. Save the map with 'Save Map' button.
  
 ####<span style="color:red">Important</span>
- - When you make a map, you need to choose the 'number of channels' in each stack/session. Map Manager will only allow one choice of 'number of channels' per map. You cannot mix one and two channel stacks within a map.
+ - When you make a map, you need to choose the 'Number Of Channels' in each stack/session. Map Manager will only allow one choice of 'Number Of Channels' per map. You cannot mix one and two channel stacks within a map.
  - Make sure the sessions in your map are imported in the correct order. It is hard to change the order later.
  - Make sure the scale of each imported stack is correct. It is hard to change the scale later.
  - New maps are saved to a default hard-drive folder. The default folder can be specified in a [user file][3] file. Right-click on a map name and select 'Show On HDD' to see the hard-drive folder where the map is saved.
@@ -41,6 +44,8 @@ Double-click a session to open a [stack][2] window and begin adding [3D annotati
 
 
 ####3. Create a line segment in each session/stack of the map
+Line segments are first specified with control points and then fit using a custom FIJI plugin. Before fitting a line in FIJI, you need to install  the [Bob_Neurite_Tracer_v3][14] plugin in FIJI and you need to specify the path to your FIJI application in a [user file][3].
+ 
  1. Double-click the first session in your map (in the main Map Manager panel) to open a [stack][2] window.
  2. Create a line segment by follow the instruction in [annotating a stack][4].
  3. Repeat steps #1 and #2 for each session in your map. Making the same line segment in each session. As you make control points, be sure they are in the same direction along the segment for each session. For some help with the ordering of your control points, open the 'stack db options' panel and turn 'Control Point Help' 'On'.
@@ -58,7 +63,7 @@ Double-click a session to open a [stack][2] window and begin adding [3D annotati
    - Select the destination timepoint segment (for example, timepoint 2)
    - In the destination timepoint (e.g. timepoint 2), press keyboard 'p' for Persistent.
 
-<p class="tip"><B>Tip.</B> You can see how your segments are connected using the 'Segment Map' button in the main Map Manager panel.</p>
+<p class="tip"><B>Tip.</B> You can see how your segments are connected by plotting a 'Segment Map' from the main Map Manager panel.</p>
    
 ####5. Mark spines in each timepoint
  1. open a single timepoint by double clicking a session in the list.
@@ -106,7 +111,7 @@ Importing bSpine maps is tricky. The problem is if your original maps for one ti
 Thus, there are two cases:
 
  1. Your maps _d1, _d2 etc. all have the same exact sessions
- 	This is simple, use 'Batch import bSpine map'. You will be prompted for the first map (you should select _d1). Once this is done, you need to hit all the buttons in '(2) fix' to complete the import and then 'save map' in the main map manager 3 panel.
+ 	This is simple, use 'Batch import bSpine map'. You will be prompted for the first map (you should select _d1). Once this is done, you need to hit all the buttons in '(2) fix' to complete the import and then 'save map' in the main Map Manager panel.
  	
  2. Your maps _d1, _d2 etc. have different sessions.
 	<span style="color:red">This DOES NOT WORK.</span>
