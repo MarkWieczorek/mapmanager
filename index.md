@@ -24,7 +24,9 @@ Map Manager is software that annotates and analyzes time-series of 3D image stac
 
 ####Getting started
 
-Have a look at some of the workflows including ... 
+- [Getting started][5]
+
+Then, have a look at some of the workflows including ... 
 
 - [Making a map][3]
 - [Simple stack database][4]
@@ -45,3 +47,4 @@ All code and documentation written by [Robert Cudmore][2]
 [2]: http://robertcudmore.org
 [3]: /mapmanager/making-a-map/ "making-a-map"
 [4]: /mapmanager/simple-stack-db/ "simple-stack-db"
+[5]: /mapmanager/getting-started/

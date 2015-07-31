@@ -40,6 +40,8 @@ Select your loaded directory on the left  and the loaded stacks will be shown on
 
 Double click a stack in the list on the right to open a [stack][3] window.
 
+<p class="tip"><B>Tip.</B> The order of stacks can be sorted by selecting columns in the stack list. To sort by date, select 'Date' in the columns header. <b>This ordering is critical when batch importing a list of stacks into a map</B></p>
+
 
 [1]: /mapmanager/stack-browser/
 [2]: http://www.robertcudmore.org/maptracker/v2/stack-browser/

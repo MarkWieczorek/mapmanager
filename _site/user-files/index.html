@@ -143,7 +143,7 @@
             <li data-order="2"><a href="/mapmanager/faq">FAQ</a></li>
         
             
-            <li data-order=""><a href="/mapmanager/file-format">File format</a></li>
+            <li data-order=""><a href="/mapmanager/File-format">File format</a></li>
         
             
             <li data-order=""><a href="/mapmanager/fItting-segments-in-fiji">Fitting segments in Fiji</a></li>
@@ -170,9 +170,11 @@
 
 <p>User files are text files where global options are specified and then loaded and applied within Map Manager. This is useful when you have mutiple users within one Map Manager installation.</p>
 
-<p>User files are loaded using the main menu &#39;mm3 -&gt; Load User&#39;</p>
+<p>User files are loaded using the main menu &#39;mm3 -&gt; Load User&#39; or in the <a href="/mapmanager/hdd-paths">Hard Drive Paths</a> panel.</p>
 
-<h4 id="rules">Rules</h4>
+<p><strong>Important.</strong> When you load a user file, anything specified in the file will <strong>override</strong> existing options.</p>
+
+<h3 id="rules">Rules</h3>
 
 <p>Make sure there is NO space surround the &#39;=&#39; sign. </p>
 
@@ -188,16 +190,23 @@
 <li>BAD: root:stackdb2:options:gFijiPath=&ldquo;C:\Users\cudmore.linden-image2\Desktop\Fiji.app\fiji-win64.exe&rdquo;</li>
 </ul>
 
+<h3 id="some-useful-options">Some useful options</h3>
+
 <h4 id="specify-default-user-folder-to-load/save-maps:">Specify default user folder to load/save maps:</h4>
-<div class="highlight"><pre><code class="language-text" data-lang="text">root:MapManager3:gMapDriveDir = &quot;vasculature:Users:cudmore:Documents:MapManager3:&quot;
+<div class="highlight"><pre><code class="language-text" data-lang="text">root:MapManager3:gMapDriveDir=&quot;vasculature:Users:cudmore:Documents:MapManager3:&quot;
 </code></pre></div>
 <h4 id="the-default-radius-of-new-segments-(um)">The default radius of new segments (um)</h4>
 <div class="highlight"><pre><code class="language-text" data-lang="text">root:line2:options:gDefaultSegmentRadius=0.3
 </code></pre></div>
-<h4 id="the-maximum-distance-along-a-segment-when-automatically-connecting-objects-(um)">The maximum distance along a segment when automatically connecting objects (um)</h4>
-<div class="highlight"><pre><code class="language-text" data-lang="text">root:ObjMap:options:gMaxPDistConnDist=3
+<h4 id="the-maximum-distance-along-a-segment-when-automatically-connecting-objects-in-a-map-(um)">The maximum distance along a segment when automatically connecting objects in a map (um)</h4>
+
+<p>Objects will only be connected if their position on the segment line is <strong>less</strong> than this.
+    root:ObjMap:options:gMaxPDistConnDist=3</p>
+
+<h4 id="the-number-of-segment-points-to-search-when-auto-connecting-a-spine">The number of segment points to search when auto-connecting a spine</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">root:StackDB2:options:gLinePointsToSearch=6
 </code></pre></div>
-<h4 id="here-is-an-example-user-file...">Here is an example user file...</h4>
+<h3 id="here-is-an-example-user-file...">Here is an example user file...</h3>
 <div class="highlight"><pre><code class="language-text" data-lang="text">#mac
 root:stackdb2:options:gFijiPath=&quot;/Applications/Fiji.app/Contents/MacOS/Imagej-macosx&quot;
 #windows

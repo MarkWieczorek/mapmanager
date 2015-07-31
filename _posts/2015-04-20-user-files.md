@@ -10,9 +10,11 @@ tags:
 
 User files are text files where global options are specified and then loaded and applied within Map Manager. This is useful when you have mutiple users within one Map Manager installation.
 
-User files are loaded using the main menu 'mm3 -> Load User'
+User files are loaded using the main menu 'mm3 -> Load User' or in the [Hard Drive Paths][1] panel.
 
-####Rules
+**Important.** When you load a user file, anything specified in the file will **override** existing options.
+
+###Rules
 Make sure there is NO space surround the '=' sign. 
 
  - GOOD: root:line2:options:gDefaultSegmentRadius=0.35
@@ -23,16 +25,22 @@ Make sure your text editor is using simple double quotes
  - GOOD: root:stackdb2:options:gFijiPath="C:\Users\cudmore.linden-image2\Desktop\Fiji.app\fiji-win64.exe"
  - BAD: root:stackdb2:options:gFijiPath=&ldquo;C:\Users\cudmore.linden-image2\Desktop\Fiji.app\fiji-win64.exe&rdquo;
  
+###Some useful options
+
 ####Specify default user folder to load/save maps:
-    root:MapManager3:gMapDriveDir = "vasculature:Users:cudmore:Documents:MapManager3:"
+    root:MapManager3:gMapDriveDir="vasculature:Users:cudmore:Documents:MapManager3:"
 
 ####The default radius of new segments (um)
 	root:line2:options:gDefaultSegmentRadius=0.3
 
-####The maximum distance along a segment when automatically connecting objects (um)
+####The maximum distance along a segment when automatically connecting objects in a map (um)
+Objects will only be connected if their position on the segment line is **less** than this.
 	root:ObjMap:options:gMaxPDistConnDist=3
 
-####Here is an example user file...
+####The number of segment points to search when auto-connecting a spine
+	root:StackDB2:options:gLinePointsToSearch=6
+
+###Here is an example user file...
 
 	#mac
 	root:stackdb2:options:gFijiPath="/Applications/Fiji.app/Contents/MacOS/Imagej-macosx"
@@ -110,3 +118,4 @@ Make sure your text editor is using simple double quotes
 	
 	#“”
 	
+[1]: /mapmanager/hdd-paths

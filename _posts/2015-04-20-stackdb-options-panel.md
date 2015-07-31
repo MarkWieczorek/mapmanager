@@ -19,7 +19,7 @@ The stack db options panel is split into two main sections, one short and one lo
 
 The top section allows you to save and load one set of stack db options.
 
-**Save.**
+**Save.** Save these options. The next time you run Map Manager, these options will be loaded.
 
 **Load.**
 
@@ -32,22 +32,22 @@ The top section allows you to save and load one set of stack db options.
 
 Here you can toggle options on and off when annotating a [stack][1] with a [stack db][2]. Each time you change an option (e.g. 'points') you need to press 'Apply To Top Stack Window' for the changes to take effect.
 
-**Points.** Toggle stack db objects on/off.
+**Points.** Toggle stack db objects.
 
-**Spine Line.**
+**Spine Line.** Toggle the line connecting the spine head to the segment radius.
 
-**Point mask.** Turn point masking on/off. By default, stack db objects are  shown and not shown based on the image plane you are viewing.
+**Point mask.** Turn point masking on/off. By default, stack db objects are shown and not shown (they are masked) based on the image plane you are viewing.
 
 **Tags.** In a stack window, the tags are the stack db point number. In a map, the tags are the **run** number of the point. See xxx.
 
-**Spine Intensity ROIs.**
+**Spine Intensity ROIs.** Toggle the three intensity analysis ROIs: spine, segment, and backbone. See [Intensity][4] analysis.
 
 **Real-time intensity analysis.**
 
 **Use segment color for all points.**
 
 
-**Line.**
+**Line.** Toggle the segment backbone line and radii lines.
 
 **Radii.**
 
@@ -55,7 +55,7 @@ Here you can toggle options on and off when annotating a [stack][1] with a [stac
 
 **Display Control Points**
 
-**Control Point Help**
+**Control Point Help** Use the 'On' and 'Off' buttons for some additional visual cues about your segment line fits. The end of the line fit is shown in red. This is useful when making the same segment across timepoints in a map. It helps you fit each segment in the same direction.
 
 **Grid Spacing (um)**
 
@@ -111,3 +111,4 @@ Here you can toggle options on and off when annotating a [stack][1] with a [stac
 [1]: /mapmanager/stack/
 [2]: /mapmanager/annotating-a-stack/
 [3]: /mapmanager/user-files/
+[4]: /mapmanager/intensity/

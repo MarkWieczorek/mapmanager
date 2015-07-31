@@ -73,7 +73,18 @@ Line segments are created in three steps:
 
 **Important:** When making a map, you will be associating individual line segments  from one session to the next. For segments that you will connect together in a map, make sure your control points are in the same general direction along each segment. If your control points go left to right in session 1, they should also go left to right in session 2.
 
+###Line segment radius
+
+Each line segment has a fixed radius in um. Spines are connected to this radius.
+
+To change the radius, double-click the radius for a segment and enter a new number. The radius of each segment is displayed in the 'r' column.
+
+Setting the radius will reconnect all your spines to that new radius while preserving the spine connection point to the line.
+
+To set all the radii of a run of connected segments, right click on the segment in the list and select 'Set run to same radius'.
+
 ###Line segment pivot points
+
 When in a map, line segments need a 'pivot point'. Specify a pivot point for a segment by clicking a point in the segment, right-click and select the 'Set As Pivot' menu.
 
 The pivot point should specify a region of the segment that is the same in all sessions. A good strategy is to choose a region of the segment near an obvious spine that is present in all sessions. Another strategy is to choose a pivot point where some other segment (dendrite) crosses near your segment as these tend to remain stable across time. Try and put the pivot point near the center of the segment, do not place it at either end. The pivot point is used to calculate a line distance along the segment (in um) which in turn will be used to auto-guess connections between objects (spines) across sessions.

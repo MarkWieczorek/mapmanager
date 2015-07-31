@@ -143,7 +143,7 @@
             <li data-order="2"><a href="/mapmanager/faq">FAQ</a></li>
         
             
-            <li data-order=""><a href="/mapmanager/file-format">File format</a></li>
+            <li data-order=""><a href="/mapmanager/File-format">File format</a></li>
         
             
             <li data-order=""><a href="/mapmanager/fItting-segments-in-fiji">Fitting segments in Fiji</a></li>
@@ -241,6 +241,16 @@ Click &#39;+&#39; button in the &#39;Line Segment&#39; group. This will create a
 <p><strong>Important:</strong> When making control points, they need to be in order along a segment. If you &#39;double-back&#39; a control point on the segment, the line fit with dumbly follow this ordering of control points. For help on the ordering of your control points, open the &#39;options&#39; panel and turn on &#39;Control Point Help&#39; with the &#39;On&#39; button. If it all gets confusing you can just delete all your control points and start over.</p>
 
 <p><strong>Important:</strong> When making a map, you will be associating individual line segments  from one session to the next. For segments that you will connect together in a map, make sure your control points are in the same general direction along each segment. If your control points go left to right in session 1, they should also go left to right in session 2.</p>
+
+<h3 id="line-segment-radius">Line segment radius</h3>
+
+<p>Each line segment has a fixed radius in um. Spines are connected to this radius.</p>
+
+<p>To change the radius, double-click the radius for a segment and enter a new number. The radius of each segment is displayed in the &#39;r&#39; column.</p>
+
+<p>Setting the radius will reconnect all your spines to that new radius while preserving the spine connection point to the line.</p>
+
+<p>To set all the radii of a run of connected segments, right click on the segment in the list and select &#39;Set run to same radius&#39;.</p>
 
 <h3 id="line-segment-pivot-points">Line segment pivot points</h3>
 

@@ -143,7 +143,7 @@
             <li data-order="2"><a href="/mapmanager/faq">FAQ</a></li>
         
             
-            <li data-order=""><a href="/mapmanager/file-format">File format</a></li>
+            <li data-order=""><a href="/mapmanager/File-format">File format</a></li>
         
             
             <li data-order=""><a href="/mapmanager/fItting-segments-in-fiji">Fitting segments in Fiji</a></li>
@@ -181,8 +181,12 @@
 <h3 id="installing-map-manager">Installing Map Manager</h3>
 
 <ul>
-<li>Once Igor Pro is installed, there is no installation of Map Manager, you just run the software. You need to get the source code from Bob.</li>
-<li>To fit lines in FIJI you will have to specify a hard-drive path to FIJI and install a plugin in FIJI. Please see <a href="/mapmanager/fItting-segments-in-fiji/">fitting segments in fiji</a>.</li>
+<li>Once Igor Pro is installed, there is no formal installation of Map Manager</li>
+<li>You need to get the source code from Bob.</li>
+<li>The source code will all be in one folder named bStack_date where &#39;date&#39; is todays date, something like 20150731.</li>
+<li>Run the software by double-clicking bStack.ipf from within your source code folder.</li>
+<li>Each user should have their own copy of the source code folder. Just make copies of the original into different user accounts.</li>
+<li>To fit lines in FIJI you will have to specify a hard-drive path to FIJI and install a plugin in FIJI. Please see <a href="/mapmanager/fitting-segments-in-fiji/">fitting segments in fiji</a>.</li>
 </ul>
 
 <h3 id="opening-map-manager">Opening Map Manager</h3>
@@ -191,8 +195,12 @@
 <li>Open bStack.ipf into Igor Pro (just double click the bStack.ipf file).</li>
 <li>Once in Igor Pro, click in the command window to compile Map Manager and activate the main menus.</li>
 <li>To score single timepoint stacks, selecting the main menu &#39;bStack -&gt; Stack Browser&#39; will open the <a href="/mapmanager/stack-browser/">Stack Browser</a> panel.</li>
-<li>To score timeseries of stacks (maps), selecting the main menu &#39;mm3 -&gt; Map Manager 3&#39; will open the <a href="/mapmanager/main-panel/">Map Manager panel</a>.</li>
+<li>To score timeseries of stacks (maps), selecting the main menu &#39;mm3 -&gt; Map Manager Panel&#39; will open the <a href="/mapmanager/main-panel/">Map Manager panel</a>.</li>
 </ul>
+
+<h3 id="map-manager-user-files">Map Manager user files</h3>
+
+<p>Map Manager <a href="/mapmanager/user-files/">user files</a> are text files that specify program defaults. While you can use Map Manager without loading a user file, you need to be especially careful to get your stack scale correct as this is different on each microscope.</p>
 
 <h3 id="closing-map-manager">Closing Map Manager</h3>
 

@@ -143,7 +143,7 @@
             <li data-order="2"><a href="/mapmanager/faq">FAQ</a></li>
         
             
-            <li data-order=""><a href="/mapmanager/file-format">File format</a></li>
+            <li data-order=""><a href="/mapmanager/File-format">File format</a></li>
         
             
             <li data-order=""><a href="/mapmanager/fItting-segments-in-fiji">Fitting segments in Fiji</a></li>
@@ -170,11 +170,17 @@
 
 <p>Line segments are fit in FIJI using Map Manager specified control points.</p>
 
-<h3 id="fiji-version">FIJI Version</h3>
+<h3 id="the-version-of-fiji-is-critical">The version of Fiji is critical</h3>
 
 <p>You are required to use ImageJ 1.47v, this corresponds to the &#39;Fiji Life-Line version, 2013 July 15&#39; on the main <a href="http://fiji.sc/Downloads">FIJI download page</a>.</p>
 
-<p>The reason we use this older version of FIJI is that newer versions of FIJI have undocumented changes to the backend JAVA programming interface. Until this is resolved, e will use an older version of FIJI.</p>
+<p>If you already have a newer version of Fiji installed, this is fine as two versions of Fiji can be installed. They just have to be in different hard-drive folders.</p>
+
+<p>Once downloaded, drag and drop the Fiji.app application folder to your user folder or to your desktop and then copy the Bob_Neurite_Tracer_v3 plugin to the &#39;plugins&#39; folder inside this Fiji.app application folder.</p>
+
+<p class="important"><B>Important.</B> Do <B>NOT</B> install Fiji into 'Program Files'.</p>
+
+<p>The reason we use this older version of Fiji is that newer versions of Fiji have undocumented changes to the backend JAVA programming interface. Until this is resolved, we will continue to use the older version of Fiji.</p>
 
 <p>Platform specific version can be downloaded here (these are slightly newer but seem to work)</p>
 
@@ -185,24 +191,38 @@
 
 <h3 id="installing-the-&#39;bob-neurite-tracer&#39;-plugin">Installing the &#39;Bob Neurite Tracer&#39; plugin</h3>
 
-<p>When you fit a line in FIJI from within Map Manager, you are using the FIJI plugin Bob_Neurite_Tracer_v3.java</p>
+<p>When you fit a line in Fiji from within Map Manager, you are using the Fiji plugin Bob_Neurite_Tracer_v3.java</p>
 
 <p>To install this plugin</p>
 
 <ol>
-<li>Download Bob_Neurite_Tracer_v3.java <a href="../images/Bob_Neurite_Tracer_v3.java">here</a> or from a Github repository <a href="https://github.com/cudmore/bob-fiji-plugins">here</a>.</li>
-<li>Copy Bob_Neurite_Tracer_v3.java into your FIJI plugins directory.</li>
+<li>Download Bob_Neurite_Tracer_v3.java <a href="../images/Bob_Neurite_Tracer_v3.java">here</a> or from our Github repository <a href="https://github.com/cudmore/bob-fiji-plugins">here</a>.</li>
+<li>Copy Bob_Neurite_Tracer_v3.java into your Fiji &#39;plugins&#39; folder.</li>
 </ol>
 
-<h3 id="configuring-map-manager-to-fit-a-line-in-fiji">Configuring Map Manager to fit a line In FIJI</h3>
+<h3 id="configuring-map-manager-to-fit-a-line-in-fiji">Configuring Map Manager to fit a line In Fiji</h3>
 
-<p>You need to specify the location of your FIJI program. This is most easily done with a Map Manager <a href="/mapmanager/user-files/">User File</a>. The file needs to contain a line like this...</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"># specify the location of your FIJI executable. Please use a lifeline version for now.
+<p>You need to specify the location of your Fiji program from within Map Manager. This is most easily done using the <a href="/mapmanager/hdd-paths">Hard Drive Paths</a> panel. Here are the details:</p>
+
+<ul>
+<li>Run Map Manager with the bStack.ipf file (this is how you always run Map Manager).</li>
+<li>Open the <a href="/mapmanager/hdd-paths">HDD Paths</a> panel using the main menu &#39;mm3 -&gt; Hard Drive Paths&#39;.</li>
+<li>In the Map Manager HDD Paths panel, specify the path to your Fiji Application with the &#39;Set&#39; button.</li>
+<li>Save these options with the green &#39;Save&#39; button. The next time you open Map Manager, the path to Fiji should be set.</li>
+</ul>
+
+<p>If that does not work, you can specify the location of your Fiji program in a Map Manager <a href="/mapmanager/user-files/">User File</a>. The user file needs to contain a line like this...</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text"># specify the location of your Fiji executable.
+#Please use a lifeline version for now.
 #mac
 root:stackdb2:options:gFijiPath=&quot;/Users/cudmore/Fiji.app/Contents/MacOS/Imagej-macosx&quot;
 #windows
 #root:stackdb2:options:gFijiPath=&quot;C:\Users\cudmore.linden-image2\Desktop\Fiji.app\fiji-win64.exe&quot;
 </code></pre></div>
+<p>Make sure the actual file exists. Don&#39;t assume the name of Fiji is &#39;fiji-win64.exe&#39;, this name changes from version to version of Fiji. If there is an error in your path, you WILL get an error when fitting lines in Map Manager.</p>
+
+<p class="important"><B>Important.</B> If your line fits do not work from within Map Manager, it is either because you have not specified the full path to your Fiji executable or you have not installed the Bob_Neurite_Tracer_v3.java plugin properly.</p>
+
 
 <div class="post-tags">
   

@@ -41,7 +41,7 @@ The main Map Manager panel shows a list of open maps on the left. When a map is 
  - As you import stacks from the [stack browser][1] there are some rules that must be followed. You will be prompted when you break these rules. In particular:
    1. The stack scale must be set. Set the scale of a [stack][2] in a stack window with shift+p.
    2. The stack must be loaded. Double click the stack in the [stack browser][1] to load a stack.
-
+   3. When importing 2 channel stacks, both channels must be loaded and you must select the first channel (ending in _ch1) in the stack browser.
 
 ####3. Create a line segment in each session/stack of the map
 Line segments are first specified with control points and then fit using a custom FIJI plugin. Before fitting a line in FIJI, you need to install  the [Bob_Neurite_Tracer_v3][14] plugin in FIJI and you need to specify the path to your FIJI application in a [user file][3].
