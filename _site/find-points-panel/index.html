@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
 
-        <title>Map Manager : Intensity</title>
+        <title>Map Manager : Find Points Panel</title>
         <meta name="description" content="">
 
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
@@ -166,40 +166,52 @@
 
                     <div id=content class=span10>
                         <div class=page-header>
-    <h3>Intensity
+    <h3>Find Points Panel
         
     </h3>
 </div>
 
-<h3 id="concepts">Concepts</h3>
+<p><strong>New on August 2, 2015</strong></p>
 
-<p>All intensity analysis is performed by summing the intensity values of pixels within a number of 3D regions-of-interest (ROI). Further analysis is then derived by performing algebra between these ROIs.</p>
+<p>The find points panel allows you to browse all spines between two timepoints.</p>
 
-<p>By constructing each ROI to have the same number of pixels. We can make meaningful divisions and subtractions between their sums.</p>
+<p>Open the find points panel by right-clicking a spine in a map and selecting &#39;Find Points&#39;.</p>
 
-<h4 id="spine-roi">Spine ROI</h4>
-
-<p>A polygon surrounding a spine. Starts as a retangle and then union with the backbone ROI is subtracted. Two parameters specify spine ROI: width and extend head.</p>
-
-<h4 id="background-roi">Background ROI</h4>
-
-<p>Same size as spine ROI, positioned near spine to minimize background intensity.</p>
-
-<h4 id="backbone-roi">Backbone ROI</h4>
-
-<p>In the region of the spine connection</p>
-
-<h3 id="parameters">Parameters</h3>
+<p><IMG class="img-float-left" SRC="../images/mm3/find-points-panel.png" WIDTH="400"></p>
 
 <ul>
-<li><strong>Spine width (um).</strong> Width of spine ROI centered on the spine line.</li>
-<li><strong>Extend head (um).</strong> Distance to extend the spine ROI beyond the end of the spine line.</li>
-<li><strong>+/- Planes.</strong> The sum of each spine, backbone, and background ROI is expanded in the Z-dimension before the sum of pixels is taken.</li>
+<li>The find points panel displays a list of all spines in the source timepoint (sIdx).</li>
+<li>For each of these spines, it shows if it is connected to the destination timepoint (dIdx). It will color the dIdx cell red if there is no connection.</li>
+<li>Any remaining spines in the destination timepoint (spines not connected to the source timepoint) will be displayed at the bottom of the list.</li>
 </ul>
 
-<h3 id="names-of-analysis-outputs">Names of analysis outputs</h3>
+<h4 id="interface">Interface</h4>
 
-<p>The following table matches what is displayed in the Map Manager Stack Plot <a href="/mapmanager/plot-panel/">plot panel</a>. [TODO: keep this updated in a google spreadhseet and display .pdf here]</p>
+<p><strong>Source.</strong> Source timepoint</p>
+
+<p><strong>Destination.</strong> Destination timepoint</p>
+
+<p><strong>Segment ID.</strong> Limit the list to one segment ID</p>
+
+<p><strong>All Segments.</strong> Generate the list for all segments (all objects in the timepoint).</p>
+
+<h4 id="interaction">Interaction</h4>
+
+<ul>
+<li>Select an object in the list and it will be propagated to all <a href="/mapmanager/run-plot/">run</a> and <a href="/mapmanager/map-plot/">map</a> plots.</li>
+<li>Use the keyboard to scroll through the list.</li>
+<li>Use left/right arrows to flash the selected object again.</li>
+</ul>
+
+<div class="print-page-break"></div>
+
+<p>When used with a spine run, find points is a reliable way to check the connections between all objects in two timepoints.</p>
+
+<p>All objects in the source timepoint are in the list, followed by any remaining objects in destination timepoint that were not connected to an object in the source timepoints.</p>
+
+<p>By sorting the list with the destination position (dpDist), you get a consice list of all objects in the destination timepoint.</p>
+
+<p><IMG class="img-float-left" SRC="../images/mm3/find-points-example.png" WIDTH="1000"></p>
 
 
 <div class="post-tags">
@@ -212,7 +224,7 @@
   
   
   
-    <a href="/mapmanager/tags/#Analysis">Analysis</a>
+    <a href="/mapmanager/tags/#Interface">Interface</a>
   
 
    <!--
@@ -221,7 +233,7 @@
 
    <!--
    <BR>
-   <a href="_posts/2015-07-25-intensity.pdf">print pdf</a>
+   <a href="_posts/2015-08-02-find-points-panel.pdf">print pdf</a>
    <BR>
    -->
     
