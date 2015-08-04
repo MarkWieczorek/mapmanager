@@ -12,11 +12,11 @@ tags:
 
 This describes a workflow for annotating 3D points in a single stack. Please see [making a map][3] to collect a sequence of stacks into a timeseries map.
 
-####1. Open and initialize bStack
+####1. Open and initialize Map Manager
 
-- Open bStack.ipf in Igor Pro (double-click the bStack desktop icon).
+- Open Map Manager in Igor Pro (double-click the Map Manager.ipf file).
 - Click in the Igor Pro command window to compile (the command window is titled 'Untitled').
-- <b>Important:</b> Initialize bStack using menu 'bStack -> Load User' and select <b>'yunju_branch_points.txt'</b>  
+- <b>Important:</b> Initialize Map Manager using menu 'bStack -> Load User' and select <b>'yunju_branch_points.txt'</b>  
     This will open the [Stack Browser][2] window
 
 ####2. Load a stack

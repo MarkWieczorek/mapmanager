@@ -39,7 +39,7 @@ To install this plugin
  
 You need to specify the location of your Fiji program from within Map Manager. This is most easily done using the [Hard Drive Paths][5] panel. Here are the details:
 
- - Run Map Manager with the bStack.ipf file (this is how you always run Map Manager).
+ - Run Map Manager with the MapManager.ipf file (this is how you always run Map Manager).
  - Open the [HDD Paths][5] panel using the main menu 'mm3 -> Hard Drive Paths'.
  - In the Map Manager HDD Paths panel, specify the path to your Fiji Application with the 'Set' button.
  - Save these options with the green 'Save' button. The next time you open Map Manager, the path to Fiji should be set.

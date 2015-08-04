@@ -18,7 +18,7 @@ The main Map Manager panel shows a list of open maps on the left. When a map is 
 
 ####Open and initialize Map Manager 
 
- 1. Open Igor Pro with bStack.ipf
+ 1. Open Igor Pro with MapManager.ipf
  2. Initialize Map Manager with the main menu 'mm3 -> Load User File'
  
 ####1. Pre-process your raw data so Map Manager can import it
