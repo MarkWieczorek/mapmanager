@@ -186,13 +186,13 @@
 <li>Initialize Map Manager with the main menu &#39;mm3 -&gt; Load User File&#39;</li>
 </ol>
 
-<h4 id="1.-pre-process-your-raw-data-so-map-manager-can-import-it">1. Pre-process your raw data so Map Manager can import it</h4>
+<h4 id="1-pre-process-your-raw-data-so-map-manager-can-import-it">1. Pre-process your raw data so Map Manager can import it</h4>
 
 <ul>
 <li>Map manager will only import single channel stacks. If your stacks have two color channels, they need to be de-interleaved into two different .tif files (one for each color channel). See <a href="https://github.com/cudmore/bob-fiji-plugins">bAlignBatch</a> for a Fiji plugin that does this.</li>
 </ul>
 
-<h4 id="2.-make-a-new-map">2. Make a new map</h4>
+<h4 id="2-make-a-new-map">2. Make a new map</h4>
 
 <ol>
 <li>Fill in a new map name and choose the number of channels for each stack in your map.</li>
@@ -223,7 +223,7 @@
 </ol></li>
 </ul>
 
-<h4 id="3.-create-a-line-segment-in-each-session/stack-of-the-map">3. Create a line segment in each session/stack of the map</h4>
+<h4 id="3-create-a-line-segment-in-each-session-stack-of-the-map">3. Create a line segment in each session/stack of the map</h4>
 
 <p>Line segments are first specified with control points and then fit using a custom FIJI plugin. Before fitting a line in FIJI, you need to install  the <a href="https://github.com/cudmore/bob-fiji-plugins">Bob_Neurite_Tracer_v3</a> plugin in FIJI and you need to specify the path to your FIJI application in a <a href="/mapmanager/user-files/">user file</a>.</p>
 
@@ -238,7 +238,7 @@
 
 <p class="tip"><B>Tip.</B> You can open a stack run by right-clicking on a session and selecting 'Plot Run +- All'. Bring up the left control panel for each stack with keyboard'[' and follow the steps above. This way, you can see the line segments you are making in each session of your map.</p>
 
-<h4 id="4.-connect-your-line-segments-together">4. Connect your line segments together</h4>
+<h4 id="4-connect-your-line-segments-together">4. Connect your line segments together</h4>
 
 <ol>
 <li>Close all stack windows using the <span style="color:blue">Close Windows</span> button in the main Map Manager panel.</li>
@@ -256,7 +256,7 @@
 <p class="tip"><B>Tip.</B> You can see how your segments are connected by plotting a 'Segment Map' from the main Map Manager panel.</p>
    
 
-<h4 id="5.-mark-spines-in-each-timepoint">5. Mark spines in each timepoint</h4>
+<h4 id="5-mark-spines-in-each-timepoint">5. Mark spines in each timepoint</h4>
 
 <ol>
 <li>open a single timepoint by double clicking a session in the list.</li>
@@ -266,7 +266,7 @@
 <p class="tip"><B>Tip.</B> As you are working, keep your eye on the Igor command window. Any small warnings will show up here. For example ...</p>
    
 
-<h4 id="6.-auto-connect-spines-from-one-timepoint-to-the-next">6. Auto connect spines from one timepoint to the next</h4>
+<h4 id="6-auto-connect-spines-from-one-timepoint-to-the-next">6. Auto connect spines from one timepoint to the next</h4>
 
 <ul>
 <li>Open a &#39;Spine Map&#39; from the main Map Manager Panel.</li>
@@ -275,7 +275,7 @@ This will make automatic connections of all spines from the first session to the
 <li>Repeat this process for each pairwise session in your stack. You can right-click and select &#39;Connect All&#39; to connect spines/objects through the entire map.</li>
 </ul>
 
-<h4 id="7.-check-the-auto-spine-connections-and-edit-as-necessary">7. Check the auto spine connections and edit as necessary</h4>
+<h4 id="7-check-the-auto-spine-connections-and-edit-as-necessary">7. Check the auto spine connections and edit as necessary</h4>
 
 <p>This is the core of Map Manager and you will spend most of your time doing this. You need to verify the auto connections of each spine and you need to do this between <strong>each</strong> timepoint in your map. If your map has 4 timepoints, you need to verify the auto spine connections between timepoint 1-2, timepoint 2-3, and timepoint 3-4.</p>
 
@@ -286,7 +286,7 @@ This will make automatic connections of all spines from the first session to the
 <li>Correct any errors in the spine dynamics using keyboard &#39;a&#39; for addition, &#39;s&#39; for subtraction, and &#39;p&#39; for persistence. See <a href="/mapmanager/run-plot/">run plot</a> for details.</li>
 </ul>
 
-<h4 id="8.-review-your-work-by-using-search-to-query-all-additions-and-subtractions">8. Review your work by using search to query all additions and subtractions</h4>
+<h4 id="8-review-your-work-by-using-search-to-query-all-additions-and-subtractions">8. Review your work by using search to query all additions and subtractions</h4>
 
 <ul>
 <li>Open the <a href="/mapmanager/search-panel/">search panel</a> from the main Map Manager panel with the &#39;Search&#39; button.</li>
@@ -303,9 +303,9 @@ This will make automatic connections of all spines from the first session to the
 <BR>
 <BR></p>
 
-<h2 id="do-not-read-below-here-!!!!">DO NOT READ BELOW HERE !!!!</h2>
+<h2 id="do-not-read-below-here">DO NOT READ BELOW HERE !!!!</h2>
 
-<h3 id="[advanced]:-importing-a-bspine-map">[ADVANCED]: Importing a bSpine map</h3>
+<h3 id="advanced-importing-a-bspine-map">[ADVANCED]: Importing a bSpine map</h3>
 
 <p><IMG class="img-float-left" SRC="../images/mm3/mm3-import-bspine.png" WIDTH="275"></p>
 
