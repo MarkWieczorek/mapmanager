@@ -178,6 +178,12 @@
 <li>HDF5</li>
 </ul>
 
+<h3 id="text">Text</h3>
+
+<h4 id="python">Python</h4>
+
+<p>Map Manager saves all files as plani text files. Thus, it is relatively easy to extend the function of Map Manager by writing Python to load, parse, and analyze these text files. Please have a look at an <a href="https://github.com/cudmore/mapmanager/blob/gh-pages/_notebooks/MapManager.ipynb">example iPython notebook</a>. If you are interested in more information, please email Robert Cudmore.</p>
+
 <h3 id="hdf5">HDF5</h3>
 
 <p><a href="https://www.hdfgroup.org/HDF5/">HDF5</a> is an open source cross platform binary file format. It can be read from <a href="http://www.mathworks.com/help/matlab/hdf5-files.html">Matlab</a>, <a href="http://www.h5py.org">Python</a>, <a href="http://www.wavemetrics.com/products/igorpro/dataaccess/hdf5.htm">Igor Pro</a> and from a <a href="https://www.hdfgroup.org/products/hdf5_tools/#h5dist">command line</a>.</p>
@@ -233,7 +239,7 @@ f[myMap].values()[9].values()[0][0][1]
 #spine 1, spineLen2
 f[myMap].values()[9].values()[0][1][1]
 </code></pre></div>
-<p>In [64]: f[myMap].values()[9].values()
+<p>In [64]: f[myMap].values()<a href="https://github.com/cudmore/mapmanager/blob/gh-pages/_notebooks/MapManager.ipynb">9</a>.values()
 Out[64]: 
 [<HDF5 dataset "a5n_s0_Int1": shape (385, 41), type "<f4">,
  <HDF5 dataset "a5n_s0_Int2": shape (385, 41), type "<f4">,
@@ -255,7 +261,7 @@ Out[64]:
 <p>i got 385 from shape (how do i do this with code?)</p>
 
 <p>In [82]: for a in range(385):
-    print f[myMap].values()[9].values()[0]<a href="https://www.hdfgroup.org/HDF5/">a</a></p>
+    print f[myMap].values()<a href="https://github.com/cudmore/mapmanager/blob/gh-pages/_notebooks/MapManager.ipynb">9</a>.values()[0]<a href="https://www.hdfgroup.org/HDF5/">a</a></p>
 
 <h3 id="this-is-working">this is working</h3>
 <div class="highlight"><pre><code class="language-text" data-lang="text">mya=np.arange(385, dtype=np.float32)
