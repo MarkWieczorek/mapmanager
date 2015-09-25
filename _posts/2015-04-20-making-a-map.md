@@ -33,15 +33,15 @@ The main Map Manager panel shows a list of open maps on the left. When a map is 
  
 ####<span style="color:red">Important</span>
  - When you make a map, you need to choose the 'Number Of Channels' in each stack/session. Map Manager will only allow one choice of 'Number Of Channels' per map. You cannot mix one and two channel stacks within a map.
- - Make sure the sessions in your map are imported in the correct order. It is hard to change the order later.
  - Make sure the scale of each imported stack is correct. It is hard to change the scale later.
- - New maps are saved to a default hard-drive folder. The default folder can be specified in a [user file][3] file. Right-click on a map name and select 'Show On HDD' to see the hard-drive folder where the map is saved.
-   - On Windows, the default folder is 'My Documents'.
-   - On OSX, the default folder is 'Documents'.
+ - Make sure the sessions in your map are imported in the correct order. It is hard to change the order later.
  - As you import stacks from the [stack browser][1] there are some rules that must be followed. You will be prompted when you break these rules. In particular:
    1. The stack scale must be set. Set the scale of a [stack][2] in a stack window with shift+p.
    2. The stack must be loaded. Double click the stack in the [stack browser][1] to load a stack.
    3. When importing 2 channel stacks, both channels must be loaded and you must select the first channel (ending in _ch1) in the stack browser.
+ - New maps are saved to a default hard-drive folder. The default folder can be specified in a [user file][3] file. Right-click on a map name and select 'Show On HDD' to see the hard-drive folder where the map is saved.
+   - On Windows, the default folder is 'My Documents'.
+   - On OSX, the default folder is 'Documents'.
 
 ####3. Create a line segment in each session/stack of the map
 Line segments are first specified with control points and then fit using a custom FIJI plugin. Before fitting a line in FIJI, you need to install  the [Bob_Neurite_Tracer_v3][14] plugin in FIJI and you need to specify the path to your FIJI application in a [user file][3].
@@ -50,6 +50,11 @@ See [Fitting Segment In Fiji][15] for help on FIJI versions, installing the plug
 
  1. Double-click the first session in your map (in the main Map Manager panel) to open a [stack][2] window.
  2. Create a line segment by follow the instruction in [annotating a stack][4].
+    - Click the '+' button to create a new (empty) segment.
+    - Create Control Points along a segment with shift+click. Remember, all points are in 3D, make sure the points are in the correct imaging plane.
+    - You can delete control points with the 'delete' key.
+    - You can move control points with either the 'm' key or right-click menu 'Move'.
+    - Once control points are made, fit the backbone line using right-click 'Make from control points - Fiji'.
  3. Repeat steps #1 and #2 for each session in your map. Making the same line segment in each session. As you make control points, be sure they are in the same direction along the segment for each session. For some help with the ordering of your control points, open the 'stack db options' panel and turn 'Control Point Help' 'On'.
  4. Set a pivot point in each line segment. Do this by clicking a point in the segment, right-click and select the 'Set As Pivot' menu. The pivot point should refer to the same region of the segment across all session. A good strategy is to choose a region of the segment near an obvious spine that is present in all sessions. Another strategy is to choose a pivot point where some other segment (dendrite) crosses near your segment as these tend to remain stable across time. Try and put the pivot point near the center of the segment, do not place it at either end. The pivot point is used to calculate a line distance along the segment (in um) which in turn will be used to auto-guess connections between spines across sessions.
  
