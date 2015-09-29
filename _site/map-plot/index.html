@@ -182,23 +182,28 @@
 <h3 id="interface">Interface</h3>
 
 <h4 id="keyboard">Keyboard</h4>
-
-<ul>
-<li>esc : Remove all selections (including masks)</li>
-<li>c : Toggle top control bar</li>
-<li>d : Toggle dynamic colors</li>
-<li>e : Edit raw data in table</li>
-<li>r : Refresh the plot</li>
-<li>arrows : pan</li>
-<li>+/- : zoom in and out</li>
-<li>enter : return to full zoom</li>
-</ul>
-
+<div class="highlight"><pre><code class="language-text" data-lang="text">Navigation
+    arrow-keys : Pan
+    +/- : zoom
+    Enter : Full Zoom (reset zoom)
+Data
+    esc : cancel selection (including masks)
+    b : mark selected object as bad
+    e : edit plotted data in a table
+General
+    r : refresh plot
+    d : toggle dynamics coloring
+    f : toggle forced coloring
+    c : toggle top control bar
+    i : open/close object info panel
+    h : display this help
+</code></pre></div>
 <h4 id="colors">Colors</h4>
 
 <ul>
 <li>Green : Added</li>
 <li>Red : Subtracted</li>
+<li>Blue : Transient (1 session)</li>
 <li>Yellow : Persistent</li>
 <li>White : Bad</li>
 </ul>
@@ -208,11 +213,11 @@
 <p>Toggle the top control bar on and off with keyboard &#39;c&#39;. </p>
 
 <ul>
-<li>Segment ID. Plot individual segments. Use &#39;All Segments&#39; to plot all segment.</li>
-<li>Bad. Toggle display of bad objects.</li>
-<li>Stats. Display a table of statistics for plotted data.</li>
-<li>Raw. Display a table of raw data.</li>
-<li>Line fit.</li>
+<li><strong>Segment ID</strong>. Plot individual segments. Use &#39;<strong>All Segments</strong>&#39; to plot all segment.</li>
+<li><strong>Bad</strong>. Toggle display of bad objects.</li>
+<li><strong>Stats</strong>. Display a table of statistics for plotted data.</li>
+<li><strong>Raw</strong>. Display a table of raw data.</li>
+<li><strong>Line fit</strong>.</li>
 </ul>
 
 <h3 id="examples">Examples</h3>
