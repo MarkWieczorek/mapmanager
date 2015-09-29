@@ -9,12 +9,22 @@ tags:
 
 Map Manager 3 can save two different types of files
 
-- Text
-- HDF5
+- Text - Default
+- HDF5 - Experimental
+
+###Text
+
+####Python
+
+Map Manager saves files as plain text. Thus, it is relatively easy to extend the function of Map Manager by writing Python (or Matlab) code to load, parse, and analyze these text files. This is a very rapid and effective route to extending the functions of Map Manager with new analysis particular to your own data and ideas. Please have a look at an [example iPython notebook][9]. If you are interested in more information, please email Robert Cudmore.
+
+It is suggested that you use the [Anaconda][6] python distribution as it comes with many useful packages pre-installed. Download Anaconda it [here][7].
 
 ###HDF5
 
 [HDF5][1] is an open source cross platform binary file format. It can be read from [Matlab][2], [Python][3], [Igor Pro][4] and from a [command line][5].
+
+As of Sept 2015, Map Manager is not saving files in the HDF5 format. If you are interested in turning on this feature, please email Robert Cudmore.
 
 ####Python
 
@@ -135,3 +145,4 @@ For now this is not very useful for my hdf5 files but is a proof of concept.
 [6]: https://store.continuum.io/cshop/anaconda/
 [7]: http://continuum.io/downloads
 [8]: https://github.com/mgraupe/hdf5Manager
+[9]: https://github.com/cudmore/mapmanager/blob/gh-pages/_notebooks/MapManager.ipynb
