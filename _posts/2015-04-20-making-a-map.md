@@ -8,21 +8,21 @@ tags:
 - Workflow
 ---
 
-<IMG class="img-float-left" SRC="../images/mm3/mm3-main-panel.png" WIDTH="600">
+<IMG class="img-float-left" SRC="../images/mm3/mm3-main-panel.png" WIDTH="650">
 
 <div class="print-page-break"></div>
 
 A map is a sequence of [stacks][2]. You create a map by appending stacks from the [stack browser][1]. Once a map is made it can be opened, saved, annotated, and browsed using the main [map maker panel][13].
 
-The main Map Manager panel shows a list of open maps on the left. When a map is selected (rr22 in this example), a list of sessions in the map are shown on the right (in this example there are 6 sessions).
+The main Map Manager panel shows a list of open maps on the left. When a map is selected (a5n in this example), a list of sessions in the map are shown on the right (in this example there are 4 sessions).
 
 ####Open and initialize Map Manager 
 
  1. Open Igor Pro with MapManager.ipf
- 2. Initialize Map Manager with the main menu 'mm3 -> Load User File'
+ 2. Initialize Map Manager with the main menu 'MapManager - Map Manager Panel'.
  
 ####1. Pre-process your raw data so Map Manager can import it
- - Map manager will only import single channel stacks. If your stacks have two color channels, they need to be de-interleaved into two different .tif files (one for each color channel). See [bAlignBatch][14] for a Fiji plugin that does this.
+ Map Manager will only import single channel stacks. If your stacks have two color channels, they need to be de-interleaved into two different .tif files. One .tif file for each color channel. See [bAlignBatch][14] for a Fiji plugin that does this.
 
 ####2. Make a new map
  1. Fill in a new map name and choose the number of channels for each stack in your map.
@@ -33,53 +33,63 @@ The main Map Manager panel shows a list of open maps on the left. When a map is 
  
 ####<span style="color:red">Important</span>
  - When you make a map, you need to choose the 'Number Of Channels' in each stack/session. Map Manager will only allow one choice of 'Number Of Channels' per map. You cannot mix one and two channel stacks within a map.
- - Make sure the scale of each imported stack is correct. It is hard to change the scale later.
+ - Make sure the scale of each imported stack is correct. It is hard to change the scale later. You can set the scale of a stack in its stack window with 'shift+p'.
  - Make sure the sessions in your map are imported in the correct order. It is hard to change the order later.
  - As you import stacks from the [stack browser][1] there are some rules that must be followed. You will be prompted when you break these rules. In particular:
    1. The stack scale must be set. Set the scale of a [stack][2] in a stack window with shift+p.
    2. The stack must be loaded. Double click the stack in the [stack browser][1] to load a stack.
    3. When importing 2 channel stacks, both channels must be loaded and you must select the first channel (ending in _ch1) in the stack browser.
- - New maps are saved to a default hard-drive folder. The default folder can be specified in a [user file][3] file. Right-click on a map name and select 'Show On HDD' to see the hard-drive folder where the map is saved.
+ - New maps are saved to a default hard-drive folder. The default folder can be specified the [Hard Drive Paths Panel][10]. Right-click on a map name and select 'Show On HDD' to see the hard-drive folder where the map is saved.
    - On Windows, the default folder is 'My Documents'.
    - On OSX, the default folder is 'Documents'.
 
-####3. Create a line segment in each session/stack of the map
-Line segments are first specified with control points and then fit using a custom FIJI plugin. Before fitting a line in FIJI, you need to install  the [Bob_Neurite_Tracer_v3][14] plugin in FIJI and you need to specify the path to your FIJI application in a [user file][3].
+####Congratulations, you just made a Map Manager map. The rest of this tutorial covers specifying and fitting segment backbone lines, adding spines, and connecting spines across timepoints.
+
+####3. Create a line segment in each session/stack of the map and fit its backbone in Fiji
+Line segments are first specified with control points and then fit using a custom FIJI plugin. Before fitting a line in FIJI, you need to install  the [Bob_Neurite_Tracer_v3][14] plugin in FIJI and you need to specify the path to your FIJI application in the [Hard Drive Paths Panel][10].
 
 See [Fitting Segment In Fiji][15] for help on FIJI versions, installing the plugin and specifying the FIJI application path in Map Manager.
 
  1. Double-click the first session in your map (in the main Map Manager panel) to open a [stack][2] window.
  2. Create a line segment by follow the instruction in [annotating a stack][4].
+    - Turn on Segment Editing with the checkbox next to 'Line Segments'. You can also turn this on using 'Edit Segments' in the main Map Manager Panel.
     - Click the '+' button to create a new (empty) segment.
     - Create Control Points along a segment with shift+click. Remember, all points are in 3D, make sure the points are in the correct imaging plane.
     - You can delete control points with the 'delete' key.
     - You can move control points with either the 'm' key or right-click menu 'Move'.
-    - Once control points are made, fit the backbone line using right-click 'Make from control points - Fiji'.
- 3. Repeat steps #1 and #2 for each session in your map. Making the same line segment in each session. As you make control points, be sure they are in the same direction along the segment for each session. For some help with the ordering of your control points, open the 'stack db options' panel and turn 'Control Point Help' 'On'.
- 4. Set a pivot point in each line segment. Do this by clicking a point in the segment, right-click and select the 'Set As Pivot' menu. The pivot point should refer to the same region of the segment across all session. A good strategy is to choose a region of the segment near an obvious spine that is present in all sessions. Another strategy is to choose a pivot point where some other segment (dendrite) crosses near your segment as these tend to remain stable across time. Try and put the pivot point near the center of the segment, do not place it at either end. The pivot point is used to calculate a line distance along the segment (in um) which in turn will be used to auto-guess connections between spines across sessions.
+    - Once control points are made, fit the backbone line in Fiji. Right-click on your segment in the list and select 'Make from control points - Fiji'.
+ 3. Repeat steps #1 and #2 for each session in your map. Making the same line segment in each session. As you make control points, be sure they are in the same direction along the segment for each session. <del>For some help with the ordering of your control points, open the 'stack db options' panel and turn 'Control Point Help' 'On'.</del>
+ 4. Set a pivot point in each line segment. Do this by clicking a point in the segment, right-click and select the 'Set As Segment Pivot' menu. The pivot point should refer to the same region of the segment across all session. A good strategy is to choose a region of the segment near an obvious spine that is present in all sessions. Another strategy is to choose a pivot point where some other segment (dendrite) crosses near your segment as these tend to remain stable across time. Try and put the pivot point near the center of the segment, do not place it at either end. The pivot point is used to calculate a line distance along the segment (in um) which in turn will be used to auto-guess connections between spines across sessions.
  
-<p class="tip"><B>Tip.</B> You can open a stack run by right-clicking on a session and selecting 'Plot Run +- All'. Bring up the left control panel for each stack with keyboard'[' and follow the steps above. This way, you can see the line segments you are making in each session of your map.</p>
+<p class="tip"><B>Tip.</B> When specifying control points and setting segment pivots, you can open multiple stack windows at the same time. Just double-click on each session in the main Map Manager Panel. This way, you can see the line segments you are making in each session of your map.</p>
 
 
 ####4. Connect your line segments together
  1. Close all stack windows using the <span style="color:blue">Close Windows</span> button in the main Map Manager panel.
  2. Open a new stack run by right-clicking a session in your map and selecting the 'Plot Run +- All' menu.
- 3. Turn on the 'Connect Segments' checkbox in the main Map Manager panel. It is in the lower left of the panel.
+ 3. Turn on the 'Edit Segments' checkbox in the main Map Manager panel. It is in the lower left of the panel.
  4. Sequentialy connect your line segment from one timepoint to the next
-   - Select the source timepoint segment (for example, timepoint 1)
-   - Select the destination timepoint segment (for example, timepoint 2)
-   - In the destination timepoint (e.g. timepoint 2), press keyboard 'p' for Persistent.
+   - Select the source timepoint segment (for example, timepoint 1). Make sure you select a point on the segment backbone line.
+   - Select the destination timepoint segment (for example, timepoint 2). Again, make sure you select a point on the segment backbone line.
+   - In the destination timepoint window (e.g. timepoint 2), press keyboard 'p' for Persistent (or use right-click menu).
 
-<p class="tip"><B>Tip.</B> You can see how your segments are connected by plotting a 'Segment Map' from the main Map Manager panel.</p>
+<p class="tip"><B>Tip.</B> You can see how your segments are connected by plotting a 'Segment Map' from the main Map Manager panel. In the segment map window, right-click a segent and select 'Plot Run' to plot a run of segments.</p>
    
 ####5. Mark spines in each timepoint
- 1. open a single timepoint by double clicking a session in the list.
- 2. Follow [annotating a stack][4] to mark spines along your new segment.
+ 1. Make sure 'Edit Segments' is off.
+ 2. Open a single timepoint by double clicking a session in the list.
+ 3. Follow [annotating a stack][4] to mark spines along your new segment.
  
-<p class="tip"><B>Tip.</B> As you are working, keep your eye on the Igor command window. Any small warnings will show up here. For example ...</p>
+<p class="tip"><B>Tip.</B> As you are working, keep your eye on the Igor command window. Each action you perform in Map Manager should report a few lines of text here. If this starts to spit out 1000's of lines there is probably a problem.</p>
    
 
-####6. Auto connect spines from one timepoint to the next
+####You have two choices here.
+
+####6.1 Use the [Find Points Panel][16]
+
+Use the Find Points Panel to browse spines in two timepoints. Find Points will also guess for the best connections and allow you to set them manually.
+
+####6.2. Auto connect spines from one timepoint to the next
  - Open a 'Spine Map' from the main Map Manager Panel.
  - In the spine map, select a spine in the first timepoint, right click and select 'Connect To Next'.
    This will make automatic connections of all spines from the first session to the next session.
@@ -153,3 +163,4 @@ Thus, there are two cases:
 [13]: /mapmanager/main-panel/
 [14]: https://github.com/cudmore/bob-fiji-plugins
 [15]: /mapmanager/fitting-segments-in-fiji/
+[16]: /mapmanager/find-points-panel/

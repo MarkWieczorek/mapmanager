@@ -8,6 +8,11 @@ tags:
 - Posts
 ---
 
+<font size=4em color="red">
+####User files have been completely revamped. Global options can now be easily saved and loaded using the [Options Panel][2].
+<BR>
+</font>
+
 User files are text files where global options are specified and then loaded and applied within Map Manager. This is useful when you have mutiple users within one Map Manager installation.
 
 User files are loaded using the main menu 'mm3 -> Load User' or in the [Hard Drive Paths][1] panel.
@@ -119,3 +124,4 @@ Objects will only be connected if their position on the segment line is **less**
 	#“”
 	
 [1]: /mapmanager/hdd-paths
+[2]: /mapmanager/stackdb-options-panel

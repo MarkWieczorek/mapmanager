@@ -179,31 +179,47 @@
 
 <p>The original documentation is <a href="http://www.robertcudmore.org/maptracker/v2/stack-browser/">here</a></p>
 
-<p>In general, the list on the left represents folders of loaded stacks. Select a folder of stacks on the left and the list on the right will show the individual stacks within that folder.</p>
+<p>The list on the left is a list of loaded folders, each folder has a list of stacks. Select a folder on the left and the list on the right will show the individual stacks within that folder.</p>
 
 <p>Double click on a stack in the list on the right and it will open a <a href="/mapmanager/stack/">stack</a> window to view the actual stack.</p>
 
 <h3 id="loading-stacks">Loading stacks</h3>
 
-<p>The simplest way to load a stack is to drag and drop a .tif file onto the Igor program icon. Stacks opened in this way will appear in a special folder (in the list on the left) called &#39;DragAndDrop&#39;.</p>
+<h4 id="load-scanimage-directory">Load ScanImage Directory</h4>
 
-<p><strong>Load ScanImage Directory.</strong> Load a folder of ScanImage .tif stack. The name of the folder will appear in the list on the left. Selecting this folder will populate the list of stacks imported. Double click on a stack (in the list on the right) to view the <a href="/mapmanager/stack/">stack</a>.</p>
+<p>Load a folder of ScanImage .tif stack. The name of the folder will appear in the list on the left. Selecting this folder will populate the list of stacks imported. Double click on a stack (in the list on the right) to view the <a href="/mapmanager/stack/">stack</a>.</p>
 
-<p><strong>Load Generic Directory.</strong> Load a folder of .tif stacks ignoring any .tif header information. This has some consequences:</p>
+<p class="important"><B>Important.</B> When importing ScanImage .tif files, the scale is not set by ScanImage. You need to calculate your x/y voxel size (in um per voxel) when you scan at 1x magnification with 1024 by 1024 pixels. You then set this value in '2p um/pixel (1024@1x)'. Map Manager will use this value to calculate each stacks x/y scale for arbitrary ScanImage zoom settings.</p>
+
+<h4 id="load-generic-directory">Load Generic Directory</h4>
+
+<p>Load a folder of .tif stacks ignoring any .tif header information. This has some consequences:</p>
 
 <ol>
-<li>The stack will not have a scale. Set this with xxx</li>
-<li>If the source .tif stack are multi-channel stacks, Map Manager will blindly import them as one big stack (usually with channels interleaved from slice to slice). Please see bAlignBatch to pre-process your .tif stacks into ch1/ch2 file pairs.</li>
+<li>The stack will not have a scale. You can set the scale in a stack window with keyboard shift+p.</li>
+<li>If the source .tif stack are multi-channel stacks, Map Manager will blindly import them as one big stack (usually with channels interleaved from slice to slice). Please see <a href="https://github.com/cudmore/bob-fiji-plugins">bAlignBatch</a> for a Fiji plugin to pre-process your .tif stacks into ch1/ch2 file pairs.</li>
 <li>The stacks will not have a date. Thus, <a href="/mapmanager/map-plot/">map plots</a> with date/days/hours will not be possible.</li>
 </ol>
 
+<h4 id="drag-and-drop">Drag and drop</h4>
+
+<p>The simplest way to load a stack is to drag and drop a .tif file onto the Igor program icon. Stacks opened in this way will appear in a special folder (in the list on the left) called &#39;DragAndDrop&#39;.</p>
+
+<p class="tip"><B>Tip.</B> The order of stacks can be sorted by selecting columns in the stack list. To sort by date, select 'Date' in the columns header. <b>This ordering is critical when batch importing a list of stacks into a Map Manager map</B></p>
+
 <h3 id="browsing-loaded-data">Browsing loaded data</h3>
 
-<p>Select your loaded directory on the left  and the loaded stacks will be shown on the right.</p>
+<p>Select your loaded directory on the left  and the loaded stacks will be shown on the right. Double click a stack in the list on the right to open a <a href="/mapmanager/stack/">stack</a> window.</p>
 
-<p>Double click a stack in the list on the right to open a <a href="/mapmanager/stack/">stack</a> window.</p>
+<p>There are many things you can do to visualize your <a href="/mapmanager/stack/">stack</a></p>
 
-<p class="tip"><B>Tip.</B> The order of stacks can be sorted by selecting columns in the stack list. To sort by date, select 'Date' in the columns header. <b>This ordering is critical when batch importing a list of stacks into a map</B></p>
+<ul>
+<li>View a histogram (keyboard &#39;h&#39;).</li>
+<li>Set min/max contrast (keyboard &#39;c&#39;).</li>
+<li>Generate maximal Z-Projections (keyboard &#39;shift+z&#39;).</li>
+<li>Cycle through different window candy (keyboard &#39;shift+c&#39;).</li>
+<li>Igor is very good at copying and pasting the image you are viewing in a stack window. Try it out by pasting into Keynote, Powerpoint, or Illustrator.</li>
+</ul>
 
 
 <div class="post-tags">

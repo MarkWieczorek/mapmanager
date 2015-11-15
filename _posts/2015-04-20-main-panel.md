@@ -9,11 +9,11 @@ tags:
 ---
 
 
-The main panel provides an interface to load, save and browse map manager maps. Open the main panel using the menu 'mm3 -> Map Manager 3'
+The main map manager panel provides an interface to load, save and browse Map Manager maps. Open the main map manager panel using the menu 'MapManager - Map Manager Panel'
 
-Expand the main map maker panel to access the [map making][13] interface.
+Expand the main map manager panel to access the [map making][13] interface. Use the disclosure triangle/+ at the top of the window near the help/? button.
 
-Once a map is created and saved, the map maker 3 panel can be minimized with the disclosure triangle (at the top of the window near the help/? button).
+Once a map is created and saved, the main map manager panel can be minimized again with the disclosure triangle.
 
 The <span style="color:blue">blue</span> buttons operate on the selected map.
   
@@ -23,15 +23,15 @@ The <span style="color:blue">blue</span> buttons operate on the selected map.
   
   <B>Save Map.</B> Save the selected map.
   
-  <B>?.</B> Open map manager 3 documentation in your default web browser.
+  <B>?.</B> Open map manager documentation in your default web browser.
   
 ####Plot Group
   
-<B>Spine Map.</B> Open a [map plot][12] showing the position of spines along dendritic segments vs. session.
+<B>Object Map.</B> Open a [map plot][12] showing the position of spines along dendritic segments vs. session.
 
 <B>Segment Map.</B>  Open a [map plot][12] showing the segments within each session and the connectivity of segments across sessions.
 
-<B>X-Axis.</B> Choose different X-Axis for Spine and Segment map plots. Available X-Axis are:
+<B>X-Axis.</B> Choose different X-Axis for Object and Segment map plots. Available X-Axis are:
 
  - Sessions 
  - Datetime
@@ -41,7 +41,7 @@ The <span style="color:blue">blue</span> buttons operate on the selected map.
  - Zero Days
  - Zero Hours
     
-Date, Days and Hours require your imported stack to have a date specified. The X-Axis options starting with 'Zero' use a session in the map as a zero timepoint. Specify this with 'Zero Session' and 'Rebuild' in the expanded map manager 3 panel.
+Date, Days and Hours require your imported stack to have a date specified. The X-Axis options starting with 'Zero' use a session in the map as a zero timepoint. Specify this with 'Zero Session' and 'Rebuild' in the expanded map manager panel.
     
 ####Panel Group
 
@@ -51,27 +51,28 @@ Each of these buttons will open a different Map Manager panel.
 
 <B>Plot.</B> Open the [plot panel][6].
 
-<B>Buttons.</B> Open a button toolbar with other useful buttons.
+<B>Process.</B> Open the [process panel][8] to set image contrast.
 
 <B>Options.</B> Open the [options panel][7].
 
-<B>Utilities.</B> Only for advanced users. Do not use.
+<B>Map DB.</B> NOT DOCUMENTED YET..
 
-<B>Process.</B> Open the [process panel][8] to set image contrast.
+<B>Layout.</B> Open the [layout/scale panel][14].
 
 <B>Stack Browser.</B> Open the [stack browser panel][9].
 
-<B>HDD Paths.</B> Open a panel to [edit hard-drive paths][10] like the default folder to save and load maps.
-
 ####Miscellaneous
-
-<B>Connect Segments.</B> When checked, all editing in a [run plot][11] will edit the persistence of segments (addition, subtraction, and persistent).
 
 <B>Unload stacks.</B> Unload all stacks in the selected map (from Igor memory).
 
 <B>Close Windows.</B> Close all windows associated with the selected map.
 
-Right-click on a map name in the list for a contextual menu.
+<B>Username.</B> This can be specified in the [map manager options panel][7].
+
+<B>Edit Segments.</B> When checked, all editing in a [run plot][11] will edit the persistence of segments (addition, subtraction, and persistent).
+
+
+####Right-click on a map name in the list for a contextual menu.
 
 <IMG class="img-float-left" SRC="../images/mm3/mm3-main-panel-map-right-click.png" WIDTH="100">
 
@@ -101,5 +102,6 @@ Right-click on a map name in the list for a contextual menu.
 [11]: /mapmanager/run-plot/
 [12]: /mapmanager/map-plot/
 [13]: /mapmanager/making-a-map/
+[14]: /mapmanager/scale-panel/
 
 <div class="print-page-break"></div>

@@ -171,39 +171,59 @@
     </h3>
 </div>
 
-<p><strong>New on August 2, 2015</strong></p>
+<p><FONT size=3em color="red"><strong>New on October, 2015.</strong> This documentation needs some work.</font></p>
 
-<p>The find points panel allows you to browse all spines between two timepoints.</p>
+<p>The find points panel allows you to browse objects between two timepoints, will show you the best-guess for putative connections, and allow you to connect/disconnect objects across sessions.</p>
 
-<p>Open the find points panel by right-clicking a spine in a map and selecting &#39;Find Points&#39;.</p>
-
-<p><IMG class="img-float-left" SRC="../images/mm3/find-points-panel.png" WIDTH="400"></p>
+<p>To open the find points panel:</p>
 
 <ul>
-<li>The find points panel displays a list of all spines in the source timepoint (sIdx).</li>
-<li>For each of these spines, it shows if it is connected to the destination timepoint (dIdx). It will color the dIdx cell red if there is no connection.</li>
-<li>Any remaining spines in the destination timepoint (spines not connected to the source timepoint) will be displayed at the bottom of the list.</li>
+<li>Right-click a spine in a map and selecting &#39;Find Points&#39;.</li>
+<li>Right-click a session in the main Map Manager Panel and selecting &#39;Find Points&#39;.</li>
+<li>Right-click a map in the main Map Manager Panel and selecting &#39;Find Points&#39;.</li>
+</ul>
+
+<p><IMG class="img-float-left" SRC="../images/mm3/mm3-find-points-panel.png" WIDTH="500">
+<div class="print-page-break"></div></p>
+
+<ul>
+<li>The find points panel displays a list of all spines in the source timepoint (sIdx). In this example there are 21 spines in the source timepoint.</li>
+<li>For each spines in the source timepoint, it shows if it is connected to the destination timepoint (dIdx). It will color the dIdx cell red if there is no connection.</li>
+<li>Any remaining spines in the destination timepoint (spines not connected to the source timepoint) will be displayed at the bottom of the list. In this example there are 3 of these spines.</li>
+<li>Each spine in the source timepoint will also have a best &#39;Guess&#39; connection in the &#39;Guess&#39; column. For spines, this is using your &#39;Segment Pivot&#39; for the two segments listed in Find Points and will connect spines across timepoints/sessions that are within &#39;Connect spines within this distance (um)&#39;. See the Map Manager Options Panel to set this.</li>
 </ul>
 
 <h4 id="interface">Interface</h4>
 
-<p><strong>Source.</strong> Source timepoint</p>
+<p><strong>Source.</strong> Source timepoint (From TP)</p>
 
-<p><strong>Destination.</strong> Destination timepoint</p>
+<p><strong>Destination.</strong> Destination timepoint (To timepoint)</p>
 
-<p><strong>Segment ID.</strong> Limit the list to one segment ID</p>
+<p><strong>Object Type.</strong> Select the type of objects to display.</p>
+
+<p><strong>Segment ID.</strong> Limit the list to one segment ID.</p>
 
 <p><strong>All Segments.</strong> Generate the list for all segments (all objects in the timepoint).</p>
+
+<p><strong>Refresh.</strong> Will refresh the Find Points list. This is necessary when you add/delete or change connections in the main stack window.</p>
 
 <h4 id="interaction">Interaction</h4>
 
 <ul>
+<li>Bring up a map run by right-clicking a row and selecting &#39;Plot Run&#39;.</li>
 <li>Select an object in the list and it will be propagated to all <a href="/mapmanager/run-plot/">run</a> and <a href="/mapmanager/map-plot/">map</a> plots.</li>
 <li>Use the keyboard to scroll through the list.</li>
 <li>Use left/right arrows to flash the selected object again.</li>
 </ul>
 
-<div class="print-page-break"></div>
+<h4 id="using-the-keyboard-to-connect-and-disconnect-objects">Using the keyboard to connect and disconnect objects</h4>
+
+<p>For a selected row</p>
+
+<ul>
+<li>&#39;shift + right-arrow&#39; to commit the &#39;Guess&#39; to the destination (dIdx).</li>
+<li>&#39;del&#39; key to remove the connection. This forces the dIdx to be addition.</li>
+</ul>
 
 <p>When used with a spine run, find points is a reliable way to check the connections between all objects in two timepoints.</p>
 
@@ -211,7 +231,9 @@
 
 <p>By sorting the list with the destination position (dpDist), you get a consice list of all objects in the destination timepoint.</p>
 
-<p><IMG class="img-float-left" SRC="../images/mm3/find-points-example.png" WIDTH="1000"></p>
+<p><IMG class="img-float-left" SRC="../images/mm3/find-points-example.png" WIDTH="1000">
+<div class="print-page-break"></div>
+Example usage of find points panel. Here, we have a run of session 1/2/3 (top row). We have positioned the Find Points panel below the stack for session 2. By selecting rows (spines) in Find Points we can browse all spines in session 2, visualize their connections to session 3, and finally edit their connections to session 3 (using the keyboard in FInd Points Panel).</p>
 
 
 <div class="post-tags">

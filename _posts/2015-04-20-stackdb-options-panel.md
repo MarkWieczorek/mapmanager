@@ -9,28 +9,37 @@ tags:
 ---
 
 
-Stack DB options provides many options to control how a stack db is displayed.
+Stack DB options provides global options to control the behavior of Map Manager. Sets of options can be saved and then loaded using the **User** section. Values shown in <font color="red"><strong>red</strong></font> will effect your analysis.
 
-From any stack db window, open stack db options with the 'Options' button.
+To open the options panel
 
-The stack db options panel is split into two main sections, one short and one long.
+  - Select 'MapManager - Map Manager Options' in the main menu.
+  - 'Options' button in the left control panel of any stack.
+  - 'Options' button in main [Map Manager Panel][5].
+  - 'Options' button in the Map Manager Buttons panel.
 
-<IMG class="img-float-left" SRC="../images/mm3/mm3-stackdb-options-short.png" WIDTH="300">
+<IMG class="img-float-left" SRC="../images/mm3/mm3-options-top.png" WIDTH="300">
 
-The top section allows you to save and load one set of stack db options.
+The panel is very tall, scroll the panel up/down with the mouse wheel.
 
-**Save.** Save these options. The next time you run Map Manager, these options will be loaded.
+###User
 
-**Load.**
+Interface to load and save [User Files][3].
+
+**Load.** Load a user file.
+
+**HD.** Show the 'User' folder on hard-disk.
+
+**Save.** Save the current options to the current user file. To reload this user file, use the 'Load' button.
 
 **Load Factory Defaults.**
 
-**Show User Folder.** Shows the User file directory on the hard-disk. [User files][3] can be used to load a set of predefined options into map manager. For example, you can specify the default min/max of a stack display.
+**Save As...** Save the current setting as a new user file.
 
 
-####Stack Window Display
+###Stack Display
 
-Here you can toggle options on and off when annotating a [stack][1] with a [stack db][2]. Each time you change an option (e.g. 'points') you need to press 'Apply To Top Stack Window' for the changes to take effect.
+Options that control the display of the [stack db][2] in a [stack][1] window. Each time you change an option (e.g. 'Points') you need to press 'Apply To Top Stack Window' for the changes to take effect. Or, 'Refresh' the stack window with 'r'.
 
 **Points.** Toggle stack db objects.
 
@@ -40,46 +49,82 @@ Here you can toggle options on and off when annotating a [stack][1] with a [stac
 
 **Tags.** In a stack window, the tags are the stack db point number. In a map, the tags are the **run** number of the point. See xxx.
 
-**Spine Intensity ROIs.** Toggle the three intensity analysis ROIs: spine, segment, and backbone. See [Intensity][4] analysis.
-
-**Real-time intensity analysis.**
-
-**Use segment color for all points.**
-
+**Use segment color for all points.** xxx
 
 **Line.** Toggle the segment backbone line and radii lines.
 
-**Radii.**
+**Radii.** xxx
 
-**Line Mask.**
+**Line Mask.** xxx
 
-**Display Control Points**
+**Display Control Points** xxx
 
 **Control Point Help** Use the 'On' and 'Off' buttons for some additional visual cues about your segment line fits. The end of the line fit is shown in red. This is useful when making the same segment across timepoints in a map. It helps you fit each segment in the same direction.
 
-**Grid Spacing (um)**
 
-####Points
+###Miscellaneous
 
-**fill this in and make sure it works**
-
-####Lines
-
-**fill this in and make sure it works**
-
-####Miscellaneous
-
-**Warn On New Objects (shift-click)**
-
+**Warn On New Objects**
+**Warn On Delete Objects**
 **New Objects On Mouse Click (no shift)**
 
+**Stack Window Size** Two default stack window sizes (screen pixels). Capture the size of an open Stack window with 'C' button.
+
+**Mask Points +/- Slices** The number of slices above and below each point to show the point in stack windows. 
+
+**Flash Ticks**
+
+**ScanImage, 1x zoom, 1024x1024 pixels (um/pixel)** The x/y voxel size in um/voxel for importing ScanImage files.
 **Line points to search when connecting spine/bouton**
-
-**Left/Right arrows will scroll through line (otherwise pan)**
-
 **Default Segment Radius (um)**
 
-####Importing Segments From FIJI
+
+**Left/Right arrows will scroll through line (otherwise pan)**
+**Show Pixel Intensity (display in history)** Prints the pixel intensity and x/y coordinates as mouse is moved over a stack window image.
+
+**Grid Spacing (um)** Display a grid on the images in a stack window. For the grid to display, stack window must be showing x/y axis. Use 'shift+c' to cycle through different stack window candy. Or set the default using 'Default Stack Candy' popup.
+
+**New Object (Shift+Click)** The default object to make on shift+click.
+**Default plot object**
+**Default Stack Candy**
+
+###Object Map
+
+**Default Run +/-**. Set the number of sessions to display when selecting right-click menu 'Plot Run +- n'.
+
+**Check map before save**. xxx
+
+**Run Window Width (pixels)**. The size of each window in a spine run.
+
+**Default Zoom Width/Height (um)**. When snapping to a spine, the default zoom. The width/height of the image zoom in um.
+
+**Connect points within this distance (um)**. When auto connecting points in a map and generating a Guess in Find points.
+
+**Connect spines within this distance (um)**. When auto connecting spines in a map and generating a Guess in Find points. This is the distance from the segment pivot points along a dendritic segment (um). You can see this distance (pDist) in the Point Info panel of a [stack][1].
+
+**Always show stack DB indices (tags)**. xxx
+**Fixed posiiton for each run window**. xxx
+**Lock segment selection in run plot**. xxx
+**Shift + left/right to go to prev/next timepoint**. xxx
+**Auto plot object map on load**. xxx
+
+
+<IMG class="img-float-left" SRC="../images/mm3/mm3-options-bottom.png" WIDTH="300">
+
+###Intensity Analysis
+
+Turn [intensity analysis][4] on/off with the 'Intensity Analysis' checkbox. Be sure to refresh any open stack windows.
+
+**Width (um)**
+**+/- Slices**
+**Extend Head (um)**
+**Extend Tail (um)**
+**+/- Segment (um)**
+
+**Real-Time**
+**Debug**
+
+###Importing Segments From FIJI
 
 **On import, Filter SWC Box Width**
 
@@ -89,26 +134,26 @@ Here you can toggle options on and off when annotating a [stack][1] with a [stac
 
 **Close Fiji When Done**
 
-####Intensity Analysis
+###Miscellaneous
 
-**Width (um)**
+A big table to set how stack db points are displayed. RIght-click on marker or color ot set.
 
-**Extend Head (um)**
+**Tag Size** The size of tags displayed (for each point) in stack db window.
 
-####Object Map
-**Default Run +/-**. Set the number of sessions to display when selecting right-click menu 'Plot Run +- n'.
+<div class="print-page-break"></div>
 
-**Run Window Width (pixels)**. The size of each window in a spine run.
+###Stack Browser Options
 
-**Maximum Allowed Connection Distance (um)**. When using '', the threshold distance to allow an auto-connection between spines.
+Additional option are available in the Stack Browser Options panel.
 
-**Default Zoom Width (um)**. When snapping to a spine, the default zoom. The width of the window view in um.
+Open the Stack Browser Options panel using the main menu 'bStack - Stack Browser Options'
 
-**Default Zoom Height (um)**
+<IMG class="img-float-left" SRC="../images/mm3/mm3-stack-browser-options.png" WIDTH="300">
 
-
+<div class="print-page-break"></div>
 
 [1]: /mapmanager/stack/
 [2]: /mapmanager/annotating-a-stack/
 [3]: /mapmanager/user-files/
 [4]: /mapmanager/intensity/
+[5]: /mapmanager/main-panel/

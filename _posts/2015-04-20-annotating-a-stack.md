@@ -56,17 +56,18 @@ The different names allow you to organize your annotations into different groups
 
 Existing line segments are listed in the 'Line Segment' group. Each line segment has a length (um), a number of objects (nObj), a radius (r), and a color (c).
 
-Line segments are created in three steps:
+Line segments are created as follows:
 
- 1. Create a new (empty) line segment  
+ 1. Make sure 'Edit Segments ' is turned on.
+ 2. Create a new (empty) line segment  
   Click '+' button in the 'Line Segment' group. This will create an empty line segment.
 
- 2. Make a series of 3D **control point** objects along your dendrite/axon  
+ 3. Make a series of 3D **control point** objects along your dendrite/axon  
   - Select 'New Object -> Other -> Control Point'  
   - Shift-click in the image to create a **control point**.
   - Continue making **control points** along the desired line segment in the image.
   
- 3. Fit the line in FIJI and import the resulting line segment back into map manager  
+ 4. Fit the line in FIJI and import the resulting line segment back into map manager  
   - Right-click on the new line segment (in the top left list) and select 'Make From Control Points - FIJI'. This will open the xxx plugin in FIJI, fit a line to your **control points** and open the fitted line segment in the map manager stack window.
 
 **Important:** When making control points, they need to be in order along a segment. If you 'double-back' a control point on the segment, the line fit with dumbly follow this ordering of control points. For help on the ordering of your control points, open the 'options' panel and turn on 'Control Point Help' with the 'On' button. If it all gets confusing you can just delete all your control points and start over.
