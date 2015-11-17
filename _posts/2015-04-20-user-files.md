@@ -9,7 +9,7 @@ tags:
 ---
 
 <font size=4em color="red">
-####User files have been completely revamped. Global options can now be easily saved and loaded using the [Options Panel][2].
+####User files have been completely revamped. Global options can now be easily saved and loaded using the [Stack DB Options Panel][2].
 <BR>
 </font>
 

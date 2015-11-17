@@ -9,7 +9,7 @@ tags:
 ---
 
 
-Stack DB options provides global options to control the behavior of Map Manager. Sets of options can be saved and then loaded using the **User** section. Values shown in <font color="red"><strong>red</strong></font> will effect your analysis.
+The Stack DB options panel provides global options to control the behavior of Map Manager. Options can be saved and then loaded using the **User** section. Values shown in <font color="red"><strong>red</strong></font> will effect your analysis.
 
 To open the options panel
 

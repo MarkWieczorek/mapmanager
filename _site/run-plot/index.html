@@ -51,6 +51,9 @@
             <li data-order="5"><a href="/mapmanager/gallery">Gallery</a></li>
         
             
+            <li data-order="1"><a href="/mapmanager/getting-started">Getting started</a></li>
+        
+            
             <li data-order="2"><a href="/mapmanager/making-a-map">Making a map</a></li>
         
             
@@ -143,9 +146,6 @@
             
                 <li class=nav-header>Blog Posts</li>
             
-            <li data-order="1"><a href="/mapmanager/getting-started">Getting started</a></li>
-        
-            
             <li data-order="2"><a href="/mapmanager/faq">FAQ</a></li>
         
             
@@ -181,7 +181,7 @@
 <ol>
 <li><strong>Stack Run.</strong> In its simplest form, a run plot showing the sequence of stacks in a map.</li>
 <li><strong>Segment Run.</strong> The same as a stack run plot but connected segments are selected, displayed, and optionally zoomed.</li>
-<li><strong>Object Run.</strong> The same as a stack run plot but individual 3D point annotations are followed across sessions in a map. One example is a run of spine objects across all stacks/sessions in a map.</li>
+<li><strong>Object Run.</strong> The same as a stack run plot but individual stack db points (3D points) are followed across sessions in a map. One example is a run of spine objects across all stacks/sessions in a map.</li>
 </ol>
 
 <h3 id="opening-a-run-plot">Opening a run plot</h3>
@@ -217,11 +217,13 @@
 <ul>
 <li><strong>a</strong> : The selected object is marked as <strong>A</strong>ddition.</li>
 <li><strong>s</strong> : The selected object is marked as <strong>S</strong>ubtraction</li>
-<li><strong>p</strong> : The selected object is marked as <strong>P</strong>ersistent.</li>
+<li><strong>p</strong> : The selected objects are marked as <strong>P</strong>ersistent. Requires a selection in two timepoints, see below.</li>
 <li><strong>b</strong> : The selected object is marked as <strong>B</strong>ad. This is only available for stack-db objects, it is not available for segments.</li>
 </ul>
 
-<p>Persistent is a special case, the source and destination objects need to be specified. To do this:</p>
+<h4 id="persistent-is-a-special-case">Persistent is a special case</h4>
+
+<p>When two objects are connected between two sequential timepoints/sessions we refer to them as &#39;persistent&#39;. To connect two points and make them persistent, both points need to be selected (in their respective timepoints) and the point in the <B>latter</B> timepoint needs to be marked persistent.</p>
 
 <ul>
 <li>Click in the source stack window and select an object. For example, timepoint 2.</li>
@@ -229,11 +231,13 @@
 <li>Press keyboard &#39;p&#39; in the destination stack window. In this example, timepoint 3.</li>
 </ul>
 
+<p><span style="color:red">Important:</span> The keyboard commands above will default to editing the dynamics of stack-db objects. To edit the dynamics between segments, turn on the global option in the main Map Manager panel by checking &#39;Edit Segments&#39;.</p>
+
+<p>All of these keyboard commands have corresponding right-click contextual menus. Select a point and right-click to open the contextual menu.</p>
+
 <h3 id="using-stack-db-object-tags-in-a-run-plot">Using stack db object tags in a run plot</h3>
 
 <p>Turn on object tags for a given stack window using keyboard &#39;t&#39;. The dynamics of each object is encoded in the color of the tag, <span style="color:green">green</span> for addition, <span style="color:red">red</span> for subtraction, and <span style="color:yellow">yellow</span> for persistent. Objects that are in the same run will have the same number in each of the stack plots. Added objects get a new number. This system is designed to quickly visualize the connectivity between stack db objects.</p>
-
-<p><span style="color:red">Important:</span> The keyboard commands above will default to editing the dynamics of stack-db objects. To edit the dynamics between segments, turn on the global option in the main Map MAnager panel by checking &#39;Connect Segments&#39;.</p>
 
 <p><IMG class="img-float-left" SRC="../images/mm3/mm3-run-segment-example.png" WIDTH="700"></p>
 

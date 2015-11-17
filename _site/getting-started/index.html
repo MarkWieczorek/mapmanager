@@ -51,6 +51,9 @@
             <li data-order="5"><a href="/mapmanager/gallery">Gallery</a></li>
         
             
+            <li data-order="1"><a href="/mapmanager/getting-started">Getting started</a></li>
+        
+            
             <li data-order="2"><a href="/mapmanager/making-a-map">Making a map</a></li>
         
             
@@ -143,9 +146,6 @@
             
                 <li class=nav-header>Blog Posts</li>
             
-            <li data-order="1"><a href="/mapmanager/getting-started">Getting started</a></li>
-        
-            
             <li data-order="2"><a href="/mapmanager/faq">FAQ</a></li>
         
             
@@ -176,22 +176,19 @@
 
 <h3 id="installing-igor-pro">Installing Igor Pro</h3>
 
-<p>Igor Pro is a cross platform environment that runs on both Windows and Mac OS. For lack of a better comparison, Igor Pro is similar to Matlab.</p>
-
-<p>You need to <a href="https://www.wavemetrics.com/order/order1.php?type=Academic">purchase</a> an Igor Pro license from <a href="https://www.wavemetrics.com/index.html">Wavemetrics</a>, <a href="https://www.wavemetrics.com/support/versions.htm">download</a> the software, and install.</p>
-
-<p>To try out Igor Pro, you can download and install a fully functional but time limited <a href="https://www.wavemetrics.com/support/demos.htm">demo version</a>.</p>
-
-<p>As of July 2015, the current Igor version is 6.37.</p>
+<ul>
+<li>Igor Pro is a cross platform program that runs on both Windows and Mac OS X.</li>
+<li>You need to <a href="https://www.wavemetrics.com/order/order1.php?type=Academic">purchase</a> an Igor Pro license from <a href="https://www.wavemetrics.com/index.html">Wavemetrics</a>, <a href="https://www.wavemetrics.com/support/versions.htm">download</a> the software, and install.</li>
+<li>To try out Igor Pro, you can download and install a fully functional but time limited <a href="https://www.wavemetrics.com/support/demos.htm">demo version</a>.</li>
+</ul>
 
 <h3 id="installing-map-manager">Installing Map Manager</h3>
 
 <ul>
 <li>Once Igor Pro is installed, there is no formal installation of Map Manager</li>
-<li>You need to get the source code from Bob.</li>
-<li>The source code will all be in one folder named MapManager_date where &#39;date&#39; is todays date, something like 20150731.</li>
+<li>Get the source code from Bob.</li>
+<li>The source code will be in a folder named &#39;MapManager_date&#39; where &#39;date&#39; is the date the software was created. The folder will be something like &#39;MapManager_20151117&#39;.</li>
 <li>Run the software by double-clicking MapManager.ipf from within your source code folder.</li>
-<li>Each user should have their own copy of the source code folder. Just make copies of the original into different user accounts.</li>
 <li>To fit lines in FIJI you will have to specify a hard-drive path to FIJI and install a plugin in FIJI. Please see <a href="/mapmanager/fitting-segments-in-fiji/">fitting segments in fiji</a>.</li>
 </ul>
 
@@ -199,18 +196,20 @@
 
 <ul>
 <li>Open MapManager.ipf into Igor Pro (just double click the MapManager.ipf file).</li>
-<li>Once in Igor Pro, click in the command window to compile Map Manager and activate the main menus.</li>
-<li>To score single timepoint stacks, selecting the main menu &#39;bStack -&gt; Stack Browser&#39; will open the <a href="/mapmanager/stack-browser/">Stack Browser</a> panel.</li>
-<li>To score timeseries of stacks (maps), selecting the main menu &#39;mm3 -&gt; Map Manager Panel&#39; will open the <a href="/mapmanager/main-panel/">Map Manager panel</a>.</li>
+<li>Once in Igor Pro, click in the command window to compile Map Manager and activate the main menus. The command window is in the lower left of your screen and has the window title &#39;Untitled&#39;.</li>
+<li>To score a single timepoint stack, select the main menu &#39;MapManager - Stack Browser&#39; to open the <a href="/mapmanager/stack-browser/">Stack Browser</a> panel. See <a href="/mapmanager/simple-stack-db/">Simple Stack DB</a> for more information.</li>
+<li>To score a timeseries of stacks (a map), select the main menu &#39;MapManager - Map Manager Panel&#39; to open the main <a href="/mapmanager/main-panel/">Map Manager panel</a>. See <a href="/mapmanager/making-a-map/">Making A Map</a> for more information.</li>
 </ul>
-
-<h3 id="map-manager-user-files">Map Manager user files</h3>
-
-<p>Map Manager <a href="/mapmanager/user-files/">user files</a> are text files that specify program defaults. While you can use Map Manager without loading a user file, you need to be especially careful to get your stack scale correct as this is different on each microscope.</p>
 
 <h3 id="closing-map-manager">Closing Map Manager</h3>
 
-<p>When you quit Igor Pro you will always be prompted with &#39;Do you want to save changes to experiment &quot;Untitled&quot; before quitting&#39;. You do <strong>NOT</strong> need to do this, always <strong>answer No</strong>. All Map Manager analysis is saved using the &#39;Save&#39; buttons from within the Map Manager interface.</p>
+<p>When you quit Igor Pro, you will always be prompted with the following dialog. You want to answer <strong>No</strong>. All Map Manager analysis is saved using the &#39;Save&#39; buttons from within the Map Manager interface.
+<IMG class="img-float-left" SRC="../images/mm3/quit-igor.png" WIDTH="450">
+<div class="print-page-break"></div></p>
+
+<h3 id="map-manager-options">Map Manager Options</h3>
+
+<p>Global options are primarily set in the <a href="/mapmanager/stackdb-options-panel/">Stack DB Option Panel</a>. There is one set of options that will be saved and reloaded the next time you run Map Manager. You can also save options to your own user file. See <a href="/mapmanager/stackdb-options-panel/">Stack DB Options</a> for mor information.</p>
 
 
 <div class="post-tags">
@@ -223,7 +222,7 @@
   
   
   
-    <a href="/mapmanager/tags/#xxx">xxx</a>
+    <a href="/mapmanager/tags/#Workflow">Workflow</a>
   
 
    <!--

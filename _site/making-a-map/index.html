@@ -51,6 +51,9 @@
             <li data-order="5"><a href="/mapmanager/gallery">Gallery</a></li>
         
             
+            <li data-order="1"><a href="/mapmanager/getting-started">Getting started</a></li>
+        
+            
             <li data-order="2"><a href="/mapmanager/making-a-map">Making a map</a></li>
         
             
@@ -142,9 +145,6 @@
         
             
                 <li class=nav-header>Blog Posts</li>
-            
-            <li data-order="1"><a href="/mapmanager/getting-started">Getting started</a></li>
-        
             
             <li data-order="2"><a href="/mapmanager/faq">FAQ</a></li>
         
@@ -279,19 +279,21 @@
 <p class="tip"><B>Tip.</B> As you are working, keep your eye on the Igor command window. Each action you perform in Map Manager should report a few lines of text here. If this starts to spit out 1000's of lines there is probably a problem.</p>
    
 
-<h4 id="you-have-two-choices-here">You have two choices here.</h4>
+<h4 id="6-connecting-stack-db-objects-from-one-timepoint-to-the-next">6. Connecting stack db objects from one timepoint to the next</h4>
 
-<h4 id="6-1-use-the-find-points-panel">6.1 Use the <a href="/mapmanager/find-points-panel/">Find Points Panel</a></h4>
+<p>You have two choices here.</p>
+
+<h4 id="6-1-use-the-find-points-panel-to-connect-objects">6.1 Use the <a href="/mapmanager/find-points-panel/">Find Points Panel</a> to connect objects</h4>
 
 <p>Use the Find Points Panel to browse spines in two timepoints. Find Points will also guess for the best connections and allow you to set them manually.</p>
 
-<h4 id="6-2-auto-connect-spines-from-one-timepoint-to-the-next">6.2. Auto connect spines from one timepoint to the next</h4>
+<h4 id="6-2-auto-connect-all-objects-using-the-map-plot">6.2. Auto connect all objects using the <a href="/mapmanager/map-plot/">map plot</a></h4>
 
 <ul>
 <li>Open a &#39;Spine Map&#39; from the main Map Manager Panel.</li>
-<li>In the spine map, select a spine in the first timepoint, right click and select &#39;Connect To Next&#39;.
-This will make automatic connections of all spines from the first session to the next session.</li>
-<li>Repeat this process for each pairwise session in your stack. You can right-click and select &#39;Connect All&#39; to connect spines/objects through the entire map.</li>
+<li>In the spine map, select a spine in the first timepoint, right click and select &#39;Connect Objects To Next&#39;. This will make automatic connections of all spines from the first session to the next session.</li>
+<li>Repeat this process for each pairwise session in your stack. You can also right-click and select &#39;Connect All Objects&#39; to connect spines/objects through the entire map.</li>
+<li>When working on spines, spines are connected if they are within a minimum distance of each other on their respective segment line. See &#39;Connect spines within this distance (um)&#39; in the <a href="/mapmanager/stackdb-options-panel/">stack db options panel</a> to set this option.</li>
 </ul>
 
 <h4 id="7-check-the-auto-spine-connections-and-edit-as-necessary">7. Check the auto spine connections and edit as necessary</h4>

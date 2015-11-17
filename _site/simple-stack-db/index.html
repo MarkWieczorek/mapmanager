@@ -51,6 +51,9 @@
             <li data-order="5"><a href="/mapmanager/gallery">Gallery</a></li>
         
             
+            <li data-order="1"><a href="/mapmanager/getting-started">Getting started</a></li>
+        
+            
             <li data-order="2"><a href="/mapmanager/making-a-map">Making a map</a></li>
         
             
@@ -143,9 +146,6 @@
             
                 <li class=nav-header>Blog Posts</li>
             
-            <li data-order="1"><a href="/mapmanager/getting-started">Getting started</a></li>
-        
-            
             <li data-order="2"><a href="/mapmanager/faq">FAQ</a></li>
         
             
@@ -174,14 +174,14 @@
     </h3>
 </div>
 
-<p>This describes a workflow for annotating 3D points in a single stack. Please see <a href="/mapmanager/making-a-map/">making a map</a> to collect a sequence of stacks into a timeseries map.</p>
+<p>This describes a workflow for annotating 3D points in a <strong>single timepoint</strong>. Please see <a href="/mapmanager/making-a-map/">making a map</a> to collect a sequence of stacks into a timeseries map.</p>
 
 <h4 id="1-open-and-initialize-map-manager">1. Open and initialize Map Manager</h4>
 
 <ul>
 <li>Open Map Manager in Igor Pro (double-click the Map Manager.ipf file).</li>
 <li>Click in the Igor Pro command window to compile (the command window is titled &#39;Untitled&#39;).</li>
-<li><b>Important:</b> Initialize Map Manager using menu &#39;bStack -&gt; Load User&#39; and select <b>&#39;yunju_branch_points.txt&#39;</b><br>
+<li>Initialize Map Manager by selecting the main menu &#39;MapManager - Stack Browser&#39;.
 This will open the <a href="/mapmanager/stack-browser/">Stack Browser</a> window</li>
 </ul>
 
@@ -196,7 +196,7 @@ Load a directory of .tif files using the &#39;Load Generic Directory&#39; button
 
 <p>Once a stack is loaded in the <a href="/mapmanager/stack-browser/">Stack Browser</a>, double-click on its entry to display the stack in a <a href="/mapmanager/stack/">Stack</a> window.</p>
 
-<p class="important">You need to set the proper X/Y/Z stack scale with keyboard 'shift+p'. If you make stack db points with the wrong scale, you need to come find Bob.</p>
+<p class="important">You need to set the proper X/Y/Z stack scale, in um, with keyboard 'shift+p'. This is a critical step in MapManager as many measurements are made using um.</p>
 
 <h4 id="3-add-3d-annotations">3. Add 3D annotations</h4>
 
@@ -242,6 +242,8 @@ Load a directory of .tif files using the &#39;Load Generic Directory&#39; button
 
 <p>The stack db toolbar displays a list of line segments and a list of points. Open and close the stack db toolbar with keyboard &#39;[&#39;.</p>
 
+<p>See <a href="/mapmanager/annotating-a-stack/">annotating a stack</a> for more detialed information on making 3D points, line segments, and special objects like spines.</p>
+
 <h5 id="line-segments">Line Segments</h5>
 
 <p>Selecting a line segment in the list will select the same line segment in the stack window and vica-vera.</p>
@@ -256,7 +258,7 @@ Load a directory of .tif files using the &#39;Load Generic Directory&#39; button
 
 <p><IMG class="img-float-right" SRC="../images/imagingcore/stack_db_search.png" WIDTH="500"></p>
 
-<p>Open the Search panel from the stack db toolbar using the &#39;Options&#39; button.</p>
+<p>Open the Search panel from the stack db toolbar using the &#39;Search&#39; button.</p>
 
 <p>The search panel will search a stack db and return a list of points. Once generated, clicking on a point in the search results will display the point in the main stack window.</p>
 
@@ -280,9 +282,7 @@ Load a directory of .tif files using the &#39;Load Generic Directory&#39; button
 
 <p><IMG class="img-float-right" SRC="../images/imagingcore/stack_db_options.png" WIDTH="300"></p>
 
-<p>Open the Options panel from the stack db toolbar using the &#39;Options&#39; button.</p>
-
-<p><b>Grid Spacing (um)</b>: Toggles a grid on and off in the main stack window. When the grid is turned on/off or the scale is set, the main stack window is not automatically updated. Close and re-open the main stack window to refresh the grid.</p>
+<p>Open the <a href="/mapmanager/stackdb-options-panel/">Stack DB Options Panel</a> from the stack db toolbar using the &#39;Options&#39; button.</p>
 
 <div class="print-page-break"></div>
 

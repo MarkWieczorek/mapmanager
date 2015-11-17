@@ -10,13 +10,13 @@ tags:
 - Posts
 ---
 
-This describes a workflow for annotating 3D points in a single stack. Please see [making a map][3] to collect a sequence of stacks into a timeseries map.
+This describes a workflow for annotating 3D points in a **single timepoint**. Please see [making a map][3] to collect a sequence of stacks into a timeseries map.
 
 ####1. Open and initialize Map Manager
 
 - Open Map Manager in Igor Pro (double-click the Map Manager.ipf file).
 - Click in the Igor Pro command window to compile (the command window is titled 'Untitled').
-- <b>Important:</b> Initialize Map Manager using menu 'bStack -> Load User' and select <b>'yunju_branch_points.txt'</b>  
+- Initialize Map Manager by selecting the main menu 'MapManager - Stack Browser'.
     This will open the [Stack Browser][2] window
 
 ####2. Load a stack
@@ -27,7 +27,7 @@ This describes a workflow for annotating 3D points in a single stack. Please see
 
 Once a stack is loaded in the [Stack Browser][2], double-click on its entry to display the stack in a [Stack][1] window.
 
-<p class="important">You need to set the proper X/Y/Z stack scale with keyboard 'shift+p'. If you make stack db points with the wrong scale, you need to come find Bob.</p>
+<p class="important">You need to set the proper X/Y/Z stack scale, in um, with keyboard 'shift+p'. This is a critical step in MapManager as many measurements are made using um.</p>
 
 
 ####3. Add 3D annotations
@@ -69,7 +69,9 @@ It is very easy to export the 3D coordinates of the points in a stack DB.
 <IMG class="img-float-right" SRC="../images/imagingcore/stack_db.png" WIDTH="600">
 
 The stack db toolbar displays a list of line segments and a list of points. Open and close the stack db toolbar with keyboard '['.
- 
+
+See [annotating a stack][5] for more detialed information on making 3D points, line segments, and special objects like spines.
+
 #####Line Segments
 
 Selecting a line segment in the list will select the same line segment in the stack window and vica-vera.
@@ -86,7 +88,7 @@ Selecting a point in the list will select the point in the stack window and vica
 
 <IMG class="img-float-right" SRC="../images/imagingcore/stack_db_search.png" WIDTH="500">
 
-Open the Search panel from the stack db toolbar using the 'Options' button.
+Open the Search panel from the stack db toolbar using the 'Search' button.
 
 The search panel will search a stack db and return a list of points. Once generated, clicking on a point in the search results will display the point in the main stack window.
 
@@ -109,9 +111,7 @@ The search results are a static output report. Once a search is performed, if po
 
 <IMG class="img-float-right" SRC="../images/imagingcore/stack_db_options.png" WIDTH="300">
 
-Open the Options panel from the stack db toolbar using the 'Options' button.
-
-<b>Grid Spacing (um)</b>: Toggles a grid on and off in the main stack window. When the grid is turned on/off or the scale is set, the main stack window is not automatically updated. Close and re-open the main stack window to refresh the grid.
+Open the [Stack DB Options Panel][4] from the stack db toolbar using the 'Options' button.
 
 <div class="print-page-break"></div>
 
@@ -119,3 +119,5 @@ Open the Options panel from the stack db toolbar using the 'Options' button.
 [1]: /mapmanager/stack/
 [2]: /mapmanager/stack-browser/
 [3]: /mapmanager/making-a-map/
+[4]: /mapmanager/stackdb-options-panel/
+[5]: /mapmanager/annotating-a-stack/

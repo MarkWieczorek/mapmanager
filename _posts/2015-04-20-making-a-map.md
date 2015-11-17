@@ -83,18 +83,19 @@ See [Fitting Segment In Fiji][15] for help on FIJI versions, installing the plug
 <p class="tip"><B>Tip.</B> As you are working, keep your eye on the Igor command window. Each action you perform in Map Manager should report a few lines of text here. If this starts to spit out 1000's of lines there is probably a problem.</p>
    
 
-####You have two choices here.
+####6. Connecting stack db objects from one timepoint to the next
 
-####6.1 Use the [Find Points Panel][16]
+You have two choices here.
+
+####6.1 Use the [Find Points Panel][16] to connect objects
 
 Use the Find Points Panel to browse spines in two timepoints. Find Points will also guess for the best connections and allow you to set them manually.
 
-####6.2. Auto connect spines from one timepoint to the next
+####6.2. Auto connect all objects using the [map plot][12]
  - Open a 'Spine Map' from the main Map Manager Panel.
- - In the spine map, select a spine in the first timepoint, right click and select 'Connect To Next'.
-   This will make automatic connections of all spines from the first session to the next session.
- - Repeat this process for each pairwise session in your stack. You can right-click and select 'Connect All' to connect spines/objects through the entire map.
- 
+ - In the spine map, select a spine in the first timepoint, right click and select 'Connect Objects To Next'. This will make automatic connections of all spines from the first session to the next session.
+ - Repeat this process for each pairwise session in your stack. You can also right-click and select 'Connect All Objects' to connect spines/objects through the entire map.
+ - When working on spines, spines are connected if they are within a minimum distance of each other on their respective segment line. See 'Connect spines within this distance (um)' in the [stack db options panel][7] to set this option.
  
 ####7. Check the auto spine connections and edit as necessary
 

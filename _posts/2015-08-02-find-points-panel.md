@@ -66,8 +66,9 @@ Clicking on any column name will sort the list by the values in that column. Col
 
  For a selected row
  
- - 'shift + right-arrow' to commit the 'Guess' to the destination (dIdx).
- - 'del' key to remove the connection.
+ - 'shift + right-arrow' to commit the 'Guess' to the destination (dIdx). This will connect the source and destination objects together, making them persistent.
+ - 'del' key to remove the connection. This will remove persistence between the source and destination objects.
+ - 'ctrl + p' to set the selected point at the global pivot. This is not used for spines.
 
 ####Tips
 
