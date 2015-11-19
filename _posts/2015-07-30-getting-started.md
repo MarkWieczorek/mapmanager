@@ -22,14 +22,14 @@ tags:
  - Run the software by double-clicking MapManager.ipf from within your source code folder.
  - To fit lines in FIJI you will have to specify a hard-drive path to FIJI and install a plugin in FIJI. Please see [fitting segments in fiji][7].
  
-###Opening Map Manager
+###Opening/Running Map Manager
 
  - Open MapManager.ipf into Igor Pro (just double click the MapManager.ipf file).
  - Once in Igor Pro, click in the command window to compile Map Manager and activate the main menus. The command window is in the lower left of your screen and has the window title 'Untitled'.
  - To score a single timepoint stack, select the main menu 'MapManager - Stack Browser' to open the [Stack Browser][6] panel. See [Simple Stack DB][10] for more information.
  - To score a timeseries of stacks (a map), select the main menu 'MapManager - Map Manager Panel' to open the main [Map Manager panel][5]. See [Making A Map][11] for more information.
 
-###Closing Map Manager
+###Closing/Quiting Map Manager
 
 When you quit Igor Pro, you will always be prompted with the following dialog. You want to answer **No**. All Map Manager analysis is saved using the 'Save' buttons from within the Map Manager interface.
 <IMG class="img-float-left" SRC="../images/mm3/quit-igor.png" WIDTH="450">
@@ -37,7 +37,7 @@ When you quit Igor Pro, you will always be prompted with the following dialog. Y
 
 ###Map Manager Options
 
-Global options are primarily set in the [Stack DB Option Panel][9]. There is one set of options that will be saved and reloaded the next time you run Map Manager. You can also save options to your own user file. See [Stack DB Options][9] for mor information.
+Global options are set in the [Option Panel][9]. There is one set of options that will be saved and reloaded the next time you run Map Manager. You can also save options to your own user file. See [Options][9] for more information.
 
 
 [1]: https://www.wavemetrics.com/index.html

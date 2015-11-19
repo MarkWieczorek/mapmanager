@@ -1,15 +1,15 @@
 ---
 layout: page
-title: "Stack DB Options"
+title: "Options"
 category: interface
 date: 2015-04-20 22:46:33
-order: 4
+order: 5
 tags:
 - Interface
 ---
 
 
-The Stack DB options panel provides global options to control the behavior of Map Manager. Options can be saved and then loaded using the **User** section. Values shown in <font color="red"><strong>red</strong></font> will effect your analysis.
+The Map Manager Options panel provides global options to control the behavior of Map Manager. Options can be saved and then loaded using the **User** section. Values shown in <font color="red"><strong>red</strong></font> will effect your analysis.
 
 To open the options panel
 
