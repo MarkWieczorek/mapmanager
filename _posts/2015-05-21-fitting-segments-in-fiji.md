@@ -39,8 +39,8 @@ You need to specify the location of your Fiji program from within Map Manager. T
 
  - Run Map Manager with the MapManager.ipf file (this is how you always run Map Manager).
  - Open the [HDD Paths][5] panel using the main menu 'MapManager - Hard Drive Paths'.
- - In the Map Manager HD Paths panel, specify the path to your Fiji Application with the 'Set' button.
- - Us e the main [Options Panel][6] to save a user file with 'Save As...'. The next time you open Map manager, it will use this Fiji path.
+ - In the Map Manager HD Paths panel, specify the path to your Fiji Application with the corresponding 'Set' button.
+ - In the main [Options Panel][6],save the global options with the 'Save' button. The next time Map Manager is run, it will remember and use this Fiji path.
  
 If that does not work, you can specify the location of your Fiji program in a Map Manager [User File][3]. The user file needs to contain a line like this...
  
@@ -51,14 +51,14 @@ If that does not work, you can specify the location of your Fiji program in a Ma
 	# windows
 	#root:stackdb2:options:gFijiPath="C:\Users\cudmore.linden-image2\Desktop\Fiji.app\fiji-win64.exe"
 
-Make sure the actual file exists. Don't assume the name of Fiji is 'fiji-win64.exe', this name changes from version to version of Fiji. If there is an error in your path, you WILL get an error when fitting lines in Map Manager.
+Make sure the actual Fiji executable exists. Don't assume the name of Fiji is 'fiji-win64.exe', this name changes from version to version of Fiji. If there is an error in this path, there WILL be an error when fitting lines in Map Manager.
 
 ###Troubleshooting
 
-If your line fits do not work from within Map Manager, please check the following
+If line fits do not work from within Map Manager, please check the following
 
   - You are using the 'Fiji Life-Line version, 2013 July 15'.
-  - Your Fiji.app folder can not be in a folder with any spaces in its path (this includes 'Program Files').
+  - Your Fiji.app folder can not be in a folder with any spaces or special characters in its path (this includes 'Program Files').
   - You have downloaded and install the 'Bob_Neurite_Tracer_v3.java'
   - You have specified your Fiji path within Map Manager using 'MapManager - Hard Drive Paths'.
 

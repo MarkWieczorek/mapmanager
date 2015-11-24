@@ -92,13 +92,13 @@
             
                 <li class=nav-header>Interface Windows</li>
             
-            <li data-order="5"><a href="/mapmanager/find-points-panel">Find Points Panel</a></li>
+            <li data-order="4"><a href="/mapmanager/find-points-panel">Find Points</a></li>
         
             
-            <li data-order="5"><a href="/mapmanager/hdd-paths">Hard Drive Paths</a></li>
+            <li data-order="6"><a href="/mapmanager/hdd-paths">Hard Drive Paths</a></li>
         
             
-            <li data-order="4"><a href="/mapmanager/stackdb-options-panel">Stack DB Options</a></li>
+            <li data-order="5"><a href="/mapmanager/stackdb-options-panel">Options</a></li>
         
             
             <li data-order="2"><a href="/mapmanager/search-panel">Search panel</a></li>
@@ -184,21 +184,13 @@
 <p>A stack window displays a 3D image stack, one image plane (slice) at a time.</p>
 
 <ul>
-<li>Use the mouse-wheel to scroll up and down through images, arrow keys to pan, +/- to zoom.</li>
-<li>Image contrast is critical, open the contrast control bar with keyboard &#39;c&#39; and adjust min/max contrast with sliders.</li>
+<li>Use the mouse-wheel to scroll up and down through images, arrow keys to pan, +/- to zoom. Zooming with keyboard +/- follows the mouse pointer</li>
+<li>Image contrast is critical, open the contrast control bar with keyboard &#39;c&#39; and adjust min/max contrast with sliders. If contrast is not set properly you will not see objects in your image that are actually there.</li>
 <li>View a pixel intensity histogram with keyboard &#39;h&#39;.</li>
 <li>Closing a stack window does not remove it from memory (the stack remains open).</li>
 </ul>
 
 <div class="print-page-break"></div>
-
-<h4 id="important-concepts">Important Concepts</h4>
-
-<ul>
-<li>Contrast is critical, if not set properly you will not see objects in your image that are actually there.</li>
-<li>Closing a stack window does not remove the stack from memory.</li>
-<li>Zooming with keyboard +/- follows the mouse pointer</li>
-</ul>
 
 <h4 id="viewing-multiple-channels">Viewing multiple channels</h4>
 
@@ -210,6 +202,19 @@
 <li>Open the contrast bar with keyboard &#39;c&#39;</li>
 <li>Pixel intensity values below &#39;min&#39; will be displayed as black</li>
 <li>Pixel intensity values above &#39;max&#39; will be displayed as white</li>
+</ul>
+
+<h4 id="scale-bar">Scale bar</h4>
+
+<p>Control the scale bar in <a href="/mapmanager/stackdb-options-panel/">Options</a>. </p>
+
+<h4 id="window-candy">Window Candy</h4>
+
+<ul>
+<li>There are five different window decorations or <strong>c</strong>andy options: (i) all, (ii) none, (iii) scale, (iv) scale + scroll, and (v) something else.</li>
+<li>Cycle different window <strong>c</strong>andies with keyboard &#39;shift+c&#39;.</li>
+<li>Set the default window <strong>c</strong>andy in <a href="/mapmanager/stackdb-options-panel/">Options</a>. </li>
+<li>Note: The grid will only display when window <strong>c</strong>andy is set to &#39;All&#39; (when the stack axis are visible).</li>
 </ul>
 
 <div class="print-page-break"></div>
@@ -232,7 +237,7 @@
 
 <p>Open a maximal Z-Projection with keyboard &#39;shift+z&#39;. This allows you to set the top and bottom slice that goes into the Z-Projection.</p>
 
-<p>Once the Z-Projection window is open, it behaves just like a stack window (with only one slice). For example, you can set contrast with keyboard &#39;c&#39;, view a histogram with keyboard &#39;h&#39;, and copy/paste the image to another program.</p>
+<p>Once the Z-Projection window is open, it behaves just like a stack window (with only one slice). For example, you can zoom with +/-, pan with arrow keys, open the contrast bar with keyboard &#39;c&#39;, view a histogram with keyboard &#39;h&#39;, and copy/paste the image to another program, etc., etc.</p>
 
 <h4 id="viewing-a-sliding-z-projection">Viewing a sliding z-projection</h4>
 

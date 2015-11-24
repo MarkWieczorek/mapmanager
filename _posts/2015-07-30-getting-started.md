@@ -11,15 +11,15 @@ tags:
 ###Installing Igor Pro
 
  - Igor Pro is a cross platform program that runs on both Windows and Mac OS X.
- - You need to [purchase][2] an Igor Pro license from [Wavemetrics][1], [download][3] the software, and install.
- - To try out Igor Pro, you can download and install a fully functional but time limited [demo version][4].
+ - You need to [purchase][2] an Igor Pro license from [Wavemetrics][1], [download][3] Igor Pro and install it.
+ - To try out Igor Pro, download and install a fully functional but time limited [demo version][4].
 
 ###Installing Map Manager
 
  - Once Igor Pro is installed, there is no formal installation of Map Manager
  - Get the source code from Bob.
  - The source code will be in a folder named 'MapManager_date' where 'date' is the date the software was created. The folder will be something like 'MapManager_20151117'.
- - Run the software by double-clicking MapManager.ipf from within your source code folder.
+ - Run the software by double-clicking MapManager.ipf from within the source code folder.
  - To fit lines in FIJI you will have to specify a hard-drive path to FIJI and install a plugin in FIJI. Please see [fitting segments in fiji][7].
  
 ###Opening/Running Map Manager
@@ -31,13 +31,20 @@ tags:
 
 ###Closing/Quiting Map Manager
 
-When you quit Igor Pro, you will always be prompted with the following dialog. You want to answer **No**. All Map Manager analysis is saved using the 'Save' buttons from within the Map Manager interface.
-<IMG class="img-float-left" SRC="../images/mm3/quit-igor.png" WIDTH="450">
+ - Quit Igor Pro with the main menu 'Igor Pro - Quit Igor Pro'
+ - Igor Pro will always show the following dialog.
+ - Always answer **No**.
+ - All Map Manager analysis is saved using the 'Save' buttons from within the Map Manager interface.
+<div class="print-page-break"></div>
+<IMG class="img-float-left" SRC="../images/mm3/quit-igor.png" WIDTH="400">
 <div class="print-page-break"></div>
 
 ###Map Manager Options
 
-Global options are set in the [Option Panel][9]. There is one set of options that will be saved and reloaded the next time you run Map Manager. You can also save options to your own user file. See [Options][9] for more information.
+ - Global options are set in the [Options Panel][9].
+ - There is one set of options that will be reloaded the next time Map Manager is run.
+ - Save the current options with the 'Save' button in the [Options][9] panel.
+ - Options can also be saved and then loaded from a user file. Use 'Save As...' to save options into a user file.
 
 
 [1]: https://www.wavemetrics.com/index.html
