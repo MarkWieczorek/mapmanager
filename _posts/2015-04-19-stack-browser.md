@@ -45,9 +45,17 @@ The simplest way to load a stack is to drag and drop a .tif file onto the Igor p
 
 ###Browsing loaded data
 
-Select your loaded directory on the left  and the loaded stacks will be shown on the right. Double click a stack in the list on the right to open a [stack][3] window.
+Select a loaded directory on the left  and the loaded stacks will be shown on the right. Double click a stack in the list on the right to open a [stack][3] window.
 
-There are many things you can do to visualize your [stack][3]
+###Keyboard shortcuts
+
+The list of stacks will respond to keyboard input
+
+  - 'o' to generate an **o**utput density report. See [spine dynamics][6].
+  - 'e' to edit the list of stacks in a text table
+  
+###Additional features
+There are many things you can do to visualize your [stacks][3]
 
   - View a histogram (keyboard 'h').
   - Set min/max contrast (keyboard 'c').
@@ -62,3 +70,4 @@ There are many things you can do to visualize your [stack][3]
 [3]: /mapmanager/stack/
 [4]: /mapmanager/map-plot/
 [5]: https://github.com/cudmore/bob-fiji-plugins
+[6]: /mapmanager/spine-dynamics/
