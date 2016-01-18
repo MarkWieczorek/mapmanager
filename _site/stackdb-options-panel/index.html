@@ -185,7 +185,7 @@
 <li>&#39;Options&#39; button in the Map Manager Buttons panel.</li>
 </ul>
 
-<p><IMG class="img-float-left" SRC="../images/mm3/mm3-options-top.png" WIDTH="300"></p>
+<p><IMG class="img-float-left" SRC="../images/mm3/mm3-options.png" WIDTH="300"></p>
 
 <p>The panel is very tall, scroll the panel up/down with the mouse wheel.</p>
 
@@ -213,8 +213,6 @@
 
 <p><strong>Point mask.</strong> Turn point masking on/off. By default, stack db objects are shown and not shown (they are masked) based on the image plane you are viewing.</p>
 
-<p><strong>Tags.</strong> In a stack window, the tags are the stack db point number. In a map, the tags are the <strong>run</strong> number of the point. See xxx.</p>
-
 <p><strong>Use segment color for all points.</strong> xxx</p>
 
 <p><strong>Line.</strong> Toggle the segment backbone line and radii lines.</p>
@@ -223,15 +221,20 @@
 
 <p><strong>Line Mask.</strong> xxx</p>
 
+<p><strong>Tag Font Size.</strong> In a stack window, the tags are the stack db point number. In a map, the tags are the <strong>run</strong> number of the point.</p>
+
+<p><strong>Scale Bar.</strong> Displayed in the bottom right of all stack windows. Cycle through stack window display options with keyboard shift+c</p>
+
 <p><strong>Display Control Points</strong> xxx</p>
 
 <p><strong>Control Point Help</strong> Use the &#39;On&#39; and &#39;Off&#39; buttons for some additional visual cues about your segment line fits. The end of the line fit is shown in red. This is useful when making the same segment across timepoints in a map. It helps you fit each segment in the same direction.</p>
 
-<h3 id="miscellaneous">Miscellaneous</h3>
+<h3 id="stack-db">Stack DB</h3>
 
 <p><strong>Warn On New Objects</strong>
 <strong>Warn On Delete Objects</strong>
-<strong>New Objects On Mouse Click (no shift)</strong></p>
+<strong>New Objects On Mouse Click (no shift)</strong>
+<strong>Allow New Objects When Viewing Sliding Z-Projection</strong></p>
 
 <p><strong>Stack Window Size</strong> Two default stack window sizes (screen pixels). Capture the size of an open Stack window with &#39;C&#39; button.</p>
 
@@ -272,7 +275,7 @@
 <strong>Shift + left/right to go to prev/next timepoint</strong>. xxx
 <strong>Auto plot object map on load</strong>. xxx</p>
 
-<p><IMG class="img-float-left" SRC="../images/mm3/mm3-options-bottom.png" WIDTH="300"></p>
+<!-- <IMG class="img-float-left" SRC="../images/mm3/mm3-options-bottom.png" WIDTH="300"> -->
 
 <h3 id="intensity-analysis">Intensity Analysis</h3>
 
@@ -284,14 +287,16 @@
 <strong>Extend Tail (um)</strong>
 <strong>+/- Segment (um)</strong></p>
 
-<p><strong>Real-Time</strong>
-<strong>Debug</strong></p>
+<p><strong>Debug</strong>
+<strong>Debug On Error</strong></p>
 
 <h3 id="importing-segments-from-fiji">Importing Segments From FIJI</h3>
 
-<p><strong>On import, Filter SWC Box Width</strong></p>
+<p><strong>Default Segment Radius (um)</strong></p>
 
-<p><strong>Filter Radius, Box Width</strong></p>
+<p><strong>Box Filter Line (points)</strong></p>
+
+<p><strong>Box Filter Radius (points)</strong></p>
 
 <p><strong>Convert To 8-bit</strong>. Will convert to 8-bit (in Fiji). This makes line fit much faster.</p>
 
@@ -299,9 +304,11 @@
 
 <h3 id="miscellaneous">Miscellaneous</h3>
 
-<p>A big table to set how stack db points are displayed. RIght-click on marker or color ot set.</p>
+<p><IMG class="img-float-left" SRC="../images/mm3/mmoptions-object-display.png" WIDTH="225"></p>
 
-<p><strong>Tag Size</strong> The size of tags displayed (for each point) in stack db window.</p>
+<p>A table to set how stack db points are displayed. Use the disclusure triangle in the upper-right of the options window to show the table.</p>
+
+<p>Right-click on &#39;marker&#39; or &#39;color&#39; to set. Double-click on &#39;size&#39; to set.</p>
 
 <div class="print-page-break"></div>
 
@@ -309,7 +316,7 @@
 
 <p>Additional option are available in the Stack Browser Options panel.</p>
 
-<p>Open the Stack Browser Options panel using the main menu &#39;bStack - Stack Browser Options&#39;</p>
+<p>Open the Stack Browser Options panel using the main menu &#39;MapManager - Stack Browser Options&#39;</p>
 
 <p><IMG class="img-float-left" SRC="../images/mm3/mm3-stack-browser-options.png" WIDTH="300"></p>
 
@@ -350,7 +357,7 @@
 
             <div class=row-fluid>
                 <div id=footer class=span12>
-                      Copyright &copy; 2015 - Robert Cudmore -
+                      Copyright &copy; 2016 - Robert Cudmore -
 
  <a href="http://robertcudmore.org/index.html">robertcudmore.org</a>
 

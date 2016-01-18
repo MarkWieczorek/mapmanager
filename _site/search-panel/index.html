@@ -174,17 +174,60 @@
     </h3>
 </div>
 
-<p><IMG class="img-float-left" SRC="../images/mm3/mm3-search-panel.png" WIDTH="700"></p>
+<p><IMG class="img-float-left" SRC="../images/mm3/mm3-search-panel.png" WIDTH="900"></p>
 
 <div class="print-page-break"></div>
 
 <p>The search panel allows a stack or map to be searched for stack db objects.</p>
 
-<p>Performing a search will create a list of object hits.</p>
+<h4 id="interacting-with-results">Interacting with results</h4>
 
-<p>Selecting an entry in search results will select that object in any open <a href="/mapmanager/stack-plot/">stack</a> and <a href="/mapmanager/map-plot/">map</a> plots.</p>
+<p>Performing a search will create a list of object matching the search criteria. Selecting an entry in the search results will select that object in any open <a href="/mapmanager/stack-plot/">stack</a> and <a href="/mapmanager/map-plot/">map</a> plots. Likewise, selecting an object in a <a href="/mapmanager/stack-plot/">stack</a> or <a href="/mapmanager/map-plot/">map</a> plot will select the object in the search list (if it is in the list).</p>
 
-<p>Double-click an entry to open its corresponding <a href="/mapmanager/stack-plot/">stack</a> or <a href="/mapmanager/run-plot/">run</a></p>
+<ul>
+<li>Single-click or scroll with keyboard will select the object in existing stack windows (it will not open or pan/zoom the existing stack windows).</li>
+<li>Double-click to open and select the object in its corresponding <a href="/mapmanager/stack-plot/">stack</a>.</li>
+<li>Option-click to zoom the object in an already open stack plot.</li>
+<li>Right-click to open a <a href="/mapmanager/run-plot/">run plot</a>.</li>
+</ul>
+
+<h4 id="types-of-searches">Types of searches</h4>
+
+<p>First select the type of object with &#39;Object Type&#39; popup. Start by selecting &#39;Spine&#39;.</p>
+
+<h4 id="objects">Objects</h4>
+
+<ul>
+<li>All. All objects of &#39;Object Type&#39;</li>
+<li>Bad. Objects marked bad</li>
+<li>Errors and Warning. Objects with <a href="/mapmanager/intensity/">Intensity Analysis</a>&#39; errors and warnings.</li>
+<li>Notes.</li>
+<li>Closeness. Returns object that are within specified distance (um) of each other.</li>
+<li>V Spines. Return spines where the z-plane of the spine head is farther (in z) from the connected backbone/dendrite line.</li>
+<li>Int Dirty. Returns spines with dirty intensity analysis. Spines with dirty intensity analysis can be analyzed in the main <a href="/mapmanager/main-panel/">map manager panel</a>, intensity tab.</li>
+<li>Int User.</li>
+<li>Int Bad.</li>
+<li>ROI Bounds. Return spines with background ROI within specified distance (um) from edges of image. This is useful if stack alignment has been run causing images to be shifted/rotated resulting in undefined regions on the edge of the image.</li>
+</ul>
+
+<h4 id="map">Map</h4>
+
+<ul>
+<li>Addition.</li>
+<li>Subtraction.</li>
+<li>Persistent</li>
+<li>Transient</li>
+<li>Bad Runs. Return a list of objects that have a mixture of good and bad within their respective run. This is used for debugging and will be removed.</li>
+<li>Re Added. Return a list of added spines that have a previous subtraction (on a previous timepoint) that is within specified distance along the backbone/dendrite.</li>
+</ul>
+
+<h4 id="manual-search">Manual Search</h4>
+
+<p>Return a list of objects matching a user specified criterion.</p>
+
+<p>Do this by selecting a statistic in the list, specify a value, and an operator (&gt;, &gt;=, &lt;, &lt;=, =, Not).</p>
+
+<p>For example, to generate a search of all long spines, select sLen2d/IntCh1, enter a spine length like 4 um, select &#39;&gt;&#39; operator and press &#39;Manual Search&#39; button.</p>
 
 
 <div class="post-tags">
@@ -221,7 +264,7 @@
 
             <div class=row-fluid>
                 <div id=footer class=span12>
-                      Copyright &copy; 2015 - Robert Cudmore -
+                      Copyright &copy; 2016 - Robert Cudmore -
 
  <a href="http://robertcudmore.org/index.html">robertcudmore.org</a>
 
