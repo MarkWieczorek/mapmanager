@@ -42,13 +42,21 @@ Intensity analysis is run from the main [map manager panel][3] using the 'Intens
 
 <IMG class="img-float-right" SRC="../images/mm3/intensity/intensity-parameters.png" WIDTH="300">
 
-Intensity analysis parameters are set in the [stack db options][2] panel. They can also be set independently for each spine using the 'Object Info' panel (in a stack window, use keyboard 'i' to toggle the Object Info Panel)
 
- - **Spine width (um).** Width of spine ROI centered on the spine line.
+Global intensity analysis parameters are set in the [stack db options][2] panel. These parameters are used for every spine in a map.
+
+Once intensity analysis has been run, the parameters of individual spines can be set using the 'Object Info' panel in a stack. Open the Object Info window in a stack with keyboard 'i'.
+
+<div class="print-page-break"></div>
+
+<IMG class="img-float-right" SRC="../images/mm3/intensity/obj-info.png" WIDTH="300">
+
+ - **Width (um).** Width of spine ROI centered on the spine line.
  - **Extend head (um).** Distance to extend the spine ROI beyond its spine head.
  - **Extend tail (um).** Distance to extend the spine ROI beyond it connection point with the backbone/dendrite..
  - **+/- Slices.** The statistics (Sum, Mean, SD, N) of each spine, backbone, and background ROI is calculated after expanding the ROI up and down in Z-dimension.
  - **+/- Segment (um).** The distance (um) to extend the backbone/dendrite ROI up and down the backbone/dendrite line.
+ - **Scale Radius (um).** Only available for individual spines using the Object Info Panel. When intensity analysis is run (for a map), each spine is assigned a radius (um) following the radius of the segment it is attached to. Once intensity analysis has been run, this radius can be set for individual spines in the Object Info panel.
  
 ###Intensity Analysis Output
 
@@ -116,6 +124,8 @@ utsmdodm	:	this spine mean divided by other dendrite mean
 
 ###Moving the background ROI
 
+<IMG class="img-float-right" SRC="../images/mm3/intensity/spine-roi-example-edit.png" WIDTH="350">
+
 Clicking on the spine backgrond ROI will enable an edit mode where the user can specify the background position. This edit mode also shows the candidate background positions.
 
   - Mouse-Click to set a new position.
@@ -123,11 +133,76 @@ Clicking on the spine backgrond ROI will enable an edit mode where the user can 
   - 'r' to reset spine position. A new position will automatically be chosen next time spine is analyzed.
   - 'esc' to cancel move
   
-<IMG class="img-float-right" SRC="../images/mm3/intensity/spine-roi-example-edit.png" WIDTH="400">
 
 <div class="print-page-break"></div>
 
-	
+###Errors and Warnings
+
+Intensity analysis should be run with 'Debug On Error' off. <strike>Set this with a procedure (code) window frontmost and select main menu 'Procedure - Debug On Error'</strike>
+
+When the intensity analysis has a problem analyzing a spine, errors and warnings will be set for that spine. Most errors are due to an ROI going off the image or in problems with drawing a valid backbone ROI (near the end of a segment).
+
+Browse Errors and Warnings using the 'Errors & Warnings' button in the [search panel][4].
+
+Errors and Warnings are
+
+<TABLE>
+<TR>
+<TD>
+<figure>
+<figcaption>Error #3 x spine ROI beyond image</figcaption>
+<IMG SRC="../images/mm3/intensity/3-spine-roi-error.png" WIDTH="300">
+</figure>
+</TD>
+
+<TD>
+<figure>
+<figcaption>Error #3.5 y spine ROI beyond image</figcaption>
+<IMG SRC="../images/mm3/intensity/3_5-spine-roi-error.png" WIDTH="300">
+</figure>
+</TD>
+
+<TD>
+<figure>
+<figcaption>Error #6 reducing spine with ImageSeedFill</figcaption>
+<IMG SRC="../images/mm3/intensity/6-reducing-spine-error.png" WIDTH="300">
+</figure>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<figure>
+<figcaption>Error #9 extending backbone error</figcaption>
+<IMG SRC="../images/mm3/intensity/9-extending-backbone.png" WIDTH="300">
+</figure>
+</TD>
+
+<TD>
+<figure>
+<figcaption>Warning #5.1 prev cPnt</figcaption>
+<IMG SRC="../images/mm3/intensity/5_1_prev-cpnt.png" WIDTH="300">
+</figure>
+</TD>
+</TR>
+
+</TABLE>
+
+###Intensity Dirty
+
+A spines intensity analysis becomes 'dirty' and needs to be re-run whenever the geometry of a spine changes or the geometry of its connected spines change.
+
+Intensity analysis can be run on just 'dirty' spines using the 'Only Dirty' checkbox in the Intensity Tab of the main [map manager panel][3]. Dirty spines can be browsed using 'Int Dirty' in the main [search panel][4]. 
+
+A spines intensity analysis becomes dirty when:
+
+  - A spine is moved
+  - A spine is reconnected to the backbone
+  - Its analysis parameters are changed (width, extend head, etc.) 
+  - Any of the other spines connected to it are changed
+  - Its dynamics are changed (addition, subtraction, persistent)
+
 [1]: /mapmanager/plot-panel/
 [2]: /mapmanager/stackdb-options-panel/
 [3]: /mapmanager/main-panel/
+[4]: /mapmanager/search-panel/
