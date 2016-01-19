@@ -108,7 +108,8 @@ ubsdMean	:	background subtracted dendrite mean
 
 #####Cross channel stats
 ```
-utssmoss	:	this spine sum minus other spine sum. This can be read as '(t)his (s)pine (s)um (m)inus (o)ther (s)pine sum'
+utssmoss	:	this spine sum minus other spine sum.
+                This can be read as '(t)his (s)pine (s)um (m)inus (o)ther (s)pine sum'
 utsmmosm	:	this spine mean minus other spine mean
 
 utssdoss	:	this spine sum divided by other spine sum
@@ -146,26 +147,26 @@ Browse Errors and Warnings using the 'Errors & Warnings' button in the [search p
 
 Errors and Warnings are
 
-<TABLE>
+<TABLE cellpadding="0">
 <TR>
 <TD>
 <figure>
 <figcaption>Error #3 x spine ROI beyond image</figcaption>
-<IMG SRC="../images/mm3/intensity/3-spine-roi-error.png" WIDTH="300">
+<IMG SRC="../images/mm3/intensity/3-spine-roi-error.png" WIDTH="350">
 </figure>
 </TD>
 
 <TD>
 <figure>
 <figcaption>Error #3.5 y spine ROI beyond image</figcaption>
-<IMG SRC="../images/mm3/intensity/3_5-spine-roi-error.png" WIDTH="300">
+<IMG SRC="../images/mm3/intensity/3_5-spine-roi-error.png" WIDTH="350">
 </figure>
 </TD>
 
 <TD>
 <figure>
 <figcaption>Error #6 reducing spine with ImageSeedFill</figcaption>
-<IMG SRC="../images/mm3/intensity/6-reducing-spine-error.png" WIDTH="300">
+<IMG SRC="../images/mm3/intensity/6-reducing-spine-error.png" WIDTH="350">
 </figure>
 </TD>
 </TR>
@@ -174,14 +175,14 @@ Errors and Warnings are
 <TD>
 <figure>
 <figcaption>Error #9 extending backbone error</figcaption>
-<IMG SRC="../images/mm3/intensity/9-extending-backbone.png" WIDTH="300">
+<IMG SRC="../images/mm3/intensity/9-extending-backbone.png" WIDTH="350">
 </figure>
 </TD>
 
 <TD>
 <figure>
 <figcaption>Warning #5.1 prev cPnt</figcaption>
-<IMG SRC="../images/mm3/intensity/5_1_prev-cpnt.png" WIDTH="300">
+<IMG SRC="../images/mm3/intensity/5_1_prev-cpnt.png" WIDTH="350">
 </figure>
 </TD>
 </TR>
