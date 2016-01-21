@@ -198,36 +198,37 @@
 <h4 id="objects">Objects</h4>
 
 <ul>
-<li>All. All objects of &#39;Object Type&#39;</li>
-<li>Bad. Objects marked bad</li>
-<li>Errors and Warning. Objects with <a href="/mapmanager/intensity/">Intensity Analysis</a>&#39; errors and warnings.</li>
-<li>Notes.</li>
-<li>Closeness. Returns object that are within specified distance (um) of each other.</li>
-<li>V Spines. Return spines where the z-plane of the spine head is farther (in z) from the connected backbone/dendrite line.</li>
-<li>Int Dirty. Returns spines with dirty intensity analysis. Spines with dirty intensity analysis can be analyzed in the main <a href="/mapmanager/main-panel/">map manager panel</a>, intensity tab.</li>
-<li>Int User.</li>
-<li>Int Bad.</li>
-<li>ROI Bounds. Return spines with background ROI within specified distance (um) from edges of image. This is useful if stack alignment has been run causing images to be shifted/rotated resulting in undefined regions on the edge of the image.</li>
+<li><strong>All.</strong> All objects of &#39;Object Type&#39;</li>
+<li><strong>Bad.</strong> Objects marked bad</li>
+<li><strong>Errors and Warning.</strong> Objects with <a href="/mapmanager/intensity/">Intensity Analysis</a> errors and warnings. USe the Error and Warning checkboxes in the upper right of the panel to toggle these columns on and off.</li>
+<li><strong>Int Dirty.</strong> Returns spines with dirty intensity analysis. Spines with dirty intensity analysis can be analyzed in the main <a href="/mapmanager/main-panel/">map manager panel</a>, intensity tab.</li>
+<li><strong>Int User.</strong></li>
+<li><strong>Int Bad.</strong></li>
+<li><strong>Notes.</strong> Objects with notes matching the search criteria. Use &#39;*&#39; as a wildcard. Use &#39;*&#39; to return all objects with notes, use &#39;thistext*&#39; to search for notes starting with &#39;thistext&#39;.</li>
+<li><strong>Closeness.</strong> Returns object that are within specified distance (um) of each other.</li>
+<li><strong>V Spines.</strong> Return spines where the z-plane of the spine head is farther (in z) from the connected backbone/dendrite line.</li>
+<li><strong>ROI Bounds.</strong> Return spines with background ROI within specified distance (um) from edges of image. This is useful if stack alignment has been run causing images to be shifted/rotated resulting in undefined regions on the edge of the image.</li>
+<li><strong>Segment Ends.</strong> Return objects within specified distance (um) of the end of their segment/backbone line.</li>
 </ul>
 
-<h4 id="map">Map</h4>
+<h4 id="map-tab">Map Tab</h4>
 
 <ul>
-<li>Addition.</li>
-<li>Subtraction.</li>
-<li>Persistent</li>
-<li>Transient</li>
-<li>Bad Runs. Return a list of objects that have a mixture of good and bad within their respective run. This is used for debugging and will be removed.</li>
-<li>Re Added. Return a list of added spines that have a previous subtraction (on a previous timepoint) that is within specified distance along the backbone/dendrite.</li>
+<li><strong>Addition.</strong></li>
+<li><strong>Subtraction.</strong></li>
+<li><strong>Persistent.</strong></li>
+<li><strong>Transient.</strong></li>
+<li><strong>Bad Runs.</strong> Return a list of objects that have a mixture of good and bad within their respective run. This is used for debugging and will be removed.</li>
+<li><strong>Re Added.</strong> Return a list of added spines that have a previous subtraction (on a previous timepoint) that is within specified distance along the backbone/dendrite.</li>
 </ul>
 
-<h4 id="manual-search">Manual Search</h4>
+<h4 id="manual-tab">Manual Tab</h4>
 
 <p>Return a list of objects matching a user specified criterion.</p>
 
 <p>Do this by selecting a statistic in the list, specify a value, and an operator (&gt;, &gt;=, &lt;, &lt;=, =, Not).</p>
 
-<p>For example, to generate a search of all long spines, select sLen2d/IntCh1, enter a spine length like 4 um, select &#39;&gt;&#39; operator and press &#39;Manual Search&#39; button.</p>
+<p>For example, to generate a search of all long spines, select sLen2d/IntCh1, enter a spine length (um) like 4, select &#39;&gt;&#39; operator and press the &#39;Manual Search&#39; button.</p>
 
 
 <div class="post-tags">
