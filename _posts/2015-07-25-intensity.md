@@ -56,6 +56,13 @@ Once intensity analysis has been run, the parameters of individual spines can be
  - **Extend tail (um).** Distance to extend the spine ROI beyond it connection point with the backbone/dendrite..
  - **+/- Slices.** The statistics (Sum, Mean, SD, N) of each spine, backbone, and background ROI is calculated after expanding the ROI up and down in Z-dimension.
  - **+/- Segment (um).** The distance (um) to extend the backbone/dendrite ROI up and down the backbone/dendrite line.
+
+ - **Background - Both Sides.** Only available as a global options.
+ - **Background Rows.** Only available as a global options.
+ - **Background Row Mult.** Only available as a global options.
+ - **Background Columns.** Only available as a global options.
+ - **Background Column Mult.** Only available as a global options.
+
  - **Scale Radius (um).** Only available for individual spines using the Object Info Panel. When intensity analysis is run (for a map), each spine is assigned a radius (um) following the radius of the segment it is attached to. Once intensity analysis has been run, this radius can be set for individual spines in the Object Info panel.
  
 ###Intensity Analysis Output

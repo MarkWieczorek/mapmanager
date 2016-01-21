@@ -184,7 +184,7 @@
 
 <p>A polygon surrounding a spine. Starts as a rectangle and then overlapping regions of the backbone/dendrite ROI is subtracted. Any remaining disjoint regions (on other side of backbone/dendrite) are then removed. The spine ROI is centered in the same image plane as the spine head. Three parameters specify spine ROI: width, extend head, and extend tail.</p>
 
-<h4 id="backbone-dendrite-roi">Backbone/Dendrite ROI</h4>
+<h4 id="backbone/dendrite-roi">Backbone/Dendrite ROI</h4>
 
 <p>A polygon centered on the spine connection point and extending a fixed distance (um) up and down the backbone/dendrite line. The backbone/dendrite ROI is centered in the same image plane as the spine connection point. The distance to extend up and down the backbone/dendrite line is set with &#39;+/- Segment (um)&#39;</p>
 
@@ -221,8 +221,13 @@
 <li><strong>Extend head (um).</strong> Distance to extend the spine ROI beyond its spine head.</li>
 <li><strong>Extend tail (um).</strong> Distance to extend the spine ROI beyond it connection point with the backbone/dendrite..</li>
 <li><strong>+/- Slices.</strong> The statistics (Sum, Mean, SD, N) of each spine, backbone, and background ROI is calculated after expanding the ROI up and down in Z-dimension.</li>
-<li><strong>+/- Segment (um).</strong> The distance (um) to extend the backbone/dendrite ROI up and down the backbone/dendrite line.</li>
-<li><strong>Scale Radius (um).</strong> Only available for individual spines using the Object Info Panel. When intensity analysis is run (for a map), each spine is assigned a radius (um) following the radius of the segment it is attached to. Once intensity analysis has been run, this radius can be set for individual spines in the Object Info panel.</li>
+<li><p><strong>+/- Segment (um).</strong> The distance (um) to extend the backbone/dendrite ROI up and down the backbone/dendrite line.</p></li>
+<li><p><strong>Background - Both Sides.</strong> Only available as a global options.</p></li>
+<li><p><strong>Background Rows.</strong> Only available as a global options.</p></li>
+<li><p><strong>Background Row Mult.</strong> Only available as a global options.</p></li>
+<li><p><strong>Background Columns.</strong> Only available as a global options.</p></li>
+<li><p><strong>Background Column Mult.</strong> Only available as a global options.</p></li>
+<li><p><strong>Scale Radius (um).</strong> Only available for individual spines using the Object Info Panel. When intensity analysis is run (for a map), each spine is assigned a radius (um) following the radius of the segment it is attached to. Once intensity analysis has been run, this radius can be set for individual spines in the Object Info panel.</p></li>
 </ul>
 
 <h3 id="intensity-analysis-output">Intensity Analysis Output</h3>
@@ -245,13 +250,13 @@ sbMean      :   spine background mean
 sbSD        :   spine background standard deviation
 sbN         :   # pixels in spine background roi
 </code></pre></div>
-<h5 id="backbone-dendrite-roi">Backbone/Dendrite ROI</h5>
+<h5 id="backbone/dendrite-roi">Backbone/Dendrite ROI</h5>
 <div class="highlight"><pre><code class="language-text" data-lang="text">dSum        :   dendrite sum
 dMean       :   dendrite mean
 dSD         :   dendrite standard deviation
 dN          :   # pixels in dendrite roi
 </code></pre></div>
-<h5 id="backbone-dendrite-background-roi">Backbone/Dendrite Background ROI</h5>
+<h5 id="backbone/dendrite-background-roi">Backbone/Dendrite Background ROI</h5>
 <div class="highlight"><pre><code class="language-text" data-lang="text">dbSum       :   dendrite background sum
 dbMean      :   dendrite background mean
 dbSD        :   dendrite background standard deviation
