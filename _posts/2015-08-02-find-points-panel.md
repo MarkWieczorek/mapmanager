@@ -1,9 +1,9 @@
 ---
 layout: page
-title: "Find Points Panel"
+title: "Find Points"
 category: interface
 date: 2015-08-02 22:46:33
-order: 5
+order: 4
 tags:
 - Interface
 ---

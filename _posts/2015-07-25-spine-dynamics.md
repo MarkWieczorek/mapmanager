@@ -8,6 +8,65 @@ tags:
 - Analysis
 ---
 
+###Density Report
+
+A density report is used for individual [stacks][1]. It will calculate the length of each dendritic segment and the density of spines.
+
+Generate a density report for each segment in a stack
+
+ - In a [stack window][1], keyboard 'o' for **o**utput report.
+ - In the [Stack Browser][3], select a stack in the list, keyboard 'o' for **o**utput report.
+ 
+```
+numSpines		Total number of spines = goodSpines + badSpines
+goodSpines		Number of good spines.
+badSpines		Number of bad spines.
+totalLen		Total segment length (um)
+goodLen			Segment length (um) from most distal good spines.
+totalDen		Total density of all spines = numSpines / totalLen
+goodDen			Density of good spines = goodSpines / goodLen
+totalLen3d
+goodLen3d
+totalDen3d
+goodDen3d
+```
+
+###Dynamics Report
+
+ 
+A dynamics report is used for a [map][2]. For each session in a map, it will calculate the length of each segment (um), the density of spines, the number of added spines, the number of subtracted spines, etc., etc.
+
+Generate a spine dynamics report for each segment in a map.
+ 
+ - In any [map plot][2], right-click and select 'Dynamics Report'. If the map plot is displaying 'All Segment', a table for each segment will be opened. Otherwise, one table for the current 'Map Segment ID' will be opened.
+ 
+ 
+ ```
+ numSpines		Total number of spines, goodSpines + badSpines.
+ goodSpines		Total number of good spines
+ badSpines		Total number of bad spines
+ totalLen		Total segment length (um)
+ goodLen		Segment length between most distal good spines.
+ 
+ totalDen		Total density = numSpines / totalLen
+ goodDen		Density of good spines = goodSpines / goodLen
+ 
+ nAdd			Number of added spines.
+ nSub			Number of subtracted spines (at the current session)
+ nSub2			Number of subtracted spines (from the previous session)
+ tor			Turn-over-ratio = 
+ 
+ pAdd			Percent added = nAdd / goodSpines from previous session * 100
+ pSub			Percent subtracted = 
+ dAdd			Density added =
+ dSub			Density subtracted = 
+ 
+ np				New persistent = 
+ nt				New transient = 
+ lp				Lost persistent = 
+ lt				Lost transient = 
+```
+
 ###Concepts
 
 ####Stack
@@ -59,3 +118,7 @@ Threshold time can be specified as: sessions, seconds, days, or hours.
 - Lost Persistent :
 - Lost Transient :
 - Always Present : Spines present in all sessions
+
+[1]: /mapmanager/stack/
+[2]: /mapmanager/map-plot/
+[3]: /mapmanager/stack-browser/

@@ -1,15 +1,15 @@
 ---
 layout: page
-title: "Stack DB Options"
+title: "Options"
 category: interface
 date: 2015-04-20 22:46:33
-order: 4
+order: 5
 tags:
 - Interface
 ---
 
 
-The Stack DB options panel provides global options to control the behavior of Map Manager. Options can be saved and then loaded using the **User** section. Values shown in <font color="red"><strong>red</strong></font> will effect your analysis.
+The Map Manager Options panel provides global options to control the behavior of Map Manager. Options can be saved and then loaded using the **User** section. Values shown in <font color="red"><strong>red</strong></font> will effect your analysis.
 
 To open the options panel
 
@@ -18,7 +18,7 @@ To open the options panel
   - 'Options' button in main [Map Manager Panel][5].
   - 'Options' button in the Map Manager Buttons panel.
 
-<IMG class="img-float-left" SRC="../images/mm3/mm3-options-top.png" WIDTH="300">
+<IMG class="img-float-left" SRC="../images/mm3/mm3-options.png" WIDTH="300">
 
 The panel is very tall, scroll the panel up/down with the mouse wheel.
 
@@ -47,8 +47,6 @@ Options that control the display of the [stack db][2] in a [stack][1] window. Ea
 
 **Point mask.** Turn point masking on/off. By default, stack db objects are shown and not shown (they are masked) based on the image plane you are viewing.
 
-**Tags.** In a stack window, the tags are the stack db point number. In a map, the tags are the **run** number of the point. See xxx.
-
 **Use segment color for all points.** xxx
 
 **Line.** Toggle the segment backbone line and radii lines.
@@ -57,16 +55,21 @@ Options that control the display of the [stack db][2] in a [stack][1] window. Ea
 
 **Line Mask.** xxx
 
+**Tag Font Size.** In a stack window, the tags are the stack db point number. In a map, the tags are the **run** number of the point.
+
+**Scale Bar.** Displayed in the bottom right of all stack windows. Cycle through stack window display options with keyboard shift+c
+
 **Display Control Points** xxx
 
 **Control Point Help** Use the 'On' and 'Off' buttons for some additional visual cues about your segment line fits. The end of the line fit is shown in red. This is useful when making the same segment across timepoints in a map. It helps you fit each segment in the same direction.
 
 
-###Miscellaneous
+###Stack DB
 
 **Warn On New Objects**
 **Warn On Delete Objects**
 **New Objects On Mouse Click (no shift)**
+**Allow New Objects When Viewing Sliding Z-Projection**
 
 **Stack Window Size** Two default stack window sizes (screen pixels). Capture the size of an open Stack window with 'C' button.
 
@@ -109,7 +112,7 @@ Options that control the display of the [stack db][2] in a [stack][1] window. Ea
 **Auto plot object map on load**. xxx
 
 
-<IMG class="img-float-left" SRC="../images/mm3/mm3-options-bottom.png" WIDTH="300">
+<!-- <IMG class="img-float-left" SRC="../images/mm3/mm3-options-bottom.png" WIDTH="300"> -->
 
 ###Intensity Analysis
 
@@ -121,14 +124,16 @@ Turn [intensity analysis][4] on/off with the 'Intensity Analysis' checkbox. Be s
 **Extend Tail (um)**
 **+/- Segment (um)**
 
-**Real-Time**
 **Debug**
+**Debug On Error**
 
 ###Importing Segments From FIJI
 
-**On import, Filter SWC Box Width**
+**Default Segment Radius (um)**
 
-**Filter Radius, Box Width**
+**Box Filter Line (points)**
+
+**Box Filter Radius (points)**
 
 **Convert To 8-bit**. Will convert to 8-bit (in Fiji). This makes line fit much faster.
 
@@ -136,9 +141,11 @@ Turn [intensity analysis][4] on/off with the 'Intensity Analysis' checkbox. Be s
 
 ###Miscellaneous
 
-A big table to set how stack db points are displayed. RIght-click on marker or color ot set.
+<IMG class="img-float-left" SRC="../images/mm3/mmoptions-object-display.png" WIDTH="225">
 
-**Tag Size** The size of tags displayed (for each point) in stack db window.
+A table to set how stack db points are displayed. Use the disclusure triangle in the upper-right of the options window to show the table.
+
+Right-click on 'marker' or 'color' to set. Double-click on 'size' to set.
 
 <div class="print-page-break"></div>
 
@@ -146,7 +153,7 @@ A big table to set how stack db points are displayed. RIght-click on marker or c
 
 Additional option are available in the Stack Browser Options panel.
 
-Open the Stack Browser Options panel using the main menu 'bStack - Stack Browser Options'
+Open the Stack Browser Options panel using the main menu 'MapManager - Stack Browser Options'
 
 <IMG class="img-float-left" SRC="../images/mm3/mm3-stack-browser-options.png" WIDTH="300">
 

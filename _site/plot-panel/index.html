@@ -92,13 +92,13 @@
             
                 <li class=nav-header>Interface Windows</li>
             
-            <li data-order="5"><a href="/mapmanager/find-points-panel">Find Points Panel</a></li>
+            <li data-order="4"><a href="/mapmanager/find-points-panel">Find Points</a></li>
         
             
-            <li data-order="5"><a href="/mapmanager/hdd-paths">Hard Drive Paths</a></li>
+            <li data-order="6"><a href="/mapmanager/hdd-paths">Hard Drive Paths</a></li>
         
             
-            <li data-order="4"><a href="/mapmanager/stackdb-options-panel">Stack DB Options</a></li>
+            <li data-order="5"><a href="/mapmanager/stackdb-options-panel">Options</a></li>
         
             
             <li data-order="2"><a href="/mapmanager/search-panel">Search panel</a></li>
@@ -174,11 +174,49 @@
     </h3>
 </div>
 
-<p><IMG class="img-float-left" SRC="../images/mm3/mm3-plot-panel.png" WIDTH="700"></p>
+<p><IMG class="img-float-center" SRC="../images/mm3/mm3-plot-panel-big.png" WIDTH="700"></p>
 
 <div class="print-page-break"></div>
 
 <p>The plot panel provides an interface to make <a href="/mapmanager/stack-plot/">stack</a> and <a href="/mapmanager/map-plot/">map</a> plots.</p>
+
+<h4 id="plotting-a-stack">Plotting a stack</h4>
+
+<ul>
+<li>Select a stack in the stack list</li>
+<li>Select a Y stat</li>
+<li>Select an X stat</li>
+<li>Press &#39;Spine Plot (stack)&#39; button</li>
+</ul>
+
+<h4 id="plotting-a-map">Plotting a map</h4>
+
+<ul>
+<li>Specify the map to plot with &#39;Grab Map&#39; button.</li>
+<li>Select a Y stat</li>
+<li>Select an X stat</li>
+<li>Press &#39;Spine Plot (map)&#39; button</li>
+</ul>
+
+<p>Both the Y and X values can be normalized to a session as an absolute change (Abs) or a percent (%). We call this normalization session the &#39;zero session&#39;. The zero session for each map can be set in the main <a href="/mapmanager/main-panel/">map manager panel</a> using &#39;Zero Session&#39;. This can be over-ridden in the plot panel by turning on the checkbox and specifying a &#39;Norm Session&#39;</p>
+
+<h4 id="saved-plots">Saved Plots</h4>
+
+<p>Once a map plot is created, Saved Plots allows the x/y plot statistics to be grabbed and reused quickly. This saves time as the number of statistics in each x/y list is large and the names of each statistic is rather cryptic.</p>
+
+<p>Right-click a row in the list of Saved Plots and select a menu:</p>
+
+<ul>
+<li><strong>Grab Plot Window</strong>. Grab the x/y statistics from the top-most map plot and save it in the selected row.</li>
+<li><strong>Fill In Interface</strong>. Take a Saved Plot and fill in the x/y statistics in the stack plot panel.</li>
+<li><strong>Delete Plot</strong>. Delete a saved plot.</li>
+</ul>
+
+<p>Once a plot is saved (with &#39;Grab Plot Window&#39;), the x/y statistics can be filled in by double clicking.</p>
+
+<p>Double-click on a Saved Plot name to set its name.</p>
+
+<p>Saved plots are saved with the global map manager options in the main <a href="/mapmanager/stackdb-options-panel/">map manager options panel</a>.</p>
 
 
 <div class="post-tags">
@@ -215,7 +253,7 @@
 
             <div class=row-fluid>
                 <div id=footer class=span12>
-                      Copyright &copy; 2015 - Robert Cudmore -
+                      Copyright &copy; 2016 - Robert Cudmore -
 
  <a href="http://robertcudmore.org/index.html">robertcudmore.org</a>
 
