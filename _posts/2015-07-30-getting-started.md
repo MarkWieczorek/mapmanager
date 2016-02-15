@@ -31,20 +31,39 @@ tags:
 
 ###Closing/Quiting Map Manager
 
+<<<<<<< HEAD
+ - Quit Igor Pro by selecting the main menu 'Igor Pro - Quit Igor Pro'.
+ - When you quit Igor Pro, you will always be prompted with the following dialog.
+ - Always answer **No**. All Map Manager analysis is saved using the 'Save' buttons from within the Map Manager interface.
+ 
+<div class="print-page-break"></div>
+<IMG class="img-float-left" SRC="../images/mm3/quit-igor.png" WIDTH="450">
+=======
  - Quit Igor Pro with the main menu 'Igor Pro - Quit Igor Pro'
  - Igor Pro will always show the following dialog.
  - Always answer **No**.
  - All Map Manager analysis is saved using the 'Save' buttons from within the Map Manager interface.
 <div class="print-page-break"></div>
+<<<<<<< HEAD
 <IMG class="img-float-left" SRC="images/mm3/quit-igor.png" WIDTH="400">
+=======
+<IMG class="img-float-left" SRC="../images/mm3/quit-igor.png" WIDTH="400">
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
 <div class="print-page-break"></div>
 
 ###Map Manager Options
 
+<<<<<<< HEAD
+ - Global options can be set and saved in the [Stack DB Option Panel][9].
+ - By default, there is one set of options that will be saved and reloaded the next time Map Manager is run.
+ - Options can also be saved to a user file. See [Stack DB Options][9] for more information.
+=======
  - Global options are set in the [Options Panel][9].
  - There is one set of options that will be reloaded the next time Map Manager is run.
  - Save the current options with the 'Save' button in the [Options][9] panel.
  - Options can also be saved and then loaded from a user file. Use 'Save As...' to save options into a user file.
+>>>>>>> origin/gh-pages
 
 
 [1]: https://www.wavemetrics.com/index.html

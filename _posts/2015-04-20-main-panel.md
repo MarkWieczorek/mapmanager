@@ -23,7 +23,7 @@ The <span style="color:blue">blue</span> buttons operate on the selected map.
 
   <B>Load Map.</B> Load a map from the hard-drive. 
   
-  <B>Save Map.</B> Save the selected map.
+  <B>Save Map.</B> Save the selected map. Ctrl+click to save the entire map including all stackdb, lines, and intensity analysis.
   
   <B>?.</B> Open map manager documentation in your default web browser.
   
@@ -53,19 +53,16 @@ Each of these buttons will open a different Map Manager panel.
 
 <B>Plot.</B> Open the [plot panel][6].
 
-<B>Process.</B> Open the [process panel][8] to set image contrast.
-
-<B>Options.</B> Open the [options panel][7].
+<B>Contrast.</B> Open the [contrast panel][8].
 
 <B>Map DB.</B> NOT DOCUMENTED YET..
 
-<B>Layout.</B> Open the [layout/scale panel][14].
+<B>Find Points.</B> Open the [Find Points panel][15].
 
-<B>Stack Browser.</B> Open the [stack browser panel][9].
 
 ###Miscellaneous
 
-<B>Unload stacks.</B> Unload all stacks in the selected map (from Igor memory).
+<B>Unload stacks.</B> Unload all stacks in the selected map (from Igor memory). Ctrl+click to unload all stacks in all open maps.
 
 <B>Close Windows.</B> Close all windows associated with the selected map.
 
@@ -113,5 +110,6 @@ Each of these buttons will open a different Map Manager panel.
 [12]: /mapmanager/map-plot/
 [13]: /mapmanager/making-a-map/
 [14]: /mapmanager/scale-panel/
+[15]: /mapmanager/find-points-panel/
 
 <div class="print-page-break"></div>
