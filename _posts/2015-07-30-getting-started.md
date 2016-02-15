@@ -37,7 +37,7 @@ tags:
  - Always answer **No**. All Map Manager analysis is saved using the 'Save' buttons from within the Map Manager interface.
  
 <div class="print-page-break"></div>
-<IMG class="img-float-left" SRC="../images/mm3/quit-igor.png" WIDTH="450">
+<IMG class="img-float-left" SRC="images/mm3/quit-igor.png" WIDTH="450">
 =======
  - Quit Igor Pro with the main menu 'Igor Pro - Quit Igor Pro'
  - Igor Pro will always show the following dialog.
@@ -47,7 +47,7 @@ tags:
 <<<<<<< HEAD
 <IMG class="img-float-left" SRC="images/mm3/quit-igor.png" WIDTH="400">
 =======
-<IMG class="img-float-left" SRC="../images/mm3/quit-igor.png" WIDTH="400">
+<IMG class="img-float-left" SRC="images/mm3/quit-igor.png" WIDTH="400">
 >>>>>>> origin/gh-pages
 >>>>>>> origin/gh-pages
 <div class="print-page-break"></div>
