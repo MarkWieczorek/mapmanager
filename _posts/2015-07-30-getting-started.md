@@ -36,7 +36,7 @@ tags:
  - Always answer **No**.
  - All Map Manager analysis is saved using the 'Save' buttons from within the Map Manager interface.
 <div class="print-page-break"></div>
-<IMG class="img-float-left" SRC="../images/mm3/quit-igor.png" WIDTH="400">
+<IMG class="img-float-left" SRC="images/mm3/quit-igor.png" WIDTH="400">
 <div class="print-page-break"></div>
 
 ###Map Manager Options

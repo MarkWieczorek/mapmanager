@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
 
-        <title>Map Manager</title>
+        <title>Map Manager : Database overview</title>
         <meta name="description" content="">
 
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
@@ -169,217 +169,39 @@
 
                     <div id=content class=span10>
                         <div class=page-header>
-    <h3>
+    <h3>Database overview
         
     </h3>
 </div>
 
-<ul class="tag-cloud">
+<p>Map Manager builds a database of 3D objects and line segments within a single <a href="/mapmanager/stack/">stack</a>. Stacks and their associated 3D objects and line segments can then be connected together into a time-series with a <a href="/mapmanager/map-plot/">map</a>.</p>
 
-  <li style="font-size: 155%">
-    <a href="#Imaging core">
-      Imaging core
-    </a>
-  </li>
+<p>Manage a stack db for a single stack with the <a href="/mapmanager/annotating-a-stack/">stack db interface</a>.</p>
 
-  <li style="font-size: 155%">
-    <a href="#Workflow">
-      Workflow
-    </a>
-  </li>
+<p>Manage a map with the <a href="/mapmanager/making-a-map/">map making interface</a>.</p>
 
-  <li style="font-size: 98%">
-    <a href="#Posts">
-      Posts
-    </a>
-  </li>
+<h3 id="definitions">Definitions</h3>
 
-  <li style="font-size: 155%">
-    <a href="#Interface">
-      Interface
-    </a>
-  </li>
+<h4 id="stack">Stack</h4>
 
-  <li style="font-size: 112%">
-    <a href="#Plots">
-      Plots
-    </a>
-  </li>
+<p>A 3D image.</p>
 
-  <li style="font-size: 98%">
-    <a href="#xxx">
-      xxx
-    </a>
-  </li>
+<h4 id="stack-database-(stack-db)">Stack Database (<strong>stack db</strong>)</h4>
 
-  <li style="font-size: 98%">
-    <a href="#Analysis">
-      Analysis
-    </a>
-  </li>
+<p>A collection of 3D points and line segments within a single stack.</p>
 
-</ul>
+<h4 id="line-segment">Line Segment</h4>
 
-<div id="archives">
+<p>A line tracing within a single stack.</p>
 
-  <div class="archive-group">
-    
-    <h3 id="#Imaging core">Imaging core</h3>
-    <a name="Imaging core"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/stackdb-plot">Stack DB plot</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/scale-panel">Scale panel</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/process-panel">Process panel</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/stack-browser">Stack Browser</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/simple-stack-db">Simple stack database</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/stack">Stack</a></h4>
-    </article>
-    
-  </div>
+<h4 id="map">Map</h4>
 
-  <div class="archive-group">
-    
-    <h3 id="#Workflow">Workflow</h3>
-    <a name="Workflow"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/gallery">Gallery</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/getting-started">Getting started</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/making-a-map">Making a map</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/database-overview">Database overview</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/annotating-a-stack">Annotating a stack</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/simple-stack-db">Simple stack database</a></h4>
-    </article>
-    
-  </div>
+<p>A time-series of stacks and their associated stack db(s).</p>
 
-  <div class="archive-group">
-    
-    <h3 id="#Posts">Posts</h3>
-    <a name="Posts"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/user-files">User files</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/simple-stack-db">Simple stack database</a></h4>
-    </article>
-    
-  </div>
+<h4 id="run">Run</h4>
 
-  <div class="archive-group">
-    
-    <h3 id="#Interface">Interface</h3>
-    <a name="Interface"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/find-points-panel">Find Points</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/hdd-paths">Hard Drive Paths</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/stackdb-options-panel">Options</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/search-panel">Search panel</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/plot-panel">Plot panel</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/main-panel">Main panel</a></h4>
-    </article>
-    
-  </div>
+<p>A sequence of stacks. A run can follow either 3D points or line segments for each stack in a map.</p>
 
-  <div class="archive-group">
-    
-    <h3 id="#Plots">Plots</h3>
-    <a name="Plots"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/stack-plot">Stack plot</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/run-plot">Run plot</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/map-plot">Map plot</a></h4>
-    </article>
-    
-  </div>
-
-  <div class="archive-group">
-    
-    <h3 id="#xxx">xxx</h3>
-    <a name="xxx"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/faq">FAQ</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/File-format">File format</a></h4>
-    </article>
-    
-  </div>
-
-  <div class="archive-group">
-    
-    <h3 id="#Analysis">Analysis</h3>
-    <a name="Analysis"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/spine-dynamics">Spine Dynamics</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/intensity">Intensity</a></h4>
-    </article>
-    
-  </div>
-
-</div>
 
 <div class="post-tags">
   
@@ -389,6 +211,8 @@
   
   
   
+    <a href="/mapmanager/tags/#Workflow">Workflow</a>
+  
 
    <!--
    <a href="javascript:window.print()">print</a>
@@ -396,7 +220,7 @@
 
    <!--
    <BR>
-   <a href="tags.html">print pdf</a>
+   <a href="_posts/2015-04-20-database-overview.pdf">print pdf</a>
    <BR>
    -->
     

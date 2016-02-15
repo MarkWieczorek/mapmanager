@@ -12,7 +12,7 @@ tags:
 
 All intensity analysis is performed by calculating statistics (Sum, Mean, standard-deviation, N) from the intensity values of pixels within a number of 3D regions-of-interest (ROI). Further analysis is then derived by performing algebra between these ROIs.
 
-<IMG class="img-float-right" SRC="../images/mm3/intensity/spine-roi-example.png" WIDTH="400">
+<IMG class="img-float-right" SRC="images/mm3/intensity/spine-roi-example.png" WIDTH="400">
 
 ####Spine ROI
 
@@ -32,7 +32,7 @@ Please note, parameters controlling the grid of candidate background positions i
 
 ###Running Intensity Analysis
 
-<IMG class="img-float-right" SRC="../images/mm3/intensity/intensity-analysis-tab.png" WIDTH="450">
+<IMG class="img-float-right" SRC="images/mm3/intensity/intensity-analysis-tab.png" WIDTH="450">
 
 Intensity analysis is run from the main [map manager panel][3] using the 'Intensity' tab.
 
@@ -40,7 +40,7 @@ Intensity analysis is run from the main [map manager panel][3] using the 'Intens
 
 ###Parameters
 
-<IMG class="img-float-right" SRC="../images/mm3/intensity/intensity-parameters.png" WIDTH="300">
+<IMG class="img-float-right" SRC="images/mm3/intensity/intensity-parameters.png" WIDTH="300">
 
 
 Global intensity analysis parameters are set in the [stack db options][2] panel. These parameters are used for every spine in a map.
@@ -49,7 +49,7 @@ Once intensity analysis has been run, the parameters of individual spines can be
 
 <div class="print-page-break"></div>
 
-<IMG class="img-float-right" SRC="../images/mm3/intensity/obj-info.png" WIDTH="300">
+<IMG class="img-float-right" SRC="images/mm3/intensity/obj-info.png" WIDTH="300">
 
  - **Width (um).** Width of spine ROI centered on the spine line.
  - **Extend head (um).** Distance to extend the spine ROI beyond its spine head.
@@ -125,7 +125,7 @@ utsmdodm	:	this spine mean divided by other dendrite mean
 
 ###Moving the background ROI
 
-<IMG class="img-float-right" SRC="../images/mm3/intensity/spine-roi-example-edit.png" WIDTH="350">
+<IMG class="img-float-right" SRC="images/mm3/intensity/spine-roi-example-edit.png" WIDTH="350">
 
 Clicking on the spine backgrond ROI will enable an edit mode where the user can specify the background position. This edit mode also shows the candidate background positions.
 
@@ -152,21 +152,21 @@ Errors and Warnings are
 <TD>
 <figure>
 <figcaption>Error #3 x spine ROI beyond image</figcaption>
-<IMG SRC="../images/mm3/intensity/3-spine-roi-error.png" WIDTH="350">
+<IMG SRC="images/mm3/intensity/3-spine-roi-error.png" WIDTH="350">
 </figure>
 </TD>
 
 <TD>
 <figure>
 <figcaption>Error #3.5 y spine ROI beyond image</figcaption>
-<IMG SRC="../images/mm3/intensity/3_5-spine-roi-error.png" WIDTH="350">
+<IMG SRC="images/mm3/intensity/3_5-spine-roi-error.png" WIDTH="350">
 </figure>
 </TD>
 
 <TD>
 <figure>
 <figcaption>Error #6 reducing spine with ImageSeedFill</figcaption>
-<IMG SRC="../images/mm3/intensity/6-reducing-spine-error.png" WIDTH="350">
+<IMG SRC="images/mm3/intensity/6-reducing-spine-error.png" WIDTH="350">
 </figure>
 </TD>
 </TR>
@@ -175,14 +175,14 @@ Errors and Warnings are
 <TD>
 <figure>
 <figcaption>Error #9 extending backbone error</figcaption>
-<IMG SRC="../images/mm3/intensity/9-extending-backbone.png" WIDTH="350">
+<IMG SRC="images/mm3/intensity/9-extending-backbone.png" WIDTH="350">
 </figure>
 </TD>
 
 <TD>
 <figure>
 <figcaption>Warning #5.1 prev cPnt</figcaption>
-<IMG SRC="../images/mm3/intensity/5_1_prev-cpnt.png" WIDTH="350">
+<IMG SRC="images/mm3/intensity/5_1_prev-cpnt.png" WIDTH="350">
 </figure>
 </TD>
 </TR>

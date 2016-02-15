@@ -9,7 +9,7 @@ tags:
 ---
 
 
-<IMG class="img-float-left" SRC="../images/mm3/mm3-search-panel.png" WIDTH="900">
+<IMG class="img-float-left" SRC="images/mm3/mm3-search-panel.png" WIDTH="900">
 
 <div class="print-page-break"></div>
 

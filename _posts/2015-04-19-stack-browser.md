@@ -8,7 +8,7 @@ tags:
 - Imaging core
 ---
 
-<IMG class="img-float-left" SRC="../images/mm3/mm3-stack-browser.png" WIDTH="800">
+<IMG class="img-float-left" SRC="images/mm3/mm3-stack-browser.png" WIDTH="800">
 
 <div class="print-page-break"></div>
 

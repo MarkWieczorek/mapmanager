@@ -66,7 +66,7 @@ It is very easy to export the 3D coordinates of the points in a stack DB.
 
 ####Stack DB toolbar
 
-<IMG class="img-float-right" SRC="../images/imagingcore/stack_db.png" WIDTH="600">
+<IMG class="img-float-right" SRC="images/imagingcore/stack_db.png" WIDTH="600">
 
 The stack db toolbar displays a list of line segments and a list of points. Open and close the stack db toolbar with keyboard '['.
 
@@ -86,7 +86,7 @@ Selecting a point in the list will select the point in the stack window and vica
 
 ####Search panel
 
-<IMG class="img-float-right" SRC="../images/imagingcore/stack_db_search.png" WIDTH="500">
+<IMG class="img-float-right" SRC="images/imagingcore/stack_db_search.png" WIDTH="500">
 
 Open the Search panel from the stack db toolbar using the 'Search' button.
 
@@ -109,7 +109,7 @@ The search results are a static output report. Once a search is performed, if po
 
 ####Options panel
 
-<IMG class="img-float-right" SRC="../images/imagingcore/stack_db_options.png" WIDTH="300">
+<IMG class="img-float-right" SRC="images/imagingcore/stack_db_options.png" WIDTH="300">
 
 Open the [Stack DB Options Panel][4] from the stack db toolbar using the 'Options' button.
 

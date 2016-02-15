@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
 
-        <title>Map Manager</title>
+        <title>Map Manager : Find Points</title>
         <meta name="description" content="">
 
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
@@ -169,217 +169,97 @@
 
                     <div id=content class=span10>
                         <div class=page-header>
-    <h3>
+    <h3>Find Points
         
     </h3>
 </div>
 
-<ul class="tag-cloud">
+<p><FONT size=3em color="red"><strong>New on October, 2015.</strong> This documentation needs some work.</font></p>
 
-  <li style="font-size: 155%">
-    <a href="#Imaging core">
-      Imaging core
-    </a>
-  </li>
+<p>The find points panel allows you to browse objects between two timepoints/sessions, will show you the best-guess for putative connections, and allow you to connect/disconnect objects across timepoints/sessions.</p>
 
-  <li style="font-size: 155%">
-    <a href="#Workflow">
-      Workflow
-    </a>
-  </li>
+<p>To open the find points panel:</p>
 
-  <li style="font-size: 98%">
-    <a href="#Posts">
-      Posts
-    </a>
-  </li>
-
-  <li style="font-size: 155%">
-    <a href="#Interface">
-      Interface
-    </a>
-  </li>
-
-  <li style="font-size: 112%">
-    <a href="#Plots">
-      Plots
-    </a>
-  </li>
-
-  <li style="font-size: 98%">
-    <a href="#xxx">
-      xxx
-    </a>
-  </li>
-
-  <li style="font-size: 98%">
-    <a href="#Analysis">
-      Analysis
-    </a>
-  </li>
-
+<ul>
+<li>Right-click a spine in a map and selecting &#39;Find Points&#39;.</li>
+<li>Right-click a session in the main Map Manager Panel and selecting &#39;Find Points&#39;.</li>
+<li>Right-click a map in the main Map Manager Panel and selecting &#39;Find Points&#39;.</li>
 </ul>
 
-<div id="archives">
+<h4 id="overview">Overview</h4>
 
-  <div class="archive-group">
-    
-    <h3 id="#Imaging core">Imaging core</h3>
-    <a name="Imaging core"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/stackdb-plot">Stack DB plot</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/scale-panel">Scale panel</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/process-panel">Process panel</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/stack-browser">Stack Browser</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/simple-stack-db">Simple stack database</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/stack">Stack</a></h4>
-    </article>
-    
-  </div>
+<ul>
+<li>The find points panel displays a list of all spines in the source timepoint (sIdx). In this example there are 21 spines in the source timepoint.</li>
+<li>For each spines in the source timepoint, it shows if it is connected to the destination timepoint (dIdx). It will color the dIdx cell red if there is no connection.</li>
+<li>Any remaining spines in the destination timepoint (spines not connected to the source timepoint) will be displayed at the bottom of the list. In this example there are 3 of these spines.</li>
+<li>Each spine in the source timepoint will also have a best &#39;Guess&#39; connection in the &#39;Guess&#39; column. For spines, this is using your &#39;Segment Pivot&#39; for the two segments listed in Find Points and will connect spines across timepoints/sessions that are within &#39;Connect spines within this distance (um)&#39;. See the Map Manager Options Panel to set this.</li>
+</ul>
 
-  <div class="archive-group">
-    
-    <h3 id="#Workflow">Workflow</h3>
-    <a name="Workflow"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/gallery">Gallery</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/getting-started">Getting started</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/making-a-map">Making a map</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/database-overview">Database overview</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/annotating-a-stack">Annotating a stack</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/simple-stack-db">Simple stack database</a></h4>
-    </article>
-    
-  </div>
+<p><IMG class="img-float-left" SRC="images/mm3/mm3-find-points-panel.png" WIDTH="500">
+<div class="print-page-break"></div></p>
 
-  <div class="archive-group">
-    
-    <h3 id="#Posts">Posts</h3>
-    <a name="Posts"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/user-files">User files</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/simple-stack-db">Simple stack database</a></h4>
-    </article>
-    
-  </div>
+<h4 id="interface">Interface</h4>
 
-  <div class="archive-group">
-    
-    <h3 id="#Interface">Interface</h3>
-    <a name="Interface"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/find-points-panel">Find Points</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/hdd-paths">Hard Drive Paths</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/stackdb-options-panel">Options</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/search-panel">Search panel</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/plot-panel">Plot panel</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/main-panel">Main panel</a></h4>
-    </article>
-    
-  </div>
+<ul>
+<li><strong>From TP.</strong> Source timepoint/session (From TP)</li>
+<li><strong>To.</strong> Destination timepoint/session (To timepoint)</li>
+<li><strong>Object Type.</strong> Select the type of objects to display.</li>
+<li><strong>ShowBad.</strong> If checked, bad points will be included in the list. Bad points will always have their &#39;Idx&#39; column in red.</li>
+<li><strong>Segment ID.</strong> Limit the list to one segment ID.</li>
+<li><strong>All Segments.</strong> Generate the list for all segments. If you are connecting spines, leave this off (unchecked).</li>
+<li><strong>Refresh.</strong> Will refresh the Find Points list. [as of Nov 2015, there may be some edits to the map that do not refresh the list automatically.]</li>
+</ul>
 
-  <div class="archive-group">
-    
-    <h3 id="#Plots">Plots</h3>
-    <a name="Plots"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/stack-plot">Stack plot</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/run-plot">Run plot</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/map-plot">Map plot</a></h4>
-    </article>
-    
-  </div>
+<h4 id="column-names">Column Names</h4>
 
-  <div class="archive-group">
-    
-    <h3 id="#xxx">xxx</h3>
-    <a name="xxx"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/faq">FAQ</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/File-format">File format</a></h4>
-    </article>
-    
-  </div>
+<p>Clicking on any column name will sort the list by the values in that column. Column names starting with &#39;s&#39; are for the source timepoint (from TP), column names starting with &#39;d&#39; are for the destination timepoint (to TP).</p>
 
-  <div class="archive-group">
-    
-    <h3 id="#Analysis">Analysis</h3>
-    <a name="Analysis"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/spine-dynamics">Spine Dynamics</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/intensity">Intensity</a></h4>
-    </article>
-    
-  </div>
+<ul>
+<li><strong>Idx</strong> - The row index in the table (no relation to object index).</li>
+<li><strong>sIdx</strong> - Source object stack db index.</li>
+<li><strong>sz</strong> - Source object z-depth</li>
+<li><strong>sParent</strong> - Source object parent segment.</li>
+<li><strong>spDist</strong> - Source object distance from pivot.</li>
+<li><strong>Guess</strong> - Automatically generated best guess for connection. This uses each objects distance from pivot (spDist and dpDist) and returns objects within X um, where X is specified by &#39;Connect spines within this distance (um)&#39;.</li>
+<li><strong>dIdx</strong> - Destination object stack db index.</li>
+<li><strong>dz</strong> - Destination object z-depth</li>
+<li><strong>dpDist</strong> - Destination object distance from pivot.</li>
+<li><strong>Dist</strong> - When two points are connected (both sIdx and dIdx are filled in), this is the distance between the two points measured as the distance between their two pivot points (spDist and dpDist).</li>
+</ul>
 
-</div>
+<h4 id="interaction">Interaction</h4>
+
+<ul>
+<li>Bring up a map run by right-clicking a row and selecting &#39;Plot Run&#39;.</li>
+<li>Select an object in the list and it will be propagated to all <a href="/mapmanager/run-plot/">run</a> and <a href="/mapmanager/map-plot/">map</a> plots.</li>
+<li>Use the keyboard to scroll through the list. The selected point will flash in all open windows.</li>
+<li>Use left/right arrows to flash the selected object again.</li>
+</ul>
+
+<h4 id="using-the-keyboard-to-connect-and-disconnect-objects">Using the keyboard to connect and disconnect objects</h4>
+
+<p>For a selected row</p>
+
+<ul>
+<li>&#39;shift + right-arrow&#39; to commit the &#39;Guess&#39; to the destination (dIdx). This will connect the source and destination objects together, making them persistent.</li>
+<li>&#39;del&#39; key to remove the connection. This will remove persistence between the source and destination objects.</li>
+<li>&#39;ctrl + p&#39; to set the selected point at the global pivot. This is not used for spines.</li>
+</ul>
+
+<h4 id="tips">Tips</h4>
+
+<p>When used with a spine run, find points is a reliable way to check the connections between all objects in two timepoints.</p>
+
+<p>All objects in the source timepoint are in the list, followed by any remaining objects in destination timepoint that were not connected to an object in the source timepoints.</p>
+
+<p>By sorting the list with the source distance from pivot (spDist), you can step through all spines in the source timepoint sequentially along the dendritic segment.</p>
+
+<p>By sorting the list with the destination distance from pivot (dpDist), you get a sequential list of all objects in the destination timepoint.</p>
+
+<p><IMG class="img-float-left" SRC="images/mm3/find-points-example.png" WIDTH="1000">
+<div class="print-page-break"></div>
+Example usage of find points panel. Here, we have a run of sessions 1/2/3 (top row). We have positioned the Find Points panel below the stack for session 2. By selecting rows (spines) in Find Points we can browse all spines in session 2, visualize their connections to session 3, and finally edit their connections to session 3 (using the keyboard in Find Points Panel).</p>
+
 
 <div class="post-tags">
   
@@ -389,6 +269,8 @@
   
   
   
+    <a href="/mapmanager/tags/#Interface">Interface</a>
+  
 
    <!--
    <a href="javascript:window.print()">print</a>
@@ -396,7 +278,7 @@
 
    <!--
    <BR>
-   <a href="tags.html">print pdf</a>
+   <a href="_posts/2015-08-02-find-points-panel.pdf">print pdf</a>
    <BR>
    -->
     

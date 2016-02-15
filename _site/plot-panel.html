@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
 
-        <title>Map Manager</title>
+        <title>Map Manager : Plot panel</title>
         <meta name="description" content="">
 
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
@@ -169,217 +169,55 @@
 
                     <div id=content class=span10>
                         <div class=page-header>
-    <h3>
+    <h3>Plot panel
         
     </h3>
 </div>
 
-<ul class="tag-cloud">
+<p><IMG class="img-float-center" SRC="images/mm3/mm3-plot-panel-big.png" WIDTH="700"></p>
 
-  <li style="font-size: 155%">
-    <a href="#Imaging core">
-      Imaging core
-    </a>
-  </li>
+<div class="print-page-break"></div>
 
-  <li style="font-size: 155%">
-    <a href="#Workflow">
-      Workflow
-    </a>
-  </li>
+<p>The plot panel provides an interface to make <a href="/mapmanager/stack-plot/">stack</a> and <a href="/mapmanager/map-plot/">map</a> plots.</p>
 
-  <li style="font-size: 98%">
-    <a href="#Posts">
-      Posts
-    </a>
-  </li>
+<h4 id="plotting-a-stack">Plotting a stack</h4>
 
-  <li style="font-size: 155%">
-    <a href="#Interface">
-      Interface
-    </a>
-  </li>
-
-  <li style="font-size: 112%">
-    <a href="#Plots">
-      Plots
-    </a>
-  </li>
-
-  <li style="font-size: 98%">
-    <a href="#xxx">
-      xxx
-    </a>
-  </li>
-
-  <li style="font-size: 98%">
-    <a href="#Analysis">
-      Analysis
-    </a>
-  </li>
-
+<ul>
+<li>Select a stack in the stack list</li>
+<li>Select a Y stat</li>
+<li>Select an X stat</li>
+<li>Press &#39;Spine Plot (stack)&#39; button</li>
 </ul>
 
-<div id="archives">
+<h4 id="plotting-a-map">Plotting a map</h4>
 
-  <div class="archive-group">
-    
-    <h3 id="#Imaging core">Imaging core</h3>
-    <a name="Imaging core"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/stackdb-plot">Stack DB plot</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/scale-panel">Scale panel</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/process-panel">Process panel</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/stack-browser">Stack Browser</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/simple-stack-db">Simple stack database</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/stack">Stack</a></h4>
-    </article>
-    
-  </div>
+<ul>
+<li>Specify the map to plot with &#39;Grab Map&#39; button.</li>
+<li>Select a Y stat</li>
+<li>Select an X stat</li>
+<li>Press &#39;Spine Plot (map)&#39; button</li>
+</ul>
 
-  <div class="archive-group">
-    
-    <h3 id="#Workflow">Workflow</h3>
-    <a name="Workflow"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/gallery">Gallery</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/getting-started">Getting started</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/making-a-map">Making a map</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/database-overview">Database overview</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/annotating-a-stack">Annotating a stack</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/simple-stack-db">Simple stack database</a></h4>
-    </article>
-    
-  </div>
+<p>Both the Y and X values can be normalized to a session as an absolute change (Abs) or a percent (%). We call this normalization session the &#39;zero session&#39;. The zero session for each map can be set in the main <a href="/mapmanager/main-panel/">map manager panel</a> using &#39;Zero Session&#39;. This can be over-ridden in the plot panel by turning on the checkbox and specifying a &#39;Norm Session&#39;</p>
 
-  <div class="archive-group">
-    
-    <h3 id="#Posts">Posts</h3>
-    <a name="Posts"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/user-files">User files</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/simple-stack-db">Simple stack database</a></h4>
-    </article>
-    
-  </div>
+<h4 id="saved-plots">Saved Plots</h4>
 
-  <div class="archive-group">
-    
-    <h3 id="#Interface">Interface</h3>
-    <a name="Interface"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/find-points-panel">Find Points</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/hdd-paths">Hard Drive Paths</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/stackdb-options-panel">Options</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/search-panel">Search panel</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/plot-panel">Plot panel</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/main-panel">Main panel</a></h4>
-    </article>
-    
-  </div>
+<p>Once a map plot is created, Saved Plots allows the x/y plot statistics to be grabbed and reused quickly. This saves time as the number of statistics in each x/y list is large and the names of each statistic is rather cryptic.</p>
 
-  <div class="archive-group">
-    
-    <h3 id="#Plots">Plots</h3>
-    <a name="Plots"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/stack-plot">Stack plot</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/run-plot">Run plot</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/map-plot">Map plot</a></h4>
-    </article>
-    
-  </div>
+<p>Right-click a row in the list of Saved Plots and select a menu:</p>
 
-  <div class="archive-group">
-    
-    <h3 id="#xxx">xxx</h3>
-    <a name="xxx"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/faq">FAQ</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/File-format">File format</a></h4>
-    </article>
-    
-  </div>
+<ul>
+<li><strong>Grab Plot Window</strong>. Grab the x/y statistics from the top-most map plot and save it in the selected row.</li>
+<li><strong>Fill In Interface</strong>. Take a Saved Plot and fill in the x/y statistics in the stack plot panel.</li>
+<li><strong>Delete Plot</strong>. Delete a saved plot.</li>
+</ul>
 
-  <div class="archive-group">
-    
-    <h3 id="#Analysis">Analysis</h3>
-    <a name="Analysis"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/spine-dynamics">Spine Dynamics</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/intensity">Intensity</a></h4>
-    </article>
-    
-  </div>
+<p>Once a plot is saved (with &#39;Grab Plot Window&#39;), the x/y statistics can be filled in by double clicking.</p>
 
-</div>
+<p>Double-click on a Saved Plot name to set its name.</p>
+
+<p>Saved plots are saved with the global map manager options in the main <a href="/mapmanager/stackdb-options-panel/">map manager options panel</a>.</p>
+
 
 <div class="post-tags">
   
@@ -389,6 +227,8 @@
   
   
   
+    <a href="/mapmanager/tags/#Interface">Interface</a>
+  
 
    <!--
    <a href="javascript:window.print()">print</a>
@@ -396,7 +236,7 @@
 
    <!--
    <BR>
-   <a href="tags.html">print pdf</a>
+   <a href="_posts/2015-04-20-plot-panel.pdf">print pdf</a>
    <BR>
    -->
     

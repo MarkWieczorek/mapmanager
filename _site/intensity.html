@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+
+        <title>Map Manager : Intensity</title>
+        <meta name="description" content="">
+
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/mapmanager/css/syntax.css">
+        <link rel="stylesheet" href="/mapmanager/css/main.css">
+    </head>
+    <body>
+
+        <div class="container">
+            <div class=row-fluid>
+                <div id=header class=span12>
+                    <div class=no-print>
+<h4><a class=brand href="/mapmanager/">Map Manager</a>
+    <small></small>
+</h4>
+
+<!--
+<div float=right>
+<a href="javascript:window.print()" float=right>print</a>
+</div>
+-->
+
+</div>
+
+                </div>
+            </div>
+
+            <div class=row-fluid>
+                
+                
+                    <div id=navigation class=span2>
+                        <ul class="nav nav-list">
+    <!-- <li><a href="/mapmanager/">Home</a></li> -->
+    <BR>
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Workflows</li>
+            
+            <li data-order="5"><a href="/mapmanager/gallery">Gallery</a></li>
+        
+            
+            <li data-order="1"><a href="/mapmanager/getting-started">Getting started</a></li>
+        
+            
+            <li data-order="2"><a href="/mapmanager/making-a-map">Making a map</a></li>
+        
+            
+            <li data-order="3"><a href="/mapmanager/annotating-a-stack">Annotating a stack</a></li>
+        
+            
+            <li data-order="1"><a href="/mapmanager/simple-stack-db">Simple stack database</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Imaging Core</li>
+            
+            <li data-order="3"><a href="/mapmanager/stackdb-plot">Stack DB plot</a></li>
+        
+            
+            <li data-order="4"><a href="/mapmanager/scale-panel">Scale panel</a></li>
+        
+            
+            <li data-order="3"><a href="/mapmanager/process-panel">Process panel</a></li>
+        
+            
+            <li data-order="1"><a href="/mapmanager/stack-browser">Stack Browser</a></li>
+        
+            
+            <li data-order="2"><a href="/mapmanager/stack">Stack</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Interface Windows</li>
+            
+            <li data-order="4"><a href="/mapmanager/find-points-panel">Find Points</a></li>
+        
+            
+            <li data-order="6"><a href="/mapmanager/hdd-paths">Hard Drive Paths</a></li>
+        
+            
+            <li data-order="5"><a href="/mapmanager/stackdb-options-panel">Options</a></li>
+        
+            
+            <li data-order="2"><a href="/mapmanager/search-panel">Search panel</a></li>
+        
+            
+            <li data-order="3"><a href="/mapmanager/plot-panel">Plot panel</a></li>
+        
+            
+            <li data-order="1"><a href="/mapmanager/main-panel">Main panel</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Plots</li>
+            
+            <li data-order="1"><a href="/mapmanager/stack-plot">Stack plot</a></li>
+        
+            
+            <li data-order="3"><a href="/mapmanager/run-plot">Run plot</a></li>
+        
+            
+            <li data-order="2"><a href="/mapmanager/map-plot">Map plot</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Analysis</li>
+            
+            <li data-order="1"><a href="/mapmanager/spine-dynamics">Spine Dynamics</a></li>
+        
+            
+            <li data-order="2"><a href="/mapmanager/intensity">Intensity</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Blog Posts</li>
+            
+            <li data-order="2"><a href="/mapmanager/faq">FAQ</a></li>
+        
+            
+            <li data-order=""><a href="/mapmanager/File-format">File format</a></li>
+        
+            
+            <li data-order=""><a href="/mapmanager/fitting-segments-in-fiji">Fitting segments in Fiji</a></li>
+        
+            
+            <li data-order="3"><a href="/mapmanager/user-files">User files</a></li>
+        
+            
+            <li data-order="3"><a href="/mapmanager/database-overview">Database overview</a></li>
+        
+    
+<!-- List additional links. It is recommended to add a divider
+    e.g. <li class=divider></li> first to break up the content. -->
+</ul>
+
+                    </div>
+
+                    <div id=content class=span10>
+                        <div class=page-header>
+    <h3>Intensity
+        
+    </h3>
+</div>
+
+<h3 id="algorithm-and-strategy">Algorithm and Strategy</h3>
+
+<p>All intensity analysis is performed by calculating statistics (Sum, Mean, standard-deviation, N) from the intensity values of pixels within a number of 3D regions-of-interest (ROI). Further analysis is then derived by performing algebra between these ROIs.</p>
+
+<p><IMG class="img-float-right" SRC="images/mm3/intensity/spine-roi-example.png" WIDTH="400"></p>
+
+<h4 id="spine-roi">Spine ROI</h4>
+
+<p>A polygon surrounding a spine. Starts as a rectangle and then overlapping regions of the backbone/dendrite ROI is subtracted. Any remaining disjoint regions (on other side of backbone/dendrite) are then removed. The spine ROI is centered in the same image plane as the spine head. Three parameters specify spine ROI: width, extend head, and extend tail.</p>
+
+<h4 id="backbone/dendrite-roi">Backbone/Dendrite ROI</h4>
+
+<p>A polygon centered on the spine connection point and extending a fixed distance (um) up and down the backbone/dendrite line. The backbone/dendrite ROI is centered in the same image plane as the spine connection point. The distance to extend up and down the backbone/dendrite line is set with &#39;+/- Segment (um)&#39;</p>
+
+<h4 id="background-roi">Background ROI</h4>
+
+<p>Both the spine roi and the backbone/dendrite roi get their own background ROIs. The spine background ROI is the same size/shape as the spine ROI. Likewise, the backbone/dendrite background ROI is the same size/shape as the backbone/dendrite ROI. The position of these background ROIs is the position that gives the minimal intensity from a number of candidate positions (a 3x3 grid emanating from the spine head). All background ROIs (both spine and backbone/dendrite) are centered in the same image plane as the spine head.</p>
+
+<p>Please note, parameters controlling the grid of candidate background positions is not exposed to the user.</p>
+
+<div class="print-page-break"></div>
+
+<h3 id="running-intensity-analysis">Running Intensity Analysis</h3>
+
+<p><IMG class="img-float-right" SRC="images/mm3/intensity/intensity-analysis-tab.png" WIDTH="450"></p>
+
+<p>Intensity analysis is run from the main <a href="/mapmanager/main-panel/">map manager panel</a> using the &#39;Intensity&#39; tab.</p>
+
+<div class="print-page-break"></div>
+
+<h3 id="parameters">Parameters</h3>
+
+<p><IMG class="img-float-right" SRC="images/mm3/intensity/intensity-parameters.png" WIDTH="300"></p>
+
+<p>Global intensity analysis parameters are set in the <a href="/mapmanager/stackdb-options-panel/">stack db options</a> panel. These parameters are used for every spine in a map.</p>
+
+<p>Once intensity analysis has been run, the parameters of individual spines can be set using the &#39;Object Info&#39; panel in a stack. Open the Object Info window in a stack with keyboard &#39;i&#39;.</p>
+
+<div class="print-page-break"></div>
+
+<p><IMG class="img-float-right" SRC="images/mm3/intensity/obj-info.png" WIDTH="300"></p>
+
+<ul>
+<li><strong>Width (um).</strong> Width of spine ROI centered on the spine line.</li>
+<li><strong>Extend head (um).</strong> Distance to extend the spine ROI beyond its spine head.</li>
+<li><strong>Extend tail (um).</strong> Distance to extend the spine ROI beyond it connection point with the backbone/dendrite..</li>
+<li><strong>+/- Slices.</strong> The statistics (Sum, Mean, SD, N) of each spine, backbone, and background ROI is calculated after expanding the ROI up and down in Z-dimension.</li>
+<li><strong>+/- Segment (um).</strong> The distance (um) to extend the backbone/dendrite ROI up and down the backbone/dendrite line.</li>
+<li><strong>Scale Radius (um).</strong> Only available for individual spines using the Object Info Panel. When intensity analysis is run (for a map), each spine is assigned a radius (um) following the radius of the segment it is attached to. Once intensity analysis has been run, this radius can be set for individual spines in the Object Info panel.</li>
+</ul>
+
+<h3 id="intensity-analysis-output">Intensity Analysis Output</h3>
+
+<p>The following statistics are calculated and displayed in the X/Y statistics lists in the <a href="/mapmanager/plot-panel/">Plot Panel</a>.</p>
+
+<p>A table of these statistics can be displayed for each stack in the stack db panel. To do this: (1) in a stack window, open the stack db panel with keyboard &#39;[&#39;, (2) click on the point list and (3) use keyboard &#39;i&#39; for intensity.</p>
+
+<p>Please note, &#39;u&#39; is for user. User stats are simple algebra on the core intensity analysis.</p>
+
+<h5 id="spine-roi">Spine ROI</h5>
+<div class="highlight"><pre><code class="language-text" data-lang="text">sSum        :   spine sum
+sMean       :   spine mean
+sSD         :   spine standard deviation
+sN          :   # pixels in spine roi
+</code></pre></div>
+<h5 id="spine-background-roi">Spine Background ROI</h5>
+<div class="highlight"><pre><code class="language-text" data-lang="text">sbSum       :   spine background sum
+sbMean      :   spine background mean
+sbSD        :   spine background standard deviation
+sbN         :   # pixels in spine background roi
+</code></pre></div>
+<h5 id="backbone/dendrite-roi">Backbone/Dendrite ROI</h5>
+<div class="highlight"><pre><code class="language-text" data-lang="text">dSum        :   dendrite sum
+dMean       :   dendrite mean
+dSD         :   dendrite standard deviation
+dN          :   # pixels in dendrite roi
+</code></pre></div>
+<h5 id="backbone/dendrite-background-roi">Backbone/Dendrite Background ROI</h5>
+<div class="highlight"><pre><code class="language-text" data-lang="text">dbSum       :   dendrite background sum
+dbMean      :   dendrite background mean
+dbSD        :   dendrite background standard deviation
+dbN         :   # pixels in dendrite background roi
+</code></pre></div>
+<h5 id="background-subtracted-rois">Background subtracted ROIs</h5>
+<div class="highlight"><pre><code class="language-text" data-lang="text">ubssSum     :   background subtracted spine sum
+ubssMean    :   background subtracted spine mean
+ubsdSum     :   background subtracted dendrite sum
+ubsdMean    :   background subtracted dendrite mean
+</code></pre></div>
+<h5 id="cross-channel-stats">Cross channel stats</h5>
+<div class="highlight"><pre><code class="language-text" data-lang="text">utssmoss    :   this spine sum minus other spine sum.
+                This can be read as &#39;(t)his (s)pine (s)um (m)inus (o)ther (s)pine sum&#39;
+utsmmosm    :   this spine mean minus other spine mean
+
+utssdoss    :   this spine sum divided by other spine sum
+utsmdosm    :   this spine mean divided by other spine mean
+
+utssmods    :   this spine sum minus other dendrite sum
+utsmmodm    :   this spine mean minus other dendrite mean
+
+utssdods    :   this spine sum divided by other dendrite sum
+utsmdodm    :   this spine mean divided by other dendrite mean
+</code></pre></div>
+<h3 id="moving-the-background-roi">Moving the background ROI</h3>
+
+<p><IMG class="img-float-right" SRC="images/mm3/intensity/spine-roi-example-edit.png" WIDTH="350"></p>
+
+<p>Clicking on the spine backgrond ROI will enable an edit mode where the user can specify the background position. This edit mode also shows the candidate background positions.</p>
+
+<ul>
+<li>Mouse-Click to set a new position.</li>
+<li>&#39;Enter&#39; to accept new position.</li>
+<li>&#39;r&#39; to reset spine position. A new position will automatically be chosen next time spine is analyzed.</li>
+<li>&#39;esc&#39; to cancel move</li>
+</ul>
+
+<div class="print-page-break"></div>
+
+<h3 id="errors-and-warnings">Errors and Warnings</h3>
+
+<p>Intensity analysis should be run with &#39;Debug On Error&#39; off. <strike>Set this with a procedure (code) window frontmost and select main menu &#39;Procedure - Debug On Error&#39;</strike></p>
+
+<p>When the intensity analysis has a problem analyzing a spine, errors and warnings will be set for that spine. Most errors are due to an ROI going off the image or in problems with drawing a valid backbone ROI (near the end of a segment).</p>
+
+<p>Browse Errors and Warnings using the &#39;Errors &amp; Warnings&#39; button in the <a href="/mapmanager/search-panel/">search panel</a>.</p>
+
+<p>Errors and Warnings are</p>
+
+<TABLE cellpadding="0">
+<TR>
+<TD>
+<figure>
+<figcaption>Error #3 x spine ROI beyond image</figcaption>
+<IMG SRC="images/mm3/intensity/3-spine-roi-error.png" WIDTH="350">
+</figure>
+</TD>
+
+<TD>
+<figure>
+<figcaption>Error #3.5 y spine ROI beyond image</figcaption>
+<IMG SRC="images/mm3/intensity/3_5-spine-roi-error.png" WIDTH="350">
+</figure>
+</TD>
+
+<TD>
+<figure>
+<figcaption>Error #6 reducing spine with ImageSeedFill</figcaption>
+<IMG SRC="images/mm3/intensity/6-reducing-spine-error.png" WIDTH="350">
+</figure>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<figure>
+<figcaption>Error #9 extending backbone error</figcaption>
+<IMG SRC="images/mm3/intensity/9-extending-backbone.png" WIDTH="350">
+</figure>
+</TD>
+
+<TD>
+<figure>
+<figcaption>Warning #5.1 prev cPnt</figcaption>
+<IMG SRC="images/mm3/intensity/5_1_prev-cpnt.png" WIDTH="350">
+</figure>
+</TD>
+</TR>
+
+</TABLE>
+
+<h3 id="intensity-dirty">Intensity Dirty</h3>
+
+<p>A spines intensity analysis becomes &#39;dirty&#39; and needs to be re-run whenever the geometry of a spine changes or the geometry of its connected spines change.</p>
+
+<p>Intensity analysis can be run on just &#39;dirty&#39; spines using the &#39;Only Dirty&#39; checkbox in the Intensity Tab of the main <a href="/mapmanager/main-panel/">map manager panel</a>. Dirty spines can be browsed using &#39;Int Dirty&#39; in the main <a href="/mapmanager/search-panel/">search panel</a>. </p>
+
+<p>A spines intensity analysis becomes dirty when:</p>
+
+<ul>
+<li>A spine is moved</li>
+<li>A spine is reconnected to the backbone</li>
+<li>Its analysis parameters are changed (width, extend head, etc.) </li>
+<li>Any of the other spines connected to it are changed</li>
+<li>Its dynamics are changed (addition, subtraction, persistent)</li>
+</ul>
+
+
+<div class="post-tags">
+  
+  
+  
+    <b>Tags:</b>  
+  
+  
+  
+    <a href="/mapmanager/tags/#Analysis">Analysis</a>
+  
+
+   <!--
+   <a href="javascript:window.print()">print</a>
+    -->
+
+   <!--
+   <BR>
+   <a href="_posts/2015-07-25-intensity.pdf">print pdf</a>
+   <BR>
+   -->
+    
+</div>
+
+
+                    </div>
+                
+            </div>
+
+            
+
+            <div class=row-fluid>
+                <div id=footer class=span12>
+                      Copyright &copy; 2016 - Robert Cudmore -
+
+ <a href="http://robertcudmore.org/index.html">robertcudmore.org</a>
+
+<!--
+Documentation for <a href="https://github.com/cudmore/mapmanager">Map Manager</a>
+-->
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function orderNav() {
+                var list,
+                    section,
+                    header,
+                    sections = [],
+                    lists = {},
+                    headers = {};
+
+                var navUl = document.querySelectorAll('#navigation ul')[0],
+                    navLis = document.querySelectorAll('#navigation ul li');
+
+                if (!navUl) return;
+
+                for (var i = 0; i < navLis.length; i++) {
+                    var order, li = navLis[i];
+
+                    if (li.classList.contains('nav-header')) {
+                        section = li.textContent || li.innerText;
+                        sections.push(section);
+                        headers[section] = li;
+                        continue;
+                    }
+
+                    if (!lists[section]) {
+                        lists[section] = [];
+                    }
+
+                    order = parseFloat(li.getAttribute('data-order'))
+                    lists[section].push([order, li]);
+                }
+
+                for (var i = 0; i < sections.length; i++) {
+                    section = sections[i];
+                    list = lists[section].sort(function(a, b) {
+                        return a[0] - b[0];
+                    });
+
+                    if (header = headers[section]) {
+                        navUl.appendChild(header);
+                    }
+                    for (var j = 0; j < list.length; j++) {
+                        navUl.appendChild(list[j][1]);
+                    }
+                }
+            }
+
+            if (document.querySelectorAll) orderNav();
+        </script>
+        
+    </body>
+</html>

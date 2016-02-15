@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
 
-        <title>Map Manager</title>
+        <title>Map Manager : Getting started</title>
         <meta name="description" content="">
 
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
@@ -169,217 +169,59 @@
 
                     <div id=content class=span10>
                         <div class=page-header>
-    <h3>
+    <h3>Getting started
         
     </h3>
 </div>
 
-<ul class="tag-cloud">
+<h3 id="installing-igor-pro">Installing Igor Pro</h3>
 
-  <li style="font-size: 155%">
-    <a href="#Imaging core">
-      Imaging core
-    </a>
-  </li>
-
-  <li style="font-size: 155%">
-    <a href="#Workflow">
-      Workflow
-    </a>
-  </li>
-
-  <li style="font-size: 98%">
-    <a href="#Posts">
-      Posts
-    </a>
-  </li>
-
-  <li style="font-size: 155%">
-    <a href="#Interface">
-      Interface
-    </a>
-  </li>
-
-  <li style="font-size: 112%">
-    <a href="#Plots">
-      Plots
-    </a>
-  </li>
-
-  <li style="font-size: 98%">
-    <a href="#xxx">
-      xxx
-    </a>
-  </li>
-
-  <li style="font-size: 98%">
-    <a href="#Analysis">
-      Analysis
-    </a>
-  </li>
-
+<ul>
+<li>Igor Pro is a cross platform program that runs on both Windows and Mac OS X.</li>
+<li>You need to <a href="https://www.wavemetrics.com/order/order1.php?type=Academic">purchase</a> an Igor Pro license from <a href="https://www.wavemetrics.com/index.html">Wavemetrics</a>, <a href="https://www.wavemetrics.com/support/versions.htm">download</a> Igor Pro and install it.</li>
+<li>To try out Igor Pro, download and install a fully functional but time limited <a href="https://www.wavemetrics.com/support/demos.htm">demo version</a>.</li>
 </ul>
 
-<div id="archives">
+<h3 id="installing-map-manager">Installing Map Manager</h3>
 
-  <div class="archive-group">
-    
-    <h3 id="#Imaging core">Imaging core</h3>
-    <a name="Imaging core"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/stackdb-plot">Stack DB plot</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/scale-panel">Scale panel</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/process-panel">Process panel</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/stack-browser">Stack Browser</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/simple-stack-db">Simple stack database</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/stack">Stack</a></h4>
-    </article>
-    
-  </div>
+<ul>
+<li>Once Igor Pro is installed, there is no formal installation of Map Manager</li>
+<li>Get the source code from Bob.</li>
+<li>The source code will be in a folder named &#39;MapManager_date&#39; where &#39;date&#39; is the date the software was created. The folder will be something like &#39;MapManager_20151117&#39;.</li>
+<li>Run the software by double-clicking MapManager.ipf from within the source code folder.</li>
+<li>To fit lines in FIJI you will have to specify a hard-drive path to FIJI and install a plugin in FIJI. Please see <a href="/mapmanager/fitting-segments-in-fiji/">fitting segments in fiji</a>.</li>
+</ul>
 
-  <div class="archive-group">
-    
-    <h3 id="#Workflow">Workflow</h3>
-    <a name="Workflow"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/gallery">Gallery</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/getting-started">Getting started</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/making-a-map">Making a map</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/database-overview">Database overview</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/annotating-a-stack">Annotating a stack</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/simple-stack-db">Simple stack database</a></h4>
-    </article>
-    
-  </div>
+<h3 id="opening/running-map-manager">Opening/Running Map Manager</h3>
 
-  <div class="archive-group">
-    
-    <h3 id="#Posts">Posts</h3>
-    <a name="Posts"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/user-files">User files</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/simple-stack-db">Simple stack database</a></h4>
-    </article>
-    
-  </div>
+<ul>
+<li>Open MapManager.ipf into Igor Pro (just double click the MapManager.ipf file).</li>
+<li>Once in Igor Pro, click in the command window to compile Map Manager and activate the main menus. The command window is in the lower left of your screen and has the window title &#39;Untitled&#39;.</li>
+<li>To score a single timepoint stack, select the main menu &#39;MapManager - Stack Browser&#39; to open the <a href="/mapmanager/stack-browser/">Stack Browser</a> panel. See <a href="/mapmanager/simple-stack-db/">Simple Stack DB</a> for more information.</li>
+<li>To score a timeseries of stacks (a map), select the main menu &#39;MapManager - Map Manager Panel&#39; to open the main <a href="/mapmanager/main-panel/">Map Manager panel</a>. See <a href="/mapmanager/making-a-map/">Making A Map</a> for more information.</li>
+</ul>
 
-  <div class="archive-group">
-    
-    <h3 id="#Interface">Interface</h3>
-    <a name="Interface"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/find-points-panel">Find Points</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/hdd-paths">Hard Drive Paths</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/stackdb-options-panel">Options</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/search-panel">Search panel</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/plot-panel">Plot panel</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/main-panel">Main panel</a></h4>
-    </article>
-    
-  </div>
+<h3 id="closing/quiting-map-manager">Closing/Quiting Map Manager</h3>
 
-  <div class="archive-group">
-    
-    <h3 id="#Plots">Plots</h3>
-    <a name="Plots"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/stack-plot">Stack plot</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/run-plot">Run plot</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/map-plot">Map plot</a></h4>
-    </article>
-    
-  </div>
+<ul>
+<li>Quit Igor Pro with the main menu &#39;Igor Pro - Quit Igor Pro&#39;</li>
+<li>Igor Pro will always show the following dialog.</li>
+<li>Always answer <strong>No</strong>.</li>
+<li>All Map Manager analysis is saved using the &#39;Save&#39; buttons from within the Map Manager interface.
+<div class="print-page-break"></div>
+<IMG class="img-float-left" SRC="images/mm3/quit-igor.png" WIDTH="400">
+<div class="print-page-break"></div></li>
+</ul>
 
-  <div class="archive-group">
-    
-    <h3 id="#xxx">xxx</h3>
-    <a name="xxx"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/faq">FAQ</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/File-format">File format</a></h4>
-    </article>
-    
-  </div>
+<h3 id="map-manager-options">Map Manager Options</h3>
 
-  <div class="archive-group">
-    
-    <h3 id="#Analysis">Analysis</h3>
-    <a name="Analysis"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/spine-dynamics">Spine Dynamics</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/intensity">Intensity</a></h4>
-    </article>
-    
-  </div>
+<ul>
+<li>Global options are set in the <a href="/mapmanager/stackdb-options-panel/">Options Panel</a>.</li>
+<li>There is one set of options that will be reloaded the next time Map Manager is run.</li>
+<li>Save the current options with the &#39;Save&#39; button in the <a href="/mapmanager/stackdb-options-panel/">Options</a> panel.</li>
+<li>Options can also be saved and then loaded from a user file. Use &#39;Save As...&#39; to save options into a user file.</li>
+</ul>
 
-</div>
 
 <div class="post-tags">
   
@@ -389,6 +231,8 @@
   
   
   
+    <a href="/mapmanager/tags/#Workflow">Workflow</a>
+  
 
    <!--
    <a href="javascript:window.print()">print</a>
@@ -396,7 +240,7 @@
 
    <!--
    <BR>
-   <a href="tags.html">print pdf</a>
+   <a href="_posts/2015-07-30-getting-started.pdf">print pdf</a>
    <BR>
    -->
     

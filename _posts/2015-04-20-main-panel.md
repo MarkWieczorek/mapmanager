@@ -17,9 +17,9 @@ Once a map is created and saved, the main map manager panel can be minimized aga
 
 The <span style="color:blue">blue</span> buttons operate on the selected map.
   
-<IMG class="img-float-center" SRC="../images/mm3/mm3-main-panel-big.png" WIDTH="700">
+<IMG class="img-float-center" SRC="images/mm3/mm3-main-panel-big.png" WIDTH="700">
 
-<!--- <IMG class="img-float-left" SRC="../images/mm3/mm3-main-panel-small.png" WIDTH="200"> -->
+<!--- <IMG class="img-float-left" SRC="images/mm3/mm3-main-panel-small.png" WIDTH="200"> -->
 
   <B>Load Map.</B> Load a map from the hard-drive. 
   
@@ -76,7 +76,7 @@ Each of these buttons will open a different Map Manager panel.
 
 ###Right-click on a map name in the list for a contextual menu.
 
-<IMG class="img-float-left" SRC="../images/mm3/mm3-main-panel-map-right-click.png" WIDTH="100">
+<IMG class="img-float-left" SRC="images/mm3/mm3-main-panel-map-right-click.png" WIDTH="100">
 
 <B>Show on HDD.</B> Shows the hard-drive folder where the map is saved.
 

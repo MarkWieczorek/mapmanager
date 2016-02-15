@@ -9,7 +9,7 @@ tags:
 ---
 
 
-<IMG class="img-float-left" SRC="../images/mm3/mm3-stackdb-plot.png" WIDTH="500">
+<IMG class="img-float-left" SRC="images/mm3/mm3-stackdb-plot.png" WIDTH="500">
 
 <div class="print-page-break"></div>
 
@@ -23,7 +23,7 @@ Open the stack db interface from any [stack][4] window using keyboard '['
 
 Choose the type of object in the 'New Object' group and shift+click in the image to create the object.
 
-<IMG class="img-float-right" SRC="../images/mm3/mm3-object-types.png" WIDTH="100">
+<IMG class="img-float-right" SRC="images/mm3/mm3-object-types.png" WIDTH="100">
 - **Spine** : A spine is always connected to a segment (its parent segment). You can only create a spine if you first select the segment that will be its parent.  
 - **Bouton** : This also requires a parent  
 - vBranch :  

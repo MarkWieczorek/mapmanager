@@ -26,7 +26,7 @@ To open the find points panel:
 - Any remaining spines in the destination timepoint (spines not connected to the source timepoint) will be displayed at the bottom of the list. In this example there are 3 of these spines.
 - Each spine in the source timepoint will also have a best 'Guess' connection in the 'Guess' column. For spines, this is using your 'Segment Pivot' for the two segments listed in Find Points and will connect spines across timepoints/sessions that are within 'Connect spines within this distance (um)'. See the Map Manager Options Panel to set this.
  
-<IMG class="img-float-left" SRC="../images/mm3/mm3-find-points-panel.png" WIDTH="500">
+<IMG class="img-float-left" SRC="images/mm3/mm3-find-points-panel.png" WIDTH="500">
 <div class="print-page-break"></div>
 
 ####Interface
@@ -80,7 +80,7 @@ By sorting the list with the source distance from pivot (spDist), you can step t
 
 By sorting the list with the destination distance from pivot (dpDist), you get a sequential list of all objects in the destination timepoint.
 
-<IMG class="img-float-left" SRC="../images/mm3/find-points-example.png" WIDTH="1000">
+<IMG class="img-float-left" SRC="images/mm3/find-points-example.png" WIDTH="1000">
 <div class="print-page-break"></div>
 Example usage of find points panel. Here, we have a run of sessions 1/2/3 (top row). We have positioned the Find Points panel below the stack for session 2. By selecting rows (spines) in Find Points we can browse all spines in session 2, visualize their connections to session 3, and finally edit their connections to session 3 (using the keyboard in Find Points Panel).
 

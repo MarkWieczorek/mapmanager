@@ -8,7 +8,7 @@ tags:
 - Workflow
 ---
 
-<IMG class="img-float-left" SRC="../images/mm3/mm3-main-panel.png" WIDTH="650">
+<IMG class="img-float-left" SRC="images/mm3/mm3-main-panel.png" WIDTH="650">
 
 <div class="print-page-break"></div>
 
@@ -122,7 +122,7 @@ This is the core of Map Manager and you will spend most of your time doing this.
 <BR>
 ##DO NOT READ BELOW HERE !!!!
 ###[ADVANCED]: Importing a bSpine map
-<IMG class="img-float-left" SRC="../images/mm3/mm3-import-bspine.png" WIDTH="275">
+<IMG class="img-float-left" SRC="images/mm3/mm3-import-bspine.png" WIDTH="275">
 
 Importing bSpine maps is tricky. The problem is if your original maps for one time-series (_d1, _d2, etc.) have different sessions. For example, _d1 has sessions from dates 1,2,3 but _d2 has sessions from dates 1,2,6,12 there <span style="color:red">will be an error</span>.
 

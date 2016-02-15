@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+
+        <title>Map Manager : Making a map</title>
+        <meta name="description" content="">
+
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/mapmanager/css/syntax.css">
+        <link rel="stylesheet" href="/mapmanager/css/main.css">
+    </head>
+    <body>
+
+        <div class="container">
+            <div class=row-fluid>
+                <div id=header class=span12>
+                    <div class=no-print>
+<h4><a class=brand href="/mapmanager/">Map Manager</a>
+    <small></small>
+</h4>
+
+<!--
+<div float=right>
+<a href="javascript:window.print()" float=right>print</a>
+</div>
+-->
+
+</div>
+
+                </div>
+            </div>
+
+            <div class=row-fluid>
+                
+                
+                    <div id=navigation class=span2>
+                        <ul class="nav nav-list">
+    <!-- <li><a href="/mapmanager/">Home</a></li> -->
+    <BR>
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Workflows</li>
+            
+            <li data-order="5"><a href="/mapmanager/gallery">Gallery</a></li>
+        
+            
+            <li data-order="1"><a href="/mapmanager/getting-started">Getting started</a></li>
+        
+            
+            <li data-order="2"><a href="/mapmanager/making-a-map">Making a map</a></li>
+        
+            
+            <li data-order="3"><a href="/mapmanager/annotating-a-stack">Annotating a stack</a></li>
+        
+            
+            <li data-order="1"><a href="/mapmanager/simple-stack-db">Simple stack database</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Imaging Core</li>
+            
+            <li data-order="3"><a href="/mapmanager/stackdb-plot">Stack DB plot</a></li>
+        
+            
+            <li data-order="4"><a href="/mapmanager/scale-panel">Scale panel</a></li>
+        
+            
+            <li data-order="3"><a href="/mapmanager/process-panel">Process panel</a></li>
+        
+            
+            <li data-order="1"><a href="/mapmanager/stack-browser">Stack Browser</a></li>
+        
+            
+            <li data-order="2"><a href="/mapmanager/stack">Stack</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Interface Windows</li>
+            
+            <li data-order="4"><a href="/mapmanager/find-points-panel">Find Points</a></li>
+        
+            
+            <li data-order="6"><a href="/mapmanager/hdd-paths">Hard Drive Paths</a></li>
+        
+            
+            <li data-order="5"><a href="/mapmanager/stackdb-options-panel">Options</a></li>
+        
+            
+            <li data-order="2"><a href="/mapmanager/search-panel">Search panel</a></li>
+        
+            
+            <li data-order="3"><a href="/mapmanager/plot-panel">Plot panel</a></li>
+        
+            
+            <li data-order="1"><a href="/mapmanager/main-panel">Main panel</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Plots</li>
+            
+            <li data-order="1"><a href="/mapmanager/stack-plot">Stack plot</a></li>
+        
+            
+            <li data-order="3"><a href="/mapmanager/run-plot">Run plot</a></li>
+        
+            
+            <li data-order="2"><a href="/mapmanager/map-plot">Map plot</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Analysis</li>
+            
+            <li data-order="1"><a href="/mapmanager/spine-dynamics">Spine Dynamics</a></li>
+        
+            
+            <li data-order="2"><a href="/mapmanager/intensity">Intensity</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Blog Posts</li>
+            
+            <li data-order="2"><a href="/mapmanager/faq">FAQ</a></li>
+        
+            
+            <li data-order=""><a href="/mapmanager/File-format">File format</a></li>
+        
+            
+            <li data-order=""><a href="/mapmanager/fitting-segments-in-fiji">Fitting segments in Fiji</a></li>
+        
+            
+            <li data-order="3"><a href="/mapmanager/user-files">User files</a></li>
+        
+            
+            <li data-order="3"><a href="/mapmanager/database-overview">Database overview</a></li>
+        
+    
+<!-- List additional links. It is recommended to add a divider
+    e.g. <li class=divider></li> first to break up the content. -->
+</ul>
+
+                    </div>
+
+                    <div id=content class=span10>
+                        <div class=page-header>
+    <h3>Making a map
+        
+    </h3>
+</div>
+
+<p><IMG class="img-float-left" SRC="images/mm3/mm3-main-panel.png" WIDTH="650"></p>
+
+<div class="print-page-break"></div>
+
+<p>A map is a sequence of <a href="/mapmanager/stack/">stacks</a>. You create a map by appending stacks from the <a href="/mapmanager/stack-browser/">stack browser</a>. Once a map is made it can be opened, saved, annotated, and browsed using the main <a href="/mapmanager/main-panel/">map maker panel</a>.</p>
+
+<p>The main Map Manager panel shows a list of open maps on the left. When a map is selected (a5n in this example), a list of sessions in the map are shown on the right (in this example there are 4 sessions).</p>
+
+<h4 id="open-and-initialize-map-manager">Open and initialize Map Manager</h4>
+
+<ol>
+<li>Open Igor Pro with MapManager.ipf</li>
+<li>Initialize Map Manager with the main menu &#39;MapManager - Map Manager Panel&#39;.</li>
+</ol>
+
+<h4 id="1.-pre-process-your-raw-data-so-map-manager-can-import-it">1. Pre-process your raw data so Map Manager can import it</h4>
+
+<p>Map Manager will only import single channel stacks. If your stacks have two color channels, they need to be de-interleaved into two different .tif files. One .tif file for each color channel. See <a href="https://github.com/cudmore/bob-fiji-plugins">bAlignBatch</a> for a Fiji plugin that does this.</p>
+
+<h4 id="2.-make-a-new-map">2. Make a new map</h4>
+
+<ol>
+<li>Fill in a new map name and choose the number of channels for each stack in your map.</li>
+<li>Create a new map with &#39;<span style="color:green">New Map</span>&#39;.</li>
+<li>Append a stack from the <a href="/mapmanager/stack-browser/">Stack Browser</a> with &#39;Append Stack&#39;.</li>
+<li>Repeat #3 for each stack.</li>
+<li>Save the map with &#39;Save Map&#39; button.</li>
+</ol>
+
+<h4 id="important"><span style="color:red">Important</span></h4>
+
+<ul>
+<li>When you make a map, you need to choose the &#39;Number Of Channels&#39; in each stack/session. Map Manager will only allow one choice of &#39;Number Of Channels&#39; per map. You cannot mix one and two channel stacks within a map.</li>
+<li>Make sure the scale of each imported stack is correct. It is hard to change the scale later. You can set the scale of a stack in its stack window with &#39;shift+p&#39;.</li>
+<li>Make sure the sessions in your map are imported in the correct order. It is hard to change the order later.</li>
+<li>As you import stacks from the <a href="/mapmanager/stack-browser/">stack browser</a> there are some rules that must be followed. You will be prompted when you break these rules. In particular:
+
+<ol>
+<li>The stack scale must be set. Set the scale of a <a href="/mapmanager/stack/">stack</a> in a stack window with shift+p.</li>
+<li>The stack must be loaded. Double click the stack in the <a href="/mapmanager/stack-browser/">stack browser</a> to load a stack.</li>
+<li>When importing 2 channel stacks, both channels must be loaded and you must select the first channel (ending in _ch1) in the stack browser.</li>
+</ol></li>
+<li>New maps are saved to a default hard-drive folder. The default folder can be specified the <a href="/mapmanager/hdd-paths/">Hard Drive Paths Panel</a>. Right-click on a map name and select &#39;Show On HDD&#39; to see the hard-drive folder where the map is saved.
+
+<ul>
+<li>On Windows, the default folder is &#39;My Documents&#39;.</li>
+<li>On OSX, the default folder is &#39;Documents&#39;.</li>
+</ul></li>
+</ul>
+
+<h4 id="congratulations,-you-just-made-a-map-manager-map.-the-rest-of-this-tutorial-covers-specifying-and-fitting-segment-backbone-lines,-adding-spines,-and-connecting-spines-across-timepoints.">Congratulations, you just made a Map Manager map. The rest of this tutorial covers specifying and fitting segment backbone lines, adding spines, and connecting spines across timepoints.</h4>
+
+<h4 id="3.-create-a-line-segment-in-each-session/stack-of-the-map-and-fit-its-backbone-in-fiji">3. Create a line segment in each session/stack of the map and fit its backbone in Fiji</h4>
+
+<p>Line segments are first specified with control points and then fit using a custom FIJI plugin. Before fitting a line in FIJI, you need to install  the <a href="https://github.com/cudmore/bob-fiji-plugins">Bob_Neurite_Tracer_v3</a> plugin in FIJI and you need to specify the path to your FIJI application in the <a href="/mapmanager/hdd-paths/">Hard Drive Paths Panel</a>.</p>
+
+<p>See <a href="/mapmanager/fitting-segments-in-fiji/">Fitting Segment In Fiji</a> for help on FIJI versions, installing the plugin and specifying the FIJI application path in Map Manager.</p>
+
+<ol>
+<li>Double-click the first session in your map (in the main Map Manager panel) to open a <a href="/mapmanager/stack/">stack</a> window.</li>
+<li>Create a line segment by follow the instruction in <a href="/mapmanager/annotating-a-stack/">annotating a stack</a>.
+
+<ul>
+<li>Turn on Segment Editing with the checkbox next to &#39;Line Segments&#39;. You can also turn this on using &#39;Edit Segments&#39; in the main Map Manager Panel.</li>
+<li>Click the &#39;+&#39; button to create a new (empty) segment.</li>
+<li>Create Control Points along a segment with shift+click. Remember, all points are in 3D, make sure the points are in the correct imaging plane.</li>
+<li>You can delete control points with the &#39;delete&#39; key.</li>
+<li>You can move control points with either the &#39;m&#39; key or right-click menu &#39;Move&#39;.</li>
+<li>Once control points are made, fit the backbone line in Fiji. Right-click on your segment in the list and select &#39;Make from control points - Fiji&#39;.</li>
+</ul></li>
+<li>Repeat steps #1 and #2 for each session in your map. Making the same line segment in each session. As you make control points, be sure they are in the same direction along the segment for each session. <del>For some help with the ordering of your control points, open the &#39;stack db options&#39; panel and turn &#39;Control Point Help&#39; &#39;On&#39;.</del></li>
+<li>Set a pivot point in each line segment. Do this by clicking a point in the segment, right-click and select the &#39;Set As Segment Pivot&#39; menu. The pivot point should refer to the same region of the segment across all session. A good strategy is to choose a region of the segment near an obvious spine that is present in all sessions. Another strategy is to choose a pivot point where some other segment (dendrite) crosses near your segment as these tend to remain stable across time. Try and put the pivot point near the center of the segment, do not place it at either end. The pivot point is used to calculate a line distance along the segment (in um) which in turn will be used to auto-guess connections between spines across sessions.</li>
+</ol>
+
+<p class="tip"><B>Tip.</B> When specifying control points and setting segment pivots, you can open multiple stack windows at the same time. Just double-click on each session in the main Map Manager Panel. This way, you can see the line segments you are making in each session of your map.</p>
+
+<h4 id="4.-connect-your-line-segments-together">4. Connect your line segments together</h4>
+
+<ol>
+<li>Close all stack windows using the <span style="color:blue">Close Windows</span> button in the main Map Manager panel.</li>
+<li>Open a new stack run by right-clicking a session in your map and selecting the &#39;Plot Run +- All&#39; menu.</li>
+<li>Turn on the &#39;Edit Segments&#39; checkbox in the main Map Manager panel. It is in the lower left of the panel.</li>
+<li>Sequentialy connect your line segment from one timepoint to the next
+
+<ul>
+<li>Select the source timepoint segment (for example, timepoint 1). Make sure you select a point on the segment backbone line.</li>
+<li>Select the destination timepoint segment (for example, timepoint 2). Again, make sure you select a point on the segment backbone line.</li>
+<li>In the destination timepoint window (e.g. timepoint 2), press keyboard &#39;p&#39; for Persistent (or use right-click menu).</li>
+</ul></li>
+</ol>
+
+<p class="tip"><B>Tip.</B> You can see how your segments are connected by plotting a 'Segment Map' from the main Map Manager panel. In the segment map window, right-click a segent and select 'Plot Run' to plot a run of segments.</p>
+   
+
+<h4 id="5.-mark-spines-in-each-timepoint">5. Mark spines in each timepoint</h4>
+
+<ol>
+<li>Make sure &#39;Edit Segments&#39; is off.</li>
+<li>Open a single timepoint by double clicking a session in the list.</li>
+<li>Follow <a href="/mapmanager/annotating-a-stack/">annotating a stack</a> to mark spines along your new segment.</li>
+</ol>
+
+<p class="tip"><B>Tip.</B> As you are working, keep your eye on the Igor command window. Each action you perform in Map Manager should report a few lines of text here. If this starts to spit out 1000's of lines there is probably a problem.</p>
+   
+
+<h4 id="6.-connecting-stack-db-objects-from-one-timepoint-to-the-next">6. Connecting stack db objects from one timepoint to the next</h4>
+
+<p>You have two choices here.</p>
+
+<h4 id="6.1-use-the-find-points-panel-to-connect-objects">6.1 Use the <a href="/mapmanager/find-points-panel/">Find Points Panel</a> to connect objects</h4>
+
+<p>Use the Find Points Panel to browse spines in two timepoints. Find Points will also guess for the best connections and allow you to set them manually.</p>
+
+<h4 id="6.2.-auto-connect-all-objects-using-the-map-plot">6.2. Auto connect all objects using the <a href="/mapmanager/map-plot/">map plot</a></h4>
+
+<ul>
+<li>Open a &#39;Spine Map&#39; from the main Map Manager Panel.</li>
+<li>In the spine map, select a spine in the first timepoint, right click and select &#39;Connect Objects To Next&#39;. This will make automatic connections of all spines from the first session to the next session.</li>
+<li>Repeat this process for each pairwise session in your stack. You can also right-click and select &#39;Connect All Objects&#39; to connect spines/objects through the entire map.</li>
+<li>When working on spines, spines are connected if they are within a minimum distance of each other on their respective segment line. See &#39;Connect spines within this distance (um)&#39; in the <a href="/mapmanager/stackdb-options-panel/">stack db options panel</a> to set this option.</li>
+</ul>
+
+<h4 id="7.-check-the-auto-spine-connections-and-edit-as-necessary">7. Check the auto spine connections and edit as necessary</h4>
+
+<p>This is the core of Map Manager and you will spend most of your time doing this. You need to verify the auto connections of each spine and you need to do this between <strong>each</strong> timepoint in your map. If your map has 4 timepoints, you need to verify the auto spine connections between timepoint 1-2, timepoint 2-3, and timepoint 3-4.</p>
+
+<ul>
+<li>Open a <a href="/mapmanager/run-plot/">run plot</a> of three sequential timepoints by right-clicking a spine in the spine map and selecting &#39;plot run +- 1&#39;.</li>
+<li>In the run plot windows, select a spine in the middle timepoint with ctrl+click. This will bring up the spine and its associated connections in all windows of the spine run. If there is no spine in a given timepoint, the image will be snapped to where the spine &#39;would-be&#39;.</li>
+<li>From the middle timepoint spine selection, go to the next spine along the segment using keyboard ctrl+right. Go to the previous spine along the segment using keyboard ctrol+left.</li>
+<li>Correct any errors in the spine dynamics using keyboard &#39;a&#39; for addition, &#39;s&#39; for subtraction, and &#39;p&#39; for persistence. See <a href="/mapmanager/run-plot/">run plot</a> for details.</li>
+</ul>
+
+<h4 id="8.-review-your-work-by-using-search-to-query-all-additions-and-subtractions">8. Review your work by using search to query all additions and subtractions</h4>
+
+<ul>
+<li>Open the <a href="/mapmanager/search-panel/">search panel</a> from the main Map Manager panel with the &#39;Search&#39; button.</li>
+<li>In the search panel, make sure &#39;map&#39; is slected and search for all spine additions with the &#39;Additions&#39; button.</li>
+<li>All added spines will appear as a list in the search results.</li>
+<li>Right-click on a spine and select &#39;plot run +- 1&#39; to bring up a spine run. [HERE I NEED TO CHANGE THE INTERFACE. I NEED A QUICKER WAY OF BRINING UP A SPINE RUN!!!]</li>
+</ul>
+
+<p><strong>THIS IS WHERE I AM ENDING FOR NOW ON July 29 ... THIS NEEDS TO BE EXPANDED</strong></p>
+
+<p><BR>
+<BR>
+<BR>
+<BR>
+<BR></p>
+
+<h2 id="do-not-read-below-here-!!!!">DO NOT READ BELOW HERE !!!!</h2>
+
+<h3 id="[advanced]:-importing-a-bspine-map">[ADVANCED]: Importing a bSpine map</h3>
+
+<p><IMG class="img-float-left" SRC="images/mm3/mm3-import-bspine.png" WIDTH="275"></p>
+
+<p>Importing bSpine maps is tricky. The problem is if your original maps for one time-series (_d1, _d2, etc.) have different sessions. For example, _d1 has sessions from dates 1,2,3 but _d2 has sessions from dates 1,2,6,12 there <span style="color:red">will be an error</span>.</p>
+
+<p>Thus, there are two cases:</p>
+
+<ol>
+<li><p>Your maps _d1, _d2 etc. all have the same exact sessions
+This is simple, use &#39;Batch import bSpine map&#39;. You will be prompted for the first map (you should select _d1). Once this is done, you need to hit all the buttons in &#39;(2) fix&#39; to complete the import and then &#39;save map&#39; in the main Map Manager panel.</p></li>
+<li><p>Your maps _d1, _d2 etc. have different sessions.
+<span style="color:red">This DOES NOT WORK.</span></p></li>
+</ol>
+
+<p><strong>This documentation is not done</strong></p>
+
+<p>####Import group</p>
+
+<ul>
+<li><p><strong>Import One bSpine map.</strong> ... not done</p></li>
+<li><p><strong>Append One bSpine map.</strong> ... not done</p></li>
+</ul>
+
+<p>#### Fix group</p>
+
+<ul>
+<li>** I am sick of writing documentation. Please see Bob for instructions. **</li>
+</ul>
+
+
+<div class="post-tags">
+  
+  
+  
+    <b>Tags:</b>  
+  
+  
+  
+    <a href="/mapmanager/tags/#Workflow">Workflow</a>
+  
+
+   <!--
+   <a href="javascript:window.print()">print</a>
+    -->
+
+   <!--
+   <BR>
+   <a href="_posts/2015-04-20-making-a-map.pdf">print pdf</a>
+   <BR>
+   -->
+    
+</div>
+
+
+                    </div>
+                
+            </div>
+
+            
+
+            <div class=row-fluid>
+                <div id=footer class=span12>
+                      Copyright &copy; 2016 - Robert Cudmore -
+
+ <a href="http://robertcudmore.org/index.html">robertcudmore.org</a>
+
+<!--
+Documentation for <a href="https://github.com/cudmore/mapmanager">Map Manager</a>
+-->
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function orderNav() {
+                var list,
+                    section,
+                    header,
+                    sections = [],
+                    lists = {},
+                    headers = {};
+
+                var navUl = document.querySelectorAll('#navigation ul')[0],
+                    navLis = document.querySelectorAll('#navigation ul li');
+
+                if (!navUl) return;
+
+                for (var i = 0; i < navLis.length; i++) {
+                    var order, li = navLis[i];
+
+                    if (li.classList.contains('nav-header')) {
+                        section = li.textContent || li.innerText;
+                        sections.push(section);
+                        headers[section] = li;
+                        continue;
+                    }
+
+                    if (!lists[section]) {
+                        lists[section] = [];
+                    }
+
+                    order = parseFloat(li.getAttribute('data-order'))
+                    lists[section].push([order, li]);
+                }
+
+                for (var i = 0; i < sections.length; i++) {
+                    section = sections[i];
+                    list = lists[section].sort(function(a, b) {
+                        return a[0] - b[0];
+                    });
+
+                    if (header = headers[section]) {
+                        navUl.appendChild(header);
+                    }
+                    for (var j = 0; j < list.length; j++) {
+                        navUl.appendChild(list[j][1]);
+                    }
+                }
+            }
+
+            if (document.querySelectorAll) orderNav();
+        </script>
+        
+    </body>
+</html>

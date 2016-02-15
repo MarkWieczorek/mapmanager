@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
 
-        <title>Map Manager</title>
+        <title>Map Manager : User files</title>
         <meta name="description" content="">
 
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
@@ -169,217 +169,133 @@
 
                     <div id=content class=span10>
                         <div class=page-header>
-    <h3>
+    <h3>User files
         
     </h3>
 </div>
 
-<ul class="tag-cloud">
+<p><font size=4em color="red"></p>
 
-  <li style="font-size: 155%">
-    <a href="#Imaging core">
-      Imaging core
-    </a>
-  </li>
+<h4 id="user-files-have-been-completely-revamped.-global-options-can-now-be-easily-saved-and-loaded-using-the-stack-db-options-panel.">User files have been completely revamped. Global options can now be easily saved and loaded using the <a href="/mapmanager/stackdb-options-panel">Stack DB Options Panel</a>.</h4>
 
-  <li style="font-size: 155%">
-    <a href="#Workflow">
-      Workflow
-    </a>
-  </li>
+<p><BR>
+</font></p>
 
-  <li style="font-size: 98%">
-    <a href="#Posts">
-      Posts
-    </a>
-  </li>
+<p>User files are text files where global options are specified and then loaded and applied within Map Manager. This is useful when you have mutiple users within one Map Manager installation.</p>
 
-  <li style="font-size: 155%">
-    <a href="#Interface">
-      Interface
-    </a>
-  </li>
+<p>User files are loaded using the main menu &#39;mm3 -&gt; Load User&#39; or in the <a href="/mapmanager/hdd-paths">Hard Drive Paths</a> panel.</p>
 
-  <li style="font-size: 112%">
-    <a href="#Plots">
-      Plots
-    </a>
-  </li>
+<p><strong>Important.</strong> When you load a user file, anything specified in the file will <strong>override</strong> existing options.</p>
 
-  <li style="font-size: 98%">
-    <a href="#xxx">
-      xxx
-    </a>
-  </li>
+<h3 id="rules">Rules</h3>
 
-  <li style="font-size: 98%">
-    <a href="#Analysis">
-      Analysis
-    </a>
-  </li>
+<p>Make sure there is NO space surround the &#39;=&#39; sign. </p>
 
+<ul>
+<li>GOOD: root:line2:options:gDefaultSegmentRadius=0.35</li>
+<li>BAD: root:line2:options:gDefaultSegmentRadius = 0.35</li>
 </ul>
 
-<div id="archives">
+<p>Make sure your text editor is using simple double quotes </p>
 
-  <div class="archive-group">
-    
-    <h3 id="#Imaging core">Imaging core</h3>
-    <a name="Imaging core"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/stackdb-plot">Stack DB plot</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/scale-panel">Scale panel</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/process-panel">Process panel</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/stack-browser">Stack Browser</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/simple-stack-db">Simple stack database</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/stack">Stack</a></h4>
-    </article>
-    
-  </div>
+<ul>
+<li>GOOD: root:stackdb2:options:gFijiPath=&quot;C:\Users\cudmore.linden-image2\Desktop\Fiji.app\fiji-win64.exe&quot;</li>
+<li>BAD: root:stackdb2:options:gFijiPath=&ldquo;C:\Users\cudmore.linden-image2\Desktop\Fiji.app\fiji-win64.exe&rdquo;</li>
+</ul>
 
-  <div class="archive-group">
-    
-    <h3 id="#Workflow">Workflow</h3>
-    <a name="Workflow"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/gallery">Gallery</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/getting-started">Getting started</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/making-a-map">Making a map</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/database-overview">Database overview</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/annotating-a-stack">Annotating a stack</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/simple-stack-db">Simple stack database</a></h4>
-    </article>
-    
-  </div>
+<h3 id="some-useful-options">Some useful options</h3>
 
-  <div class="archive-group">
-    
-    <h3 id="#Posts">Posts</h3>
-    <a name="Posts"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/user-files">User files</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/simple-stack-db">Simple stack database</a></h4>
-    </article>
-    
-  </div>
+<h4 id="specify-default-user-folder-to-load/save-maps:">Specify default user folder to load/save maps:</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">root:MapManager3:gMapDriveDir=&quot;vasculature:Users:cudmore:Documents:MapManager3:&quot;
+</code></pre></div>
+<h4 id="the-default-radius-of-new-segments-(um)">The default radius of new segments (um)</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">root:line2:options:gDefaultSegmentRadius=0.3
+</code></pre></div>
+<h4 id="the-maximum-distance-along-a-segment-when-automatically-connecting-objects-in-a-map-(um)">The maximum distance along a segment when automatically connecting objects in a map (um)</h4>
 
-  <div class="archive-group">
-    
-    <h3 id="#Interface">Interface</h3>
-    <a name="Interface"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/find-points-panel">Find Points</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/hdd-paths">Hard Drive Paths</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/stackdb-options-panel">Options</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/search-panel">Search panel</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/plot-panel">Plot panel</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/main-panel">Main panel</a></h4>
-    </article>
-    
-  </div>
+<p>Objects will only be connected if their position on the segment line is <strong>less</strong> than this.
+    root:ObjMap:options:gMaxPDistConnDist=3</p>
 
-  <div class="archive-group">
-    
-    <h3 id="#Plots">Plots</h3>
-    <a name="Plots"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/stack-plot">Stack plot</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/run-plot">Run plot</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/map-plot">Map plot</a></h4>
-    </article>
-    
-  </div>
+<h4 id="the-number-of-segment-points-to-search-when-auto-connecting-a-spine">The number of segment points to search when auto-connecting a spine</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">root:StackDB2:options:gLinePointsToSearch=6
+</code></pre></div>
+<h3 id="here-is-an-example-user-file...">Here is an example user file...</h3>
+<div class="highlight"><pre><code class="language-text" data-lang="text">#mac
+root:stackdb2:options:gFijiPath=&quot;/Applications/Fiji.app/Contents/MacOS/Imagej-macosx&quot;
+#windows
+#root:stackdb2:options:gFijiPath=&quot;C:\Users\cudmore.linden-image2\Desktop\Fiji.app\fiji-win64.exe&quot;
 
-  <div class="archive-group">
-    
-    <h3 id="#xxx">xxx</h3>
-    <a name="xxx"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/faq">FAQ</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/File-format">File format</a></h4>
-    </article>
-    
-  </div>
+#default point size for stack db objects
+root:stackdb2:options:gPointSize=3
 
-  <div class="archive-group">
-    
-    <h3 id="#Analysis">Analysis</h3>
-    <a name="Analysis"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/spine-dynamics">Spine Dynamics</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/intensity">Intensity</a></h4>
-    </article>
-    
-  </div>
+#default size for user selections
+root:StackDB2:options:gPointSelSize=5
 
-</div>
+#default stack window width
+root:bStack:gStackWindowWidth1=1000
+
+#default segment radius
+root:line2:options:gDefaultSegmentRadius=0.35
+
+#set the number of image planes an object is visible
+#controls mask as you scroll up/down with mouse wheel
+root:bStack:gMaskWindow=2
+
+#turn on real-time intnesity analysis
+root:stackdb2:options:gAnalyzeIntOnNewSpines = 0
+root:stackdb2:options:gShowSpineIntensity = 0
+
+root:line2:options:gFIlterSWC_BoxWidth = 5
+root:line2:options:gFIlterRadius_BoxWidth = 5
+
+root:bNV:gUserName=&quot;cudmore&quot;
+
+#stack browser
+root:bStack:gRootHDD=&quot;&quot;
+
+#
+root:bStack:gRootHDD=&quot;fourt:jhu:data:&quot;
+#
+root:bStack:gAnalysisPath=&quot;Vasculature:Users:cudmore:jhu:vascularAnalysis:&quot;
+
+# set defaults in ‘Process Image’
+# ch1 defaults
+root:bProcess:gAutoContrast=1
+root:bProcess:gMinContrast=0
+root:bProcess:gMaxContrast=200
+root:bProcess:gColorTable=&quot;Green&quot;
+
+# ch2 default
+root:bProcess:gAutoContrastCh2=1
+root:bProcess:gMinContrastCh2=0
+root:bProcess:gMaxContrastCh2=200
+root:bProcess:gColorTable2=&quot;Grays&quot;
+
+#
+root:bStack:gDefaultChannel=1
+
+root:ObjMap:options:gDefaultPlusMinusRun=1
+root:ObjMap:options:gDefaultRunWindowWidth=400
+root:ObjMap:options:gDefaultZoomWidth=20
+root:ObjMap:options:gDefaultZoomHeight=20
+
+#only allow auto spine connections &lt; this number
+root:ObjMap:options:gMaxPDistConnDist=3
+
+# default segment radius (um)
+root:line2:options:gDefaultSegmentRadius=0.3
+
+# line points to search when connecting spine/bouton
+root:StackDB2:options:gLinePointsToSearch=6
+
+# single stack window parameters
+root:bStack:gStackWindowWidth1=800
+root:bStack:gStackWindowWidth2=767.5
+
+root:bStack:stackScaleBar=5
+
+#“”
+</code></pre></div>
 
 <div class="post-tags">
   
@@ -389,6 +305,8 @@
   
   
   
+    <a href="/mapmanager/tags/#Posts">Posts</a>
+  
 
    <!--
    <a href="javascript:window.print()">print</a>
@@ -396,7 +314,7 @@
 
    <!--
    <BR>
-   <a href="tags.html">print pdf</a>
+   <a href="_posts/2015-04-20-user-files.pdf">print pdf</a>
    <BR>
    -->
     

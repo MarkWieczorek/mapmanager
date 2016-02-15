@@ -18,7 +18,7 @@ To open the options panel
   - 'Options' button in main [Map Manager Panel][5].
   - 'Options' button in the Map Manager Buttons panel.
 
-<IMG class="img-float-left" SRC="../images/mm3/mm3-options.png" WIDTH="300">
+<IMG class="img-float-left" SRC="images/mm3/mm3-options.png" WIDTH="300">
 
 The panel is very tall, scroll the panel up/down with the mouse wheel.
 
@@ -112,7 +112,7 @@ Options that control the display of the [stack db][2] in a [stack][1] window. Ea
 **Auto plot object map on load**. xxx
 
 
-<!-- <IMG class="img-float-left" SRC="../images/mm3/mm3-options-bottom.png" WIDTH="300"> -->
+<!-- <IMG class="img-float-left" SRC="images/mm3/mm3-options-bottom.png" WIDTH="300"> -->
 
 ###Intensity Analysis
 
@@ -141,7 +141,7 @@ Turn [intensity analysis][4] on/off with the 'Intensity Analysis' checkbox. Be s
 
 ###Miscellaneous
 
-<IMG class="img-float-left" SRC="../images/mm3/mmoptions-object-display.png" WIDTH="225">
+<IMG class="img-float-left" SRC="images/mm3/mmoptions-object-display.png" WIDTH="225">
 
 A table to set how stack db points are displayed. Use the disclusure triangle in the upper-right of the options window to show the table.
 
@@ -155,7 +155,7 @@ Additional option are available in the Stack Browser Options panel.
 
 Open the Stack Browser Options panel using the main menu 'MapManager - Stack Browser Options'
 
-<IMG class="img-float-left" SRC="../images/mm3/mm3-stack-browser-options.png" WIDTH="300">
+<IMG class="img-float-left" SRC="images/mm3/mm3-stack-browser-options.png" WIDTH="300">
 
 <div class="print-page-break"></div>
 

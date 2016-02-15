@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
 
-        <title>Map Manager</title>
+        <title>Map Manager : Spine Dynamics</title>
         <meta name="description" content="">
 
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
@@ -169,217 +169,133 @@
 
                     <div id=content class=span10>
                         <div class=page-header>
-    <h3>
+    <h3>Spine Dynamics
         
     </h3>
 </div>
 
-<ul class="tag-cloud">
+<h3 id="density-report">Density Report</h3>
 
-  <li style="font-size: 155%">
-    <a href="#Imaging core">
-      Imaging core
-    </a>
-  </li>
+<p>A density report is used for individual <a href="/mapmanager/stack/">stacks</a>. It will calculate the length of each dendritic segment and the density of spines.</p>
 
-  <li style="font-size: 155%">
-    <a href="#Workflow">
-      Workflow
-    </a>
-  </li>
+<p>Generate a density report for each segment in a stack</p>
 
-  <li style="font-size: 98%">
-    <a href="#Posts">
-      Posts
-    </a>
-  </li>
+<ul>
+<li>In a <a href="/mapmanager/stack/">stack window</a>, keyboard &#39;o&#39; for <strong>o</strong>utput report.</li>
+<li>In the <a href="/mapmanager/stack-browser/">Stack Browser</a>, select a stack in the list, keyboard &#39;o&#39; for <strong>o</strong>utput report.</li>
+</ul>
+<div class="highlight"><pre><code class="language-text" data-lang="text">numSpines       Total number of spines = goodSpines + badSpines
+goodSpines      Number of good spines.
+badSpines       Number of bad spines.
+totalLen        Total segment length (um)
+goodLen         Segment length (um) from most distal good spines.
+totalDen        Total density of all spines = numSpines / totalLen
+goodDen         Density of good spines = goodSpines / goodLen
+totalLen3d
+goodLen3d
+totalDen3d
+goodDen3d
+</code></pre></div>
+<h3 id="dynamics-report">Dynamics Report</h3>
 
-  <li style="font-size: 155%">
-    <a href="#Interface">
-      Interface
-    </a>
-  </li>
+<p>A dynamics report is used for a <a href="/mapmanager/map-plot/">map</a>. For each session in a map, it will calculate the length of each segment (um), the density of spines, the number of added spines, the number of subtracted spines, etc., etc.</p>
 
-  <li style="font-size: 112%">
-    <a href="#Plots">
-      Plots
-    </a>
-  </li>
+<p>Generate a spine dynamics report for each segment in a map.</p>
 
-  <li style="font-size: 98%">
-    <a href="#xxx">
-      xxx
-    </a>
-  </li>
+<ul>
+<li>In any <a href="/mapmanager/map-plot/">map plot</a>, right-click and select &#39;Dynamics Report&#39;. If the map plot is displaying &#39;All Segment&#39;, a table for each segment will be opened. Otherwise, one table for the current &#39;Map Segment ID&#39; will be opened.</li>
+</ul>
+<div class="highlight"><pre><code class="language-text" data-lang="text"> numSpines      Total number of spines, goodSpines + badSpines.
+ goodSpines     Total number of good spines
+ badSpines      Total number of bad spines
+ totalLen       Total segment length (um)
+ goodLen        Segment length between most distal good spines.
 
-  <li style="font-size: 98%">
-    <a href="#Analysis">
-      Analysis
-    </a>
-  </li>
+ totalDen       Total density = numSpines / totalLen
+ goodDen        Density of good spines = goodSpines / goodLen
 
+ nAdd           Number of added spines.
+ nSub           Number of subtracted spines (at the current session)
+ nSub2          Number of subtracted spines (from the previous session)
+ tor            Turn-over-ratio = 
+
+ pAdd           Percent added = nAdd / goodSpines from previous session * 100
+ pSub           Percent subtracted = 
+ dAdd           Density added =
+ dSub           Density subtracted = 
+
+ np             New persistent = 
+ nt             New transient = 
+ lp             Lost persistent = 
+ lt             Lost transient = 
+</code></pre></div>
+<h3 id="concepts">Concepts</h3>
+
+<h4 id="stack">Stack</h4>
+
+<p>Each segment within a stack has a number of spines and a total traced dendritic length. From this we can calculate spine density.</p>
+
+<ul>
+<li>Number of spines</li>
+<li>Dendrite length</li>
+<li>Spine density : number of spines / dendrite length</li>
 </ul>
 
-<div id="archives">
+<h4 id="map">Map</h4>
 
-  <div class="archive-group">
-    
-    <h3 id="#Imaging core">Imaging core</h3>
-    <a name="Imaging core"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/stackdb-plot">Stack DB plot</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/scale-panel">Scale panel</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/process-panel">Process panel</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/stack-browser">Stack Browser</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/simple-stack-db">Simple stack database</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/stack">Stack</a></h4>
-    </article>
-    
-  </div>
+<p>From one session to the next, the number of added and subtracted spines are counted. From this, the percent and density changes are calculated.</p>
 
-  <div class="archive-group">
-    
-    <h3 id="#Workflow">Workflow</h3>
-    <a name="Workflow"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/gallery">Gallery</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/getting-started">Getting started</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/making-a-map">Making a map</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/database-overview">Database overview</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/annotating-a-stack">Annotating a stack</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/simple-stack-db">Simple stack database</a></h4>
-    </article>
-    
-  </div>
+<ul>
+<li># Added </li>
+<li># Subtracted</li>
+<li>% Added : # added / (number of spines in pervious session) * 100</li>
+<li>% Subtracted :</li>
+<li>Turn-over-ratio : A measure of total dynamics (both addition and subtraction)</li>
+<li>Density Added : </li>
+<li>Density Subtracted : </li>
+</ul>
 
-  <div class="archive-group">
-    
-    <h3 id="#Posts">Posts</h3>
-    <a name="Posts"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/user-files">User files</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/simple-stack-db">Simple stack database</a></h4>
-    </article>
-    
-  </div>
+<h4 id="map-lifetime">Map Lifetime</h4>
 
-  <div class="archive-group">
-    
-    <h3 id="#Interface">Interface</h3>
-    <a name="Interface"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/find-points-panel">Find Points</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/hdd-paths">Hard Drive Paths</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/stackdb-options-panel">Options</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/search-panel">Search panel</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/plot-panel">Plot panel</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/main-panel">Main panel</a></h4>
-    </article>
-    
-  </div>
+<p>Observed </p>
 
-  <div class="archive-group">
-    
-    <h3 id="#Plots">Plots</h3>
-    <a name="Plots"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/stack-plot">Stack plot</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/run-plot">Run plot</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/map-plot">Map plot</a></h4>
-    </article>
-    
-  </div>
+<ul>
+<li>observed sessions</li>
+<li>observed seconds</li>
+<li>observed days</li>
+<li>observed hours</li>
+</ul>
 
-  <div class="archive-group">
-    
-    <h3 id="#xxx">xxx</h3>
-    <a name="xxx"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/faq">FAQ</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/File-format">File format</a></h4>
-    </article>
-    
-  </div>
+<p>Lifetime</p>
 
-  <div class="archive-group">
-    
-    <h3 id="#Analysis">Analysis</h3>
-    <a name="Analysis"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/spine-dynamics">Spine Dynamics</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/intensity">Intensity</a></h4>
-    </article>
-    
-  </div>
+<ul>
+<li>sessions</li>
+<li>seconds</li>
+<li>days</li>
+<li>hours</li>
+</ul>
 
-</div>
+<p>Age</p>
+
+<ul>
+<li>sessions</li>
+<li>seconds</li>
+<li>days</li>
+<li>hours</li>
+</ul>
+
+<h4 id="svoboda-style-persistent-and-transient">Svoboda style persistent and transient</h4>
+
+<p>Threshold time can be specified as: sessions, seconds, days, or hours.</p>
+
+<ul>
+<li>New Persistent : New spine that persists for &gt; threshold time</li>
+<li>New Transient :</li>
+<li>Lost Persistent :</li>
+<li>Lost Transient :</li>
+<li>Always Present : Spines present in all sessions</li>
+</ul>
+
 
 <div class="post-tags">
   
@@ -389,6 +305,8 @@
   
   
   
+    <a href="/mapmanager/tags/#Analysis">Analysis</a>
+  
 
    <!--
    <a href="javascript:window.print()">print</a>
@@ -396,7 +314,7 @@
 
    <!--
    <BR>
-   <a href="tags.html">print pdf</a>
+   <a href="_posts/2015-07-25-spine-dynamics.pdf">print pdf</a>
    <BR>
    -->
     

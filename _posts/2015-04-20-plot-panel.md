@@ -9,7 +9,7 @@ tags:
 ---
 
 
-<IMG class="img-float-center" SRC="../images/mm3/mm3-plot-panel-big.png" WIDTH="700">
+<IMG class="img-float-center" SRC="images/mm3/mm3-plot-panel-big.png" WIDTH="700">
 
 <div class="print-page-break"></div>
 
