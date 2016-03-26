@@ -116,8 +116,8 @@ Open the [Stack DB Options Panel][4] from the stack db toolbar using the 'Option
 <div class="print-page-break"></div>
 
 
-[1]: /mapmanager/stack/
-[2]: /mapmanager/stack-browser/
-[3]: /mapmanager/making-a-map/
-[4]: /mapmanager/stackdb-options-panel/
-[5]: /mapmanager/annotating-a-stack/
+[1]: stack
+[2]: stack-browser
+[3]: making-a-map
+[4]: stackdb-options-panel
+[5]: annotating-a-stack
