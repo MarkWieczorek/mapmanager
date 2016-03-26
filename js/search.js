@@ -46,7 +46,7 @@ jQuery(function() {
 
           // Build a snippet of HTML for this result
           var appendString = item.date + ' - <a href="' + '/mapmanager' + item.url + '">' + item.title + '</a><BR>';
-console.log(appendString);
+		  //console.log(appendString);
 
           // Add it to the results
           $search_results.append(appendString);
