@@ -18,11 +18,11 @@ To open the options panel
   - 'Options' button in main [Map Manager Panel][5].
   - 'Options' button in the Map Manager Buttons panel.
 
-<IMG class="img-float-left" SRC="../images/mm3/mm3-options.png" WIDTH="300">
+<IMG class="img-float-left" SRC="images/mm3/mm3-options.png" WIDTH="300">
 
 The panel is very tall, scroll the panel up/down with the mouse wheel.
 
-###User
+### User
 
 Interface to load and save [User Files][3].
 
@@ -37,7 +37,7 @@ Interface to load and save [User Files][3].
 **Save As...** Save the current setting as a new user file.
 
 
-###Stack Display
+### Stack Display
 
 Options that control the display of the [stack db][2] in a [stack][1] window. Each time you change an option (e.g. 'Points') you need to press 'Apply To Top Stack Window' for the changes to take effect. Or, 'Refresh' the stack window with 'r'.
 
@@ -64,7 +64,7 @@ Options that control the display of the [stack db][2] in a [stack][1] window. Ea
 **Control Point Help** Use the 'On' and 'Off' buttons for some additional visual cues about your segment line fits. The end of the line fit is shown in red. This is useful when making the same segment across timepoints in a map. It helps you fit each segment in the same direction.
 
 
-###Stack DB
+### Stack DB
 
 **Warn On New Objects**
 **Warn On Delete Objects**
@@ -91,7 +91,7 @@ Options that control the display of the [stack db][2] in a [stack][1] window. Ea
 **Default plot object**
 **Default Stack Candy**
 
-###Object Map
+### Object Map
 
 **Default Run +/-**. Set the number of sessions to display when selecting right-click menu 'Plot Run +- n'.
 
@@ -112,9 +112,9 @@ Options that control the display of the [stack db][2] in a [stack][1] window. Ea
 **Auto plot object map on load**. xxx
 
 
-<!-- <IMG class="img-float-left" SRC="../images/mm3/mm3-options-bottom.png" WIDTH="300"> -->
+<!-- <IMG class="img-float-left" SRC="images/mm3/mm3-options-bottom.png" WIDTH="300"> -->
 
-###Intensity Analysis
+### Intensity Analysis
 
 Turn [intensity analysis][4] on/off with the 'Intensity Analysis' checkbox. Be sure to refresh any open stack windows.
 
@@ -127,7 +127,7 @@ Turn [intensity analysis][4] on/off with the 'Intensity Analysis' checkbox. Be s
 **Debug**
 **Debug On Error**
 
-###Importing Segments From FIJI
+### Importing Segments From FIJI
 
 **Default Segment Radius (um)**
 
@@ -139,9 +139,9 @@ Turn [intensity analysis][4] on/off with the 'Intensity Analysis' checkbox. Be s
 
 **Close Fiji When Done**
 
-###Miscellaneous
+### Miscellaneous
 
-<IMG class="img-float-left" SRC="../images/mm3/mmoptions-object-display.png" WIDTH="225">
+<IMG class="img-float-left" SRC="images/mm3/mmoptions-object-display.png" WIDTH="225">
 
 A table to set how stack db points are displayed. Use the disclusure triangle in the upper-right of the options window to show the table.
 
@@ -149,13 +149,13 @@ Right-click on 'marker' or 'color' to set. Double-click on 'size' to set.
 
 <div class="print-page-break"></div>
 
-###Stack Browser Options
+### Stack Browser Options
 
 Additional option are available in the Stack Browser Options panel.
 
 Open the Stack Browser Options panel using the main menu 'MapManager - Stack Browser Options'
 
-<IMG class="img-float-left" SRC="../images/mm3/mm3-stack-browser-options.png" WIDTH="300">
+<IMG class="img-float-left" SRC="images/mm3/mm3-stack-browser-options.png" WIDTH="300">
 
 <div class="print-page-break"></div>
 

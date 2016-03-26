@@ -12,44 +12,44 @@ Map Manager 3 can save two different types of files
 - Text - Default
 - HDF5 - Experimental
 
-###Text
+### Text
 
-####Python
+#### Python
 
 Map Manager saves files as plain text. Thus, it is relatively easy to extend the function of Map Manager by writing Python (or Matlab) code to load, parse, and analyze these text files. This is a very rapid and effective route to extending the functions of Map Manager with new analysis particular to your own data and ideas. Please have a look at an [example iPython notebook][9]. If you are interested in more information, please email Robert Cudmore.
 
 It is suggested that you use the [Anaconda][6] python distribution as it comes with many useful packages pre-installed. Download Anaconda it [here][7].
 
-###HDF5
+### HDF5
 
 [HDF5][1] is an open source cross platform binary file format. It can be read from [Matlab][2], [Python][3], [Igor Pro][4] and from a [command line][5].
 
 As of Sept 2015, Map Manager is not saving files in the HDF5 format. If you are interested in turning on this feature, please email Robert Cudmore.
 
-####Python
+#### Python
 
 It is suggested that you use the [Anaconda][6] python distribution as it comes with many useful packages pre-installed including hdf5 for python. Download Anaconda it [here][7].
 
     import h5py
     import numpy as np
     
-    #open h5 file
+    # open h5 file
     f = h5py.File('a5n.hdf5', 'r')
     
-    #get list of top level groups (these are mm3 maps)
+    # get list of top level groups (these are mm3 maps)
     for g in f:
         print g
         
-    #assign myMap to top level map
+    # assign myMap to top level map
     for myMap in f: print myMap
     
-    #get list of objects within a map
-    #these objects include {objmap, stackdb, int, line, linedb}
-    #keys() returns a list [0], [1], [2], ...
+    # get list of objects within a map
+    # these objects include {objmap, stackdb, int, line, linedb}
+    # keys() returns a list [0], [1], [2], ...
     for key in f[myMap].keys():
         print key
         
-    #datasets within group 'a104'
+    # datasets within group 'a104'
     for ds in f[myMap].values():
         print ds
         
@@ -63,19 +63,19 @@ It is suggested that you use the [Anaconda][6] python distribution as it comes w
     spineIndex = 10
     f[myMap].values()[objectIndex][spineIndex]
     
-    #attributes of a dataset
+    # attributes of a dataset
     objectIndex= 4
     for a in f[myMap].values()[objectIndex].attrs:
         print a
 
-    #this is trying to pull form an intensity object
-    #for some reaosn i can't transpose the rows
+    # this is trying to pull form an intensity object
+    # for some reaosn i can't transpose the rows
     f[myMap].values()[9].values()[0][0][:]
     
-    #spine 0, spineLen2 (spineLen2 is in column 1)
+    # spine 0, spineLen2 (spineLen2 is in column 1)
     f[myMap].values()[9].values()[0][0][1]
     
-    #spine 1, spineLen2
+    # spine 1, spineLen2
     f[myMap].values()[9].values()[0][1][1]
 
 In [64]: f[myMap].values()[9].values()
@@ -103,7 +103,7 @@ In [82]: for a in range(385):
     print f[myMap].values()[9].values()[0][a][1]
 
 
-###this is working
+### this is working
 
     mya=np.arange(385, dtype=np.float32)
     for a in range(385):
@@ -116,7 +116,7 @@ In [82]: for a in range(385):
     plt.show()
     
         
-####Use the Python hdf5Manager
+#### Use the Python hdf5Manager
 
 For now this is not very useful for my hdf5 files but is a proof of concept.
 
@@ -129,11 +129,11 @@ For now this is not very useful for my hdf5 files but is a proof of concept.
 3. Getting h5_manager to work  
     
     
-        #install pyqt4 in anaconda
+        # install pyqt4 in anaconda
         conda install pyqt
-        #update anaconda (h5_manager was failing to import matplotlib)
+        # update anaconda (h5_manager was failing to import matplotlib)
         conda update --prefix /Users/cudmore/anaconda anaconda
-        #run h5_manager
+        # run h5_manager
         python h5_manager.py 
     
     
@@ -141,7 +141,7 @@ For now this is not very useful for my hdf5 files but is a proof of concept.
 [2]: http://www.mathworks.com/help/matlab/hdf5-files.html
 [3]: http://www.h5py.org
 [4]: http://www.wavemetrics.com/products/igorpro/dataaccess/hdf5.htm
-[5]: https://www.hdfgroup.org/products/hdf5_tools/#h5dist
+[5]: https://www.hdfgroup.org/products/hdf5_tools/# h5dist
 [6]: https://store.continuum.io/cshop/anaconda/
 [7]: http://continuum.io/downloads
 [8]: https://github.com/mgraupe/hdf5Manager

@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
 
-        <title>Map Manager : Map Manager Documentation</title>
+        <title>Map Manager : Map plot</title>
         <meta name="description" content="">
 
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
@@ -168,52 +168,105 @@
                     </div>
 
                     <div id=content class=span10>
-                        <p><br /></p>
+                        <div class=page-header>
+    <h3>Map plot
+        
+    </h3>
+</div>
 
-<p style="font-size:20px">
-Map Manager is software to annotate and analyze time-series of 3D image stacks.
-</p>
+<p>A map plot shows objects across multiple imaging sessions. Objects persisting from one session to the next are connected with a line.</p>
 
-<p><br /></p>
+<p>All map plots are interactive. Selecting an object will propagate this selection to other map and <a href="/mapmanager/stack-plot/">stack plots</a>.</p>
 
-<p><img class="img-float-right" src="/mapmanager/images/imagingcore/stack_example_spines.jpg" width="400" /></p>
+<p>A large number of map plots can be generated using the <a href="/mapmanager/plot-panel/">plot panel</a>.</p>
 
-<h4 id="main-features">Main features</h4>
+<p>There are two special plots provided in the main <a href="/mapmanager/main-panel/">map manager panel</a>: Spine Map and Segment Map.</p>
 
+<h3 id="interface">Interface</h3>
+
+<h4 id="keyboard">Keyboard</h4>
+  	Navigation
+  		arrow-keys : Pan
+  		+/- : zoom
+  		Enter : Full Zoom (reset zoom)
+  	Data
+  		esc : cancel selection (including masks)
+  		b : mark selected object as bad
+  		e : edit plotted data in a table
+  	General
+  		r : refresh plot
+  		d : toggle dynamics coloring
+  		f : toggle forced coloring
+  		c : toggle top control bar
+  		i : open/close object info panel
+  		h : display this help
+
+<h4 id="colors">Colors</h4>
 <ul>
-  <li>In vivo, ex vivo, and fixed tissue</li>
-  <li>Three dimensional image stacks, one and two color channels</li>
-  <li>Track 3D objects across multiple timepoints</li>
-  <li>Automatically registers objects in different timepoints</li>
-  <li>Written in <a href="http://wavemetrics.com">Igor Pro</a></li>
+  <li>Green : Added</li>
+  <li>Red : Subtracted</li>
+  <li>Blue : Transient (1 session)</li>
+  <li>Yellow : Persistent</li>
+  <li>White : Bad</li>
 </ul>
 
-<h4 id="getting-started">Getting started</h4>
+<h4 id="top-control-bar">Top control bar</h4>
+<p>Toggle the top control bar on and off with keyboard ‘c’.</p>
 
 <ul>
-  <li><a href="/mapmanager/getting-started/">Getting started</a></li>
+  <li><strong>Segment ID</strong>. Plot individual segments. Use ‘<strong>All Segments</strong>’ to plot all segment.</li>
+  <li><strong>Bad</strong>. Toggle display of bad objects.</li>
+  <li><strong>Stats</strong>. Display a table of statistics for plotted data.</li>
+  <li><strong>Raw</strong>. Display a table of raw data.</li>
+  <li><strong>Line fit</strong>.</li>
 </ul>
 
-<h4 id="workflows">Workflows</h4>
+<h3 id="examples">Examples</h3>
 
-<ul>
-  <li><a href="/mapmanager/making-a-map/" title="making-a-map">Making a map</a></li>
-  <li><a href="/mapmanager/simple-stack-db/" title="simple-stack-db">Simple stack database</a></li>
-</ul>
+<p>All plots can be generated using the <a href="/mapmanager/plot-panel/">plot panel</a>. There are two special plots provided in the main <a href="/mapmanager/main-panel/">map manager panel</a>: Spine Map and Segment Map.</p>
 
-<h4 id="about">About</h4>
+<p><img class="img-float-left" src="images/mm3/mm3-map-plot.png" width="300" /></p>
 
-<p>All code and documentation written by <a href="http://robertcudmore.org">Robert Cudmore</a></p>
+<p>This is an example of a ‘Spine Map’. It shows the position of each spine on its dendritic segment. The lines connect persistent spines across sessions. Added spines are in green, subtracted spines in red, and transient spines are in blue.</p>
 
-<h4 id="links">Links</h4>
+<div class="print-page-break"></div>
 
-<ul>
-  <li><a href="http://cudmore.github.io/mapmanager/">Map Manager</a> (This page)</li>
-  <li><a href="https://github.com/cudmore/bob-fiji-plugins">Fiji macros and plugins</a> (GitHub)</li>
-  <li>Robert Cudmore’s <a href="http://robertcudmore.org/">Home Page</a></li>
-  <li>Robert Cudmore’s blog <a href="http://cudmore.github.io/">Blog</a></li>
-  <li>Software for <a href="http://cudmore.github.io/Vascular-Analysis/">Vascular Analysis</a></li>
-</ul>
+<p><img class="img-float-left" src="images/mm3/mm3-map1-plot.png" width="250" /></p>
+
+<p>A map plot of spine length in μm (sLen2d) versus map session. The lines connect persistent spines across sessions. The colors are the same as the first example.</p>
+
+<div class="print-page-break"></div>
+
+<p><img class="img-float-left" src="images/mm3/mm3-map2-plot.png" width="250" /></p>
+
+<p>A map plot of spine length in μm (sLen2d) for session 1 versus session 0. Each point is the length of a single spine measured in session 0 (bottom axis) and again in session 1 (left axis).</p>
+
+<div class="print-page-break"></div>
+
+
+
+<div class="post-tags">
+  
+  
+  
+    <b>Tags:</b>  
+  
+  
+  
+    <a href="/mapmanager/tags/#Plots">Plots</a>
+  
+
+   <!--
+   <a href="javascript:window.print()">print</a>
+    -->
+
+   <!--
+   <BR>
+   <a href="_posts/2015-04-20-map-plot.pdf">print pdf</a>
+   <BR>
+   -->
+    
+</div>
 
 
                     </div>

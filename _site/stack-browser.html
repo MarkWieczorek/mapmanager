@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
 
-        <title>Map Manager : Map Manager Documentation</title>
+        <title>Map Manager : Stack Browser</title>
         <meta name="description" content="">
 
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
@@ -168,52 +168,96 @@
                     </div>
 
                     <div id=content class=span10>
-                        <p><br /></p>
+                        <div class=page-header>
+    <h3>Stack Browser
+        
+    </h3>
+</div>
 
-<p style="font-size:20px">
-Map Manager is software to annotate and analyze time-series of 3D image stacks.
-</p>
+<p><img class="img-float-left" src="images/mm3/mm3-stack-browser.png" width="800" /></p>
 
-<p><br /></p>
+<div class="print-page-break"></div>
 
-<p><img class="img-float-right" src="/mapmanager/images/imagingcore/stack_example_spines.jpg" width="400" /></p>
+<p>The stack browser provides an interface to load and browse directories of .tif <a href="/mapmanager/stack/">stacks</a>.</p>
 
-<h4 id="main-features">Main features</h4>
+<p>The original documentation is <a href="http://www.robertcudmore.org/maptracker/v2/stack-browser/">here</a></p>
+
+<p>The list on the left is a list of loaded folders, each folder has a list of stacks. Select a folder on the left and the list on the right will show the individual stacks within that folder.</p>
+
+<p>Double click on a stack in the list on the right and it will open a <a href="/mapmanager/stack/">stack</a> window to view the actual stack.</p>
+
+<h3 id="loading-stacks">Loading stacks</h3>
+
+<h4 id="load-scanimage-directory">Load ScanImage Directory</h4>
+
+<p>Load a folder of ScanImage .tif stack. The name of the folder will appear in the list on the left. Selecting this folder will populate the list of stacks imported. Double click on a stack (in the list on the right) to view the <a href="/mapmanager/stack/">stack</a>.</p>
+
+<p class="important"><b>Important.</b> When importing ScanImage .tif files, the scale is not set by ScanImage. You need to calculate your x/y voxel size (in um per voxel) when you scan at 1x magnification with 1024 by 1024 pixels. You then set this value in '2p um/pixel (1024@1x)'. Map Manager will use this value to calculate each stacks x/y scale for arbitrary ScanImage zoom settings.</p>
+
+<h4 id="load-generic-directory">Load Generic Directory</h4>
+
+<p>Load a folder of .tif stacks ignoring any .tif header information. This has some consequences:</p>
+
+<ol>
+  <li>The stack will not have a scale. You can set the scale in a stack window with keyboard shift+p.</li>
+  <li>If the source .tif stack are multi-channel stacks, Map Manager will blindly import them as one big stack (usually with channels interleaved from slice to slice). Please see <a href="https://github.com/cudmore/bob-fiji-plugins">bAlignBatch</a> for a Fiji plugin to pre-process your .tif stacks into ch1/ch2 file pairs.</li>
+  <li>The stacks will not have a date. Thus, <a href="/mapmanager/map-plot/">map plots</a> with date/days/hours will not be possible.</li>
+</ol>
+
+<h4 id="drag-and-drop">Drag and drop</h4>
+
+<p>The simplest way to load a stack is to drag and drop a .tif file onto the Igor program icon. Stacks opened in this way will appear in a special folder (in the list on the left) called ‘DragAndDrop’.</p>
+
+<p class="tip"><b>Tip.</b> The order of stacks can be sorted by selecting columns in the stack list. To sort by date, select 'Date' in the columns header. <b>This ordering is critical when batch importing a list of stacks into a Map Manager map</b></p>
+
+<h3 id="browsing-loaded-data">Browsing loaded data</h3>
+
+<p>Select a loaded directory on the left  and the loaded stacks will be shown on the right. Double click a stack in the list on the right to open a <a href="/mapmanager/stack/">stack</a> window.</p>
+
+<h3 id="keyboard-shortcuts">Keyboard shortcuts</h3>
+
+<p>The list of stacks will respond to keyboard input</p>
 
 <ul>
-  <li>In vivo, ex vivo, and fixed tissue</li>
-  <li>Three dimensional image stacks, one and two color channels</li>
-  <li>Track 3D objects across multiple timepoints</li>
-  <li>Automatically registers objects in different timepoints</li>
-  <li>Written in <a href="http://wavemetrics.com">Igor Pro</a></li>
+  <li>‘o’ to generate an <strong>o</strong>utput density report. See <a href="/mapmanager/spine-dynamics/">spine dynamics</a>.</li>
+  <li>‘e’ to edit the list of stacks in a text table</li>
 </ul>
 
-<h4 id="getting-started">Getting started</h4>
+<h3 id="additional-features">Additional features</h3>
+<p>There are many things you can do to visualize your <a href="/mapmanager/stack/">stacks</a></p>
 
 <ul>
-  <li><a href="/mapmanager/getting-started/">Getting started</a></li>
+  <li>View a histogram (keyboard ‘h’).</li>
+  <li>Set min/max contrast (keyboard ‘c’).</li>
+  <li>Generate maximal Z-Projections (keyboard ‘shift+z’).</li>
+  <li>Cycle through different window candy (keyboard ‘shift+c’).</li>
+  <li>Igor is very good at copying and pasting the image you are viewing in a stack window. Try it out by pasting into Keynote, Powerpoint, or Illustrator.</li>
 </ul>
 
-<h4 id="workflows">Workflows</h4>
 
-<ul>
-  <li><a href="/mapmanager/making-a-map/" title="making-a-map">Making a map</a></li>
-  <li><a href="/mapmanager/simple-stack-db/" title="simple-stack-db">Simple stack database</a></li>
-</ul>
 
-<h4 id="about">About</h4>
+<div class="post-tags">
+  
+  
+  
+    <b>Tags:</b>  
+  
+  
+  
+    <a href="/mapmanager/tags/#Imaging core">Imaging core</a>
+  
 
-<p>All code and documentation written by <a href="http://robertcudmore.org">Robert Cudmore</a></p>
+   <!--
+   <a href="javascript:window.print()">print</a>
+    -->
 
-<h4 id="links">Links</h4>
-
-<ul>
-  <li><a href="http://cudmore.github.io/mapmanager/">Map Manager</a> (This page)</li>
-  <li><a href="https://github.com/cudmore/bob-fiji-plugins">Fiji macros and plugins</a> (GitHub)</li>
-  <li>Robert Cudmore’s <a href="http://robertcudmore.org/">Home Page</a></li>
-  <li>Robert Cudmore’s blog <a href="http://cudmore.github.io/">Blog</a></li>
-  <li>Software for <a href="http://cudmore.github.io/Vascular-Analysis/">Vascular Analysis</a></li>
-</ul>
+   <!--
+   <BR>
+   <a href="_posts/2015-04-19-stack-browser.pdf">print pdf</a>
+   <BR>
+   -->
+    
+</div>
 
 
                     </div>

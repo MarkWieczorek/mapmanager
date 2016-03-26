@@ -9,7 +9,7 @@ tags:
 ---
 
 <font size=4em color="red">
-####User files have been completely revamped. Global options can now be easily saved and loaded using the [Stack DB Options Panel][2].
+#### User files have been completely revamped. Global options can now be easily saved and loaded using the [Stack DB Options Panel][2].
 <BR>
 </font>
 
@@ -19,7 +19,7 @@ User files are loaded using the main menu 'mm3 -> Load User' or in the [Hard Dri
 
 **Important.** When you load a user file, anything specified in the file will **override** existing options.
 
-###Rules
+### Rules
 Make sure there is NO space surround the '=' sign. 
 
  - GOOD: root:line2:options:gDefaultSegmentRadius=0.35
@@ -30,45 +30,45 @@ Make sure your text editor is using simple double quotes
  - GOOD: root:stackdb2:options:gFijiPath="C:\Users\cudmore.linden-image2\Desktop\Fiji.app\fiji-win64.exe"
  - BAD: root:stackdb2:options:gFijiPath=&ldquo;C:\Users\cudmore.linden-image2\Desktop\Fiji.app\fiji-win64.exe&rdquo;
  
-###Some useful options
+### Some useful options
 
-####Specify default user folder to load/save maps:
+#### Specify default user folder to load/save maps:
     root:MapManager3:gMapDriveDir="vasculature:Users:cudmore:Documents:MapManager3:"
 
-####The default radius of new segments (um)
+#### The default radius of new segments (um)
 	root:line2:options:gDefaultSegmentRadius=0.3
 
-####The maximum distance along a segment when automatically connecting objects in a map (um)
+#### The maximum distance along a segment when automatically connecting objects in a map (um)
 Objects will only be connected if their position on the segment line is **less** than this.
 	root:ObjMap:options:gMaxPDistConnDist=3
 
-####The number of segment points to search when auto-connecting a spine
+#### The number of segment points to search when auto-connecting a spine
 	root:StackDB2:options:gLinePointsToSearch=6
 
-###Here is an example user file...
+### Here is an example user file...
 
-	#mac
+	# mac
 	root:stackdb2:options:gFijiPath="/Applications/Fiji.app/Contents/MacOS/Imagej-macosx"
-	#windows
-	#root:stackdb2:options:gFijiPath="C:\Users\cudmore.linden-image2\Desktop\Fiji.app\fiji-win64.exe"
+	# windows
+	# root:stackdb2:options:gFijiPath="C:\Users\cudmore.linden-image2\Desktop\Fiji.app\fiji-win64.exe"
 
-	#default point size for stack db objects
+	# default point size for stack db objects
 	root:stackdb2:options:gPointSize=3
 
-	#default size for user selections
+	# default size for user selections
 	root:StackDB2:options:gPointSelSize=5
 
-	#default stack window width
+	# default stack window width
 	root:bStack:gStackWindowWidth1=1000
 
-	#default segment radius
+	# default segment radius
 	root:line2:options:gDefaultSegmentRadius=0.35
 
-	#set the number of image planes an object is visible
-	#controls mask as you scroll up/down with mouse wheel
+	# set the number of image planes an object is visible
+	# controls mask as you scroll up/down with mouse wheel
 	root:bStack:gMaskWindow=2
 
-	#turn on real-time intnesity analysis
+	# turn on real-time intnesity analysis
 	root:stackdb2:options:gAnalyzeIntOnNewSpines = 0
 	root:stackdb2:options:gShowSpineIntensity = 0
 
@@ -77,7 +77,7 @@ Objects will only be connected if their position on the segment line is **less**
 
 	root:bNV:gUserName="cudmore"
 
-	#stack browser
+	# stack browser
 	root:bStack:gRootHDD=""
 
 	#
@@ -106,7 +106,7 @@ Objects will only be connected if their position on the segment line is **less**
 	root:ObjMap:options:gDefaultZoomWidth=20
 	root:ObjMap:options:gDefaultZoomHeight=20
 
-	#only allow auto spine connections < this number
+	# only allow auto spine connections < this number
 	root:ObjMap:options:gMaxPDistConnDist=3
 
 	# default segment radius (um)

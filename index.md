@@ -13,7 +13,7 @@ Map Manager is software to annotate and analyze time-series of 3D image stacks.
 
 <IMG class="img-float-right" SRC="/mapmanager/images/imagingcore/stack_example_spines.jpg" width="400">
 
-####Main features
+#### Main features
 
 - In vivo, ex vivo, and fixed tissue
 - Three dimensional image stacks, one and two color channels
@@ -21,20 +21,20 @@ Map Manager is software to annotate and analyze time-series of 3D image stacks.
 - Automatically registers objects in different timepoints
 - Written in [Igor Pro][1]
 
-####Getting started
+#### Getting started
 
 - [Getting started][5]
 
-####Workflows
+#### Workflows
 
 - [Making a map][3]
 - [Simple stack database][4]
 
-####About
+#### About
 
 All code and documentation written by [Robert Cudmore][2]
 
-####Links
+#### Links
 
 - <A HREF="http://cudmore.github.io/mapmanager/">Map Manager</A> (This page)
 - <A HREF="https://github.com/cudmore/bob-fiji-plugins">Fiji macros and plugins</A> (GitHub)

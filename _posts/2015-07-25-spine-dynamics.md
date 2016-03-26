@@ -8,7 +8,7 @@ tags:
 - Analysis
 ---
 
-###Density Report
+### Density Report
 
 A density report is used for individual [stacks][1]. It will calculate the length of each dendritic segment and the density of spines.
 
@@ -31,7 +31,7 @@ totalDen3d
 goodDen3d
 ```
 
-###Dynamics Report
+### Dynamics Report
 
  
 A dynamics report is used for a [map][2]. For each session in a map, it will calculate the length of each segment (um), the density of spines, the number of added spines, the number of subtracted spines, etc., etc.
@@ -67,16 +67,16 @@ Generate a spine dynamics report for each segment in a map.
  lt				Lost transient = 
 ```
 
-###Concepts
+### Concepts
 
-####Stack
+#### Stack
 Each segment within a stack has a number of spines and a total traced dendritic length. From this we can calculate spine density.
 
 - Number of spines
 - Dendrite length
 - Spine density : number of spines / dendrite length
 
-####Map
+#### Map
 From one session to the next, the number of added and subtracted spines are counted. From this, the percent and density changes are calculated.
 
 - # Added 
@@ -87,7 +87,7 @@ From one session to the next, the number of added and subtracted spines are coun
 - Density Added : 
 - Density Subtracted : 
 
-####Map Lifetime
+#### Map Lifetime
 Observed 
 
 - observed sessions
@@ -109,7 +109,7 @@ Age
 - days
 - hours
 
-####Svoboda style persistent and transient
+#### Svoboda style persistent and transient
 
 Threshold time can be specified as: sessions, seconds, days, or hours.
 

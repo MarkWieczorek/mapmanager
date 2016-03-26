@@ -11,7 +11,7 @@ tags:
 
 The scale panel provides an interface to tweak Igor plots.
 
-<IMG class="img-float-left" SRC="../images/mm3/mm3-scale-panel.png" WIDTH="400">
+<IMG class="img-float-left" SRC="images/mm3/mm3-scale-panel.png" WIDTH="400">
 
 <div class="print-page-break"></div>
 

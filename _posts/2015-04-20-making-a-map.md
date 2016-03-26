@@ -8,7 +8,7 @@ tags:
 - Workflow
 ---
 
-<IMG class="img-float-left" SRC="../images/mm3/mm3-main-panel.png" WIDTH="650">
+<IMG class="img-float-left" SRC="images/mm3/mm3-main-panel.png" WIDTH="650">
 
 <div class="print-page-break"></div>
 
@@ -16,19 +16,19 @@ A map is a sequence of [stacks][2]. You create a map by appending stacks from th
 
 The main Map Manager panel shows a list of open maps on the left. When a map is selected (a5n in this example), a list of sessions in the map are shown on the right (in this example there are 4 sessions).
 
-####Open and initialize Map Manager 
+#### Open and initialize Map Manager 
 
  1. Open Igor Pro with MapManager.ipf
  2. Initialize Map Manager with the main menu 'MapManager - Map Manager Panel'.
  
-####1. Pre-process your raw data so Map Manager can import it
+#### 1. Pre-process your raw data so Map Manager can import it
  Map Manager will only import single channel stacks. If your stacks have two color channels, they need to be de-interleaved into two different .tif files. One .tif file for each color channel. See [bAlignBatch][14] for a Fiji plugin that does this.
 
-####2. Make a new map
+#### 2. Make a new map
  1. Fill in a new map name and choose the number of channels for each stack in your map.
  2. Create a new map with '<span style="color:green">New Map</span>'.
  3. Append a stack from the [Stack Browser][1] with 'Append Stack'.
- 4. Repeat #3 for each stack.
+ 4. Repeat # 3 for each stack.
  5. Save the map with 'Save Map' button.
  
 ####<span style="color:red">Important</span>
@@ -43,9 +43,9 @@ The main Map Manager panel shows a list of open maps on the left. When a map is 
    - On Windows, the default folder is 'My Documents'.
    - On OSX, the default folder is 'Documents'.
 
-####Congratulations, you just made a Map Manager map. The rest of this tutorial covers specifying and fitting segment backbone lines, adding spines, and connecting spines across timepoints.
+#### Congratulations, you just made a Map Manager map. The rest of this tutorial covers specifying and fitting segment backbone lines, adding spines, and connecting spines across timepoints.
 
-####3. Create a line segment in each session/stack of the map and fit its backbone in Fiji
+#### 3. Create a line segment in each session/stack of the map and fit its backbone in Fiji
 Line segments are first specified with control points and then fit using a custom FIJI plugin. Before fitting a line in FIJI, you need to install  the [Bob_Neurite_Tracer_v3][14] plugin in FIJI and you need to specify the path to your FIJI application in the [Hard Drive Paths Panel][10].
 
 See [Fitting Segment In Fiji][15] for help on FIJI versions, installing the plugin and specifying the FIJI application path in Map Manager.
@@ -58,13 +58,13 @@ See [Fitting Segment In Fiji][15] for help on FIJI versions, installing the plug
     - You can delete control points with the 'delete' key.
     - You can move control points with either the 'm' key or right-click menu 'Move'.
     - Once control points are made, fit the backbone line in Fiji. Right-click on your segment in the list and select 'Make from control points - Fiji'.
- 3. Repeat steps #1 and #2 for each session in your map. Making the same line segment in each session. As you make control points, be sure they are in the same direction along the segment for each session. <del>For some help with the ordering of your control points, open the 'stack db options' panel and turn 'Control Point Help' 'On'.</del>
+ 3. Repeat steps # 1 and # 2 for each session in your map. Making the same line segment in each session. As you make control points, be sure they are in the same direction along the segment for each session. <del>For some help with the ordering of your control points, open the 'stack db options' panel and turn 'Control Point Help' 'On'.</del>
  4. Set a pivot point in each line segment. Do this by clicking a point in the segment, right-click and select the 'Set As Segment Pivot' menu. The pivot point should refer to the same region of the segment across all session. A good strategy is to choose a region of the segment near an obvious spine that is present in all sessions. Another strategy is to choose a pivot point where some other segment (dendrite) crosses near your segment as these tend to remain stable across time. Try and put the pivot point near the center of the segment, do not place it at either end. The pivot point is used to calculate a line distance along the segment (in um) which in turn will be used to auto-guess connections between spines across sessions.
  
 <p class="tip"><B>Tip.</B> When specifying control points and setting segment pivots, you can open multiple stack windows at the same time. Just double-click on each session in the main Map Manager Panel. This way, you can see the line segments you are making in each session of your map.</p>
 
 
-####4. Connect your line segments together
+#### 4. Connect your line segments together
  1. Close all stack windows using the <span style="color:blue">Close Windows</span> button in the main Map Manager panel.
  2. Open a new stack run by right-clicking a session in your map and selecting the 'Plot Run +- All' menu.
  3. Turn on the 'Edit Segments' checkbox in the main Map Manager panel. It is in the lower left of the panel.
@@ -75,7 +75,7 @@ See [Fitting Segment In Fiji][15] for help on FIJI versions, installing the plug
 
 <p class="tip"><B>Tip.</B> You can see how your segments are connected by plotting a 'Segment Map' from the main Map Manager panel. In the segment map window, right-click a segent and select 'Plot Run' to plot a run of segments.</p>
    
-####5. Mark spines in each timepoint
+#### 5. Mark spines in each timepoint
  1. Make sure 'Edit Segments' is off.
  2. Open a single timepoint by double clicking a session in the list.
  3. Follow [annotating a stack][4] to mark spines along your new segment.
@@ -83,21 +83,21 @@ See [Fitting Segment In Fiji][15] for help on FIJI versions, installing the plug
 <p class="tip"><B>Tip.</B> As you are working, keep your eye on the Igor command window. Each action you perform in Map Manager should report a few lines of text here. If this starts to spit out 1000's of lines there is probably a problem.</p>
    
 
-####6. Connecting stack db objects from one timepoint to the next
+#### 6. Connecting stack db objects from one timepoint to the next
 
 You have two choices here.
 
-####6.1 Use the [Find Points Panel][16] to connect objects
+#### 6.1 Use the [Find Points Panel][16] to connect objects
 
 Use the Find Points Panel to browse spines in two timepoints. Find Points will also guess for the best connections and allow you to set them manually.
 
-####6.2. Auto connect all objects using the [map plot][12]
+#### 6.2. Auto connect all objects using the [map plot][12]
  - Open a 'Spine Map' from the main Map Manager Panel.
  - In the spine map, select a spine in the first timepoint, right click and select 'Connect Objects To Next'. This will make automatic connections of all spines from the first session to the next session.
  - Repeat this process for each pairwise session in your stack. You can also right-click and select 'Connect All Objects' to connect spines/objects through the entire map.
  - When working on spines, spines are connected if they are within a minimum distance of each other on their respective segment line. See 'Connect spines within this distance (um)' in the [stack db options panel][7] to set this option.
  
-####7. Check the auto spine connections and edit as necessary
+#### 7. Check the auto spine connections and edit as necessary
 
 This is the core of Map Manager and you will spend most of your time doing this. You need to verify the auto connections of each spine and you need to do this between **each** timepoint in your map. If your map has 4 timepoints, you need to verify the auto spine connections between timepoint 1-2, timepoint 2-3, and timepoint 3-4.
 
@@ -106,7 +106,7 @@ This is the core of Map Manager and you will spend most of your time doing this.
  - From the middle timepoint spine selection, go to the next spine along the segment using keyboard ctrl+right. Go to the previous spine along the segment using keyboard ctrol+left.
  - Correct any errors in the spine dynamics using keyboard 'a' for addition, 's' for subtraction, and 'p' for persistence. See [run plot][11] for details.
  
-####8. Review your work by using search to query all additions and subtractions
+#### 8. Review your work by using search to query all additions and subtractions
 
  - Open the [search panel][5] from the main Map Manager panel with the 'Search' button.
  - In the search panel, make sure 'map' is slected and search for all spine additions with the 'Additions' button.
@@ -120,9 +120,9 @@ This is the core of Map Manager and you will spend most of your time doing this.
 <BR>
 <BR>
 <BR>
-##DO NOT READ BELOW HERE !!!!
+## DO NOT READ BELOW HERE !!!!
 ###[ADVANCED]: Importing a bSpine map
-<IMG class="img-float-left" SRC="../images/mm3/mm3-import-bspine.png" WIDTH="275">
+<IMG class="img-float-left" SRC="images/mm3/mm3-import-bspine.png" WIDTH="275">
 
 Importing bSpine maps is tricky. The problem is if your original maps for one time-series (_d1, _d2, etc.) have different sessions. For example, _d1 has sessions from dates 1,2,3 but _d2 has sessions from dates 1,2,6,12 there <span style="color:red">will be an error</span>.
 
@@ -137,7 +137,7 @@ Thus, there are two cases:
 
  **This documentation is not done**
  
- ####Import group
+ #### Import group
  
  - **Import One bSpine map.** ... not done
  

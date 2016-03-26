@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
 
-        <title>Map Manager : Map Manager Documentation</title>
+        <title>Map Manager : Spine Dynamics</title>
         <meta name="description" content="">
 
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
@@ -168,52 +168,164 @@
                     </div>
 
                     <div id=content class=span10>
-                        <p><br /></p>
+                        <div class=page-header>
+    <h3>Spine Dynamics
+        
+    </h3>
+</div>
 
-<p style="font-size:20px">
-Map Manager is software to annotate and analyze time-series of 3D image stacks.
-</p>
+<h3 id="density-report">Density Report</h3>
 
-<p><br /></p>
+<p>A density report is used for individual <a href="/mapmanager/stack/">stacks</a>. It will calculate the length of each dendritic segment and the density of spines.</p>
 
-<p><img class="img-float-right" src="/mapmanager/images/imagingcore/stack_example_spines.jpg" width="400" /></p>
-
-<h4 id="main-features">Main features</h4>
-
-<ul>
-  <li>In vivo, ex vivo, and fixed tissue</li>
-  <li>Three dimensional image stacks, one and two color channels</li>
-  <li>Track 3D objects across multiple timepoints</li>
-  <li>Automatically registers objects in different timepoints</li>
-  <li>Written in <a href="http://wavemetrics.com">Igor Pro</a></li>
-</ul>
-
-<h4 id="getting-started">Getting started</h4>
+<p>Generate a density report for each segment in a stack</p>
 
 <ul>
-  <li><a href="/mapmanager/getting-started/">Getting started</a></li>
+  <li>In a <a href="/mapmanager/stack/">stack window</a>, keyboard ‘o’ for <strong>o</strong>utput report.</li>
+  <li>In the <a href="/mapmanager/stack-browser/">Stack Browser</a>, select a stack in the list, keyboard ‘o’ for <strong>o</strong>utput report.</li>
 </ul>
 
-<h4 id="workflows">Workflows</h4>
+<pre><code>numSpines		Total number of spines = goodSpines + badSpines
+goodSpines		Number of good spines.
+badSpines		Number of bad spines.
+totalLen		Total segment length (um)
+goodLen			Segment length (um) from most distal good spines.
+totalDen		Total density of all spines = numSpines / totalLen
+goodDen			Density of good spines = goodSpines / goodLen
+totalLen3d
+goodLen3d
+totalDen3d
+goodDen3d
+</code></pre>
+
+<h3 id="dynamics-report">Dynamics Report</h3>
+
+<p>A dynamics report is used for a <a href="/mapmanager/map-plot/">map</a>. For each session in a map, it will calculate the length of each segment (um), the density of spines, the number of added spines, the number of subtracted spines, etc., etc.</p>
+
+<p>Generate a spine dynamics report for each segment in a map.</p>
 
 <ul>
-  <li><a href="/mapmanager/making-a-map/" title="making-a-map">Making a map</a></li>
-  <li><a href="/mapmanager/simple-stack-db/" title="simple-stack-db">Simple stack database</a></li>
+  <li>In any <a href="/mapmanager/map-plot/">map plot</a>, right-click and select ‘Dynamics Report’. If the map plot is displaying ‘All Segment’, a table for each segment will be opened. Otherwise, one table for the current ‘Map Segment ID’ will be opened.</li>
 </ul>
 
-<h4 id="about">About</h4>
+<p>```
+ numSpines		Total number of spines, goodSpines + badSpines.
+ goodSpines		Total number of good spines
+ badSpines		Total number of bad spines
+ totalLen		Total segment length (um)
+ goodLen		Segment length between most distal good spines.</p>
 
-<p>All code and documentation written by <a href="http://robertcudmore.org">Robert Cudmore</a></p>
+<p>totalDen		Total density = numSpines / totalLen
+ goodDen		Density of good spines = goodSpines / goodLen</p>
 
-<h4 id="links">Links</h4>
+<p>nAdd			Number of added spines.
+ nSub			Number of subtracted spines (at the current session)
+ nSub2			Number of subtracted spines (from the previous session)
+ tor			Turn-over-ratio =</p>
+
+<p>pAdd			Percent added = nAdd / goodSpines from previous session * 100
+ pSub			Percent subtracted = 
+ dAdd			Density added =
+ dSub			Density subtracted =</p>
+
+<p>np				New persistent = 
+ nt				New transient = 
+ lp				Lost persistent = 
+ lt				Lost transient = 
+```</p>
+
+<h3 id="concepts">Concepts</h3>
+
+<h4 id="stack">Stack</h4>
+<p>Each segment within a stack has a number of spines and a total traced dendritic length. From this we can calculate spine density.</p>
 
 <ul>
-  <li><a href="http://cudmore.github.io/mapmanager/">Map Manager</a> (This page)</li>
-  <li><a href="https://github.com/cudmore/bob-fiji-plugins">Fiji macros and plugins</a> (GitHub)</li>
-  <li>Robert Cudmore’s <a href="http://robertcudmore.org/">Home Page</a></li>
-  <li>Robert Cudmore’s blog <a href="http://cudmore.github.io/">Blog</a></li>
-  <li>Software for <a href="http://cudmore.github.io/Vascular-Analysis/">Vascular Analysis</a></li>
+  <li>Number of spines</li>
+  <li>Dendrite length</li>
+  <li>Spine density : number of spines / dendrite length</li>
 </ul>
+
+<h4 id="map">Map</h4>
+<p>From one session to the next, the number of added and subtracted spines are counted. From this, the percent and density changes are calculated.</p>
+
+<ul>
+  <li>
+    <h1 id="added">Added</h1>
+  </li>
+  <li>
+    <h1 id="subtracted">Subtracted</h1>
+  </li>
+  <li>% Added : # added / (number of spines in pervious session) * 100</li>
+  <li>% Subtracted :</li>
+  <li>Turn-over-ratio : A measure of total dynamics (both addition and subtraction)</li>
+  <li>Density Added :</li>
+  <li>Density Subtracted :</li>
+</ul>
+
+<h4 id="map-lifetime">Map Lifetime</h4>
+<p>Observed</p>
+
+<ul>
+  <li>observed sessions</li>
+  <li>observed seconds</li>
+  <li>observed days</li>
+  <li>observed hours</li>
+</ul>
+
+<p>Lifetime</p>
+
+<ul>
+  <li>sessions</li>
+  <li>seconds</li>
+  <li>days</li>
+  <li>hours</li>
+</ul>
+
+<p>Age</p>
+
+<ul>
+  <li>sessions</li>
+  <li>seconds</li>
+  <li>days</li>
+  <li>hours</li>
+</ul>
+
+<h4 id="svoboda-style-persistent-and-transient">Svoboda style persistent and transient</h4>
+
+<p>Threshold time can be specified as: sessions, seconds, days, or hours.</p>
+
+<ul>
+  <li>New Persistent : New spine that persists for &gt; threshold time</li>
+  <li>New Transient :</li>
+  <li>Lost Persistent :</li>
+  <li>Lost Transient :</li>
+  <li>Always Present : Spines present in all sessions</li>
+</ul>
+
+
+
+<div class="post-tags">
+  
+  
+  
+    <b>Tags:</b>  
+  
+  
+  
+    <a href="/mapmanager/tags/#Analysis">Analysis</a>
+  
+
+   <!--
+   <a href="javascript:window.print()">print</a>
+    -->
+
+   <!--
+   <BR>
+   <a href="_posts/2015-07-25-spine-dynamics.pdf">print pdf</a>
+   <BR>
+   -->
+    
+</div>
 
 
                     </div>

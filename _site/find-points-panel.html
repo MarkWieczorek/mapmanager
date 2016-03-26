@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
 
-        <title>Map Manager : Map Manager Documentation</title>
+        <title>Map Manager : Find Points</title>
         <meta name="description" content="">
 
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
@@ -168,52 +168,122 @@
                     </div>
 
                     <div id=content class=span10>
-                        <p><br /></p>
+                        <div class=page-header>
+    <h3>Find Points
+        
+    </h3>
+</div>
 
-<p style="font-size:20px">
-Map Manager is software to annotate and analyze time-series of 3D image stacks.
-</p>
+<p>&lt;FONT size=3em color=”red”&gt;<strong>New on October, 2015.</strong> This documentation needs some work.&lt;/font&gt;</p>
 
-<p><br /></p>
+<p>The find points panel allows you to browse objects between two timepoints/sessions, will show you the best-guess for putative connections, and allow you to connect/disconnect objects across timepoints/sessions.</p>
 
-<p><img class="img-float-right" src="/mapmanager/images/imagingcore/stack_example_spines.jpg" width="400" /></p>
-
-<h4 id="main-features">Main features</h4>
-
-<ul>
-  <li>In vivo, ex vivo, and fixed tissue</li>
-  <li>Three dimensional image stacks, one and two color channels</li>
-  <li>Track 3D objects across multiple timepoints</li>
-  <li>Automatically registers objects in different timepoints</li>
-  <li>Written in <a href="http://wavemetrics.com">Igor Pro</a></li>
-</ul>
-
-<h4 id="getting-started">Getting started</h4>
+<p>To open the find points panel:</p>
 
 <ul>
-  <li><a href="/mapmanager/getting-started/">Getting started</a></li>
+  <li>Right-click a spine in a map and selecting ‘Find Points’.</li>
+  <li>Right-click a session in the main Map Manager Panel and selecting ‘Find Points’.</li>
+  <li>Right-click a map in the main Map Manager Panel and selecting ‘Find Points’.</li>
 </ul>
 
-<h4 id="workflows">Workflows</h4>
+<h4 id="overview">Overview</h4>
 
 <ul>
-  <li><a href="/mapmanager/making-a-map/" title="making-a-map">Making a map</a></li>
-  <li><a href="/mapmanager/simple-stack-db/" title="simple-stack-db">Simple stack database</a></li>
+  <li>The find points panel displays a list of all spines in the source timepoint (sIdx). In this example there are 21 spines in the source timepoint.</li>
+  <li>For each spines in the source timepoint, it shows if it is connected to the destination timepoint (dIdx). It will color the dIdx cell red if there is no connection.</li>
+  <li>Any remaining spines in the destination timepoint (spines not connected to the source timepoint) will be displayed at the bottom of the list. In this example there are 3 of these spines.</li>
+  <li>Each spine in the source timepoint will also have a best ‘Guess’ connection in the ‘Guess’ column. For spines, this is using your ‘Segment Pivot’ for the two segments listed in Find Points and will connect spines across timepoints/sessions that are within ‘Connect spines within this distance (um)’. See the Map Manager Options Panel to set this.</li>
 </ul>
 
-<h4 id="about">About</h4>
+<p><img class="img-float-left" src="images/mm3/mm3-find-points-panel.png" width="500" /></p>
+<div class="print-page-break"></div>
 
-<p>All code and documentation written by <a href="http://robertcudmore.org">Robert Cudmore</a></p>
-
-<h4 id="links">Links</h4>
+<h4 id="interface">Interface</h4>
 
 <ul>
-  <li><a href="http://cudmore.github.io/mapmanager/">Map Manager</a> (This page)</li>
-  <li><a href="https://github.com/cudmore/bob-fiji-plugins">Fiji macros and plugins</a> (GitHub)</li>
-  <li>Robert Cudmore’s <a href="http://robertcudmore.org/">Home Page</a></li>
-  <li>Robert Cudmore’s blog <a href="http://cudmore.github.io/">Blog</a></li>
-  <li>Software for <a href="http://cudmore.github.io/Vascular-Analysis/">Vascular Analysis</a></li>
+  <li><strong>From TP.</strong> Source timepoint/session (From TP)</li>
+  <li><strong>To.</strong> Destination timepoint/session (To timepoint)</li>
+  <li><strong>Object Type.</strong> Select the type of objects to display.</li>
+  <li><strong>ShowBad.</strong> If checked, bad points will be included in the list. Bad points will always have their ‘Idx’ column in red.</li>
+  <li><strong>Segment ID.</strong> Limit the list to one segment ID.</li>
+  <li><strong>All Segments.</strong> Generate the list for all segments. If you are connecting spines, leave this off (unchecked).</li>
+  <li><strong>Refresh.</strong> Will refresh the Find Points list. [as of Nov 2015, there may be some edits to the map that do not refresh the list automatically.]</li>
 </ul>
+
+<h4 id="column-names">Column Names</h4>
+
+<p>Clicking on any column name will sort the list by the values in that column. Column names starting with ‘s’ are for the source timepoint (from TP), column names starting with ‘d’ are for the destination timepoint (to TP).</p>
+
+<ul>
+  <li><strong>Idx</strong> - The row index in the table (no relation to object index).</li>
+  <li><strong>sIdx</strong> - Source object stack db index.</li>
+  <li><strong>sz</strong> - Source object z-depth</li>
+  <li><strong>sParent</strong> - Source object parent segment.</li>
+  <li><strong>spDist</strong> - Source object distance from pivot.</li>
+  <li><strong>Guess</strong> - Automatically generated best guess for connection. This uses each objects distance from pivot (spDist and dpDist) and returns objects within X um, where X is specified by ‘Connect spines within this distance (um)’.</li>
+  <li><strong>dIdx</strong> - Destination object stack db index.</li>
+  <li><strong>dz</strong> - Destination object z-depth</li>
+  <li><strong>dpDist</strong> - Destination object distance from pivot.</li>
+  <li><strong>Dist</strong> - When two points are connected (both sIdx and dIdx are filled in), this is the distance between the two points measured as the distance between their two pivot points (spDist and dpDist).</li>
+</ul>
+
+<h4 id="interaction">Interaction</h4>
+
+<ul>
+  <li>Bring up a map run by right-clicking a row and selecting ‘Plot Run’.</li>
+  <li>Select an object in the list and it will be propagated to all <a href="/mapmanager/run-plot/">run</a> and <a href="/mapmanager/map-plot/">map</a> plots.</li>
+  <li>Use the keyboard to scroll through the list. The selected point will flash in all open windows.</li>
+  <li>Use left/right arrows to flash the selected object again.</li>
+</ul>
+
+<h4 id="using-the-keyboard-to-connect-and-disconnect-objects">Using the keyboard to connect and disconnect objects</h4>
+
+<p>For a selected row</p>
+
+<ul>
+  <li>‘shift + right-arrow’ to commit the ‘Guess’ to the destination (dIdx). This will connect the source and destination objects together, making them persistent.</li>
+  <li>‘del’ key to remove the connection. This will remove persistence between the source and destination objects.</li>
+  <li>‘ctrl + p’ to set the selected point at the global pivot. This is not used for spines.</li>
+</ul>
+
+<h4 id="tips">Tips</h4>
+
+<p>When used with a spine run, find points is a reliable way to check the connections between all objects in two timepoints.</p>
+
+<p>All objects in the source timepoint are in the list, followed by any remaining objects in destination timepoint that were not connected to an object in the source timepoints.</p>
+
+<p>By sorting the list with the source distance from pivot (spDist), you can step through all spines in the source timepoint sequentially along the dendritic segment.</p>
+
+<p>By sorting the list with the destination distance from pivot (dpDist), you get a sequential list of all objects in the destination timepoint.</p>
+
+<p><img class="img-float-left" src="images/mm3/find-points-example.png" width="1000" /></p>
+<div class="print-page-break"></div>
+<p>Example usage of find points panel. Here, we have a run of sessions 1/2/3 (top row). We have positioned the Find Points panel below the stack for session 2. By selecting rows (spines) in Find Points we can browse all spines in session 2, visualize their connections to session 3, and finally edit their connections to session 3 (using the keyboard in Find Points Panel).</p>
+
+
+
+<div class="post-tags">
+  
+  
+  
+    <b>Tags:</b>  
+  
+  
+  
+    <a href="/mapmanager/tags/#Interface">Interface</a>
+  
+
+   <!--
+   <a href="javascript:window.print()">print</a>
+    -->
+
+   <!--
+   <BR>
+   <a href="_posts/2015-08-02-find-points-panel.pdf">print pdf</a>
+   <BR>
+   -->
+    
+</div>
 
 
                     </div>

@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
 
-        <title>Map Manager : Map Manager Documentation</title>
+        <title>Map Manager : Plot panel</title>
         <meta name="description" content="">
 
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
@@ -168,52 +168,79 @@
                     </div>
 
                     <div id=content class=span10>
-                        <p><br /></p>
+                        <div class=page-header>
+    <h3>Plot panel
+        
+    </h3>
+</div>
 
-<p style="font-size:20px">
-Map Manager is software to annotate and analyze time-series of 3D image stacks.
-</p>
+<p><img class="img-float-center" src="images/mm3/mm3-plot-panel-big.png" width="700" /></p>
 
-<p><br /></p>
+<div class="print-page-break"></div>
 
-<p><img class="img-float-right" src="/mapmanager/images/imagingcore/stack_example_spines.jpg" width="400" /></p>
+<p>The plot panel provides an interface to make <a href="/mapmanager/stack-plot/">stack</a> and <a href="/mapmanager/map-plot/">map</a> plots.</p>
 
-<h4 id="main-features">Main features</h4>
-
-<ul>
-  <li>In vivo, ex vivo, and fixed tissue</li>
-  <li>Three dimensional image stacks, one and two color channels</li>
-  <li>Track 3D objects across multiple timepoints</li>
-  <li>Automatically registers objects in different timepoints</li>
-  <li>Written in <a href="http://wavemetrics.com">Igor Pro</a></li>
-</ul>
-
-<h4 id="getting-started">Getting started</h4>
+<h4 id="plotting-a-stack">Plotting a stack</h4>
 
 <ul>
-  <li><a href="/mapmanager/getting-started/">Getting started</a></li>
+  <li>Select a stack in the stack list</li>
+  <li>Select a Y stat</li>
+  <li>Select an X stat</li>
+  <li>Press ‘Spine Plot (stack)’ button</li>
 </ul>
 
-<h4 id="workflows">Workflows</h4>
+<h4 id="plotting-a-map">Plotting a map</h4>
+<ul>
+  <li>Specify the map to plot with ‘Grab Map’ button.</li>
+  <li>Select a Y stat</li>
+  <li>Select an X stat</li>
+  <li>Press ‘Spine Plot (map)’ button</li>
+</ul>
+
+<p>Both the Y and X values can be normalized to a session as an absolute change (Abs) or a percent (%). We call this normalization session the ‘zero session’. The zero session for each map can be set in the main <a href="/mapmanager/main-panel/">map manager panel</a> using ‘Zero Session’. This can be over-ridden in the plot panel by turning on the checkbox and specifying a ‘Norm Session’</p>
+
+<h4 id="saved-plots">Saved Plots</h4>
+
+<p>Once a map plot is created, Saved Plots allows the x/y plot statistics to be grabbed and reused quickly. This saves time as the number of statistics in each x/y list is large and the names of each statistic is rather cryptic.</p>
+
+<p>Right-click a row in the list of Saved Plots and select a menu:</p>
 
 <ul>
-  <li><a href="/mapmanager/making-a-map/" title="making-a-map">Making a map</a></li>
-  <li><a href="/mapmanager/simple-stack-db/" title="simple-stack-db">Simple stack database</a></li>
+  <li><strong>Grab Plot Window</strong>. Grab the x/y statistics from the top-most map plot and save it in the selected row.</li>
+  <li><strong>Fill In Interface</strong>. Take a Saved Plot and fill in the x/y statistics in the stack plot panel.</li>
+  <li><strong>Delete Plot</strong>. Delete a saved plot.</li>
 </ul>
 
-<h4 id="about">About</h4>
+<p>Once a plot is saved (with ‘Grab Plot Window’), the x/y statistics can be filled in by double clicking.</p>
 
-<p>All code and documentation written by <a href="http://robertcudmore.org">Robert Cudmore</a></p>
+<p>Double-click on a Saved Plot name to set its name.</p>
 
-<h4 id="links">Links</h4>
+<p>Saved plots are saved with the global map manager options in the main <a href="/mapmanager/stackdb-options-panel/">map manager options panel</a>.</p>
 
-<ul>
-  <li><a href="http://cudmore.github.io/mapmanager/">Map Manager</a> (This page)</li>
-  <li><a href="https://github.com/cudmore/bob-fiji-plugins">Fiji macros and plugins</a> (GitHub)</li>
-  <li>Robert Cudmore’s <a href="http://robertcudmore.org/">Home Page</a></li>
-  <li>Robert Cudmore’s blog <a href="http://cudmore.github.io/">Blog</a></li>
-  <li>Software for <a href="http://cudmore.github.io/Vascular-Analysis/">Vascular Analysis</a></li>
-</ul>
+
+
+<div class="post-tags">
+  
+  
+  
+    <b>Tags:</b>  
+  
+  
+  
+    <a href="/mapmanager/tags/#Interface">Interface</a>
+  
+
+   <!--
+   <a href="javascript:window.print()">print</a>
+    -->
+
+   <!--
+   <BR>
+   <a href="_posts/2015-04-20-plot-panel.pdf">print pdf</a>
+   <BR>
+   -->
+    
+</div>
 
 
                     </div>

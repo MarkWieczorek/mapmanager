@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
 
-        <title>Map Manager</title>
+        <title>Map Manager : Stack</title>
         <meta name="description" content="">
 
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
@@ -169,217 +169,166 @@
 
                     <div id=content class=span10>
                         <div class=page-header>
-    <h3>
+    <h3>Stack
         
     </h3>
 </div>
 
-<ul class="tag-cloud">
+<p><img class="img-float-left" src="images/imagingcore/stack-example-spines4.png" width="300" />
+<img class="img-float-left" src="images/imagingcore/stack-example-vascular-4.png" width="300" /></p>
 
-  <li style="font-size: 155%">
-    <a href="#Imaging core">
-      Imaging core
-    </a>
-  </li>
+<div class="print-page-break"></div>
 
-  <li style="font-size: 155%">
-    <a href="#Workflow">
-      Workflow
-    </a>
-  </li>
+<h4 id="overview">Overview</h4>
+<p>A stack window displays a 3D image stack, one image plane (slice) at a time.</p>
 
-  <li style="font-size: 98%">
-    <a href="#Posts">
-      Posts
-    </a>
-  </li>
-
-  <li style="font-size: 155%">
-    <a href="#Interface">
-      Interface
-    </a>
-  </li>
-
-  <li style="font-size: 112%">
-    <a href="#Plots">
-      Plots
-    </a>
-  </li>
-
-  <li style="font-size: 98%">
-    <a href="#xxx">
-      xxx
-    </a>
-  </li>
-
-  <li style="font-size: 98%">
-    <a href="#Analysis">
-      Analysis
-    </a>
-  </li>
-
+<ul>
+  <li>Use the mouse-wheel to scroll up and down through images, arrow keys to pan, +/- to zoom. Zooming with keyboard +/- follows the mouse pointer</li>
+  <li>Image contrast is critical, open the contrast control bar with keyboard ‘c’ and adjust min/max contrast with sliders. If contrast is not set properly you will not see objects in your image that are actually there.</li>
+  <li>View a pixel intensity histogram with keyboard ‘h’.</li>
+  <li>Closing a stack window does not remove it from memory (the stack remains open).</li>
 </ul>
 
-<div id="archives">
+<div class="print-page-break"></div>
 
-  <div class="archive-group">
-    
-    <h3 id="#Imaging core">Imaging core</h3>
-    <a name="Imaging core"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/stackdb-plot">Stack DB plot</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/scale-panel">Scale panel</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/process-panel">Process panel</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/stack-browser">Stack Browser</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/simple-stack-db">Simple stack database</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/stack">Stack</a></h4>
-    </article>
-    
-  </div>
+<h4 id="viewing-multiple-channels">Viewing multiple channels</h4>
 
-  <div class="archive-group">
-    
-    <h3 id="#Workflow">Workflow</h3>
-    <a name="Workflow"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/gallery">Gallery</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/getting-started">Getting started</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/making-a-map">Making a map</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/database-overview">Database overview</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/annotating-a-stack">Annotating a stack</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/simple-stack-db">Simple stack database</a></h4>
-    </article>
-    
-  </div>
+<p>If your stack has more than one (color) channel. Keyboard ‘1’ and ‘2’ will switch between channels.</p>
 
-  <div class="archive-group">
-    
-    <h3 id="#Posts">Posts</h3>
-    <a name="Posts"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/user-files">User files</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/simple-stack-db">Simple stack database</a></h4>
-    </article>
-    
-  </div>
+<h4 id="contrast-bar">Contrast bar</h4>
+<ul>
+  <li>Open the contrast bar with keyboard ‘c’</li>
+  <li>Pixel intensity values below ‘min’ will be displayed as black</li>
+  <li>Pixel intensity values above ‘max’ will be displayed as white</li>
+</ul>
 
-  <div class="archive-group">
-    
-    <h3 id="#Interface">Interface</h3>
-    <a name="Interface"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/find-points-panel">Find Points</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/hdd-paths">Hard Drive Paths</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/stackdb-options-panel">Options</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/search-panel">Search panel</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/plot-panel">Plot panel</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/main-panel">Main panel</a></h4>
-    </article>
-    
-  </div>
+<h4 id="scale-bar">Scale bar</h4>
+<p>Control the scale bar in <a href="/mapmanager/stackdb-options-panel/">Options</a>.</p>
 
-  <div class="archive-group">
-    
-    <h3 id="#Plots">Plots</h3>
-    <a name="Plots"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/stack-plot">Stack plot</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/run-plot">Run plot</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/map-plot">Map plot</a></h4>
-    </article>
-    
-  </div>
+<h4 id="window-candy">Window Candy</h4>
+<ul>
+  <li>There are five different window decorations or <strong>c</strong>andy options: (i) all, (ii) none, (iii) scale, (iv) scale + scroll, and (v) something else.</li>
+  <li>Cycle different window <strong>c</strong>andies with keyboard ‘shift+c’.</li>
+  <li>Set the default window <strong>c</strong>andy in <a href="/mapmanager/stackdb-options-panel/">Options</a>.</li>
+  <li>Note: The grid will only display when window <strong>c</strong>andy is set to ‘All’ (when the stack axis are visible).</li>
+</ul>
 
-  <div class="archive-group">
-    
-    <h3 id="#xxx">xxx</h3>
-    <a name="xxx"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/faq">FAQ</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/File-format">File format</a></h4>
-    </article>
-    
-  </div>
+<div class="print-page-break"></div>
 
-  <div class="archive-group">
-    
-    <h3 id="#Analysis">Analysis</h3>
-    <a name="Analysis"></a>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/spine-dynamics">Spine Dynamics</a></h4>
-    </article>
-    
-    <article class="archive-item">
-      <h4><a href="/mapmanager/intensity">Intensity</a></h4>
-    </article>
-    
-  </div>
+<h4 id="histogram">Histogram</h4>
 
-</div>
+<p><img class="img-float-right" src="images/imagingcore/histogram.jpg" width="300" /></p>
+
+<p>The histogram window show a histogram of pixel intensity values for each image in a stack.</p>
+
+<ul>
+  <li>Open the histogram window with keyboard ‘h’.</li>
+  <li>The histogram window shows a pixel intensity histogram for one image.</li>
+  <li>Scroll through the image in a stack (mouse-wheel) and the histogram for each image will be show.</li>
+</ul>
+
+<div class="print-page-break"></div>
+
+<h4 id="making-z-projections">Making Z-Projections</h4>
+
+<p>Open a maximal Z-Projection with keyboard ‘shift+z’. This allows you to set the top and bottom slice that goes into the Z-Projection.</p>
+
+<p>Once the Z-Projection window is open, it behaves just like a stack window (with only one slice). For example, you can zoom with +/-, pan with arrow keys, open the contrast bar with keyboard ‘c’, view a histogram with keyboard ‘h’, and copy/paste the image to another program, etc., etc.</p>
+
+<h4 id="viewing-a-sliding-z-projection">Viewing a sliding z-projection</h4>
+
+<p>A sliding Z-Projection is a special stack where each image plane is replaced by a small maximal Z-Projection showing slices just above and below the image plane you are viewing.</p>
+
+<p>You can switch to a sliding Z-Projection just like you can switch channels. Switch to a sliding Z-Projection for channel 1 with keyboard ‘3’ and for channel 2 with keyboard ‘4’.</p>
+
+<p>Options for the sliding Z-Projection are set with ‘bStack - Stack Browser Options’. See the end of the page documenting <a href="/mapmanager/stackdb-options-panel/">Options</a>.</p>
+
+<h4 id="navigation-window">Navigation window</h4>
+
+<p><img class="img-float-right" src="images/imagingcore/stack_navigation.jpg" width="300" /></p>
+
+<p>The navigation window opens a new window with a maximal z-projection of the stack and shows the current zoomed view as a blue square.</p>
+
+<ul>
+  <li>Right click and select ‘Navigation Window’ menu. A navigation window will be opened and your current zoomed view of the stack will be shown as a blue square.</li>
+  <li>Zoom with +/- or pan with arrow keys and the blue-square tracks what you are looking at.</li>
+  <li>The navigation window is, by default, a maximal z-projection of the entire stack.</li>
+</ul>
+
+<div class="print-page-break"></div>
+
+<h4 id="zoom-window">Zoom window</h4>
+
+<p>Right click and select ‘Zoom Window’.</p>
+
+<h4 id="point-info">Point info</h4>
+
+<p><img class="img-float-right" src="images/mm3/mm3-point-info.png" width="300" /></p>
+
+<p>The Point Info window shows information about the currently selected object.</p>
+
+<ul>
+  <li>Open the Point Info window from any stack window using keyboard ‘i’.</li>
+  <li>Use the point info window to annotate objects with text notes.</li>
+</ul>
+
+<div class="print-page-break"></div>
+
+<h4 id="right-click">Right click</h4>
+<p><img class="img-float-right" src="images/mm3/mm3-stack-right-click.png" width="200" /></p>
+
+<p>Right-click on the image and you will get a contextual menu to activate the features described on this page.</p>
+<div class="print-page-break"></div>
+
+<h4 id="keyboard-commands">Keyboard commands</h4>
+
+<p>Map Manager makes heavy use of keyboard shortcuts. Use the right click menu to see the mapping between the function and the key. Here is a list of keyboard shortcuts.</p>
+
+<pre><code>=====     Stack Help     ===============
+  	Navigation
+  		arrow-keys : Pan
+  		+/- : zoom
+  		Enter : Full Zoom (reset zoom)
+  		] : Toggle between 2 different window sizes
+  	Image Display
+  		1 : Channel 1
+  		2 : Channel 2
+  		3 :  Sliding Z-Project, Channel 1
+  		4 : Sliding Z-Project, Channel 2
+  	Toolbars
+  		c : Toggle the contrast control bar
+  	Child Windows
+  		h : Histogram
+  		z :maximal z-projection
+  		shift+z : maximal z-projection (options)
+  		i : Object Info Panel
+  		shift+i : Stack Info Panel
+  		[ : Toggle the stack db control bar (the left control bar)
+  	Right-click menu
+  		Navigation  Window
+  		Export Quicktime Movie... (export avi on Microsoft Windows)
+  	Other
+  		shift+C : Cycle candy
+  		] : Switch between two default stack window sizes (Set in Map Manager Options)
+  		shift+P : Set pixel/voxel size
+  		/ : Start/Stop movie
+  		shift + h : Print this help
+  	Object (spine) Scoring
+  		[ : Toggle left control bar
+  		i : Object info panel
+  		control+left_arrow : Go to previous spine
+  		control+right_arrow : Go to next spine
+  		control+click on point : Display Point Run (e.g. control+click on a spine)
+  		control+click on line : Display Line Segment Run
+  		l : Link windows (lower-case 'L' as in link)
+  	Map (run plot)
+  		a : Selected object --&gt;&gt; Addition
+  		s : Selected object --&gt;&gt; Subtraction
+  		p : Selected object --&gt;&gt; Persistent (requires selection in previous timepoint)
+  		b : Selected object --&gt;&gt; Toggle bad on/off
+</code></pre>
+
+
 
 <div class="post-tags">
   
@@ -389,6 +338,8 @@
   
   
   
+    <a href="/mapmanager/tags/#Imaging core">Imaging core</a>
+  
 
    <!--
    <a href="javascript:window.print()">print</a>
@@ -396,7 +347,7 @@
 
    <!--
    <BR>
-   <a href="tags.html">print pdf</a>
+   <a href="_posts/2015-01-30-stack.pdf">print pdf</a>
    <BR>
    -->
     

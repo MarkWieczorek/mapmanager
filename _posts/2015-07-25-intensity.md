@@ -8,21 +8,21 @@ tags:
 - Analysis
 ---
 
-###Algorithm and Strategy
+### Algorithm and Strategy
 
 All intensity analysis is performed by calculating statistics (Sum, Mean, standard-deviation, N) from the intensity values of pixels within a number of 3D regions-of-interest (ROI). Further analysis is then derived by performing algebra between these ROIs.
 
-<IMG class="img-float-right" SRC="../images/mm3/intensity/spine-roi-example.png" WIDTH="400">
+<IMG class="img-float-right" SRC="images/mm3/intensity/spine-roi-example.png" WIDTH="400">
 
-####Spine ROI
+#### Spine ROI
 
 A polygon surrounding a spine. Starts as a rectangle and then overlapping regions of the backbone/dendrite ROI is subtracted. Any remaining disjoint regions (on other side of backbone/dendrite) are then removed. The spine ROI is centered in the same image plane as the spine head. Three parameters specify spine ROI: width, extend head, and extend tail.
 
-####Backbone/Dendrite ROI
+#### Backbone/Dendrite ROI
 
 A polygon centered on the spine connection point and extending a fixed distance (um) up and down the backbone/dendrite line. The backbone/dendrite ROI is centered in the same image plane as the spine connection point. The distance to extend up and down the backbone/dendrite line is set with '+/- Segment (um)'
 
-####Background ROI
+#### Background ROI
 
 Both the spine roi and the backbone/dendrite roi get their own background ROIs. The spine background ROI is the same size/shape as the spine ROI. Likewise, the backbone/dendrite background ROI is the same size/shape as the backbone/dendrite ROI. The position of these background ROIs is the position that gives the minimal intensity from a number of candidate positions (a 3x3 grid emanating from the spine head). All background ROIs (both spine and backbone/dendrite) are centered in the same image plane as the spine head.
 
@@ -30,17 +30,17 @@ Please note, parameters controlling the grid of candidate background positions i
 
 <div class="print-page-break"></div>
 
-###Running Intensity Analysis
+### Running Intensity Analysis
 
-<IMG class="img-float-right" SRC="../images/mm3/intensity/intensity-analysis-tab.png" WIDTH="450">
+<IMG class="img-float-right" SRC="images/mm3/intensity/intensity-analysis-tab.png" WIDTH="450">
 
 Intensity analysis is run from the main [map manager panel][3] using the 'Intensity' tab.
 
 <div class="print-page-break"></div>
 
-###Parameters
+### Parameters
 
-<IMG class="img-float-right" SRC="../images/mm3/intensity/intensity-parameters.png" WIDTH="300">
+<IMG class="img-float-right" SRC="images/mm3/intensity/intensity-parameters.png" WIDTH="300">
 
 
 Global intensity analysis parameters are set in the [stack db options][2] panel. These parameters are used for every spine in a map.
@@ -49,7 +49,7 @@ Once intensity analysis has been run, the parameters of individual spines can be
 
 <div class="print-page-break"></div>
 
-<IMG class="img-float-right" SRC="../images/mm3/intensity/obj-info.png" WIDTH="300">
+<IMG class="img-float-right" SRC="images/mm3/intensity/obj-info.png" WIDTH="300">
 
  - **Width (um).** Width of spine ROI centered on the spine line.
  - **Extend head (um).** Distance to extend the spine ROI beyond its spine head.
@@ -58,7 +58,7 @@ Once intensity analysis has been run, the parameters of individual spines can be
  - **+/- Segment (um).** The distance (um) to extend the backbone/dendrite ROI up and down the backbone/dendrite line.
  - **Scale Radius (um).** Only available for individual spines using the Object Info Panel. When intensity analysis is run (for a map), each spine is assigned a radius (um) following the radius of the segment it is attached to. Once intensity analysis has been run, this radius can be set for individual spines in the Object Info panel.
  
-###Intensity Analysis Output
+### Intensity Analysis Output
 
 The following statistics are calculated and displayed in the X/Y statistics lists in the [Plot Panel][1].
 
@@ -66,7 +66,7 @@ A table of these statistics can be displayed for each stack in the stack db pane
 
 Please note, 'u' is for user. User stats are simple algebra on the core intensity analysis.
 
-#####Spine ROI
+##### Spine ROI
 ```
 sSum		:	spine sum
 sMean		:	spine mean
@@ -74,7 +74,7 @@ sSD			:	spine standard deviation
 sN			:	# pixels in spine roi
 ```
 
-#####Spine Background ROI
+##### Spine Background ROI
 ```
 sbSum		:	spine background sum
 sbMean		:	spine background mean
@@ -82,7 +82,7 @@ sbSD		:	spine background standard deviation
 sbN			:	# pixels in spine background roi
 ```
 
-#####Backbone/Dendrite ROI
+##### Backbone/Dendrite ROI
 ```
 dSum		:	dendrite sum
 dMean		:	dendrite mean
@@ -90,7 +90,7 @@ dSD			:	dendrite standard deviation
 dN			:	# pixels in dendrite roi
 ```
 
-#####Backbone/Dendrite Background ROI
+##### Backbone/Dendrite Background ROI
 ```
 dbSum		:	dendrite background sum
 dbMean		:	dendrite background mean
@@ -98,7 +98,7 @@ dbSD		:	dendrite background standard deviation
 dbN			:	# pixels in dendrite background roi
 ```
 
-#####Background subtracted ROIs
+##### Background subtracted ROIs
 ```
 ubssSum		:	background subtracted spine sum
 ubssMean	:	background subtracted spine mean
@@ -106,7 +106,7 @@ ubsdSum		:	background subtracted dendrite sum
 ubsdMean	:	background subtracted dendrite mean
 ```
 
-#####Cross channel stats
+##### Cross channel stats
 ```
 utssmoss	:	this spine sum minus other spine sum.
                 This can be read as '(t)his (s)pine (s)um (m)inus (o)ther (s)pine sum'
@@ -123,9 +123,9 @@ utsmdodm	:	this spine mean divided by other dendrite mean
 
 ```
 
-###Moving the background ROI
+### Moving the background ROI
 
-<IMG class="img-float-right" SRC="../images/mm3/intensity/spine-roi-example-edit.png" WIDTH="350">
+<IMG class="img-float-right" SRC="images/mm3/intensity/spine-roi-example-edit.png" WIDTH="350">
 
 Clicking on the spine backgrond ROI will enable an edit mode where the user can specify the background position. This edit mode also shows the candidate background positions.
 
@@ -137,7 +137,7 @@ Clicking on the spine backgrond ROI will enable an edit mode where the user can 
 
 <div class="print-page-break"></div>
 
-###Errors and Warnings
+### Errors and Warnings
 
 Intensity analysis should be run with 'Debug On Error' off. <strike>Set this with a procedure (code) window frontmost and select main menu 'Procedure - Debug On Error'</strike>
 
@@ -151,22 +151,22 @@ Errors and Warnings are
 <TR>
 <TD>
 <figure>
-<figcaption>Error #3 x spine ROI beyond image</figcaption>
-<IMG SRC="../images/mm3/intensity/3-spine-roi-error.png" WIDTH="350">
+<figcaption>Error # 3 x spine ROI beyond image</figcaption>
+<IMG SRC="images/mm3/intensity/3-spine-roi-error.png" WIDTH="350">
 </figure>
 </TD>
 
 <TD>
 <figure>
-<figcaption>Error #3.5 y spine ROI beyond image</figcaption>
-<IMG SRC="../images/mm3/intensity/3_5-spine-roi-error.png" WIDTH="350">
+<figcaption>Error # 3.5 y spine ROI beyond image</figcaption>
+<IMG SRC="images/mm3/intensity/3_5-spine-roi-error.png" WIDTH="350">
 </figure>
 </TD>
 
 <TD>
 <figure>
-<figcaption>Error #6 reducing spine with ImageSeedFill</figcaption>
-<IMG SRC="../images/mm3/intensity/6-reducing-spine-error.png" WIDTH="350">
+<figcaption>Error # 6 reducing spine with ImageSeedFill</figcaption>
+<IMG SRC="images/mm3/intensity/6-reducing-spine-error.png" WIDTH="350">
 </figure>
 </TD>
 </TR>
@@ -174,22 +174,22 @@ Errors and Warnings are
 <TR>
 <TD>
 <figure>
-<figcaption>Error #9 extending backbone error</figcaption>
-<IMG SRC="../images/mm3/intensity/9-extending-backbone.png" WIDTH="350">
+<figcaption>Error # 9 extending backbone error</figcaption>
+<IMG SRC="images/mm3/intensity/9-extending-backbone.png" WIDTH="350">
 </figure>
 </TD>
 
 <TD>
 <figure>
-<figcaption>Warning #5.1 prev cPnt</figcaption>
-<IMG SRC="../images/mm3/intensity/5_1_prev-cpnt.png" WIDTH="350">
+<figcaption>Warning # 5.1 prev cPnt</figcaption>
+<IMG SRC="images/mm3/intensity/5_1_prev-cpnt.png" WIDTH="350">
 </figure>
 </TD>
 </TR>
 
 </TABLE>
 
-###Intensity Dirty
+### Intensity Dirty
 
 A spines intensity analysis becomes 'dirty' and needs to be re-run whenever the geometry of a spine changes or the geometry of its connected spines change.
 

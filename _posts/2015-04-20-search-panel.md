@@ -9,13 +9,13 @@ tags:
 ---
 
 
-<IMG class="img-float-left" SRC="../images/mm3/mm3-search-panel.png" WIDTH="900">
+<IMG class="img-float-left" SRC="images/mm3/mm3-search-panel.png" WIDTH="900">
 
 <div class="print-page-break"></div>
 
 The search panel allows a stack or map to be searched for stack db objects.
 
-####Interacting with results
+#### Interacting with results
 
 Performing a search will create a list of object matching the search criteria. Selecting an entry in the search results will select that object in any open [stack][3] and [map][2] plots. Likewise, selecting an object in a [stack][3] or [map][2] plot will select the object in the search list (if it is in the list).
 
@@ -24,11 +24,11 @@ Performing a search will create a list of object matching the search criteria. S
   - Option-click to zoom the object in an already open stack plot.
   - Right-click to open a [run plot][4].
 
-####Types of searches
+#### Types of searches
 
 First select the type of object with 'Object Type' popup. Start by selecting 'Spine'.
 
-####Objects
+#### Objects
 
   - **All.** All objects of 'Object Type'
   - **Bad.** Objects marked bad
@@ -42,7 +42,7 @@ First select the type of object with 'Object Type' popup. Start by selecting 'Sp
   - **ROI Bounds.** Return spines with background ROI within specified distance (um) from edges of image. This is useful if stack alignment has been run causing images to be shifted/rotated resulting in undefined regions on the edge of the image.
   - **Segment Ends.** Return objects within specified distance (um) of the end of their segment/backbone line.
   
-####Map Tab
+#### Map Tab
 
   - **Addition.**
   - **Subtraction.**
@@ -51,7 +51,7 @@ First select the type of object with 'Object Type' popup. Start by selecting 'Sp
   - **Bad Runs.** Return a list of objects that have a mixture of good and bad within their respective run. This is used for debugging and will be removed.
   - **Re Added.** Return a list of added spines that have a previous subtraction (on a previous timepoint) that is within specified distance along the backbone/dendrite.
   
-####Manual Tab
+#### Manual Tab
   Return a list of objects matching a user specified criterion.
   
   Do this by selecting a statistic in the list, specify a value, and an operator (>, >=, <, <=, =, Not).

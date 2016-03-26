@@ -17,9 +17,9 @@ Once a map is created and saved, the main map manager panel can be minimized aga
 
 The <span style="color:blue">blue</span> buttons operate on the selected map.
   
-<IMG class="img-float-center" SRC="../images/mm3/mm3-main-panel-big.png" WIDTH="700">
+<IMG class="img-float-center" SRC="images/mm3/mm3-main-panel-big.png" WIDTH="700">
 
-<!--- <IMG class="img-float-left" SRC="../images/mm3/mm3-main-panel-small.png" WIDTH="200"> -->
+<!--- <IMG class="img-float-left" SRC="images/mm3/mm3-main-panel-small.png" WIDTH="200"> -->
 
   <B>Load Map.</B> Load a map from the hard-drive. 
   
@@ -27,7 +27,7 @@ The <span style="color:blue">blue</span> buttons operate on the selected map.
   
   <B>?.</B> Open map manager documentation in your default web browser.
   
-###Plot
+### Plot
   
 <B>Object Map.</B> Open a [map plot][12] showing the position of spines along dendritic segments vs. session.
 
@@ -45,7 +45,7 @@ The <span style="color:blue">blue</span> buttons operate on the selected map.
     
 Datetime, Days and Hours require stacks to have a date/time specified. Specify a custom date/time by turning on 'Edit Date/Time' in the Map Making Tab. The X-Axis options starting with 'Zero' use a session in the map as a zero timepoint. Specify this with 'Zero Session' in the expanded map manager panel. The zero session for a map will have a '*' in its session list. Zero Session is also used by the [Plot Panel][6].
     
-###Panels
+### Panels
 
 Each of these buttons will open a different Map Manager panel.
 
@@ -63,7 +63,7 @@ Each of these buttons will open a different Map Manager panel.
 
 <B>Stack Browser.</B> Open the [stack browser panel][9].
 
-###Miscellaneous
+### Miscellaneous
 
 <B>Unload stacks.</B> Unload all stacks in the selected map (from Igor memory).
 
@@ -74,9 +74,9 @@ Each of these buttons will open a different Map Manager panel.
 <B>Edit Segments.</B> When checked, all editing in a [run plot][11] will edit the persistence of segments (addition, subtraction, and persistent).
 
 
-###Right-click on a map name in the list for a contextual menu.
+### Right-click on a map name in the list for a contextual menu.
 
-<IMG class="img-float-left" SRC="../images/mm3/mm3-main-panel-map-right-click.png" WIDTH="100">
+<IMG class="img-float-left" SRC="images/mm3/mm3-main-panel-map-right-click.png" WIDTH="100">
 
 <B>Show on HDD.</B> Shows the hard-drive folder where the map is saved.
 
@@ -86,15 +86,15 @@ Each of these buttons will open a different Map Manager panel.
 
 <B>Close map.</B> Close a map, removing it and all associated analysis from Igor memory.
 
-###Plot Tab
+### Plot Tab
 
-###Map Making Tab
+### Map Making Tab
 
-###Intensity Tab
+### Intensity Tab
 
-###Utility Tab
+### Utility Tab
 
-###Report Tab
+### Report Tab
 
 <div class="print-page-break"></div>
 

@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
 
-        <title>Map Manager : Map Manager Documentation</title>
+        <title>Map Manager : Getting started</title>
         <meta name="description" content="">
 
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
@@ -168,52 +168,84 @@
                     </div>
 
                     <div id=content class=span10>
-                        <p><br /></p>
+                        <div class=page-header>
+    <h3>Getting started
+        
+    </h3>
+</div>
 
-<p style="font-size:20px">
-Map Manager is software to annotate and analyze time-series of 3D image stacks.
-</p>
-
-<p><br /></p>
-
-<p><img class="img-float-right" src="/mapmanager/images/imagingcore/stack_example_spines.jpg" width="400" /></p>
-
-<h4 id="main-features">Main features</h4>
+<h3 id="installing-igor-pro">Installing Igor Pro</h3>
 
 <ul>
-  <li>In vivo, ex vivo, and fixed tissue</li>
-  <li>Three dimensional image stacks, one and two color channels</li>
-  <li>Track 3D objects across multiple timepoints</li>
-  <li>Automatically registers objects in different timepoints</li>
-  <li>Written in <a href="http://wavemetrics.com">Igor Pro</a></li>
+  <li>Igor Pro is a cross platform program that runs on both Windows and Mac OS X.</li>
+  <li>You need to <a href="https://www.wavemetrics.com/order/order1.php?type=Academic">purchase</a> an Igor Pro license from <a href="https://www.wavemetrics.com/index.html">Wavemetrics</a>, <a href="https://www.wavemetrics.com/support/versions.htm">download</a> Igor Pro and install it.</li>
+  <li>To try out Igor Pro, download and install a fully functional but time limited <a href="https://www.wavemetrics.com/support/demos.htm">demo version</a>.</li>
 </ul>
 
-<h4 id="getting-started">Getting started</h4>
+<h3 id="installing-map-manager">Installing Map Manager</h3>
 
 <ul>
-  <li><a href="/mapmanager/getting-started/">Getting started</a></li>
+  <li>Once Igor Pro is installed, there is no formal installation of Map Manager</li>
+  <li>Get the source code from Bob.</li>
+  <li>The source code will be in a folder named ‘MapManager_date’ where ‘date’ is the date the software was created. The folder will be something like ‘MapManager_20151117’.</li>
+  <li>Run the software by double-clicking MapManager.ipf from within the source code folder.</li>
+  <li>To fit lines in FIJI you will have to specify a hard-drive path to FIJI and install a plugin in FIJI. Please see <a href="/mapmanager/fitting-segments-in-fiji/">fitting segments in fiji</a>.</li>
 </ul>
 
-<h4 id="workflows">Workflows</h4>
+<h3 id="openingrunning-map-manager">Opening/Running Map Manager</h3>
 
 <ul>
-  <li><a href="/mapmanager/making-a-map/" title="making-a-map">Making a map</a></li>
-  <li><a href="/mapmanager/simple-stack-db/" title="simple-stack-db">Simple stack database</a></li>
+  <li>Open MapManager.ipf into Igor Pro (just double click the MapManager.ipf file).</li>
+  <li>Once in Igor Pro, click in the command window to compile Map Manager and activate the main menus. The command window is in the lower left of your screen and has the window title ‘Untitled’.</li>
+  <li>To score a single timepoint stack, select the main menu ‘MapManager - Stack Browser’ to open the <a href="/mapmanager/stack-browser/">Stack Browser</a> panel. See <a href="/mapmanager/simple-stack-db/">Simple Stack DB</a> for more information.</li>
+  <li>To score a timeseries of stacks (a map), select the main menu ‘MapManager - Map Manager Panel’ to open the main <a href="/mapmanager/main-panel/">Map Manager panel</a>. See <a href="/mapmanager/making-a-map/">Making A Map</a> for more information.</li>
 </ul>
 
-<h4 id="about">About</h4>
-
-<p>All code and documentation written by <a href="http://robertcudmore.org">Robert Cudmore</a></p>
-
-<h4 id="links">Links</h4>
+<h3 id="closingquiting-map-manager">Closing/Quiting Map Manager</h3>
 
 <ul>
-  <li><a href="http://cudmore.github.io/mapmanager/">Map Manager</a> (This page)</li>
-  <li><a href="https://github.com/cudmore/bob-fiji-plugins">Fiji macros and plugins</a> (GitHub)</li>
-  <li>Robert Cudmore’s <a href="http://robertcudmore.org/">Home Page</a></li>
-  <li>Robert Cudmore’s blog <a href="http://cudmore.github.io/">Blog</a></li>
-  <li>Software for <a href="http://cudmore.github.io/Vascular-Analysis/">Vascular Analysis</a></li>
+  <li>Quit Igor Pro with the main menu ‘Igor Pro - Quit Igor Pro’</li>
+  <li>Igor Pro will always show the following dialog.</li>
+  <li>Always answer <strong>No</strong>.</li>
+  <li>All Map Manager analysis is saved using the ‘Save’ buttons from within the Map Manager interface.</li>
 </ul>
+<div class="print-page-break"></div>
+<p><img class="img-float-left" src="images/mm3/quit-igor.png" width="400" /></p>
+<div class="print-page-break"></div>
+
+<h3 id="map-manager-options">Map Manager Options</h3>
+
+<ul>
+  <li>Global options are set in the <a href="/mapmanager/stackdb-options-panel/">Options Panel</a>.</li>
+  <li>There is one set of options that will be reloaded the next time Map Manager is run.</li>
+  <li>Save the current options with the ‘Save’ button in the <a href="/mapmanager/stackdb-options-panel/">Options</a> panel.</li>
+  <li>Options can also be saved and then loaded from a user file. Use ‘Save As…’ to save options into a user file.</li>
+</ul>
+
+
+
+<div class="post-tags">
+  
+  
+  
+    <b>Tags:</b>  
+  
+  
+  
+    <a href="/mapmanager/tags/#Workflow">Workflow</a>
+  
+
+   <!--
+   <a href="javascript:window.print()">print</a>
+    -->
+
+   <!--
+   <BR>
+   <a href="_posts/2015-07-30-getting-started.pdf">print pdf</a>
+   <BR>
+   -->
+    
+</div>
 
 
                     </div>

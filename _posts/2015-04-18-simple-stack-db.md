@@ -12,14 +12,14 @@ tags:
 
 This describes a workflow for annotating 3D points in a **single timepoint**. Please see [making a map][3] to collect a sequence of stacks into a timeseries map.
 
-####1. Open and initialize Map Manager
+#### 1. Open and initialize Map Manager
 
 - Open Map Manager in Igor Pro (double-click the Map Manager.ipf file).
 - Click in the Igor Pro command window to compile (the command window is titled 'Untitled').
 - Initialize Map Manager by selecting the main menu 'MapManager - Stack Browser'.
     This will open the [Stack Browser][2] window
 
-####2. Load a stack
+#### 2. Load a stack
 - Either  
     Drag and drop a .tif stack onto the Stack Browser.
 - Or  
@@ -30,7 +30,7 @@ Once a stack is loaded in the [Stack Browser][2], double-click on its entry to d
 <p class="important">You need to set the proper X/Y/Z stack scale, in um, with keyboard 'shift+p'. This is a critical step in MapManager as many measurements are made using um.</p>
 
 
-####3. Add 3D annotations
+#### 3. Add 3D annotations
 
 Each stack can have a list of 3D annotations, we call this a stack database (stack db).
 
@@ -39,15 +39,15 @@ Each stack can have a list of 3D annotations, we call this a stack database (sta
 - Delete a point by selecting the point (mouse left-click) and hitting keyboard 'Delete' or 'Backspace'.
 - Each point can have a textual note, select the point and fill in a note in the field below the list of points.
 
-####4. Save your work
+#### 4. Save your work
 
 - Save a stack db using the 'Save' button.
 - Load a previously saved stack db with the 'Load' button.
 - <b>Important:</b> You are responsible for saving your stack db. Use the 'Save' button.
 
-###Details
+### Details
 
-####Stack scale
+#### Stack scale
 
 Set the X/Y/Z stack scale in the main stack window with keyboard 'shift+p'.
 
@@ -55,7 +55,7 @@ Please set the proper scale before you make any stack db points.
 
 If you create stack db points and later need to change the scale <b>you need to come see Bob</b>.
 
-####Exporting data
+#### Exporting data
 
 It is very easy to export the 3D coordinates of the points in a stack DB.
 
@@ -64,19 +64,19 @@ It is very easy to export the 3D coordinates of the points in a stack DB.
 - Option 2: When you save a stack db you are saving all the points in a single text file. The file can be found in a folder named 'stackdb' in the hard-drive folder of your original stack.
 
 
-####Stack DB toolbar
+#### Stack DB toolbar
 
-<IMG class="img-float-right" SRC="../images/imagingcore/stack_db.png" WIDTH="600">
+<IMG class="img-float-right" SRC="images/imagingcore/stack_db.png" WIDTH="600">
 
 The stack db toolbar displays a list of line segments and a list of points. Open and close the stack db toolbar with keyboard '['.
 
 See [annotating a stack][5] for more detialed information on making 3D points, line segments, and special objects like spines.
 
-#####Line Segments
+##### Line Segments
 
 Selecting a line segment in the list will select the same line segment in the stack window and vica-vera.
 
-#####Points
+##### Points
 
 Selecting a point in the list will select the point in the stack window and vica-versa.
 
@@ -84,9 +84,9 @@ Selecting a point in the list will select the point in the stack window and vica
 
 <div class="print-page-break"></div>
 
-####Search panel
+#### Search panel
 
-<IMG class="img-float-right" SRC="../images/imagingcore/stack_db_search.png" WIDTH="500">
+<IMG class="img-float-right" SRC="images/imagingcore/stack_db_search.png" WIDTH="500">
 
 Open the Search panel from the stack db toolbar using the 'Search' button.
 
@@ -107,9 +107,9 @@ The search results are a static output report. Once a search is performed, if po
 
 <div class="print-page-break"></div>
 
-####Options panel
+#### Options panel
 
-<IMG class="img-float-right" SRC="../images/imagingcore/stack_db_options.png" WIDTH="300">
+<IMG class="img-float-right" SRC="images/imagingcore/stack_db_options.png" WIDTH="300">
 
 Open the [Stack DB Options Panel][4] from the stack db toolbar using the 'Options' button.
 

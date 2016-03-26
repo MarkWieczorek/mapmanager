@@ -7,7 +7,7 @@ date: 2015-04-21 22:01:06
  
 Line segments are fit in FIJI using Map Manager specified control points.
 
-###The version of Fiji is critical
+### The version of Fiji is critical
 
 You are required to use <font color="red"><strong>ImageJ 1.47v</strong></font>, this corresponds to the <font color="red"><strong>'Fiji Life-Line version, 2013 July 15'</strong></font> on the main [FIJI download page][1].
 
@@ -49,11 +49,11 @@ If that does not work, you can specify the location of your Fiji program in a Ma
 	# mac
 	root:stackdb2:options:gFijiPath="/Users/cudmore/Fiji.app/Contents/MacOS/Imagej-macosx"
 	# windows
-	#root:stackdb2:options:gFijiPath="C:\Users\cudmore.linden-image2\Desktop\Fiji.app\fiji-win64.exe"
+	# root:stackdb2:options:gFijiPath="C:\Users\cudmore.linden-image2\Desktop\Fiji.app\fiji-win64.exe"
 
 Make sure the actual Fiji executable exists. Don't assume the name of Fiji is 'fiji-win64.exe', this name changes from version to version of Fiji. If there is an error in this path, there WILL be an error when fitting lines in Map Manager.
 
-###Troubleshooting
+### Troubleshooting
 
 If line fits do not work from within Map Manager, please check the following
 

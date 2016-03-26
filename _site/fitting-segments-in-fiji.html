@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
 
-        <title>Map Manager : Map Manager Documentation</title>
+        <title>Map Manager : Fitting segments in Fiji</title>
         <meta name="description" content="">
 
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
@@ -168,52 +168,96 @@
                     </div>
 
                     <div id=content class=span10>
-                        <p><br /></p>
+                        <div class=page-header>
+    <h3>Fitting segments in Fiji
+        
+    </h3>
+</div>
 
-<p style="font-size:20px">
-Map Manager is software to annotate and analyze time-series of 3D image stacks.
-</p>
+<p>Line segments are fit in FIJI using Map Manager specified control points.</p>
 
-<p><br /></p>
+<h3 id="the-version-of-fiji-is-critical">The version of Fiji is critical</h3>
 
-<p><img class="img-float-right" src="/mapmanager/images/imagingcore/stack_example_spines.jpg" width="400" /></p>
+<p>You are required to use <font color="red"><strong>ImageJ 1.47v</strong></font>, this corresponds to the <font color="red"><strong>'Fiji Life-Line version, 2013 July 15'</strong></font> on the main <a href="http://fiji.sc/Downloads">FIJI download page</a>.</p>
 
-<h4 id="main-features">Main features</h4>
+<p>###(1) Download ‘Fiji Life-Line version, 2013 July 15’
+  - Mac: http://fiji.sc/downloads/Life-Line/fiji-macosx-20130715.dmg
+  - Windows (64bit): http://fiji.sc/downloads/Life-Line/fiji-win64-20130715.zip
+  - Windows (32-bit): http://fiji.sc/downloads/Life-Line/fiji-win32-20130715.zip</p>
+
+<p>Once downloaded and installed/uncompressed, drag and drop the <a href="../images/Bob_Neurite_Tracer_v3.java">Bob_Neurite_Tracer_v3.java</a> plugin to the ‘plugins’ folder inside the newly created Fiji.app application folder.</p>
+
+<p class="important"><b>Important.</b> Do <b>NOT</b> put Fiji.app into any path with spaces. Do not put Fiji.app in 'Program Files'.</p>
+
+<p>If you already have a newer version of Fiji installed, this is fine as two versions of Fiji can be installed. They just have to be in different hard-drive folders.</p>
+
+<p>The reason we use this older version of Fiji is that newer versions of Fiji have undocumented changes to the backend JAVA programming interface. Until this is resolved, we will continue to use the older version of Fiji.</p>
+
+<p>###(2) Installing the ‘Bob_Neurite_Tracer_v3.java’ plugin</p>
+
+<p>When you fit a line in Fiji from within Map Manager, you are using the Fiji plugin Bob_Neurite_Tracer_v3.java</p>
+
+<p>To install this plugin</p>
+
+<ol>
+  <li>Download <a href="../images/Bob_Neurite_Tracer_v3.java">Bob_Neurite_Tracer_v3.java</a> or from our <a href="https://github.com/cudmore/bob-fiji-plugins">Github repository</a>.</li>
+  <li>Copy Bob_Neurite_Tracer_v3.java into your Fiji ‘plugins’ folder.</li>
+</ol>
+
+<p>###(3) Configuring Map Manager to fit a line In Fiji</p>
+
+<p>You need to specify the location of your Fiji program from within Map Manager. This is most easily done using the <a href="/mapmanager/hdd-paths">Hard Drive Paths</a> panel. Here are the details:</p>
 
 <ul>
-  <li>In vivo, ex vivo, and fixed tissue</li>
-  <li>Three dimensional image stacks, one and two color channels</li>
-  <li>Track 3D objects across multiple timepoints</li>
-  <li>Automatically registers objects in different timepoints</li>
-  <li>Written in <a href="http://wavemetrics.com">Igor Pro</a></li>
+  <li>Run Map Manager with the MapManager.ipf file (this is how you always run Map Manager).</li>
+  <li>Open the <a href="/mapmanager/hdd-paths">HDD Paths</a> panel using the main menu ‘MapManager - Hard Drive Paths’.</li>
+  <li>In the Map Manager HD Paths panel, specify the path to your Fiji Application with the corresponding ‘Set’ button.</li>
+  <li>In the main <a href="/mapmanager/stackdb-options-panel">Options Panel</a>,save the global options with the ‘Save’ button. The next time Map Manager is run, it will remember and use this Fiji path.</li>
 </ul>
 
-<h4 id="getting-started">Getting started</h4>
+<p>If that does not work, you can specify the location of your Fiji program in a Map Manager <a href="/mapmanager/user-files/">User File</a>. The user file needs to contain a line like this…</p>
+
+<pre><code># Specify the location of your Fiji executable.
+# Please use 'Fiji Life-Line version, 2013 July 15'.
+# mac
+root:stackdb2:options:gFijiPath="/Users/cudmore/Fiji.app/Contents/MacOS/Imagej-macosx"
+# windows
+# root:stackdb2:options:gFijiPath="C:\Users\cudmore.linden-image2\Desktop\Fiji.app\fiji-win64.exe"
+</code></pre>
+
+<p>Make sure the actual Fiji executable exists. Don’t assume the name of Fiji is ‘fiji-win64.exe’, this name changes from version to version of Fiji. If there is an error in this path, there WILL be an error when fitting lines in Map Manager.</p>
+
+<h3 id="troubleshooting">Troubleshooting</h3>
+
+<p>If line fits do not work from within Map Manager, please check the following</p>
 
 <ul>
-  <li><a href="/mapmanager/getting-started/">Getting started</a></li>
+  <li>You are using the ‘Fiji Life-Line version, 2013 July 15’.</li>
+  <li>Your Fiji.app folder can not be in a folder with any spaces or special characters in its path (this includes ‘Program Files’).</li>
+  <li>You have downloaded and install the ‘Bob_Neurite_Tracer_v3.java’</li>
+  <li>You have specified your Fiji path within Map Manager using ‘MapManager - Hard Drive Paths’.</li>
 </ul>
 
-<h4 id="workflows">Workflows</h4>
 
-<ul>
-  <li><a href="/mapmanager/making-a-map/" title="making-a-map">Making a map</a></li>
-  <li><a href="/mapmanager/simple-stack-db/" title="simple-stack-db">Simple stack database</a></li>
-</ul>
 
-<h4 id="about">About</h4>
+<div class="post-tags">
+  
+  
+  
+  
+  
 
-<p>All code and documentation written by <a href="http://robertcudmore.org">Robert Cudmore</a></p>
+   <!--
+   <a href="javascript:window.print()">print</a>
+    -->
 
-<h4 id="links">Links</h4>
-
-<ul>
-  <li><a href="http://cudmore.github.io/mapmanager/">Map Manager</a> (This page)</li>
-  <li><a href="https://github.com/cudmore/bob-fiji-plugins">Fiji macros and plugins</a> (GitHub)</li>
-  <li>Robert Cudmore’s <a href="http://robertcudmore.org/">Home Page</a></li>
-  <li>Robert Cudmore’s blog <a href="http://cudmore.github.io/">Blog</a></li>
-  <li>Software for <a href="http://cudmore.github.io/Vascular-Analysis/">Vascular Analysis</a></li>
-</ul>
+   <!--
+   <BR>
+   <a href="_posts/2015-05-21-fitting-segments-in-fiji.pdf">print pdf</a>
+   <BR>
+   -->
+    
+</div>
 
 
                     </div>

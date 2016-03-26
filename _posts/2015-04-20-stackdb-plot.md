@@ -8,7 +8,7 @@ tags:
 - Imaging core
 ---
 
-<IMG class="img-float-left" SRC="../images/mm3/mm3-stackdb-plot.png" WIDTH="600">
+<IMG class="img-float-left" SRC="images/mm3/mm3-stackdb-plot.png" WIDTH="600">
 
 <div class="print-page-break"></div>
 

@@ -9,21 +9,21 @@ tags:
 ---
 
 
-<IMG class="img-float-center" SRC="../images/mm3/mm3-plot-panel-big.png" WIDTH="700">
+<IMG class="img-float-center" SRC="images/mm3/mm3-plot-panel-big.png" WIDTH="700">
 
 <div class="print-page-break"></div>
 
 The plot panel provides an interface to make [stack][1] and [map][2] plots.
 
 
-####Plotting a stack
+#### Plotting a stack
 
   - Select a stack in the stack list
   - Select a Y stat
   - Select an X stat
   - Press 'Spine Plot (stack)' button
   
-####Plotting a map
+#### Plotting a map
    - Specify the map to plot with 'Grab Map' button.
    - Select a Y stat
    - Select an X stat
@@ -31,7 +31,7 @@ The plot panel provides an interface to make [stack][1] and [map][2] plots.
    
 Both the Y and X values can be normalized to a session as an absolute change (Abs) or a percent (%). We call this normalization session the 'zero session'. The zero session for each map can be set in the main [map manager panel][3] using 'Zero Session'. This can be over-ridden in the plot panel by turning on the checkbox and specifying a 'Norm Session'
 
-####Saved Plots
+#### Saved Plots
 
 Once a map plot is created, Saved Plots allows the x/y plot statistics to be grabbed and reused quickly. This saves time as the number of statistics in each x/y list is large and the names of each statistic is rather cryptic.
 

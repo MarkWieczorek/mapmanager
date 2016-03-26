@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
 
-        <title>Map Manager : Map Manager Documentation</title>
+        <title>Map Manager : FAQ</title>
         <meta name="description" content="">
 
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
@@ -168,52 +168,67 @@
                     </div>
 
                     <div id=content class=span10>
-                        <p><br /></p>
+                        <div class=page-header>
+    <h3>FAQ
+        
+    </h3>
+</div>
 
-<p style="font-size:20px">
-Map Manager is software to annotate and analyze time-series of 3D image stacks.
-</p>
+<h3 id="limitations">Limitations</h3>
 
-<p><br /></p>
-
-<p><img class="img-float-right" src="/mapmanager/images/imagingcore/stack_example_spines.jpg" width="400" /></p>
-
-<h4 id="main-features">Main features</h4>
+<h4 id="importing">Importing</h4>
 
 <ul>
-  <li>In vivo, ex vivo, and fixed tissue</li>
-  <li>Three dimensional image stacks, one and two color channels</li>
-  <li>Track 3D objects across multiple timepoints</li>
-  <li>Automatically registers objects in different timepoints</li>
-  <li>Written in <a href="http://wavemetrics.com">Igor Pro</a></li>
+  <li>
+    <p>Map Manager is designed to import single color channel 3D .tif files. For other file types (e.g. .lsm) or for other cases like 2 color channel .tif files we have some FIJI plugins that should get you started.</p>
+  </li>
+  <li>
+    <p>To import 2 color channel .tif files, the files need to be split into 2 separate .tif files (with _ch1 and _ch2 in their names). See <a href="https://github.com/cudmore/bob-fiji-plugins">bAlignBatch</a>, a FIJI plugin that does this for you.</p>
+  </li>
+  <li>
+    <p>Does <strong>not</strong> handle .tif stacks with multiple repeats per images plane. Map Manager will import these stacks fine but does not know about the repeats. You want to strip out repeats before importing into Map Manager.</p>
+  </li>
 </ul>
 
-<h4 id="getting-started">Getting started</h4>
+<h4 id="file-name-rules">File name rules</h4>
 
 <ul>
-  <li><a href="/mapmanager/getting-started/">Getting started</a></li>
+  <li>Map Manager will have problems if any of the following strings are in your source file names:</li>
+  <li>_ch1</li>
+  <li>_ch2</li>
+  <li>_zs</li>
 </ul>
 
-<h4 id="workflows">Workflows</h4>
+<h4 id="visualization">Visualization</h4>
 
 <ul>
-  <li><a href="/mapmanager/making-a-map/" title="making-a-map">Making a map</a></li>
-  <li><a href="/mapmanager/simple-stack-db/" title="simple-stack-db">Simple stack database</a></li>
+  <li>Will only display one channel at a time. For most purposes this is fine. You can quickly switch between the color channels and run intensity analysis on both channels independently. To visualize a merged or composite image, use FIJI.</li>
 </ul>
 
-<h4 id="about">About</h4>
 
-<p>All code and documentation written by <a href="http://robertcudmore.org">Robert Cudmore</a></p>
 
-<h4 id="links">Links</h4>
+<div class="post-tags">
+  
+  
+  
+    <b>Tags:</b>  
+  
+  
+  
+    <a href="/mapmanager/tags/#xxx">xxx</a>
+  
 
-<ul>
-  <li><a href="http://cudmore.github.io/mapmanager/">Map Manager</a> (This page)</li>
-  <li><a href="https://github.com/cudmore/bob-fiji-plugins">Fiji macros and plugins</a> (GitHub)</li>
-  <li>Robert Cudmore’s <a href="http://robertcudmore.org/">Home Page</a></li>
-  <li>Robert Cudmore’s blog <a href="http://cudmore.github.io/">Blog</a></li>
-  <li>Software for <a href="http://cudmore.github.io/Vascular-Analysis/">Vascular Analysis</a></li>
-</ul>
+   <!--
+   <a href="javascript:window.print()">print</a>
+    -->
+
+   <!--
+   <BR>
+   <a href="_posts/2015-07-30-faq.pdf">print pdf</a>
+   <BR>
+   -->
+    
+</div>
 
 
                     </div>

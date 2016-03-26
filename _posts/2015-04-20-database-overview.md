@@ -14,25 +14,25 @@ Manage a stack db for a single stack with the [stack db interface][3].
 
 Manage a map with the [map making interface][4].
 
-###Definitions
+### Definitions
 
-####Stack
+#### Stack
 
 A 3D image.
 
-####Stack Database (**stack db**)
+#### Stack Database (**stack db**)
 
 A collection of 3D points and line segments within a single stack.
 
-####Line Segment
+#### Line Segment
 
 A line tracing within a single stack.
 
-####Map
+#### Map
 
 A time-series of stacks and their associated stack db(s).
 
-####Run
+#### Run
 
 A sequence of stacks. A run can follow either 3D points or line segments for each stack in a map.
 

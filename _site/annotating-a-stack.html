@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
 
-        <title>Map Manager : Map Manager Documentation</title>
+        <title>Map Manager : Annotating a stack</title>
         <meta name="description" content="">
 
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
@@ -168,52 +168,129 @@
                     </div>
 
                     <div id=content class=span10>
-                        <p><br /></p>
+                        <div class=page-header>
+    <h3>Annotating a stack
+        
+    </h3>
+</div>
 
-<p style="font-size:20px">
-Map Manager is software to annotate and analyze time-series of 3D image stacks.
+<p><img class="img-float-left" src="images/mm3/mm3-stackdb-plot.png" width="500" /></p>
+
+<div class="print-page-break"></div>
+
+<p>Stacks are annotated with 3D objects and line segments. Taken together, these 3D objects and line segments make a stack database (<strong>stack db</strong>).</p>
+
+<p>This example shows a stack window and its stack db with three line segments and a number of 3D objects, spines in this case.</p>
+
+<p>Open the stack db interface from any <a href="/mapmanager/stack/">stack</a> window using keyboard ‘[’</p>
+
+<h3 id="creating-3d-objects">Creating 3D objects</h3>
+
+<p>Choose the type of object in the ‘New Object’ group and shift+click in the image to create the object.</p>
+
+<p><img class="img-float-right" src="images/mm3/mm3-object-types.png" width="100" />
+- <strong>Spine</strong> : A spine is always connected to a segment (its parent segment). You can only create a spine if you first select the segment that will be its parent.<br />
+- <strong>Bouton</strong> : This also requires a parent<br />
+- vBranch :<br />
+- soma :<br />
+- peri :<br />
+- <strong>controlPnt</strong> : Points along a segment that are used to fit a line in FIJI. 
+- other :</p>
+
+<p>The different names allow you to organize your annotations into different groups. These groups can then be <a href="/mapmanager/search-panel/">searched</a>, <a href="/mapmanager/plot-panel/">plotted</a> and connect together in a <a href="/mapmanager/map-plot/">map</a>.</p>
+
+<p class="tip"><b>Tip.</b> All objects are 3D points. To create a new point with better precision, zoom in the stack window with keyboard '+'. The zoom will follow the mouse pointer. Zoom out again with keyboard '-' and return to the full view with keyboard 'enter'.
 </p>
 
-<p><br /></p>
-
-<p><img class="img-float-right" src="/mapmanager/images/imagingcore/stack_example_spines.jpg" width="400" /></p>
-
-<h4 id="main-features">Main features</h4>
+<h4 id="selecting-an-object">Selecting an object</h4>
 
 <ul>
-  <li>In vivo, ex vivo, and fixed tissue</li>
-  <li>Three dimensional image stacks, one and two color channels</li>
-  <li>Track 3D objects across multiple timepoints</li>
-  <li>Automatically registers objects in different timepoints</li>
-  <li>Written in <a href="http://wavemetrics.com">Igor Pro</a></li>
+  <li>Single-click on the object. Selected object will appear as yellow circles. PRess keyboard ‘esc’ to cancel a selection.</li>
 </ul>
 
-<h4 id="getting-started">Getting started</h4>
+<h4 id="moving-an-object">Moving an object</h4>
 
 <ul>
-  <li><a href="/mapmanager/getting-started/">Getting started</a></li>
+  <li>Select the object (single click), right-click and select ‘Move’. Your next click will be the new 3D position of the object. You are given feedback in the bottom of the stack window. Press ‘esc’ to cancel a move.</li>
 </ul>
 
-<h4 id="workflows">Workflows</h4>
+<h4 id="deleting-an-object">Deleting an object</h4>
 
 <ul>
-  <li><a href="/mapmanager/making-a-map/" title="making-a-map">Making a map</a></li>
-  <li><a href="/mapmanager/simple-stack-db/" title="simple-stack-db">Simple stack database</a></li>
+  <li>Select the object (single click), right-click and select ‘Delete’.</li>
+  <li>Select the object (single-click) and hit the ‘del’ key.</li>
 </ul>
 
-<h4 id="about">About</h4>
+<h3 id="creating-line-segments">Creating line segments</h3>
 
-<p>All code and documentation written by <a href="http://robertcudmore.org">Robert Cudmore</a></p>
+<p>Existing line segments are listed in the ‘Line Segment’ group. Each line segment has a length (um), a number of objects (nObj), a radius (r), and a color (c).</p>
 
-<h4 id="links">Links</h4>
+<p>Line segments are created as follows:</p>
 
-<ul>
-  <li><a href="http://cudmore.github.io/mapmanager/">Map Manager</a> (This page)</li>
-  <li><a href="https://github.com/cudmore/bob-fiji-plugins">Fiji macros and plugins</a> (GitHub)</li>
-  <li>Robert Cudmore’s <a href="http://robertcudmore.org/">Home Page</a></li>
-  <li>Robert Cudmore’s blog <a href="http://cudmore.github.io/">Blog</a></li>
-  <li>Software for <a href="http://cudmore.github.io/Vascular-Analysis/">Vascular Analysis</a></li>
-</ul>
+<ol>
+  <li>Make sure ‘Edit Segments ‘ is turned on.</li>
+  <li>
+    <p>Create a new (empty) line segment<br />
+  Click ‘+’ button in the ‘Line Segment’ group. This will create an empty line segment.</p>
+  </li>
+  <li>Make a series of 3D <strong>control point</strong> objects along your dendrite/axon
+    <ul>
+      <li>Select ‘New Object -&gt; Other -&gt; Control Point’</li>
+      <li>Shift-click in the image to create a <strong>control point</strong>.</li>
+      <li>Continue making <strong>control points</strong> along the desired line segment in the image.</li>
+    </ul>
+  </li>
+  <li>Fit the line in FIJI and import the resulting line segment back into map manager
+    <ul>
+      <li>Right-click on the new line segment (in the top left list) and select ‘Make From Control Points - FIJI’. This will open the xxx plugin in FIJI, fit a line to your <strong>control points</strong> and open the fitted line segment in the map manager stack window.</li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>Important:</strong> When making control points, they need to be in order along a segment. If you ‘double-back’ a control point on the segment, the line fit with dumbly follow this ordering of control points. For help on the ordering of your control points, open the ‘options’ panel and turn on ‘Control Point Help’ with the ‘On’ button. If it all gets confusing you can just delete all your control points and start over.</p>
+
+<p><strong>Important:</strong> When making a map, you will be associating individual line segments  from one session to the next. For segments that you will connect together in a map, make sure your control points are in the same general direction along each segment. If your control points go left to right in session 1, they should also go left to right in session 2.</p>
+
+<h3 id="line-segment-radius">Line segment radius</h3>
+
+<p>Each line segment has a fixed radius in um. Spines are connected to this radius.</p>
+
+<p>To change the radius, double-click the radius for a segment and enter a new number. The radius of each segment is displayed in the ‘r’ column.</p>
+
+<p>Setting the radius will reconnect all your spines to that new radius while preserving the spine connection point to the line.</p>
+
+<p>To set all the radii of a run of connected segments, right click on the segment in the list and select ‘Set run to same radius’.</p>
+
+<h3 id="line-segment-pivot-points">Line segment pivot points</h3>
+
+<p>When in a map, line segments need a ‘pivot point’. Specify a pivot point for a segment by clicking a point in the segment, right-click and select the ‘Set As Segment Pivot’ menu.</p>
+
+<p>The pivot point should specify a region of the segment that is the same in all sessions. A good strategy is to choose a region of the segment near an obvious spine that is present in all sessions. Another strategy is to choose a pivot point where some other segment (dendrite) crosses near your segment as these tend to remain stable across time. Try and put the pivot point near the center of the segment, do not place it at either end. The pivot point is used to calculate a line distance along the segment (in um) which in turn will be used to auto-guess connections between objects (spines) across sessions.</p>
+
+
+
+<div class="post-tags">
+  
+  
+  
+    <b>Tags:</b>  
+  
+  
+  
+    <a href="/mapmanager/tags/#Workflow">Workflow</a>
+  
+
+   <!--
+   <a href="javascript:window.print()">print</a>
+    -->
+
+   <!--
+   <BR>
+   <a href="_posts/2015-04-20-annotating-a-stack.pdf">print pdf</a>
+   <BR>
+   -->
+    
+</div>
 
 
                     </div>

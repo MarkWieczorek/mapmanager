@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
 
-        <title>Map Manager : Map Manager Documentation</title>
+        <title>Map Manager : Database overview</title>
         <meta name="description" content="">
 
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
@@ -168,52 +168,64 @@
                     </div>
 
                     <div id=content class=span10>
-                        <p><br /></p>
+                        <div class=page-header>
+    <h3>Database overview
+        
+    </h3>
+</div>
 
-<p style="font-size:20px">
-Map Manager is software to annotate and analyze time-series of 3D image stacks.
-</p>
+<p>Map Manager builds a database of 3D objects and line segments within a single <a href="/mapmanager/stack/">stack</a>. Stacks and their associated 3D objects and line segments can then be connected together into a time-series with a <a href="/mapmanager/map-plot/">map</a>.</p>
 
-<p><br /></p>
+<p>Manage a stack db for a single stack with the <a href="/mapmanager/annotating-a-stack/">stack db interface</a>.</p>
 
-<p><img class="img-float-right" src="/mapmanager/images/imagingcore/stack_example_spines.jpg" width="400" /></p>
+<p>Manage a map with the <a href="/mapmanager/making-a-map/">map making interface</a>.</p>
 
-<h4 id="main-features">Main features</h4>
+<h3 id="definitions">Definitions</h3>
 
-<ul>
-  <li>In vivo, ex vivo, and fixed tissue</li>
-  <li>Three dimensional image stacks, one and two color channels</li>
-  <li>Track 3D objects across multiple timepoints</li>
-  <li>Automatically registers objects in different timepoints</li>
-  <li>Written in <a href="http://wavemetrics.com">Igor Pro</a></li>
-</ul>
+<h4 id="stack">Stack</h4>
 
-<h4 id="getting-started">Getting started</h4>
+<p>A 3D image.</p>
 
-<ul>
-  <li><a href="/mapmanager/getting-started/">Getting started</a></li>
-</ul>
+<h4 id="stack-database-stack-db">Stack Database (<strong>stack db</strong>)</h4>
 
-<h4 id="workflows">Workflows</h4>
+<p>A collection of 3D points and line segments within a single stack.</p>
 
-<ul>
-  <li><a href="/mapmanager/making-a-map/" title="making-a-map">Making a map</a></li>
-  <li><a href="/mapmanager/simple-stack-db/" title="simple-stack-db">Simple stack database</a></li>
-</ul>
+<h4 id="line-segment">Line Segment</h4>
 
-<h4 id="about">About</h4>
+<p>A line tracing within a single stack.</p>
 
-<p>All code and documentation written by <a href="http://robertcudmore.org">Robert Cudmore</a></p>
+<h4 id="map">Map</h4>
 
-<h4 id="links">Links</h4>
+<p>A time-series of stacks and their associated stack db(s).</p>
 
-<ul>
-  <li><a href="http://cudmore.github.io/mapmanager/">Map Manager</a> (This page)</li>
-  <li><a href="https://github.com/cudmore/bob-fiji-plugins">Fiji macros and plugins</a> (GitHub)</li>
-  <li>Robert Cudmore’s <a href="http://robertcudmore.org/">Home Page</a></li>
-  <li>Robert Cudmore’s blog <a href="http://cudmore.github.io/">Blog</a></li>
-  <li>Software for <a href="http://cudmore.github.io/Vascular-Analysis/">Vascular Analysis</a></li>
-</ul>
+<h4 id="run">Run</h4>
+
+<p>A sequence of stacks. A run can follow either 3D points or line segments for each stack in a map.</p>
+
+
+
+<div class="post-tags">
+  
+  
+  
+    <b>Tags:</b>  
+  
+  
+  
+    <a href="/mapmanager/tags/#Workflow">Workflow</a>
+  
+
+   <!--
+   <a href="javascript:window.print()">print</a>
+    -->
+
+   <!--
+   <BR>
+   <a href="_posts/2015-04-20-database-overview.pdf">print pdf</a>
+   <BR>
+   -->
+    
+</div>
 
 
                     </div>

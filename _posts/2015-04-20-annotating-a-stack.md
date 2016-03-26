@@ -9,7 +9,7 @@ tags:
 ---
 
 
-<IMG class="img-float-left" SRC="../images/mm3/mm3-stackdb-plot.png" WIDTH="500">
+<IMG class="img-float-left" SRC="images/mm3/mm3-stackdb-plot.png" WIDTH="500">
 
 <div class="print-page-break"></div>
 
@@ -19,11 +19,11 @@ This example shows a stack window and its stack db with three line segments and 
 
 Open the stack db interface from any [stack][4] window using keyboard '['
 
-###Creating 3D objects
+### Creating 3D objects
 
 Choose the type of object in the 'New Object' group and shift+click in the image to create the object.
 
-<IMG class="img-float-right" SRC="../images/mm3/mm3-object-types.png" WIDTH="100">
+<IMG class="img-float-right" SRC="images/mm3/mm3-object-types.png" WIDTH="100">
 - **Spine** : A spine is always connected to a segment (its parent segment). You can only create a spine if you first select the segment that will be its parent.  
 - **Bouton** : This also requires a parent  
 - vBranch :  
@@ -38,21 +38,21 @@ The different names allow you to organize your annotations into different groups
 </p>
 
 
-####Selecting an object
+#### Selecting an object
 
 - Single-click on the object. Selected object will appear as yellow circles. PRess keyboard 'esc' to cancel a selection.
 
-####Moving an object
+#### Moving an object
 
 - Select the object (single click), right-click and select 'Move'. Your next click will be the new 3D position of the object. You are given feedback in the bottom of the stack window. Press 'esc' to cancel a move.
 
-####Deleting an object
+#### Deleting an object
 
 - Select the object (single click), right-click and select 'Delete'. 
 - Select the object (single-click) and hit the 'del' key.
 
 
-###Creating line segments
+### Creating line segments
 
 Existing line segments are listed in the 'Line Segment' group. Each line segment has a length (um), a number of objects (nObj), a radius (r), and a color (c).
 
@@ -74,7 +74,7 @@ Line segments are created as follows:
 
 **Important:** When making a map, you will be associating individual line segments  from one session to the next. For segments that you will connect together in a map, make sure your control points are in the same general direction along each segment. If your control points go left to right in session 1, they should also go left to right in session 2.
 
-###Line segment radius
+### Line segment radius
 
 Each line segment has a fixed radius in um. Spines are connected to this radius.
 
@@ -84,7 +84,7 @@ Setting the radius will reconnect all your spines to that new radius while prese
 
 To set all the radii of a run of connected segments, right click on the segment in the list and select 'Set run to same radius'.
 
-###Line segment pivot points
+### Line segment pivot points
 
 When in a map, line segments need a 'pivot point'. Specify a pivot point for a segment by clicking a point in the segment, right-click and select the 'Set As Segment Pivot' menu.
 
