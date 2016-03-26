@@ -152,19 +152,19 @@ Thus, there are two cases:
  
 
 
-[1]: /mapmanager/stack-browser/
-[2]: /mapmanager/stack/
-[3]: /mapmanager/user-files/
-[4]: /mapmanager/annotating-a-stack/
-[5]: /mapmanager/search-panel/
-[6]: /mapmanager/plot-panel/
-[7]: /mapmanager/stackdb-options-panel/
-[8]: /mapmanager/process-panel/
-[9]: /mapmanager/stack-browser/
-[10]: /mapmanager/hdd-paths/
-[11]: /mapmanager/run-plot/
-[12]: /mapmanager/map-plot/
-[13]: /mapmanager/main-panel/
+[1]: stack-browser
+[2]: stack
+[3]: user-files
+[4]: annotating-a-stack
+[5]: search-panel
+[6]: plot-panel
+[7]: stackdb-options-panel
+[8]: process-panel
+[9]: stack-browser
+[10]: hdd-paths
+[11]: run-plot
+[12]: map-plot
+[13]: main-panel
 [14]: https://github.com/cudmore/bob-fiji-plugins
-[15]: /mapmanager/fitting-segments-in-fiji/
-[16]: /mapmanager/find-points-panel/
+[15]: fitting-segments-in-fiji
+[16]: find-points-panel

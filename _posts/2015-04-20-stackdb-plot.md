@@ -19,8 +19,8 @@ All stack db plots are interactive. Selecting an object will propagate this sele
 Toggle the stack db interface in any [stack][2] using keyboard '['
  
 
-[1]: /mapmanager/plot-panel/
-[2]: /mapmanager/stack/
-[3]: /mapmanager/map-plot/
-[4]: /mapmanager/stack-plot/
+[1]: plot-panel
+[2]: stack
+[3]: map-plot
+[4]: stack-plot
 

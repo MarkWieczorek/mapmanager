@@ -36,7 +36,7 @@ A time-series of stacks and their associated stack db(s).
 
 A sequence of stacks. A run can follow either 3D points or line segments for each stack in a map.
 
-[1]: /mapmanager/stack/
-[2]: /mapmanager/map-plot/
-[3]: /mapmanager/annotating-a-stack/
-[4]: /mapmanager/making-a-map/
+[1]: stack
+[2]: map-plot
+[3]: annotating-a-stack
+[4]: making-a-map

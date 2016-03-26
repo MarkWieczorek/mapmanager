@@ -17,5 +17,5 @@ The scale panel provides an interface to tweak Igor plots.
 
  
 
-[1]: /mapmanager/stack-browser/
+[1]: stack-browser
 

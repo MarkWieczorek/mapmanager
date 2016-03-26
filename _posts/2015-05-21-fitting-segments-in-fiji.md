@@ -11,7 +11,7 @@ Line segments are fit in FIJI using Map Manager specified control points.
 
 You are required to use <font color="red"><strong>ImageJ 1.47v</strong></font>, this corresponds to the <font color="red"><strong>'Fiji Life-Line version, 2013 July 15'</strong></font> on the main [FIJI download page][1].
 
-###(1) Download 'Fiji Life-Line version, 2013 July 15'
+### (1) Download 'Fiji Life-Line version, 2013 July 15'
   - Mac: http://fiji.sc/downloads/Life-Line/fiji-macosx-20130715.dmg
   - Windows (64bit): http://fiji.sc/downloads/Life-Line/fiji-win64-20130715.zip
   - Windows (32-bit): http://fiji.sc/downloads/Life-Line/fiji-win32-20130715.zip
@@ -24,7 +24,7 @@ If you already have a newer version of Fiji installed, this is fine as two versi
 
 The reason we use this older version of Fiji is that newer versions of Fiji have undocumented changes to the backend JAVA programming interface. Until this is resolved, we will continue to use the older version of Fiji.
 
-###(2) Installing the 'Bob_Neurite_Tracer_v3.java' plugin
+### (2) Installing the 'Bob_Neurite_Tracer_v3.java' plugin
 
 When you fit a line in Fiji from within Map Manager, you are using the Fiji plugin Bob_Neurite_Tracer_v3.java
 
@@ -33,7 +33,7 @@ To install this plugin
  1. Download [Bob_Neurite_Tracer_v3.java][4] or from our [Github repository][2].
  2. Copy Bob_Neurite_Tracer_v3.java into your Fiji 'plugins' folder.
  
-###(3) Configuring Map Manager to fit a line In Fiji
+### (3) Configuring Map Manager to fit a line In Fiji
  
 You need to specify the location of your Fiji program from within Map Manager. This is most easily done using the [Hard Drive Paths][5] panel. Here are the details:
 
@@ -64,7 +64,7 @@ If line fits do not work from within Map Manager, please check the following
 
 [1]: http://fiji.sc/Downloads
 [2]: https://github.com/cudmore/bob-fiji-plugins
-[3]: /mapmanager/user-files/
-[4]: ../images/Bob_Neurite_Tracer_v3.java
-[5]: /mapmanager/hdd-paths
-[6]: /mapmanager/stackdb-options-panel
+[3]: user-files
+[4]: images/Bob_Neurite_Tracer_v3.java
+[5]: hdd-paths
+[6]: stackdb-options-panel

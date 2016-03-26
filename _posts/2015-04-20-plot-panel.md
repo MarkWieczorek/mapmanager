@@ -47,8 +47,8 @@ Double-click on a Saved Plot name to set its name.
 
 Saved plots are saved with the global map manager options in the main [map manager options panel][4].
 
-[1]: /mapmanager/stack-plot/
-[2]: /mapmanager/map-plot/
-[3]: /mapmanager/main-panel/
-[4]: /mapmanager/stackdb-options-panel/
+[1]: stack-plot
+[2]: map-plot
+[3]: main-panel
+[4]: stackdb-options-panel
 

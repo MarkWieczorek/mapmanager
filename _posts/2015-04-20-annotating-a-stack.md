@@ -90,9 +90,9 @@ When in a map, line segments need a 'pivot point'. Specify a pivot point for a s
 
 The pivot point should specify a region of the segment that is the same in all sessions. A good strategy is to choose a region of the segment near an obvious spine that is present in all sessions. Another strategy is to choose a pivot point where some other segment (dendrite) crosses near your segment as these tend to remain stable across time. Try and put the pivot point near the center of the segment, do not place it at either end. The pivot point is used to calculate a line distance along the segment (in um) which in turn will be used to auto-guess connections between objects (spines) across sessions.
 
-[1]: /mapmanager/stack-plot/
-[2]: /mapmanager/map-plot/
-[3]: /mapmanager/search-panel/
-[4]: /mapmanager/stack/
-[5]: /mapmanager/plot-panel/
+[1]: stack-plot
+[2]: map-plot
+[3]: search-panel
+[4]: stack
+[5]: plot-panel
 

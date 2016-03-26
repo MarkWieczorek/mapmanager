@@ -210,7 +210,7 @@ A spines intensity analysis becomes dirty when:
   - Any of the other spines connected to it are changed
   - Its dynamics are changed (addition, subtraction, persistent)
 
-[1]: /mapmanager/plot-panel/
-[2]: /mapmanager/stackdb-options-panel/
-[3]: /mapmanager/main-panel/
-[4]: /mapmanager/search-panel/
+[1]: plot-panel
+[2]: stackdb-options-panel
+[3]: main-panel
+[4]: search-panel

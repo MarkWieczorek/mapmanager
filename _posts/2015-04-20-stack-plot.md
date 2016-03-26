@@ -23,8 +23,8 @@ Example stack plot of position of spines along a dendritic segment. Spines can b
 
 Example stack plot of spine length in &mu;m (sLen2d) versus spine index. Spine index is the order spines were created in 1, 2, 3, etc. etc.
 
-[1]: /mapmanager/plot-panel/
-[2]: /mapmanager/stack/
-[3]: /mapmanager/map-plot/
+[1]: plot-panel
+[2]: stack
+[3]: map-plot
 
 <div class="print-page-break"></div>

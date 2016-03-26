@@ -51,10 +51,10 @@ tags:
 [2]: https://www.wavemetrics.com/order/order1.php?type=Academic
 [3]: https://www.wavemetrics.com/support/versions.htm
 [4]: https://www.wavemetrics.com/support/demos.htm
-[5]: /mapmanager/main-panel/
-[6]: /mapmanager/stack-browser/
-[7]: /mapmanager/fitting-segments-in-fiji/
-[8]: /mapmanager/user-files/
-[9]: /mapmanager/stackdb-options-panel/
-[10]: /mapmanager/simple-stack-db/
-[11]: /mapmanager/making-a-map/
+[5]: main-panel
+[6]: stack-browser
+[7]: fitting-segments-in-fiji
+[8]: user-files
+[9]: stackdb-options-panel
+[10]: simple-stack-db
+[11]: making-a-map

@@ -96,20 +96,20 @@ Each of these buttons will open a different Map Manager panel.
 <div class="print-page-break"></div>
 
 
-[1]: /mapmanager/stack-browser/
-[2]: /mapmanager/stack/
-[3]: /mapmanager/user-files/
-[4]: /mapmanager/annotating-a-stack/
-[5]: /mapmanager/search-panel/
-[6]: /mapmanager/plot-panel/
-[7]: /mapmanager/stackdb-options-panel/
-[8]: /mapmanager/process-panel/
-[9]: /mapmanager/stack-browser/
-[10]: /mapmanager/hdd-paths/
-[11]: /mapmanager/run-plot/
-[12]: /mapmanager/map-plot/
-[13]: /mapmanager/making-a-map/
-[14]: /mapmanager/scale-panel/
-[15]: /mapmanager/find-points-panel/
+[1]: stack-browser
+[2]: stack
+[3]: user-files
+[4]: annotating-a-stack
+[5]: search-panel
+[6]: plot-panel
+[7]: stackdb-options-panel
+[8]: process-panel
+[9]: stack-browser
+[10]: hdd-paths
+[11]: run-plot
+[12]: map-plot
+[13]: making-a-map
+[14]: scale-panel
+[15]: find-points-panel
 
 <div class="print-page-break"></div>

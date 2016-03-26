@@ -119,6 +119,6 @@ Threshold time can be specified as: sessions, seconds, days, or hours.
 - Lost Transient :
 - Always Present : Spines present in all sessions
 
-[1]: /mapmanager/stack/
-[2]: /mapmanager/map-plot/
-[3]: /mapmanager/stack-browser/
+[1]: stack
+[2]: map-plot
+[3]: stack-browser

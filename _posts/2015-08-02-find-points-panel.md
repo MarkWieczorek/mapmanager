@@ -84,5 +84,5 @@ By sorting the list with the destination distance from pivot (dpDist), you get a
 <div class="print-page-break"></div>
 Example usage of find points panel. Here, we have a run of sessions 1/2/3 (top row). We have positioned the Find Points panel below the stack for session 2. By selecting rows (spines) in Find Points we can browse all spines in session 2, visualize their connections to session 3, and finally edit their connections to session 3 (using the keyboard in Find Points Panel).
 
-[1]: /mapmanager/run-plot/
-[2]: /mapmanager/map-plot/
+[1]: run-plot
+[2]: map-plot

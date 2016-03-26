@@ -159,8 +159,8 @@ Open the Stack Browser Options panel using the main menu 'MapManager - Stack Bro
 
 <div class="print-page-break"></div>
 
-[1]: /mapmanager/stack/
-[2]: /mapmanager/annotating-a-stack/
-[3]: /mapmanager/user-files/
-[4]: /mapmanager/intensity/
-[5]: /mapmanager/main-panel/
+[1]: stack
+[2]: annotating-a-stack
+[3]: user-files
+[4]: intensity
+[5]: main-panel

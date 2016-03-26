@@ -58,10 +58,10 @@ First select the type of object with 'Object Type' popup. Start by selecting 'Sp
   
   For example, to generate a search of all long spines, select sLen2d/IntCh1, enter a spine length (um) like 4, select '>' operator and press the 'Manual Search' button.
      
-[1]: /mapmanager/stack-browser/
-[2]: /mapmanager/map-plot/
-[3]: /mapmanager/stack-plot/
-[4]: /mapmanager/run-plot/
-[5]: /mapmanager/intensity/
-[6]: /mapmanager/main-panel/
+[1]: stack-browser
+[2]: map-plot
+[3]: stack-plot
+[4]: run-plot
+[5]: intensity
+[6]: main-panel
 

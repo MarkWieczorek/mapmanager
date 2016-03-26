@@ -123,5 +123,5 @@ Objects will only be connected if their position on the segment line is **less**
 	
 	#“”
 	
-[1]: /mapmanager/hdd-paths
-[2]: /mapmanager/stackdb-options-panel
+[1]: hdd-paths
+[2]: stackdb-options-panel
