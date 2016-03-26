@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Map Manager - Articles</title>
+    <description></description>
+    <link>
+    </link>
+    
+      
+      <item>
+        <title>Gallery</title>
+        
+          <description>&lt;h4 id=&quot;gallery&quot;&gt;Gallery&lt;/h4&gt;
+
+</description>
+        
+        <pubDate>Sun, 15 Nov 2015 17:46:33 -0500</pubDate>
+        <link>
+        /gallery</link>
+        <guid isPermaLink="true">/gallery</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Find Points</title>
+        
+          <description>&lt;p&gt;&amp;lt;FONT size=3em color=”red”&amp;gt;&lt;strong&gt;New on October, 2015.&lt;/strong&gt; This documentation needs some work.&amp;lt;/font&amp;gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sun, 02 Aug 2015 18:46:33 -0400</pubDate>
+        <link>
+        /find-points-panel</link>
+        <guid isPermaLink="true">/find-points-panel</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Getting started</title>
+        
+          <description>&lt;h3 id=&quot;installing-igor-pro&quot;&gt;Installing Igor Pro&lt;/h3&gt;
+
+</description>
+        
+        <pubDate>Thu, 30 Jul 2015 18:46:33 -0400</pubDate>
+        <link>
+        /getting-started</link>
+        <guid isPermaLink="true">/getting-started</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>FAQ</title>
+        
+          <description>&lt;h3 id=&quot;limitations&quot;&gt;Limitations&lt;/h3&gt;
+
+</description>
+        
+        <pubDate>Thu, 30 Jul 2015 18:46:33 -0400</pubDate>
+        <link>
+        /faq</link>
+        <guid isPermaLink="true">/faq</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Spine Dynamics</title>
+        
+          <description>&lt;h3 id=&quot;density-report&quot;&gt;Density Report&lt;/h3&gt;
+
+</description>
+        
+        <pubDate>Sat, 25 Jul 2015 18:46:33 -0400</pubDate>
+        <link>
+        /spine-dynamics</link>
+        <guid isPermaLink="true">/spine-dynamics</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Intensity</title>
+        
+          <description>&lt;h3 id=&quot;algorithm-and-strategy&quot;&gt;Algorithm and Strategy&lt;/h3&gt;
+
+</description>
+        
+        <pubDate>Sat, 25 Jul 2015 18:46:33 -0400</pubDate>
+        <link>
+        /intensity</link>
+        <guid isPermaLink="true">/intensity</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Hard Drive Paths</title>
+        
+          <description>&lt;p&gt;&lt;img class=&quot;img-float-left&quot; src=&quot;images/mm3/mm3-hdd-paths.png&quot; width=&quot;650&quot; /&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Wed, 22 Jul 2015 18:46:33 -0400</pubDate>
+        <link>
+        /hdd-paths</link>
+        <guid isPermaLink="true">/hdd-paths</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>File format</title>
+        
+          <description>&lt;p&gt;Map Manager 3 can save two different types of files&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Thu, 28 May 2015 18:01:06 -0400</pubDate>
+        <link>
+        /File-format</link>
+        <guid isPermaLink="true">/File-format</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Fitting segments in Fiji</title>
+        
+          <description>&lt;p&gt;Line segments are fit in FIJI using Map Manager specified control points.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 21 Apr 2015 18:01:06 -0400</pubDate>
+        <link>
+        /fitting-segments-in-fiji</link>
+        <guid isPermaLink="true">/fitting-segments-in-fiji</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>User files</title>
+        
+          <description>&lt;p class=&quot;important&quot;&gt;
+User files have been completely revamped. Global options can now be easily saved and loaded using the &#39;Stack DB Options Panel&#39;.
+&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 20 Apr 2015 18:46:33 -0400</pubDate>
+        <link>
+        /user-files</link>
+        <guid isPermaLink="true">/user-files</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Stack DB plot</title>
+        
+          <description>&lt;p&gt;&lt;img class=&quot;img-float-left&quot; src=&quot;images/mm3/mm3-stackdb-plot.png&quot; width=&quot;600&quot; /&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 20 Apr 2015 18:46:33 -0400</pubDate>
+        <link>
+        /stackdb-plot</link>
+        <guid isPermaLink="true">/stackdb-plot</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Options</title>
+        
+          <description>&lt;p&gt;The Map Manager Options panel provides global options to control the behavior of Map Manager. Options can be saved and then loaded using the &lt;strong&gt;User&lt;/strong&gt; section. Values shown in &lt;font color=&quot;red&quot;&gt;&lt;strong&gt;red&lt;/strong&gt;&lt;/font&gt; will effect your analysis.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 20 Apr 2015 18:46:33 -0400</pubDate>
+        <link>
+        /stackdb-options-panel</link>
+        <guid isPermaLink="true">/stackdb-options-panel</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Stack plot</title>
+        
+          <description>&lt;p&gt;A stack plot shows a value/statistic for all 3D annotations in a single &lt;a href=&quot;stack&quot;&gt;stack&lt;/a&gt;. Each point is a value/statistic for one 3D annotation in the stack.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 20 Apr 2015 18:46:33 -0400</pubDate>
+        <link>
+        /stack-plot</link>
+        <guid isPermaLink="true">/stack-plot</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Search panel</title>
+        
+          <description>&lt;p&gt;&lt;img class=&quot;img-float-left&quot; src=&quot;images/mm3/mm3-search-panel.png&quot; width=&quot;900&quot; /&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 20 Apr 2015 18:46:33 -0400</pubDate>
+        <link>
+        /search-panel</link>
+        <guid isPermaLink="true">/search-panel</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Scale panel</title>
+        
+          <description>&lt;p&gt;The scale panel provides an interface to tweak Igor plots.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 20 Apr 2015 18:46:33 -0400</pubDate>
+        <link>
+        /scale-panel</link>
+        <guid isPermaLink="true">/scale-panel</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Run plot</title>
+        
+          <description>&lt;p&gt;&lt;img class=&quot;img-float-center&quot; src=&quot;images/mm3/example-spine-run.png&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 20 Apr 2015 18:46:33 -0400</pubDate>
+        <link>
+        /run-plot</link>
+        <guid isPermaLink="true">/run-plot</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Process panel</title>
+        
+          <description>&lt;p&gt;&lt;img class=&quot;img-float-left&quot; src=&quot;images/mm3/mm3-process-panel.png&quot; width=&quot;400&quot; /&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 20 Apr 2015 18:46:33 -0400</pubDate>
+        <link>
+        /process-panel</link>
+        <guid isPermaLink="true">/process-panel</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Plot panel</title>
+        
+          <description>&lt;p&gt;&lt;img class=&quot;img-float-center&quot; src=&quot;images/mm3/mm3-plot-panel-big.png&quot; width=&quot;700&quot; /&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 20 Apr 2015 18:46:33 -0400</pubDate>
+        <link>
+        /plot-panel</link>
+        <guid isPermaLink="true">/plot-panel</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Map plot</title>
+        
+          <description>&lt;p&gt;A map plot shows objects across multiple imaging sessions. Objects persisting from one session to the next are connected with a line.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 20 Apr 2015 18:46:33 -0400</pubDate>
+        <link>
+        /map-plot</link>
+        <guid isPermaLink="true">/map-plot</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Making a map</title>
+        
+          <description>&lt;p&gt;&lt;img class=&quot;img-float-left&quot; src=&quot;images/mm3/mm3-main-panel.png&quot; width=&quot;650&quot; /&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 20 Apr 2015 18:46:33 -0400</pubDate>
+        <link>
+        /making-a-map</link>
+        <guid isPermaLink="true">/making-a-map</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Main panel</title>
+        
+          <description>&lt;p&gt;The main map manager panel provides an interface to load, save and browse Map Manager maps. Open the main map manager panel using the menu ‘MapManager - Map Manager Panel’&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 20 Apr 2015 18:46:33 -0400</pubDate>
+        <link>
+        /main-panel</link>
+        <guid isPermaLink="true">/main-panel</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Database overview</title>
+        
+          <description>&lt;p&gt;Map Manager builds a database of 3D objects and line segments within a single &lt;a href=&quot;stack&quot;&gt;stack&lt;/a&gt;. Stacks and their associated 3D objects and line segments can then be connected together into a time-series with a &lt;a href=&quot;map-plot&quot;&gt;map&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 20 Apr 2015 18:46:33 -0400</pubDate>
+        <link>
+        /database-overview</link>
+        <guid isPermaLink="true">/database-overview</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Annotating a stack</title>
+        
+          <description>&lt;p&gt;&lt;img class=&quot;img-float-left&quot; src=&quot;images/mm3/mm3-stackdb-plot.png&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 20 Apr 2015 18:46:33 -0400</pubDate>
+        <link>
+        /annotating-a-stack</link>
+        <guid isPermaLink="true">/annotating-a-stack</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Stack Browser</title>
+        
+          <description>&lt;p&gt;&lt;img class=&quot;img-float-left&quot; src=&quot;images/mm3/mm3-stack-browser.png&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sun, 19 Apr 2015 18:46:33 -0400</pubDate>
+        <link>
+        /stack-browser</link>
+        <guid isPermaLink="true">/stack-browser</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Simple stack database</title>
+        
+          <description>&lt;p&gt;This describes a workflow for annotating 3D points in a &lt;strong&gt;single timepoint&lt;/strong&gt;. Please see &lt;a href=&quot;making-a-map&quot;&gt;making a map&lt;/a&gt; to collect a sequence of stacks into a timeseries map.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 21 Feb 2015 17:46:33 -0500</pubDate>
+        <link>
+        /simple-stack-db</link>
+        <guid isPermaLink="true">/simple-stack-db</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Stack</title>
+        
+          <description>&lt;p&gt;&lt;img class=&quot;img-float-left&quot; src=&quot;images/imagingcore/stack-example-spines4.png&quot; width=&quot;300&quot; /&gt;
+&lt;img class=&quot;img-float-left&quot; src=&quot;images/imagingcore/stack-example-vascular-4.png&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 30 Jan 2015 17:46:33 -0500</pubDate>
+        <link>
+        /stack</link>
+        <guid isPermaLink="true">/stack</guid>
+      </item>
+      
+    
+  </channel>
+</rss>
