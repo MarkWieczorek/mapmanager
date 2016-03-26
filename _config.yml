@@ -41,7 +41,7 @@ baseurl: '/mapmanager'
 permalink: /:title
 
 # Syntax highlighting
-highlighter: pygments
+highlighter: rouge
 
 # Since these are pages, it doesn't really matter
 future: true

@@ -199,7 +199,7 @@
 
 <p>It is suggested that you use the <a href="https://store.continuum.io/cshop/anaconda/">Anaconda</a> python distribution as it comes with many useful packages pre-installed including hdf5 for python. Download Anaconda it <a href="http://continuum.io/downloads">here</a>.</p>
 
-<pre><code>import h5py
+<div class="highlighter-rouge"><pre class="highlight"><code>import h5py
 import numpy as np
 
 # open h5 file
@@ -247,6 +247,7 @@ f[myMap].values()[9].values()[0][0][1]
 # spine 1, spineLen2
 f[myMap].values()[9].values()[0][1][1]
 </code></pre>
+</div>
 
 <p>In [64]: f[myMap].values()<a href="https://github.com/cudmore/mapmanager/blob/gh-pages/_notebooks/MapManager.ipynb">9</a>.values()
 Out[64]: 
@@ -274,7 +275,7 @@ Out[64]:
 
 <h3 id="this-is-working">this is working</h3>
 
-<pre><code>mya=np.arange(385, dtype=np.float32)
+<div class="highlighter-rouge"><pre class="highlight"><code>mya=np.arange(385, dtype=np.float32)
 for a in range(385):
     mya[a] = f[myMap].values()[9].values()[0][a][1]
 
@@ -284,6 +285,7 @@ plt.xlabel('Spine Index')
 plt.ylabel('Spine Length 2D (um)')
 plt.show()
 </code></pre>
+</div>
 
 <h4 id="use-the-python-hdf5manager">Use the Python hdf5Manager</h4>
 
@@ -301,13 +303,14 @@ plt.show()
   <li>
     <p>Getting h5_manager to work</p>
 
-    <pre><code> # install pyqt4 in anaconda
+    <div class="highlighter-rouge"><pre class="highlight"><code> # install pyqt4 in anaconda
  conda install pyqt
  # update anaconda (h5_manager was failing to import matplotlib)
  conda update --prefix /Users/cudmore/anaconda anaconda
  # run h5_manager
  python h5_manager.py 
 </code></pre>
+    </div>
   </li>
 </ol>
 

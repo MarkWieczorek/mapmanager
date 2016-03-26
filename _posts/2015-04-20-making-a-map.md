@@ -31,7 +31,7 @@ The main Map Manager panel shows a list of open maps on the left. When a map is 
  4. Repeat # 3 for each stack.
  5. Save the map with 'Save Map' button.
  
-####<span style="color:red">Important</span>
+#### <span style="color:red">Important</span>
  - When you make a map, you need to choose the 'Number Of Channels' in each stack/session. Map Manager will only allow one choice of 'Number Of Channels' per map. You cannot mix one and two channel stacks within a map.
  - Make sure the scale of each imported stack is correct. It is hard to change the scale later. You can set the scale of a stack in its stack window with 'shift+p'.
  - Make sure the sessions in your map are imported in the correct order. It is hard to change the order later.
@@ -113,15 +113,18 @@ This is the core of Map Manager and you will spend most of your time doing this.
  - All added spines will appear as a list in the search results.
  - Right-click on a spine and select 'plot run +- 1' to bring up a spine run. [HERE I NEED TO CHANGE THE INTERFACE. I NEED A QUICKER WAY OF BRINING UP A SPINE RUN!!!]
  
-**THIS IS WHERE I AM ENDING FOR NOW ON July 29 ... THIS NEEDS TO BE EXPANDED**
+**THIS IS WHERE I AM ENDING FOR NOW ON July 29, 2015 ... THIS NEEDS TO BE EXPANDED**
  
 <BR>
 <BR>
 <BR>
 <BR>
 <BR>
+
 ## DO NOT READ BELOW HERE !!!!
-###[ADVANCED]: Importing a bSpine map
+
+### [ADVANCED]: Importing a bSpine map
+
 <IMG class="img-float-left" SRC="images/mm3/mm3-import-bspine.png" WIDTH="275">
 
 Importing bSpine maps is tricky. The problem is if your original maps for one time-series (_d1, _d2, etc.) have different sessions. For example, _d1 has sessions from dates 1,2,3 but _d2 has sessions from dates 1,2,6,12 there <span style="color:red">will be an error</span>.

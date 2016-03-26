@@ -201,17 +201,25 @@
   <li>Save the map with ‘Save Map’ button.</li>
 </ol>
 
-<p>####<span style="color:red">Important</span>
- - When you make a map, you need to choose the ‘Number Of Channels’ in each stack/session. Map Manager will only allow one choice of ‘Number Of Channels’ per map. You cannot mix one and two channel stacks within a map.
- - Make sure the scale of each imported stack is correct. It is hard to change the scale later. You can set the scale of a stack in its stack window with ‘shift+p’.
- - Make sure the sessions in your map are imported in the correct order. It is hard to change the order later.
- - As you import stacks from the <a href="/mapmanager/stack-browser/">stack browser</a> there are some rules that must be followed. You will be prompted when you break these rules. In particular:
-   1. The stack scale must be set. Set the scale of a <a href="/mapmanager/stack/">stack</a> in a stack window with shift+p.
-   2. The stack must be loaded. Double click the stack in the <a href="/mapmanager/stack-browser/">stack browser</a> to load a stack.
-   3. When importing 2 channel stacks, both channels must be loaded and you must select the first channel (ending in _ch1) in the stack browser.
- - New maps are saved to a default hard-drive folder. The default folder can be specified the <a href="/mapmanager/hdd-paths/">Hard Drive Paths Panel</a>. Right-click on a map name and select ‘Show On HDD’ to see the hard-drive folder where the map is saved.
-   - On Windows, the default folder is ‘My Documents’.
-   - On OSX, the default folder is ‘Documents’.</p>
+<h4 id="span-stylecolorredimportantspan"><span style="color:red">Important</span></h4>
+<ul>
+  <li>When you make a map, you need to choose the ‘Number Of Channels’ in each stack/session. Map Manager will only allow one choice of ‘Number Of Channels’ per map. You cannot mix one and two channel stacks within a map.</li>
+  <li>Make sure the scale of each imported stack is correct. It is hard to change the scale later. You can set the scale of a stack in its stack window with ‘shift+p’.</li>
+  <li>Make sure the sessions in your map are imported in the correct order. It is hard to change the order later.</li>
+  <li>As you import stacks from the <a href="/mapmanager/stack-browser/">stack browser</a> there are some rules that must be followed. You will be prompted when you break these rules. In particular:
+    <ol>
+      <li>The stack scale must be set. Set the scale of a <a href="/mapmanager/stack/">stack</a> in a stack window with shift+p.</li>
+      <li>The stack must be loaded. Double click the stack in the <a href="/mapmanager/stack-browser/">stack browser</a> to load a stack.</li>
+      <li>When importing 2 channel stacks, both channels must be loaded and you must select the first channel (ending in _ch1) in the stack browser.</li>
+    </ol>
+  </li>
+  <li>New maps are saved to a default hard-drive folder. The default folder can be specified the <a href="/mapmanager/hdd-paths/">Hard Drive Paths Panel</a>. Right-click on a map name and select ‘Show On HDD’ to see the hard-drive folder where the map is saved.
+    <ul>
+      <li>On Windows, the default folder is ‘My Documents’.</li>
+      <li>On OSX, the default folder is ‘Documents’.</li>
+    </ul>
+  </li>
+</ul>
 
 <h4 id="congratulations-you-just-made-a-map-manager-map-the-rest-of-this-tutorial-covers-specifying-and-fitting-segment-backbone-lines-adding-spines-and-connecting-spines-across-timepoints">Congratulations, you just made a Map Manager map. The rest of this tutorial covers specifying and fitting segment backbone lines, adding spines, and connecting spines across timepoints.</h4>
 
@@ -299,16 +307,19 @@
   <li>Right-click on a spine and select ‘plot run +- 1’ to bring up a spine run. [HERE I NEED TO CHANGE THE INTERFACE. I NEED A QUICKER WAY OF BRINING UP A SPINE RUN!!!]</li>
 </ul>
 
-<p><strong>THIS IS WHERE I AM ENDING FOR NOW ON July 29 … THIS NEEDS TO BE EXPANDED</strong></p>
+<p><strong>THIS IS WHERE I AM ENDING FOR NOW ON July 29, 2015 … THIS NEEDS TO BE EXPANDED</strong></p>
 
 <p><br />
 <br />
 <br />
 <br />
-<br />
-## DO NOT READ BELOW HERE !!!!
-###[ADVANCED]: Importing a bSpine map
-<img class="img-float-left" src="images/mm3/mm3-import-bspine.png" width="275" /></p>
+<br /></p>
+
+<h2 id="do-not-read-below-here-">DO NOT READ BELOW HERE !!!!</h2>
+
+<h3 id="advanced-importing-a-bspine-map">[ADVANCED]: Importing a bSpine map</h3>
+
+<p><img class="img-float-left" src="images/mm3/mm3-import-bspine.png" width="275" /></p>
 
 <p>Importing bSpine maps is tricky. The problem is if your original maps for one time-series (_d1, _d2, etc.) have different sessions. For example, _d1 has sessions from dates 1,2,3 but _d2 has sessions from dates 1,2,6,12 there <span style="color:red">will be an error</span>.</p>
 
