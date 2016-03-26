@@ -42,9 +42,10 @@ All code and documentation written by [Robert Cudmore][2]
 - Robert Cudmore's blog <A HREF="http://cudmore.github.io/">Blog</A>
 - Software for <A HREF="http://cudmore.github.io/Vascular-Analysis/">Vascular Analysis</A>
 
+yyy
 
 [1]: http://wavemetrics.com
 [2]: http://robertcudmore.org
 [3]: /mapmanager/making-a-map/ "making-a-map"
 [4]: /mapmanager/simple-stack-db/ "simple-stack-db"
-[5]: /mapmanager/getting-started/
+[5]: /getting-started
