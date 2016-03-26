@@ -65,9 +65,9 @@ There are many things you can do to visualize your [stacks][3]
   
 
 
-[1]: /mapmanager/stack-browser/
+[1]: stack-browser
 [2]: http://www.robertcudmore.org/maptracker/v2/stack-browser/
-[3]: /mapmanager/stack/
-[4]: /mapmanager/map-plot/
+[3]: stack
+[4]: map-plot
 [5]: https://github.com/cudmore/bob-fiji-plugins
-[6]: /mapmanager/spine-dynamics/
+[6]: spine-dynamics
