@@ -174,11 +174,7 @@
     </h3>
 </div>
 
-<<<<<<< HEAD:_site/making-a-map.html
 <p><img class="img-float-left" src="images/mm3/mm3-main-panel.png" width="650" /></p>
-=======
-<p><IMG class="img-float-left" SRC="images/mm3/mm3-main-panel.png" WIDTH="650"></p>
->>>>>>> origin/gh-pages:_site/making-a-map.html
 
 <div class="print-page-break"></div>
 
@@ -193,19 +189,10 @@
   <li>Initialize Map Manager with the main menu ‘MapManager - Map Manager Panel’.</li>
 </ol>
 
-<<<<<<< HEAD:_site/making-a-map.html
 <h4 id="pre-process-your-raw-data-so-map-manager-can-import-it">1. Pre-process your raw data so Map Manager can import it</h4>
 <p>Map Manager will only import single channel stacks. If your stacks have two color channels, they need to be de-interleaved into two different .tif files. One .tif file for each color channel. See <a href="https://github.com/cudmore/bob-fiji-plugins">bAlignBatch</a> for a Fiji plugin that does this.</p>
 
 <h4 id="make-a-new-map">2. Make a new map</h4>
-=======
-<h4 id="1.-pre-process-your-raw-data-so-map-manager-can-import-it">1. Pre-process your raw data so Map Manager can import it</h4>
-
-<p>Map Manager will only import single channel stacks. If your stacks have two color channels, they need to be de-interleaved into two different .tif files. One .tif file for each color channel. See <a href="https://github.com/cudmore/bob-fiji-plugins">bAlignBatch</a> for a Fiji plugin that does this.</p>
-
-<h4 id="2.-make-a-new-map">2. Make a new map</h4>
-
->>>>>>> origin/gh-pages:_site/making-a-map.html
 <ol>
   <li>Fill in a new map name and choose the number of channels for each stack in your map.</li>
   <li>Create a new map with ‘<span style="color:green">New Map</span>’.</li>
@@ -226,14 +213,9 @@
    - On Windows, the default folder is ‘My Documents’.
    - On OSX, the default folder is ‘Documents’.</p>
 
-<h4 id="congratulations,-you-just-made-a-map-manager-map.-the-rest-of-this-tutorial-covers-specifying-and-fitting-segment-backbone-lines,-adding-spines,-and-connecting-spines-across-timepoints.">Congratulations, you just made a Map Manager map. The rest of this tutorial covers specifying and fitting segment backbone lines, adding spines, and connecting spines across timepoints.</h4>
+<h4 id="congratulations-you-just-made-a-map-manager-map-the-rest-of-this-tutorial-covers-specifying-and-fitting-segment-backbone-lines-adding-spines-and-connecting-spines-across-timepoints">Congratulations, you just made a Map Manager map. The rest of this tutorial covers specifying and fitting segment backbone lines, adding spines, and connecting spines across timepoints.</h4>
 
-<<<<<<< HEAD:_site/making-a-map.html
 <h4 id="create-a-line-segment-in-each-sessionstack-of-the-map-and-fit-its-backbone-in-fiji">3. Create a line segment in each session/stack of the map and fit its backbone in Fiji</h4>
-=======
-<h4 id="3.-create-a-line-segment-in-each-session/stack-of-the-map-and-fit-its-backbone-in-fiji">3. Create a line segment in each session/stack of the map and fit its backbone in Fiji</h4>
-
->>>>>>> origin/gh-pages:_site/making-a-map.html
 <p>Line segments are first specified with control points and then fit using a custom FIJI plugin. Before fitting a line in FIJI, you need to install  the <a href="https://github.com/cudmore/bob-fiji-plugins">Bob_Neurite_Tracer_v3</a> plugin in FIJI and you need to specify the path to your FIJI application in the <a href="/mapmanager/hdd-paths/">Hard Drive Paths Panel</a>.</p>
 
 <p>See <a href="/mapmanager/fitting-segments-in-fiji/">Fitting Segment In Fiji</a> for help on FIJI versions, installing the plugin and specifying the FIJI application path in Map Manager.</p>
@@ -254,13 +236,7 @@
   <li>Set a pivot point in each line segment. Do this by clicking a point in the segment, right-click and select the ‘Set As Segment Pivot’ menu. The pivot point should refer to the same region of the segment across all session. A good strategy is to choose a region of the segment near an obvious spine that is present in all sessions. Another strategy is to choose a pivot point where some other segment (dendrite) crosses near your segment as these tend to remain stable across time. Try and put the pivot point near the center of the segment, do not place it at either end. The pivot point is used to calculate a line distance along the segment (in um) which in turn will be used to auto-guess connections between spines across sessions.</li>
 </ol>
 
-<<<<<<< HEAD:_site/making-a-map.html
 <p class="tip"><b>Tip.</b> When specifying control points and setting segment pivots, you can open multiple stack windows at the same time. Just double-click on each session in the main Map Manager Panel. This way, you can see the line segments you are making in each session of your map.</p>
-=======
-<p class="tip"><B>Tip.</B> When specifying control points and setting segment pivots, you can open multiple stack windows at the same time. Just double-click on each session in the main Map Manager Panel. This way, you can see the line segments you are making in each session of your map.</p>
-
-<h4 id="4.-connect-your-line-segments-together">4. Connect your line segments together</h4>
->>>>>>> origin/gh-pages:_site/making-a-map.html
 
 <h4 id="connect-your-line-segments-together">4. Connect your line segments together</h4>
 <ol>
@@ -276,14 +252,7 @@
   </li>
 </ol>
 
-<<<<<<< HEAD:_site/making-a-map.html
 <p class="tip"><b>Tip.</b> You can see how your segments are connected by plotting a 'Segment Map' from the main Map Manager panel. In the segment map window, right-click a segent and select 'Plot Run' to plot a run of segments.</p>
-=======
-<p class="tip"><B>Tip.</B> You can see how your segments are connected by plotting a 'Segment Map' from the main Map Manager panel. In the segment map window, right-click a segent and select 'Plot Run' to plot a run of segments.</p>
-   
-
-<h4 id="5.-mark-spines-in-each-timepoint">5. Mark spines in each timepoint</h4>
->>>>>>> origin/gh-pages:_site/making-a-map.html
 
 <h4 id="mark-spines-in-each-timepoint">5. Mark spines in each timepoint</h4>
 <ol>
@@ -294,7 +263,6 @@
 
 <p class="tip"><b>Tip.</b> As you are working, keep your eye on the Igor command window. Each action you perform in Map Manager should report a few lines of text here. If this starts to spit out 1000's of lines there is probably a problem.</p>
 
-<<<<<<< HEAD:_site/making-a-map.html
 <h4 id="connecting-stack-db-objects-from-one-timepoint-to-the-next">6. Connecting stack db objects from one timepoint to the next</h4>
 
 <p>You have two choices here.</p>
@@ -304,18 +272,6 @@
 <p>Use the Find Points Panel to browse spines in two timepoints. Find Points will also guess for the best connections and allow you to set them manually.</p>
 
 <h4 id="auto-connect-all-objects-using-the-map-plot12">6.2. Auto connect all objects using the <a href="/mapmanager/map-plot/">map plot</a></h4>
-=======
-<h4 id="6.-connecting-stack-db-objects-from-one-timepoint-to-the-next">6. Connecting stack db objects from one timepoint to the next</h4>
-
-<p>You have two choices here.</p>
-
-<h4 id="6.1-use-the-find-points-panel-to-connect-objects">6.1 Use the <a href="/mapmanager/find-points-panel/">Find Points Panel</a> to connect objects</h4>
-
-<p>Use the Find Points Panel to browse spines in two timepoints. Find Points will also guess for the best connections and allow you to set them manually.</p>
-
-<h4 id="6.2.-auto-connect-all-objects-using-the-map-plot">6.2. Auto connect all objects using the <a href="/mapmanager/map-plot/">map plot</a></h4>
-
->>>>>>> origin/gh-pages:_site/making-a-map.html
 <ul>
   <li>Open a ‘Spine Map’ from the main Map Manager Panel.</li>
   <li>In the spine map, select a spine in the first timepoint, right click and select ‘Connect Objects To Next’. This will make automatic connections of all spines from the first session to the next session.</li>
@@ -323,11 +279,7 @@
   <li>When working on spines, spines are connected if they are within a minimum distance of each other on their respective segment line. See ‘Connect spines within this distance (um)’ in the <a href="/mapmanager/stackdb-options-panel/">stack db options panel</a> to set this option.</li>
 </ul>
 
-<<<<<<< HEAD:_site/making-a-map.html
 <h4 id="check-the-auto-spine-connections-and-edit-as-necessary">7. Check the auto spine connections and edit as necessary</h4>
-=======
-<h4 id="7.-check-the-auto-spine-connections-and-edit-as-necessary">7. Check the auto spine connections and edit as necessary</h4>
->>>>>>> origin/gh-pages:_site/making-a-map.html
 
 <p>This is the core of Map Manager and you will spend most of your time doing this. You need to verify the auto connections of each spine and you need to do this between <strong>each</strong> timepoint in your map. If your map has 4 timepoints, you need to verify the auto spine connections between timepoint 1-2, timepoint 2-3, and timepoint 3-4.</p>
 
@@ -338,11 +290,7 @@
   <li>Correct any errors in the spine dynamics using keyboard ‘a’ for addition, ‘s’ for subtraction, and ‘p’ for persistence. See <a href="/mapmanager/run-plot/">run plot</a> for details.</li>
 </ul>
 
-<<<<<<< HEAD:_site/making-a-map.html
 <h4 id="review-your-work-by-using-search-to-query-all-additions-and-subtractions">8. Review your work by using search to query all additions and subtractions</h4>
-=======
-<h4 id="8.-review-your-work-by-using-search-to-query-all-additions-and-subtractions">8. Review your work by using search to query all additions and subtractions</h4>
->>>>>>> origin/gh-pages:_site/making-a-map.html
 
 <ul>
   <li>Open the <a href="/mapmanager/search-panel/">search panel</a> from the main Map Manager panel with the ‘Search’ button.</li>
@@ -353,7 +301,6 @@
 
 <p><strong>THIS IS WHERE I AM ENDING FOR NOW ON July 29 … THIS NEEDS TO BE EXPANDED</strong></p>
 
-<<<<<<< HEAD:_site/making-a-map.html
 <p><br />
 <br />
 <br />
@@ -362,13 +309,6 @@
 ## DO NOT READ BELOW HERE !!!!
 ###[ADVANCED]: Importing a bSpine map
 <img class="img-float-left" src="images/mm3/mm3-import-bspine.png" width="275" /></p>
-=======
-<h2 id="do-not-read-below-here-!!!!">DO NOT READ BELOW HERE !!!!</h2>
-
-<h3 id="[advanced]:-importing-a-bspine-map">[ADVANCED]: Importing a bSpine map</h3>
-
-<p><IMG class="img-float-left" SRC="images/mm3/mm3-import-bspine.png" WIDTH="275"></p>
->>>>>>> origin/gh-pages:_site/making-a-map.html
 
 <p>Importing bSpine maps is tricky. The problem is if your original maps for one time-series (_d1, _d2, etc.) have different sessions. For example, _d1 has sessions from dates 1,2,3 but _d2 has sessions from dates 1,2,6,12 there <span style="color:red">will be an error</span>.</p>
 

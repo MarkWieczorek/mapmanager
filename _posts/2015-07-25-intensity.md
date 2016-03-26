@@ -158,33 +158,21 @@ Errors and Warnings are
 <TR>
 <TD>
 <figure>
-<<<<<<< HEAD
 <figcaption>Error # 3 x spine ROI beyond image</figcaption>
-=======
-<figcaption>Error #3 x spine ROI beyond image</figcaption>
->>>>>>> origin/gh-pages
 <IMG SRC="images/mm3/intensity/3-spine-roi-error.png" WIDTH="350">
 </figure>
 </TD>
 
 <TD>
 <figure>
-<<<<<<< HEAD
 <figcaption>Error # 3.5 y spine ROI beyond image</figcaption>
-=======
-<figcaption>Error #3.5 y spine ROI beyond image</figcaption>
->>>>>>> origin/gh-pages
 <IMG SRC="images/mm3/intensity/3_5-spine-roi-error.png" WIDTH="350">
 </figure>
 </TD>
 
 <TD>
 <figure>
-<<<<<<< HEAD
 <figcaption>Error # 6 reducing spine with ImageSeedFill</figcaption>
-=======
-<figcaption>Error #6 reducing spine with ImageSeedFill</figcaption>
->>>>>>> origin/gh-pages
 <IMG SRC="images/mm3/intensity/6-reducing-spine-error.png" WIDTH="350">
 </figure>
 </TD>
@@ -193,22 +181,14 @@ Errors and Warnings are
 <TR>
 <TD>
 <figure>
-<<<<<<< HEAD
 <figcaption>Error # 9 extending backbone error</figcaption>
-=======
-<figcaption>Error #9 extending backbone error</figcaption>
->>>>>>> origin/gh-pages
 <IMG SRC="images/mm3/intensity/9-extending-backbone.png" WIDTH="350">
 </figure>
 </TD>
 
 <TD>
 <figure>
-<<<<<<< HEAD
 <figcaption>Warning # 5.1 prev cPnt</figcaption>
-=======
-<figcaption>Warning #5.1 prev cPnt</figcaption>
->>>>>>> origin/gh-pages
 <IMG SRC="images/mm3/intensity/5_1_prev-cpnt.png" WIDTH="350">
 </figure>
 </TD>

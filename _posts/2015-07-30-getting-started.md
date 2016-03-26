@@ -37,11 +37,7 @@ tags:
  
 <div class="print-page-break"></div>
 <IMG class="img-float-left" SRC="images/mm3/quit-igor.png" WIDTH="400">
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/gh-pages
-<div class="print-page-break"></div>
 
 ### Map Manager Options
 

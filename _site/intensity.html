@@ -178,21 +178,13 @@
 
 <p>All intensity analysis is performed by calculating statistics (Sum, Mean, standard-deviation, N) from the intensity values of pixels within a number of 3D regions-of-interest (ROI). Further analysis is then derived by performing algebra between these ROIs.</p>
 
-<<<<<<< HEAD:_site/intensity.html
 <p><img class="img-float-right" src="images/mm3/intensity/spine-roi-example.png" width="400" /></p>
-=======
-<p><IMG class="img-float-right" SRC="images/mm3/intensity/spine-roi-example.png" WIDTH="400"></p>
->>>>>>> origin/gh-pages:_site/intensity.html
 
 <h4 id="spine-roi">Spine ROI</h4>
 
 <p>A polygon surrounding a spine. Starts as a rectangle and then overlapping regions of the backbone/dendrite ROI is subtracted. Any remaining disjoint regions (on other side of backbone/dendrite) are then removed. The spine ROI is centered in the same image plane as the spine head. Three parameters specify spine ROI: width, extend head, and extend tail.</p>
 
-<<<<<<< HEAD:_site/intensity.html
 <h4 id="backbonedendrite-roi">Backbone/Dendrite ROI</h4>
-=======
-<h4 id="backbone/dendrite-roi">Backbone/Dendrite ROI</h4>
->>>>>>> origin/gh-pages:_site/intensity.html
 
 <p>A polygon centered on the spine connection point and extending a fixed distance (um) up and down the backbone/dendrite line. The backbone/dendrite ROI is centered in the same image plane as the spine connection point. The distance to extend up and down the backbone/dendrite line is set with ‘+/- Segment (um)’</p>
 
@@ -206,11 +198,7 @@
 
 <h3 id="running-intensity-analysis">Running Intensity Analysis</h3>
 
-<<<<<<< HEAD:_site/intensity.html
 <p><img class="img-float-right" src="images/mm3/intensity/intensity-analysis-tab.png" width="450" /></p>
-=======
-<p><IMG class="img-float-right" SRC="images/mm3/intensity/intensity-analysis-tab.png" WIDTH="450"></p>
->>>>>>> origin/gh-pages:_site/intensity.html
 
 <p>Intensity analysis is run from the main <a href="/mapmanager/main-panel/">map manager panel</a> using the ‘Intensity’ tab.</p>
 
@@ -218,11 +206,7 @@
 
 <h3 id="parameters">Parameters</h3>
 
-<<<<<<< HEAD:_site/intensity.html
 <p><img class="img-float-right" src="images/mm3/intensity/intensity-parameters.png" width="300" /></p>
-=======
-<p><IMG class="img-float-right" SRC="images/mm3/intensity/intensity-parameters.png" WIDTH="300"></p>
->>>>>>> origin/gh-pages:_site/intensity.html
 
 <p>Global intensity analysis parameters are set in the <a href="/mapmanager/stackdb-options-panel/">stack db options</a> panel. These parameters are used for every spine in a map.</p>
 
@@ -230,7 +214,6 @@
 
 <div class="print-page-break"></div>
 
-<<<<<<< HEAD:_site/intensity.html
 <p><img class="img-float-right" src="images/mm3/intensity/obj-info.png" width="300" /></p>
 
 <ul>
@@ -238,24 +221,17 @@
   <li><strong>Extend head (um).</strong> Distance to extend the spine ROI beyond its spine head.</li>
   <li><strong>Extend tail (um).</strong> Distance to extend the spine ROI beyond it connection point with the backbone/dendrite..</li>
   <li><strong>+/- Slices.</strong> The statistics (Sum, Mean, SD, N) of each spine, backbone, and background ROI is calculated after expanding the ROI up and down in Z-dimension.</li>
-  <li><strong>+/- Segment (um).</strong> The distance (um) to extend the backbone/dendrite ROI up and down the backbone/dendrite line.</li>
+  <li>
+    <p><strong>+/- Segment (um).</strong> The distance (um) to extend the backbone/dendrite ROI up and down the backbone/dendrite line.</p>
+  </li>
+  <li><strong>Background - Both Sides.</strong> Only available as a global options.</li>
+  <li><strong>Background Rows.</strong> Only available as a global options.</li>
+  <li><strong>Background Row Mult.</strong> Only available as a global options.</li>
+  <li><strong>Background Columns.</strong> Only available as a global options.</li>
+  <li>
+    <p><strong>Background Column Mult.</strong> Only available as a global options.</p>
+  </li>
   <li><strong>Scale Radius (um).</strong> Only available for individual spines using the Object Info Panel. When intensity analysis is run (for a map), each spine is assigned a radius (um) following the radius of the segment it is attached to. Once intensity analysis has been run, this radius can be set for individual spines in the Object Info panel.</li>
-=======
-<p><IMG class="img-float-right" SRC="images/mm3/intensity/obj-info.png" WIDTH="300"></p>
-
-<ul>
-<li><strong>Width (um).</strong> Width of spine ROI centered on the spine line.</li>
-<li><strong>Extend head (um).</strong> Distance to extend the spine ROI beyond its spine head.</li>
-<li><strong>Extend tail (um).</strong> Distance to extend the spine ROI beyond it connection point with the backbone/dendrite..</li>
-<li><strong>+/- Slices.</strong> The statistics (Sum, Mean, SD, N) of each spine, backbone, and background ROI is calculated after expanding the ROI up and down in Z-dimension.</li>
-<li><p><strong>+/- Segment (um).</strong> The distance (um) to extend the backbone/dendrite ROI up and down the backbone/dendrite line.</p></li>
-<li><p><strong>Background - Both Sides.</strong> Only available as a global options.</p></li>
-<li><p><strong>Background Rows.</strong> Only available as a global options.</p></li>
-<li><p><strong>Background Row Mult.</strong> Only available as a global options.</p></li>
-<li><p><strong>Background Columns.</strong> Only available as a global options.</p></li>
-<li><p><strong>Background Column Mult.</strong> Only available as a global options.</p></li>
-<li><p><strong>Scale Radius (um).</strong> Only available for individual spines using the Object Info Panel. When intensity analysis is run (for a map), each spine is assigned a radius (um) following the radius of the segment it is attached to. Once intensity analysis has been run, this radius can be set for individual spines in the Object Info panel.</p></li>
->>>>>>> origin/gh-pages:_site/intensity.html
 </ul>
 
 <h3 id="intensity-analysis-output">Intensity Analysis Output</h3>
@@ -274,7 +250,6 @@ sN			:	# pixels in spine roi
 </code></pre>
 
 <h5 id="spine-background-roi">Spine Background ROI</h5>
-<<<<<<< HEAD:_site/intensity.html
 <pre><code>sbSum		:	spine background sum
 sbMean		:	spine background mean
 sbSD		:	spine background standard deviation
@@ -295,25 +270,6 @@ dbSD		:	dendrite background standard deviation
 dbN			:	# pixels in dendrite background roi
 </code></pre>
 
-=======
-<div class="highlight"><pre><code class="language-text" data-lang="text">sbSum       :   spine background sum
-sbMean      :   spine background mean
-sbSD        :   spine background standard deviation
-sbN         :   # pixels in spine background roi
-</code></pre></div>
-<h5 id="backbone/dendrite-roi">Backbone/Dendrite ROI</h5>
-<div class="highlight"><pre><code class="language-text" data-lang="text">dSum        :   dendrite sum
-dMean       :   dendrite mean
-dSD         :   dendrite standard deviation
-dN          :   # pixels in dendrite roi
-</code></pre></div>
-<h5 id="backbone/dendrite-background-roi">Backbone/Dendrite Background ROI</h5>
-<div class="highlight"><pre><code class="language-text" data-lang="text">dbSum       :   dendrite background sum
-dbMean      :   dendrite background mean
-dbSD        :   dendrite background standard deviation
-dbN         :   # pixels in dendrite background roi
-</code></pre></div>
->>>>>>> origin/gh-pages:_site/intensity.html
 <h5 id="background-subtracted-rois">Background subtracted ROIs</h5>
 <pre><code>ubssSum		:	background subtracted spine sum
 ubssMean	:	background subtracted spine mean
@@ -339,11 +295,7 @@ utsmdodm	:	this spine mean divided by other dendrite mean
 
 <h3 id="moving-the-background-roi">Moving the background ROI</h3>
 
-<<<<<<< HEAD:_site/intensity.html
 <p><img class="img-float-right" src="images/mm3/intensity/spine-roi-example-edit.png" width="350" /></p>
-=======
-<p><IMG class="img-float-right" SRC="images/mm3/intensity/spine-roi-example-edit.png" WIDTH="350"></p>
->>>>>>> origin/gh-pages:_site/intensity.html
 
 <p>Clicking on the spine backgrond ROI will enable an edit mode where the user can specify the background position. This edit mode also shows the candidate background positions.</p>
 
@@ -370,37 +322,22 @@ utsmdodm	:	this spine mean divided by other dendrite mean
 <tr>
 <td>
 <figure>
-<<<<<<< HEAD:_site/intensity.html
 <figcaption>Error # 3 x spine ROI beyond image</figcaption>
 <img src="images/mm3/intensity/3-spine-roi-error.png" width="350" />
-=======
-<figcaption>Error #3 x spine ROI beyond image</figcaption>
-<IMG SRC="images/mm3/intensity/3-spine-roi-error.png" WIDTH="350">
->>>>>>> origin/gh-pages:_site/intensity.html
 </figure>
 </td>
 
 <td>
 <figure>
-<<<<<<< HEAD:_site/intensity.html
 <figcaption>Error # 3.5 y spine ROI beyond image</figcaption>
 <img src="images/mm3/intensity/3_5-spine-roi-error.png" width="350" />
-=======
-<figcaption>Error #3.5 y spine ROI beyond image</figcaption>
-<IMG SRC="images/mm3/intensity/3_5-spine-roi-error.png" WIDTH="350">
->>>>>>> origin/gh-pages:_site/intensity.html
 </figure>
 </td>
 
 <td>
 <figure>
-<<<<<<< HEAD:_site/intensity.html
 <figcaption>Error # 6 reducing spine with ImageSeedFill</figcaption>
 <img src="images/mm3/intensity/6-reducing-spine-error.png" width="350" />
-=======
-<figcaption>Error #6 reducing spine with ImageSeedFill</figcaption>
-<IMG SRC="images/mm3/intensity/6-reducing-spine-error.png" WIDTH="350">
->>>>>>> origin/gh-pages:_site/intensity.html
 </figure>
 </td>
 </tr>
@@ -408,25 +345,15 @@ utsmdodm	:	this spine mean divided by other dendrite mean
 <tr>
 <td>
 <figure>
-<<<<<<< HEAD:_site/intensity.html
 <figcaption>Error # 9 extending backbone error</figcaption>
 <img src="images/mm3/intensity/9-extending-backbone.png" width="350" />
-=======
-<figcaption>Error #9 extending backbone error</figcaption>
-<IMG SRC="images/mm3/intensity/9-extending-backbone.png" WIDTH="350">
->>>>>>> origin/gh-pages:_site/intensity.html
 </figure>
 </td>
 
 <td>
 <figure>
-<<<<<<< HEAD:_site/intensity.html
 <figcaption>Warning # 5.1 prev cPnt</figcaption>
 <img src="images/mm3/intensity/5_1_prev-cpnt.png" width="350" />
-=======
-<figcaption>Warning #5.1 prev cPnt</figcaption>
-<IMG SRC="images/mm3/intensity/5_1_prev-cpnt.png" WIDTH="350">
->>>>>>> origin/gh-pages:_site/intensity.html
 </figure>
 </td>
 </tr>
