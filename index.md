@@ -47,4 +47,4 @@ All code and documentation written by [Robert Cudmore][2]
 [2]: http://robertcudmore.org
 [3]: /mapmanager/making-a-map/ "making-a-map"
 [4]: /mapmanager/simple-stack-db/ "simple-stack-db"
-[5]: /getting-started/
+[5]: /getting-started
