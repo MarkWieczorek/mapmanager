@@ -46,6 +46,6 @@ yyy
 
 [1]: http://wavemetrics.com
 [2]: http://robertcudmore.org
-[3]: /mapmanager/making-a-map/ "making-a-map"
-[4]: /mapmanager/simple-stack-db/ "simple-stack-db"
-[5]: /getting-started
+[3]: making-a-map
+[4]: simple-stack-db
+[5]: getting-started
