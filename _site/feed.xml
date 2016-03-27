@@ -25,7 +25,9 @@
       <item>
         <title>Find Points</title>
         
-          <description>&lt;p&gt;&amp;lt;FONT size=3em color=”red”&amp;gt;&lt;strong&gt;New on October, 2015.&lt;/strong&gt; This documentation needs some work.&amp;lt;/font&amp;gt;&lt;/p&gt;
+          <description>&lt;p class=&quot;tip&quot;&gt;&lt;b&gt;New in October, 2015.&lt;/b&gt;
+This documentation needs some work.
+&lt;/p&gt;
 
 </description>
         

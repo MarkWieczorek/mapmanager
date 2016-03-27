@@ -177,7 +177,9 @@
     </h3>
 </div>
 
-<p>&lt;FONT size=3em color=”red”&gt;<strong>New on October, 2015.</strong> This documentation needs some work.&lt;/font&gt;</p>
+<p class="tip"><b>New in October, 2015.</b>
+This documentation needs some work.
+</p>
 
 <p>The find points panel allows you to browse objects between two timepoints/sessions, will show you the best-guess for putative connections, and allow you to connect/disconnect objects across timepoints/sessions.</p>
 
@@ -340,19 +342,21 @@ Documentation for <a href="https://github.com/cudmore/mapmanager">Map Manager</a
                     lists[section].push([order, li]);
                 }
 
-                for (var i = 0; i < sections.length; i++) {
-                    section = sections[i];
-                    list = lists[section].sort(function(a, b) {
-                        return a[0] - b[0];
-                    });
+                //20160327 removed, this was no doing anything???
+                //for (var i = 0; i < sections.length; i++) {
+                 //   section = sections[i];
+                 //   console.log(section);
+                 //   list = lists[section].sort(function(a, b) {
+                 //       return a[0] - b[0];
+                 //   });
 
-                    if (header = headers[section]) {
-                        navUl.appendChild(header);
-                    }
-                    for (var j = 0; j < list.length; j++) {
-                        navUl.appendChild(list[j][1]);
-                    }
-                }
+                 //   if (header = headers[section]) {
+                 //       navUl.appendChild(header);
+                 //   }
+                 //   for (var j = 0; j < list.length; j++) {
+                 //       navUl.appendChild(list[j][1]);
+                 //   }
+                //}
             }
 
             if (document.querySelectorAll) orderNav();
