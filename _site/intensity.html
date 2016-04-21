@@ -136,7 +136,10 @@
             
                 <li class=nav-header>Analysis</li>
             
-            <li data-order="1"><a href="/mapmanager/spine-dynamics">Spine Dynamics</a></li>
+            <li data-order="1"><a href="/mapmanager/stack-analysis">Stack report</a></li>
+        
+            
+            <li data-order="1"><a href="/mapmanager/spine-dynamics">Map report</a></li>
         
             
             <li data-order="2"><a href="/mapmanager/intensity">Intensity</a></li>
@@ -246,61 +249,61 @@
 <p>Please note, ‘u’ is for user. User stats are simple algebra on the core intensity analysis.</p>
 
 <h5 id="spine-roi-1">Spine ROI</h5>
-<p><code class="highlighter-rouge">
-sSum		:	spine sum
+<div class="highlighter-rouge"><pre class="highlight"><code>sSum		:	spine sum
 sMean		:	spine mean
-sSD			:	spine standard deviation
-sN			:	# pixels in spine roi
-</code></p>
+sSD		:	spine standard deviation
+sN		:	# pixels in spine roi
+</code></pre>
+</div>
 
 <h5 id="spine-background-roi">Spine Background ROI</h5>
-<p><code class="highlighter-rouge">
-sbSum		:	spine background sum
+<div class="highlighter-rouge"><pre class="highlight"><code>sbSum		:	spine background sum
 sbMean		:	spine background mean
 sbSD		:	spine background standard deviation
 sbN			:	# pixels in spine background roi
-</code></p>
+</code></pre>
+</div>
 
 <h5 id="backbonedendrite-roi-1">Backbone/Dendrite ROI</h5>
-<p><code class="highlighter-rouge">
-dSum		:	dendrite sum
+<div class="highlighter-rouge"><pre class="highlight"><code>dSum		:	dendrite sum
 dMean		:	dendrite mean
-dSD			:	dendrite standard deviation
-dN			:	# pixels in dendrite roi
-</code></p>
+dSD		:	dendrite standard deviation
+dN		:	# pixels in dendrite roi
+</code></pre>
+</div>
 
 <h5 id="backbonedendrite-background-roi">Backbone/Dendrite Background ROI</h5>
-<p><code class="highlighter-rouge">
-dbSum		:	dendrite background sum
+<div class="highlighter-rouge"><pre class="highlight"><code>dbSum		:	dendrite background sum
 dbMean		:	dendrite background mean
 dbSD		:	dendrite background standard deviation
-dbN			:	# pixels in dendrite background roi
-</code></p>
+dbN		:	# pixels in dendrite background roi
+</code></pre>
+</div>
 
 <h5 id="background-subtracted-rois">Background subtracted ROIs</h5>
-<p><code class="highlighter-rouge">
-ubssSum		:	background subtracted spine sum
+<div class="highlighter-rouge"><pre class="highlight"><code>ubssSum		:	background subtracted spine sum
 ubssMean	:	background subtracted spine mean
 ubsdSum		:	background subtracted dendrite sum
 ubsdMean	:	background subtracted dendrite mean
-</code></p>
+</code></pre>
+</div>
 
 <h5 id="cross-channel-stats">Cross channel stats</h5>
-<p>```
-utssmoss	:	this spine sum minus other spine sum.
-                This can be read as ‘(t)his (s)pine (s)um (m)inus (o)ther (s)pine sum’
-utsmmosm	:	this spine mean minus other spine mean</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>utssmoss	:	this spine sum minus other spine sum.
+                	This can be read as '(t)his (s)pine (s)um (m)inus (o)ther (s)pine sum'
+utsmmosm	:	this spine mean minus other spine mean
 
-<p>utssdoss	:	this spine sum divided by other spine sum
-utsmdosm	:	this spine mean divided by other spine mean</p>
+utssdoss	:	this spine sum divided by other spine sum
+utsmdosm	:	this spine mean divided by other spine mean
 
-<p>utssmods	:	this spine sum minus other dendrite sum
-utsmmodm	:	this spine mean minus other dendrite mean</p>
+utssmods	:	this spine sum minus other dendrite sum
+utsmmodm	:	this spine mean minus other dendrite mean
 
-<p>utssdods	:	this spine sum divided by other dendrite sum
-utsmdodm	:	this spine mean divided by other dendrite mean</p>
+utssdods	:	this spine sum divided by other dendrite sum
+utsmdodm	:	this spine mean divided by other dendrite mean
 
-<p>```</p>
+</code></pre>
+</div>
 
 <h3 id="moving-the-background-roi">Moving the background ROI</h3>
 

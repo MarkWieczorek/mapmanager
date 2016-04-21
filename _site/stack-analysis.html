@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
 
-        <title>Map Manager : Find Points</title>
+        <title>Map Manager : Stack report</title>
         <meta name="description" content="">
 
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
@@ -175,98 +175,41 @@
 
                     <div id=content class=span10>
                         <div class=page-header>
-    <h3>Find Points
+    <h3>Stack report
         
     </h3>
 </div>
 
-<p class="tip"><b>New in October, 2015.</b>
-This documentation needs some work.
-</p>
+<p>Each stack tracing can be viewed as a table of text. With these tables it is easy to copy and paste into another program.</p>
 
-<p>The find points panel allows you to browse objects between two timepoints/sessions, will show you the best-guess for putative connections, and allow you to connect/disconnect objects across timepoints/sessions.</p>
+<p>This includes separate tables for segments, stack db, and intensity analysis.</p>
 
-<p>To open the find points panel:</p>
+<p>See <a href="spine-dynamics">Map report</a> to generate density and dynamics reports for an entire map.</p>
 
-<ul>
-  <li>Right-click a spine in a map and selecting ‘Find Points’.</li>
-  <li>Right-click a session in the main Map Manager Panel and selecting ‘Find Points’.</li>
-  <li>Right-click a map in the main Map Manager Panel and selecting ‘Find Points’.</li>
-</ul>
-
-<h4 id="overview">Overview</h4>
+<h4 id="segments">Segments</h4>
 
 <ul>
-  <li>The find points panel displays a list of all spines in the source timepoint (sIdx). In this example there are 21 spines in the source timepoint.</li>
-  <li>For each spines in the source timepoint, it shows if it is connected to the destination timepoint (dIdx). It will color the dIdx cell red if there is no connection.</li>
-  <li>Any remaining spines in the destination timepoint (spines not connected to the source timepoint) will be displayed at the bottom of the list. In this example there are 3 of these spines.</li>
-  <li>Each spine in the source timepoint will also have a best ‘Guess’ connection in the ‘Guess’ column. For spines, this is using your ‘Segment Pivot’ for the two segments listed in Find Points and will connect spines across timepoints/sessions that are within ‘Connect spines within this distance (um)’. See the Map Manager Options Panel to set this.</li>
+  <li>Keyboard ‘e’ In the ‘Line Segments’ section of the main stack db panel to display a summary of each segment.</li>
+  <li>Keyboard ‘E’ In the ‘Line Segments’ section of the main stack db panel to display the entire line (all 3D points)</li>
 </ul>
 
-<p><img class="img-float-left" src="images/mm3/mm3-find-points-panel.png" width="500" /></p>
+<h4 id="stack-db">Stack DB</h4>
+
+<ul>
+  <li>Keyboard ‘e’ In the ‘Points’ section of the main stack db panel to display the stack db as a table.</li>
+</ul>
+
+<h4 id="intensity-analysis">Intensity Analysis</h4>
+
+<ul>
+  <li>Keyboard ‘i’ In the ‘Points’ section of the main stack db panel to display intensity analysis as a table.</li>
+</ul>
+
+<p class="tip"><b>Tip.</b> Use keyboard '[' in any stack window to open and close the stack db panel.</p>
+
+<p><img class="img-float-left" src="images/mm3/stack-example-5.png" width="600" /></p>
+
 <div class="print-page-break"></div>
-
-<h4 id="interface">Interface</h4>
-
-<ul>
-  <li><strong>From TP.</strong> Source timepoint/session (From TP)</li>
-  <li><strong>To.</strong> Destination timepoint/session (To timepoint)</li>
-  <li><strong>Object Type.</strong> Select the type of objects to display.</li>
-  <li><strong>ShowBad.</strong> If checked, bad points will be included in the list. Bad points will always have their ‘Idx’ column in red.</li>
-  <li><strong>Segment ID.</strong> Limit the list to one segment ID.</li>
-  <li><strong>All Segments.</strong> Generate the list for all segments. If you are connecting spines, leave this off (unchecked).</li>
-  <li><strong>Refresh.</strong> Will refresh the Find Points list. [as of Nov 2015, there may be some edits to the map that do not refresh the list automatically.]</li>
-</ul>
-
-<h4 id="column-names">Column Names</h4>
-
-<p>Clicking on any column name will sort the list by the values in that column. Column names starting with ‘s’ are for the source timepoint (from TP), column names starting with ‘d’ are for the destination timepoint (to TP).</p>
-
-<ul>
-  <li><strong>Idx</strong> - The row index in the table (no relation to object index).</li>
-  <li><strong>sIdx</strong> - Source object stack db index.</li>
-  <li><strong>sz</strong> - Source object z-depth</li>
-  <li><strong>sParent</strong> - Source object parent segment.</li>
-  <li><strong>spDist</strong> - Source object distance from pivot.</li>
-  <li><strong>Guess</strong> - Automatically generated best guess for connection. This uses each objects distance from pivot (spDist and dpDist) and returns objects within X um, where X is specified by ‘Connect spines within this distance (um)’.</li>
-  <li><strong>dIdx</strong> - Destination object stack db index.</li>
-  <li><strong>dz</strong> - Destination object z-depth</li>
-  <li><strong>dpDist</strong> - Destination object distance from pivot.</li>
-  <li><strong>Dist</strong> - When two points are connected (both sIdx and dIdx are filled in), this is the distance between the two points measured as the distance between their two pivot points (spDist and dpDist).</li>
-</ul>
-
-<h4 id="interaction">Interaction</h4>
-
-<ul>
-  <li>Bring up a map run by right-clicking a row and selecting ‘Plot Run’.</li>
-  <li>Select an object in the list and it will be propagated to all <a href="run-plot">run</a> and <a href="map-plot">map</a> plots.</li>
-  <li>Use the keyboard to scroll through the list. The selected point will flash in all open windows.</li>
-  <li>Use left/right arrows to flash the selected object again.</li>
-</ul>
-
-<h4 id="using-the-keyboard-to-connect-and-disconnect-objects">Using the keyboard to connect and disconnect objects</h4>
-
-<p>For a selected row</p>
-
-<ul>
-  <li>‘shift + right-arrow’ to commit the ‘Guess’ to the destination (dIdx). This will connect the source and destination objects together, making them persistent.</li>
-  <li>‘del’ key to remove the connection. This will remove persistence between the source and destination objects.</li>
-  <li>‘ctrl + p’ to set the selected point at the global pivot. This is not used for spines.</li>
-</ul>
-
-<h4 id="tips">Tips</h4>
-
-<p>When used with a spine run, find points is a reliable way to check the connections between all objects in two timepoints.</p>
-
-<p>All objects in the source timepoint are in the list, followed by any remaining objects in destination timepoint that were not connected to an object in the source timepoints.</p>
-
-<p>By sorting the list with the source distance from pivot (spDist), you can step through all spines in the source timepoint sequentially along the dendritic segment.</p>
-
-<p>By sorting the list with the destination distance from pivot (dpDist), you get a sequential list of all objects in the destination timepoint.</p>
-
-<p><img class="img-float-left" src="images/mm3/find-points-example.png" width="1000" /></p>
-<div class="print-page-break"></div>
-<p>Example usage of find points panel. Here, we have a run of sessions 1/2/3 (top row). We have positioned the Find Points panel below the stack for session 2. By selecting rows (spines) in Find Points we can browse all spines in session 2, visualize their connections to session 3, and finally edit their connections to session 3 (using the keyboard in Find Points Panel).</p>
 
 
 
@@ -278,7 +221,7 @@ This documentation needs some work.
   
   
   
-    <a href="/mapmanager/tags/#Interface">Interface</a>
+    <a href="/mapmanager/tags/#Analysis">Analysis</a>
   
 
    <!--
@@ -287,7 +230,7 @@ This documentation needs some work.
 
    <!--
    <BR>
-   <a href="_posts/2015-08-02-find-points-panel.pdf">print pdf</a>
+   <a href="_posts/2016-04-21-stack-analysis.pdf">print pdf</a>
    <BR>
    -->
     

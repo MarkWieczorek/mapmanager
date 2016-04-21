@@ -1,12 +1,14 @@
 ---
 layout: page
-title: "Spine Dynamics"
+title: "Map report"
 category: analysis
 date: 2015-07-25 22:46:33
 order: 1
 tags:
 - Analysis
 ---
+
+See [Stack report][4] to display segment and stack db tables for a single stack.
 
 ### Density Report
 
@@ -16,7 +18,8 @@ Generate a density report for each segment in a stack
 
  - In a [stack window][1], keyboard 'o' for **o**utput report.
  - In the [Stack Browser][3], select a stack in the list, keyboard 'o' for **o**utput report.
- 
+
+
 ```
 numSpines		Total number of spines = goodSpines + badSpines
 goodSpines		Number of good spines.
@@ -41,30 +44,31 @@ Generate a spine dynamics report for each segment in a map.
  - In any [map plot][2], right-click and select 'Dynamics Report'. If the map plot is displaying 'All Segment', a table for each segment will be opened. Otherwise, one table for the current 'Map Segment ID' will be opened.
  
  
- ```
- numSpines		Total number of spines, goodSpines + badSpines.
- goodSpines		Total number of good spines
- badSpines		Total number of bad spines
- totalLen		Total segment length (um)
- goodLen		Segment length between most distal good spines.
- 
- totalDen		Total density = numSpines / totalLen
- goodDen		Density of good spines = goodSpines / goodLen
- 
- nAdd			Number of added spines.
- nSub			Number of subtracted spines (at the current session)
- nSub2			Number of subtracted spines (from the previous session)
- tor			Turn-over-ratio = 
- 
- pAdd			Percent added = nAdd / goodSpines from previous session * 100
- pSub			Percent subtracted = 
- dAdd			Density added =
- dSub			Density subtracted = 
- 
- np				New persistent = 
- nt				New transient = 
- lp				Lost persistent = 
- lt				Lost transient = 
+```
+numSpines		Total number of spines, goodSpines + badSpines.
+goodSpines		Total number of good spines
+badSpines		Total number of bad spines
+
+totalLen		Total segment length (um)
+goodLen			Segment length between most distal good spines.
+
+totalDen		Total density = numSpines / totalLen
+goodDen			Density of good spines = goodSpines / goodLen
+
+nAdd			Number of added spines.
+nSub			Number of subtracted spines (at the current session)
+nSub2			Number of subtracted spines (from the previous session)
+tor			Turn-over-ratio = 
+
+pAdd			Percent added = nAdd / goodSpines from previous session * 100
+pSub			Percent subtracted = 
+dAdd			Density added =
+dSub			Density subtracted = 
+
+np			New persistent = 
+nt			New transient = 
+lp			Lost persistent = 
+lt			Lost transient = 
 ```
 
 ### Concepts
@@ -79,8 +83,8 @@ Each segment within a stack has a number of spines and a total traced dendritic 
 #### Map
 From one session to the next, the number of added and subtracted spines are counted. From this, the percent and density changes are calculated.
 
-- # Added 
-- # Subtracted
+- Number Added 
+- Number Subtracted
 - % Added : # added / (number of spines in pervious session) * 100
 - % Subtracted :
 - Turn-over-ratio : A measure of total dynamics (both addition and subtraction)
@@ -122,3 +126,4 @@ Threshold time can be specified as: sessions, seconds, days, or hours.
 [1]: stack
 [2]: map-plot
 [3]: stack-browser
+[4]: stack-analysis

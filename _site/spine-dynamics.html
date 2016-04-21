@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
 
-        <title>Map Manager : Spine Dynamics</title>
+        <title>Map Manager : Map report</title>
         <meta name="description" content="">
 
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
@@ -136,7 +136,10 @@
             
                 <li class=nav-header>Analysis</li>
             
-            <li data-order="1"><a href="/mapmanager/spine-dynamics">Spine Dynamics</a></li>
+            <li data-order="1"><a href="/mapmanager/stack-analysis">Stack report</a></li>
+        
+            
+            <li data-order="1"><a href="/mapmanager/spine-dynamics">Map report</a></li>
         
             
             <li data-order="2"><a href="/mapmanager/intensity">Intensity</a></li>
@@ -172,10 +175,12 @@
 
                     <div id=content class=span10>
                         <div class=page-header>
-    <h3>Spine Dynamics
+    <h3>Map report
         
     </h3>
 </div>
+
+<p>See <a href="stack-analysis">Stack report</a> to display segment and stack db tables for a single stack.</p>
 
 <h3 id="density-report">Density Report</h3>
 
@@ -188,8 +193,7 @@
   <li>In the <a href="stack-browser">Stack Browser</a>, select a stack in the list, keyboard ‘o’ for <strong>o</strong>utput report.</li>
 </ul>
 
-<p><code class="highlighter-rouge">
-numSpines		Total number of spines = goodSpines + badSpines
+<div class="highlighter-rouge"><pre class="highlight"><code>numSpines		Total number of spines = goodSpines + badSpines
 goodSpines		Number of good spines.
 badSpines		Number of bad spines.
 totalLen		Total segment length (um)
@@ -200,7 +204,8 @@ totalLen3d
 goodLen3d
 totalDen3d
 goodDen3d
-</code></p>
+</code></pre>
+</div>
 
 <h3 id="dynamics-report">Dynamics Report</h3>
 
@@ -212,31 +217,32 @@ goodDen3d
   <li>In any <a href="map-plot">map plot</a>, right-click and select ‘Dynamics Report’. If the map plot is displaying ‘All Segment’, a table for each segment will be opened. Otherwise, one table for the current ‘Map Segment ID’ will be opened.</li>
 </ul>
 
-<p>```
- numSpines		Total number of spines, goodSpines + badSpines.
- goodSpines		Total number of good spines
- badSpines		Total number of bad spines
- totalLen		Total segment length (um)
- goodLen		Segment length between most distal good spines.</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>numSpines		Total number of spines, goodSpines + badSpines.
+goodSpines		Total number of good spines
+badSpines		Total number of bad spines
 
-<p>totalDen		Total density = numSpines / totalLen
- goodDen		Density of good spines = goodSpines / goodLen</p>
+totalLen		Total segment length (um)
+goodLen			Segment length between most distal good spines.
 
-<p>nAdd			Number of added spines.
- nSub			Number of subtracted spines (at the current session)
- nSub2			Number of subtracted spines (from the previous session)
- tor			Turn-over-ratio =</p>
+totalDen		Total density = numSpines / totalLen
+goodDen			Density of good spines = goodSpines / goodLen
 
-<p>pAdd			Percent added = nAdd / goodSpines from previous session * 100
- pSub			Percent subtracted = 
- dAdd			Density added =
- dSub			Density subtracted =</p>
+nAdd			Number of added spines.
+nSub			Number of subtracted spines (at the current session)
+nSub2			Number of subtracted spines (from the previous session)
+tor			Turn-over-ratio = 
 
-<p>np				New persistent = 
- nt				New transient = 
- lp				Lost persistent = 
- lt				Lost transient = 
-```</p>
+pAdd			Percent added = nAdd / goodSpines from previous session * 100
+pSub			Percent subtracted = 
+dAdd			Density added =
+dSub			Density subtracted = 
+
+np			New persistent = 
+nt			New transient = 
+lp			Lost persistent = 
+lt			Lost transient = 
+</code></pre>
+</div>
 
 <h3 id="concepts">Concepts</h3>
 
@@ -253,12 +259,8 @@ goodDen3d
 <p>From one session to the next, the number of added and subtracted spines are counted. From this, the percent and density changes are calculated.</p>
 
 <ul>
-  <li>
-    <h1 id="added">Added</h1>
-  </li>
-  <li>
-    <h1 id="subtracted">Subtracted</h1>
-  </li>
+  <li>Number Added</li>
+  <li>Number Subtracted</li>
   <li>% Added : # added / (number of spines in pervious session) * 100</li>
   <li>% Subtracted :</li>
   <li>Turn-over-ratio : A measure of total dynamics (both addition and subtraction)</li>

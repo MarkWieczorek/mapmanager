@@ -8,6 +8,21 @@
     
       
       <item>
+        <title>Stack report</title>
+        
+          <description>&lt;p&gt;Each stack tracing can be viewed as a table of text. With these tables it is easy to copy and paste into another program.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Wed, 20 Apr 2016 21:46:33 -0400</pubDate>
+        <link>
+        /stack-analysis</link>
+        <guid isPermaLink="true">/stack-analysis</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Gallery</title>
         
           <description>&lt;h4 id=&quot;gallery&quot;&gt;Gallery&lt;/h4&gt;
@@ -70,9 +85,9 @@ This documentation needs some work.
     
       
       <item>
-        <title>Spine Dynamics</title>
+        <title>Map report</title>
         
-          <description>&lt;h3 id=&quot;density-report&quot;&gt;Density Report&lt;/h3&gt;
+          <description>&lt;p&gt;See &lt;a href=&quot;stack-analysis&quot;&gt;Stack report&lt;/a&gt; to display segment and stack db tables for a single stack.&lt;/p&gt;
 
 </description>
         
@@ -389,7 +404,7 @@ User files have been completely revamped. Global options can now be easily saved
       <item>
         <title>Stack</title>
         
-          <description>&lt;p&gt;&lt;img class=&quot;img-float-left&quot; src=&quot;images/imagingcore/stack-example-spines4.png&quot; width=&quot;300&quot; /&gt;
+          <description>&lt;p&gt;&lt;img class=&quot;img-float-left&quot; src=&quot;images/imagingcore/stack-example-spines4.png&quot; width=&quot;300&quot; /&gt;&lt;br /&gt;
 &lt;img class=&quot;img-float-left&quot; src=&quot;images/imagingcore/stack-example-vascular-4.png&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
 
 </description>

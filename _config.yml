@@ -41,7 +41,7 @@ baseurl: '/mapmanager'
 permalink: /:title
 
 # Syntax highlighting
-highlighter: rouge
+#highlighter: rouge
 
 # Since these are pages, it doesn't really matter
 future: true
@@ -51,6 +51,11 @@ exclude: ['bin', 'README.md']
 
 # Use the redcarpet Markdown renderer
 markdown: kramdown
+
+kramdown:
+   input: GFM
+   syntax_highlighter: rouge
+
 #markdown: redcarpet
 #redcarpet:
 #    extensions: [

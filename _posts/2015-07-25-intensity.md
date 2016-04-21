@@ -77,8 +77,8 @@ Please note, 'u' is for user. User stats are simple algebra on the core intensit
 ```
 sSum		:	spine sum
 sMean		:	spine mean
-sSD			:	spine standard deviation
-sN			:	# pixels in spine roi
+sSD		:	spine standard deviation
+sN		:	# pixels in spine roi
 ```
 
 ##### Spine Background ROI
@@ -93,8 +93,8 @@ sbN			:	# pixels in spine background roi
 ```
 dSum		:	dendrite sum
 dMean		:	dendrite mean
-dSD			:	dendrite standard deviation
-dN			:	# pixels in dendrite roi
+dSD		:	dendrite standard deviation
+dN		:	# pixels in dendrite roi
 ```
 
 ##### Backbone/Dendrite Background ROI
@@ -102,7 +102,7 @@ dN			:	# pixels in dendrite roi
 dbSum		:	dendrite background sum
 dbMean		:	dendrite background mean
 dbSD		:	dendrite background standard deviation
-dbN			:	# pixels in dendrite background roi
+dbN		:	# pixels in dendrite background roi
 ```
 
 ##### Background subtracted ROIs
@@ -116,7 +116,7 @@ ubsdMean	:	background subtracted dendrite mean
 ##### Cross channel stats
 ```
 utssmoss	:	this spine sum minus other spine sum.
-                This can be read as '(t)his (s)pine (s)um (m)inus (o)ther (s)pine sum'
+                	This can be read as '(t)his (s)pine (s)um (m)inus (o)ther (s)pine sum'
 utsmmosm	:	this spine mean minus other spine mean
 
 utssdoss	:	this spine sum divided by other spine sum
