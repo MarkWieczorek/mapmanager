@@ -103,7 +103,7 @@ Each of these buttons will open a different Map Manager panel.
 [5]: search-panel
 [6]: plot-panel
 [7]: stackdb-options-panel
-[8]: process-panel
+[8]: contrast-panel
 [9]: stack-browser
 [10]: hdd-paths
 [11]: run-plot

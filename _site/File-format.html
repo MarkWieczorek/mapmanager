@@ -73,13 +73,16 @@
             
                 <li class=nav-header>Imaging Core</li>
             
+            <li data-order="5"><a href="/mapmanager/fitting-segments-in-fiji">Fitting segments in Fiji</a></li>
+        
+            
             <li data-order="3"><a href="/mapmanager/stackdb-plot">Stack DB plot</a></li>
         
             
-            <li data-order="4"><a href="/mapmanager/scale-panel">Scale panel</a></li>
+            <li data-order="4"><a href="/mapmanager/layout-panel">Layout panel</a></li>
         
             
-            <li data-order="3"><a href="/mapmanager/process-panel">Process panel</a></li>
+            <li data-order="3"><a href="/mapmanager/contrast-panel">Contrast panel</a></li>
         
             
             <li data-order="1"><a href="/mapmanager/stack-browser">Stack Browser</a></li>
@@ -152,13 +155,13 @@
             
                 <li class=nav-header>Blog Posts</li>
             
+            <li data-order="2"><a href="/mapmanager/release-notes">Release Notes</a></li>
+        
+            
             <li data-order="2"><a href="/mapmanager/faq">FAQ</a></li>
         
             
             <li data-order=""><a href="/mapmanager/File-format">File format</a></li>
-        
-            
-            <li data-order=""><a href="/mapmanager/fitting-segments-in-fiji">Fitting segments in Fiji</a></li>
         
             
             <li data-order="3"><a href="/mapmanager/user-files">User files</a></li>
@@ -255,28 +258,28 @@ f[myMap].values()[9].values()[0][1][1]
 </code></pre>
 </div>
 
-<p>In [64]: f[myMap].values()<a href="https://github.com/cudmore/mapmanager/blob/gh-pages/_notebooks/MapManager.ipynb">9</a>.values()<br />
-Out[64]: <br />
-[&lt;HDF5 dataset “a5n_s0_Int1”: shape (385, 41), type “&lt;f4”&gt;,<br />
- &lt;HDF5 dataset “a5n_s0_Int2”: shape (385, 41), type “&lt;f4”&gt;,<br />
- &lt;HDF5 dataset “a5n_s0_db2”: shape (385, 44), type “|O8”&gt;,<br />
- &lt;HDF5 dataset “a5n_s0_l”: shape (3903, 19), type “&lt;f4”&gt;,<br />
- &lt;HDF5 dataset “a5n_s1_Int1”: shape (378, 41), type “&lt;f4”&gt;,<br />
- &lt;HDF5 dataset “a5n_s1_Int2”: shape (378, 41), type “&lt;f4”&gt;,<br />
- &lt;HDF5 dataset “a5n_s1_db2”: shape (378, 44), type “|O8”&gt;,<br />
- &lt;HDF5 dataset “a5n_s1_l”: shape (3871, 19), type “&lt;f4”&gt;,<br />
- &lt;HDF5 dataset “a5n_s2_Int1”: shape (369, 41), type “&lt;f4”&gt;,<br />
- &lt;HDF5 dataset “a5n_s2_Int2”: shape (369, 41), type “&lt;f4”&gt;,<br />
- &lt;HDF5 dataset “a5n_s2_db2”: shape (369, 44), type “|O8”&gt;,<br />
- &lt;HDF5 dataset “a5n_s2_l”: shape (3742, 19), type “&lt;f4”&gt;,<br />
- &lt;HDF5 dataset “a5n_s3_Int1”: shape (364, 41), type “&lt;f4”&gt;,<br />
- &lt;HDF5 dataset “a5n_s3_Int2”: shape (364, 41), type “&lt;f4”&gt;,<br />
- &lt;HDF5 dataset “a5n_s3_db2”: shape (364, 44), type “|O8”&gt;,<br />
+<p>In [64]: f[myMap].values()<a href="https://github.com/cudmore/mapmanager/blob/gh-pages/_notebooks/MapManager.ipynb">9</a>.values()
+Out[64]: 
+[&lt;HDF5 dataset “a5n_s0_Int1”: shape (385, 41), type “&lt;f4”&gt;,
+ &lt;HDF5 dataset “a5n_s0_Int2”: shape (385, 41), type “&lt;f4”&gt;,
+ &lt;HDF5 dataset “a5n_s0_db2”: shape (385, 44), type “|O8”&gt;,
+ &lt;HDF5 dataset “a5n_s0_l”: shape (3903, 19), type “&lt;f4”&gt;,
+ &lt;HDF5 dataset “a5n_s1_Int1”: shape (378, 41), type “&lt;f4”&gt;,
+ &lt;HDF5 dataset “a5n_s1_Int2”: shape (378, 41), type “&lt;f4”&gt;,
+ &lt;HDF5 dataset “a5n_s1_db2”: shape (378, 44), type “|O8”&gt;,
+ &lt;HDF5 dataset “a5n_s1_l”: shape (3871, 19), type “&lt;f4”&gt;,
+ &lt;HDF5 dataset “a5n_s2_Int1”: shape (369, 41), type “&lt;f4”&gt;,
+ &lt;HDF5 dataset “a5n_s2_Int2”: shape (369, 41), type “&lt;f4”&gt;,
+ &lt;HDF5 dataset “a5n_s2_db2”: shape (369, 44), type “|O8”&gt;,
+ &lt;HDF5 dataset “a5n_s2_l”: shape (3742, 19), type “&lt;f4”&gt;,
+ &lt;HDF5 dataset “a5n_s3_Int1”: shape (364, 41), type “&lt;f4”&gt;,
+ &lt;HDF5 dataset “a5n_s3_Int2”: shape (364, 41), type “&lt;f4”&gt;,
+ &lt;HDF5 dataset “a5n_s3_db2”: shape (364, 44), type “|O8”&gt;,
  &lt;HDF5 dataset “a5n_s3_l”: shape (3837, 19), type “&lt;f4”&gt;]</p>
 
 <p>i got 385 from shape (how do i do this with code?)</p>
 
-<p>In [82]: for a in range(385):<br />
+<p>In [82]: for a in range(385):
     print f[myMap].values()<a href="https://github.com/cudmore/mapmanager/blob/gh-pages/_notebooks/MapManager.ipynb">9</a>.values()[0]<a href="https://www.hdfgroup.org/HDF5/">a</a></p>
 
 <h3 id="this-is-working">this is working</h3>

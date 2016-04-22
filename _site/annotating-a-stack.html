@@ -73,13 +73,16 @@
             
                 <li class=nav-header>Imaging Core</li>
             
+            <li data-order="5"><a href="/mapmanager/fitting-segments-in-fiji">Fitting segments in Fiji</a></li>
+        
+            
             <li data-order="3"><a href="/mapmanager/stackdb-plot">Stack DB plot</a></li>
         
             
-            <li data-order="4"><a href="/mapmanager/scale-panel">Scale panel</a></li>
+            <li data-order="4"><a href="/mapmanager/layout-panel">Layout panel</a></li>
         
             
-            <li data-order="3"><a href="/mapmanager/process-panel">Process panel</a></li>
+            <li data-order="3"><a href="/mapmanager/contrast-panel">Contrast panel</a></li>
         
             
             <li data-order="1"><a href="/mapmanager/stack-browser">Stack Browser</a></li>
@@ -152,13 +155,13 @@
             
                 <li class=nav-header>Blog Posts</li>
             
+            <li data-order="2"><a href="/mapmanager/release-notes">Release Notes</a></li>
+        
+            
             <li data-order="2"><a href="/mapmanager/faq">FAQ</a></li>
         
             
             <li data-order=""><a href="/mapmanager/File-format">File format</a></li>
-        
-            
-            <li data-order=""><a href="/mapmanager/fitting-segments-in-fiji">Fitting segments in Fiji</a></li>
         
             
             <li data-order="3"><a href="/mapmanager/user-files">User files</a></li>
@@ -194,13 +197,13 @@
 
 <p>Choose the type of object in the ‘New Object’ group and shift+click in the image to create the object.</p>
 
-<p><img class="img-float-right" src="images/mm3/mm3-object-types.png" width="100" /><br />
-- <strong>Spine</strong> : A spine is always connected to a segment (its parent segment). You can only create a spine if you first select the segment that will be its parent.  <br />
-- <strong>Bouton</strong> : This also requires a parent  <br />
-- vBranch :  <br />
-- soma :  <br />
-- peri :  <br />
-- <strong>controlPnt</strong> : Points along a segment that are used to fit a line in FIJI. <br />
+<p><img class="img-float-right" src="images/mm3/mm3-object-types.png" width="100" />
+- <strong>Spine</strong> : A spine is always connected to a segment (its parent segment). You can only create a spine if you first select the segment that will be its parent.<br />
+- <strong>Bouton</strong> : This also requires a parent<br />
+- vBranch :<br />
+- soma :<br />
+- peri :<br />
+- <strong>controlPnt</strong> : Points along a segment that are used to fit a line in FIJI. 
 - other :</p>
 
 <p>The different names allow you to organize your annotations into different groups. These groups can then be <a href="search-panel">searched</a>, <a href="plot-panel">plotted</a> and connect together in a <a href="map-plot">map</a>.</p>
@@ -236,7 +239,7 @@
 <ol>
   <li>Make sure ‘Edit Segments ‘ is turned on.</li>
   <li>
-    <p>Create a new (empty) line segment  <br />
+    <p>Create a new (empty) line segment<br />
   Click ‘+’ button in the ‘Line Segment’ group. This will create an empty line segment.</p>
   </li>
   <li>Make a series of 3D <strong>control point</strong> objects along your dendrite/axon

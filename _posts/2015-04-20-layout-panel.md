@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Scale panel"
+title: "Layout panel"
 category: imagingcore
 date: 2015-04-20 22:46:33
 order: 4
@@ -9,7 +9,7 @@ tags:
 ---
 
 
-The scale panel provides an interface to tweak Igor plots.
+The layout panel provides an interface to tweak Igor plots.
 
 <IMG class="img-float-left" SRC="images/mm3/mm3-scale-panel.png" WIDTH="400">
 
