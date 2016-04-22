@@ -90,23 +90,25 @@
 
                     order = parseFloat(li.getAttribute('data-order'))
                     lists[section].push([order, li]);
+                    
+                    //console.log(order, li);
                 }
 
                 //20160327 removed, this was no doing anything???
-                //for (var i = 0; i < sections.length; i++) {
-                 //   section = sections[i];
-                 //   console.log(section);
-                 //   list = lists[section].sort(function(a, b) {
-                 //       return a[0] - b[0];
-                 //   });
+                for (var i = 0; i < sections.length; i++) {
+                    section = sections[i];
+                    //console.log(section);
+                    list = lists[section].sort(function(a, b) {
+                        return a[0] - b[0];
+                    });
 
-                 //   if (header = headers[section]) {
-                 //       navUl.appendChild(header);
-                 //   }
-                 //   for (var j = 0; j < list.length; j++) {
-                 //       navUl.appendChild(list[j][1]);
-                 //   }
-                //}
+                    if (header = headers[section]) {
+                        navUl.appendChild(header);
+                    }
+                    for (var j = 0; j < list.length; j++) {
+                        navUl.appendChild(list[j][1]);
+                    }
+                }
             }
 
             if (document.querySelectorAll) orderNav();

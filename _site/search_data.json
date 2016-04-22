@@ -135,7 +135,7 @@
 
     "stackdb-plot": {
       "title": "Stack DB plot",
-      "content"	 : "A stack db plot provides an interface to edit and visualize a stack db for a single stack.All stack db plots are interactive. Selecting an object will propagate this selection to other stack and map plots.Toggle the stack db interface in any stack using keyboard ‘[’",
+      "content"	 : "A stack db plot provides an interface to edit and visualize a stack db for a single stack.All stack db plots are interactive. Selecting an object will propagate this selection to other stack and map plots.Toggle the stack db interface in any stack using keyboard ‘[’.",
       "url": "/stackdb-plot",
       "author": "",
       "category": "imagingcore",

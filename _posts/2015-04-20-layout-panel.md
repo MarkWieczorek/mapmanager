@@ -3,7 +3,7 @@ layout: page
 title: "Layout panel"
 category: imagingcore
 date: 2015-04-20 22:46:33
-order: 4
+order: 6
 tags:
 - Imaging core
 ---
