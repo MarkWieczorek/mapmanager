@@ -36,7 +36,7 @@ All code and documentation written by [Robert Cudmore][2]
 
 #### Links
 
-- <A HREF="http://cudmore.github.io/mapmanager/">Map Manager</A> (This page)
+- <A HREF="https://github.com/cudmore/mapmanager">Map Manager</A> (Github)
 - <A HREF="https://github.com/cudmore/bob-fiji-plugins">Fiji macros and plugins</A> (GitHub)
 - Robert Cudmore's <A HREF="http://robertcudmore.org/">Home Page</A>
 - Robert Cudmore's blog <A HREF="http://cudmore.github.io/">Blog</A>
