@@ -72,7 +72,7 @@ This documentation needs some work.
       <item>
         <title>Getting started</title>
         
-          <description>&lt;h3 id=&quot;installing-igor-pro&quot;&gt;Installing Igor Pro&lt;/h3&gt;
+          <description>&lt;h4 id=&quot;installing-igor-pro&quot;&gt;Installing Igor Pro&lt;/h4&gt;
 
 </description>
         
@@ -372,21 +372,6 @@ User files have been completely revamped. Global options can now be easily saved
     
       
       <item>
-        <title>Annotating a stack</title>
-        
-          <description>&lt;p&gt;&lt;img class=&quot;img-float-left&quot; src=&quot;images/mm3/mm3-stackdb-plot.png&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
-
-</description>
-        
-        <pubDate>Mon, 20 Apr 2015 18:46:33 -0400</pubDate>
-        <link>
-        /annotating-a-stack</link>
-        <guid isPermaLink="true">/annotating-a-stack</guid>
-      </item>
-      
-    
-      
-      <item>
         <title>Stack Browser</title>
         
           <description>&lt;p&gt;&lt;img class=&quot;img-float-left&quot; src=&quot;images/mm3/mm3-stack-browser.png&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
@@ -402,16 +387,16 @@ User files have been completely revamped. Global options can now be easily saved
     
       
       <item>
-        <title>Simple stack database</title>
+        <title>Annotating a stack</title>
         
-          <description>&lt;p&gt;This describes a workflow for annotating 3D points in a &lt;strong&gt;single timepoint&lt;/strong&gt;. Please see &lt;a href=&quot;making-a-map&quot;&gt;making a map&lt;/a&gt; to collect a sequence of stacks into a timeseries map.&lt;/p&gt;
+          <description>&lt;p&gt;This describes a workflow for annotating 3D points in a &lt;strong&gt;single stack&lt;/strong&gt;. Please see &lt;a href=&quot;making-a-map&quot;&gt;making a map&lt;/a&gt; to collect a sequence of stacks into a timeseries map.&lt;/p&gt;
 
 </description>
         
         <pubDate>Sat, 21 Feb 2015 17:46:33 -0500</pubDate>
         <link>
-        /simple-stack-db</link>
-        <guid isPermaLink="true">/simple-stack-db</guid>
+        /annotating-a-stack</link>
+        <guid isPermaLink="true">/annotating-a-stack</guid>
       </item>
       
     

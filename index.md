@@ -27,8 +27,8 @@ Map Manager is software to annotate and analyze time-series of 3D image stacks.
 
 #### Workflows
 
-- [Making a map][3]
-- [Simple stack database][4]
+- [Annotating a stack][3]
+- [Making a map][4]
 
 #### About
 
@@ -45,6 +45,6 @@ All code and documentation written by [Robert Cudmore][2]
 
 [1]: http://wavemetrics.com
 [2]: http://robertcudmore.org
-[3]: making-a-map
-[4]: simple-stack-db
+[3]: annotating-a-stack
+[4]: making-a-map
 [5]: getting-started

@@ -18,6 +18,9 @@
             <div class=row-fluid>
                 <div id=header class=span12>
                     <div class=no-print>
+
+<div style="float: right;"><A HREF="search.html">Search...</A></div>
+
 <h4>
 	<a class=brand href="/mapmanager/">Map Manager</a>
     <small></small>
@@ -29,6 +32,8 @@
 <a href="javascript:window.print()" float=right>print</a>
 </div>
 -->
+
+
 
 </div>
 
@@ -60,10 +65,7 @@
             <li data-order="2"><a href="/mapmanager/making-a-map">Making a map</a></li>
         
             
-            <li data-order="3"><a href="/mapmanager/annotating-a-stack">Annotating a stack</a></li>
-        
-            
-            <li data-order="1"><a href="/mapmanager/simple-stack-db">Simple stack database</a></li>
+            <li data-order="1"><a href="/mapmanager/annotating-a-stack">Annotating a stack</a></li>
         
     
         
@@ -176,7 +178,7 @@
     e.g. <li class=divider></li> first to break up the content. -->
 </ul>
 
-    <A HREF="search.html">Search...</A>
+<!--    <A HREF="search.html">Search...</A> -->
 
                     </div>
 
@@ -221,27 +223,17 @@
 
 <h3 id="configuring-map-manager-to-fit-a-line-in-fiji">(3) Configuring Map Manager to fit a line In Fiji</h3>
 
-<p>You need to specify the location of your Fiji program from within Map Manager. This is most easily done using the <a href="hdd-paths">Hard Drive Paths</a> panel. Here are the details:</p>
+<p>You need to specify the location of your Fiji program from within Map Manager. This is most easily done using the <a href="hdd-paths">Hard Drive Paths</a> panel.</p>
 
 <ul>
-  <li>Run Map Manager with the MapManager.ipf file (this is how you always run Map Manager).</li>
   <li>Open the <a href="hdd-paths">HDD Paths</a> panel using the main menu ‘MapManager - Hard Drive Paths’.</li>
-  <li>In the Map Manager HD Paths panel, specify the path to your Fiji Application with the corresponding ‘Set’ button.</li>
-  <li>In the main <a href="stackdb-options-panel">Options Panel</a>,save the global options with the ‘Save’ button. The next time Map Manager is run, it will remember and use this Fiji path.</li>
+  <li>In the Map Manager HD Paths panel, specify the path to your <strong>Fiji Application</strong> with the corresponding <strong>Set</strong> button.</li>
+  <li>In the main <a href="stackdb-options-panel">Options Panel</a>, save the global options with the <strong>Save</strong> button. The next time Map Manager is run, it will remember and use this Fiji path.</li>
 </ul>
 
-<p>If that does not work, you can specify the location of your Fiji program in a Map Manager <a href="user-files">User File</a>. The user file needs to contain a line like this…</p>
+<p><img class="img-float-left" src="images/mm3/mm3-hdd-paths.png" width="650" /></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code># Specify the location of your Fiji executable.
-# Please use 'Fiji Life-Line version, 2013 July 15'.
-# mac
-root:stackdb2:options:gFijiPath="/Users/cudmore/Fiji.app/Contents/MacOS/Imagej-macosx"
-# windows
-# root:stackdb2:options:gFijiPath="C:\Users\cudmore.linden-image2\Desktop\Fiji.app\fiji-win64.exe"
-</code></pre>
-</div>
-
-<p>Make sure the actual Fiji executable exists. Don’t assume the name of Fiji is ‘fiji-win64.exe’, this name changes from version to version of Fiji. If there is an error in this path, there WILL be an error when fitting lines in Map Manager.</p>
+<div class="print-page-break"></div>
 
 <h3 id="troubleshooting">Troubleshooting</h3>
 
@@ -253,6 +245,19 @@ root:stackdb2:options:gFijiPath="/Users/cudmore/Fiji.app/Contents/MacOS/Imagej-m
   <li>You have downloaded and install the ‘Bob_Neurite_Tracer_v3.java’</li>
   <li>You have specified your Fiji path within Map Manager using ‘MapManager - Hard Drive Paths’.</li>
 </ul>
+
+<p>The location of the Fiji program can also be specified in a Map Manager <a href="user-files">User File</a>. The user file needs to contain a line like this…</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code># Specify the location of your Fiji executable.
+# Please use 'Fiji Life-Line version, 2013 July 15'.
+# mac
+root:stackdb2:options:gFijiPath="/Users/cudmore/Fiji.app/Contents/MacOS/Imagej-macosx"
+# windows
+# root:stackdb2:options:gFijiPath="C:\Users\cudmore.linden-image2\Desktop\Fiji.app\fiji-win64.exe"
+</code></pre>
+</div>
+
+<p>Make sure the actual Fiji executable exists. Don’t assume the name of Fiji is ‘fiji-win64.exe’, this name changes from version to version of Fiji. If there is an error in this path, there WILL be an error when fitting lines in Map Manager.</p>
 
 
 

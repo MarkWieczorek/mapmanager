@@ -18,6 +18,9 @@
             <div class=row-fluid>
                 <div id=header class=span12>
                     <div class=no-print>
+
+<div style="float: right;"><A HREF="search.html">Search...</A></div>
+
 <h4>
 	<a class=brand href="/mapmanager/">Map Manager</a>
     <small></small>
@@ -29,6 +32,8 @@
 <a href="javascript:window.print()" float=right>print</a>
 </div>
 -->
+
+
 
 </div>
 
@@ -60,10 +65,7 @@
             <li data-order="2"><a href="/mapmanager/making-a-map">Making a map</a></li>
         
             
-            <li data-order="3"><a href="/mapmanager/annotating-a-stack">Annotating a stack</a></li>
-        
-            
-            <li data-order="1"><a href="/mapmanager/simple-stack-db">Simple stack database</a></li>
+            <li data-order="1"><a href="/mapmanager/annotating-a-stack">Annotating a stack</a></li>
         
     
         
@@ -176,7 +178,7 @@
     e.g. <li class=divider></li> first to break up the content. -->
 </ul>
 
-    <A HREF="search.html">Search...</A>
+<!--    <A HREF="search.html">Search...</A> -->
 
                     </div>
 
@@ -187,7 +189,7 @@
     </h3>
 </div>
 
-<h3 id="installing-igor-pro">Installing Igor Pro</h3>
+<h4 id="installing-igor-pro">Installing Igor Pro</h4>
 
 <ul>
   <li>Igor Pro is a cross platform program that runs on both Windows and Mac OS X.</li>
@@ -195,7 +197,7 @@
   <li>To try out Igor Pro, download and install a fully functional but time limited <a href="https://www.wavemetrics.com/support/demos.htm">demo version</a>.</li>
 </ul>
 
-<h3 id="installing-map-manager">Installing Map Manager</h3>
+<h4 id="installing-map-manager">Installing Map Manager</h4>
 
 <ul>
   <li>Once Igor Pro is installed, there is no formal installation of Map Manager</li>
@@ -205,16 +207,18 @@
   <li>To fit lines in FIJI you will have to specify a hard-drive path to FIJI and install a plugin in FIJI. Please see <a href="fitting-segments-in-fiji">fitting segments in fiji</a>.</li>
 </ul>
 
-<h3 id="openingrunning-map-manager">Opening/Running Map Manager</h3>
+<h4 id="openingrunning-map-manager">Opening/Running Map Manager</h4>
 
 <ul>
   <li>Open MapManager.ipf into Igor Pro (just double click the MapManager.ipf file).</li>
   <li>Once in Igor Pro, click in the command window to compile Map Manager and activate the main menus. The command window is in the lower left of your screen and has the window title ‘Untitled’.</li>
-  <li>To score a single timepoint stack, select the main menu ‘MapManager - Stack Browser’ to open the <a href="stack-browser">Stack Browser</a> panel. See <a href="simple-stack-db">Simple Stack DB</a> for more information.</li>
+  <li>To score a single timepoint stack, select the main menu ‘MapManager - Stack Browser’ to open the <a href="stack-browser">Stack Browser</a> panel. See <a href="annotating-a-stack">Annotating a stack</a> for more information.</li>
   <li>To score a timeseries of stacks (a map), select the main menu ‘MapManager - Map Manager Panel’ to open the main <a href="main-panel">Map Manager panel</a>. See <a href="making-a-map">Making A Map</a> for more information.</li>
 </ul>
 
-<h3 id="closingquiting-map-manager">Closing/Quiting Map Manager</h3>
+<p><img class="img-float-right" src="images/mm3/quit-igor.png" width="400" /></p>
+
+<h4 id="closingquiting-map-manager">Closing/Quiting Map Manager</h4>
 
 <ul>
   <li>Quit Igor Pro by selecting the main menu ‘Igor Pro - Quit Igor Pro’.</li>
@@ -222,10 +226,7 @@
   <li>Always answer <strong>No</strong>. All Map Manager analysis is saved using the ‘Save’ buttons from within the Map Manager interface.</li>
 </ul>
 
-<div class="print-page-break"></div>
-<p><img class="img-float-left" src="images/mm3/quit-igor.png" width="400" /></p>
-
-<h3 id="map-manager-options">Map Manager Options</h3>
+<h4 id="map-manager-options">Map Manager Options</h4>
 
 <ul>
   <li>Global options are set in the <a href="stackdb-options-panel">Options Panel</a>.</li>
@@ -233,6 +234,8 @@
   <li>Save the current options with the ‘Save’ button in the <a href="stackdb-options-panel">Options</a> panel.</li>
   <li>Options can also be saved and then loaded from a user file. Use ‘Save As…’ to save options into a user file.</li>
 </ul>
+
+<div class="print-page-break"></div>
 
 
 
