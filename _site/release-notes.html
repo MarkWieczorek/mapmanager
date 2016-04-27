@@ -141,10 +141,7 @@
             
                 <li class=nav-header>Analysis</li>
             
-            <li data-order="1"><a href="/mapmanager/stack-analysis">Stack report</a></li>
-        
-            
-            <li data-order="1"><a href="/mapmanager/spine-dynamics">Map report</a></li>
+            <li data-order="1"><a href="/mapmanager/reports">Reports</a></li>
         
             
             <li data-order="2"><a href="/mapmanager/intensity">Intensity</a></li>
@@ -191,16 +188,21 @@
 
 <h3 id="update-file-version-20151224">20160422 Update (file version 20151224)</h3>
 
+<p>This is a major release with new features, improvements, and bug fixes. The file format has not changed but the options have. Please remake your options!</p>
+
 <h4 id="new-features">New Features</h4>
 
 <ul>
-  <li>Jumping spines</li>
-  <li>Added jumping to map search</li>
-</ul>
-
-<p>Jumping spines are specified just like other persistent spines. select spines in both time-points and hit keyboard ‘p’. When you make jumping spines, the source and destination spines are required to be subtraction and addition respectively.</p>
-
-<ul>
+  <li>
+    <p>Jumping spines
+Jumping spines are specified just like other persistent spines. select spines in both time-points and hit keyboard ‘p’. When you make jumping spines, the source and destination spines are required to be subtraction and addition respectively.</p>
+  </li>
+  <li>
+    <p>Added jumping to map search</p>
+  </li>
+  <li>
+    <p>No more limitation on length of file names when importing into stack browser</p>
+  </li>
   <li>
     <p>Plot run +/- now has option to set ‘row’ of run</p>
   </li>
@@ -215,35 +217,37 @@
   <li>
     <p>Main map plot now remembers its position</p>
   </li>
-  <li>Conrol click on close all windows will now close tables</li>
+  <li>Conrol click on ‘close all windows’ will now close tables</li>
 </ul>
 
 <h4 id="improvements">Improvements</h4>
 
 <ul>
   <li>
-    <p>No more limitation on length of file names when importing into stack browser</p>
+    <p>Fast left/right mouse click should no longer be a problem.</p>
   </li>
   <li>
-    <p>Fast left/right mouse click should no longer be a problem</p>
+    <p>User clicks during long operations like opening a run should no longer be a problem.</p>
   </li>
   <li>
-    <p>User clicks during long operations like opening a run should no longer be a problem</p>
+    <p>Updated coloring of spines in map plot. If there is no previous segment, spines are no longer marked as added (green). If there is no next segment, spines are no longer marked as subtracted (red). Same rules for transient (blue).</p>
+  </li>
+  <li>Map Plot. Snapping a marquee rectangle and right-click to make a selection now prints the mean/sd/se/n for both x and y axis.</li>
+  <li>
+    <p>Map Plot. Snapping a marquee rectangle and right-click to make a selection now works for +/- from mask.</p>
   </li>
   <li>
-    <p>Right-click in map plot to make selection now works for (+/- from mask)</p>
+    <p>Stats button in map plot will now report grand mean of all spine masks in plot (previously was only per segment).</p>
+  </li>
+  <li>All spine dynamics now plot following colors and size specified in table in options panel.</li>
+  <li>
+    <p>The size of masks in map plots now follow ‘pntSel’ in main map manager options panel.</p>
   </li>
   <li>
-    <p>Stats button in map plot will now report grand mean of all spine masks in plot (previously was only per segment)</p>
+    <p>Revamped example user file. tried to make it clear that this can be empty and that values specified will over-ride setting in main options panel.</p>
   </li>
-  <li>All spine dynamics now plot following colors and size specified in table in options panel</li>
-  <li>
-    <p>The size of masks in map plots now follow ‘pntSel’ in main map manager options panel</p>
-  </li>
-  <li>
-    <p>Revamped example user file. tried to make it clear that this can be empty and that values specified will over-ride setting in main options panel</p>
-  </li>
-  <li>Added dynamics menu to right-click in map plot</li>
+  <li>Added ‘dynamics’ menu to right-click in map plot.</li>
+  <li>Added ‘Edit Line’ menu to right-click in main stack window ‘Line Segments’.</li>
 </ul>
 
 <h4 id="bug-fixes">Bug Fixes</h4>

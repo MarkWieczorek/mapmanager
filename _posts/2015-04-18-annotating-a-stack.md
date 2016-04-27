@@ -177,4 +177,4 @@ Open the [Stack DB Options Panel][4] from the stack db toolbar using the 'Option
 [8]: map-plot
 [9]: fitting-segments-in-fiji
 [10]: File-format
-[11]: stack-analysis
+[11]: reports

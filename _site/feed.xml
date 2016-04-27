@@ -23,21 +23,6 @@
     
       
       <item>
-        <title>Stack report</title>
-        
-          <description>&lt;p&gt;Each stack tracing can be viewed as a table of text. With these tables it is easy to copy and paste into another program.&lt;/p&gt;
-
-</description>
-        
-        <pubDate>Wed, 20 Apr 2016 21:46:33 -0400</pubDate>
-        <link>
-        /stack-analysis</link>
-        <guid isPermaLink="true">/stack-analysis</guid>
-      </item>
-      
-    
-      
-      <item>
         <title>Gallery</title>
         
           <description>&lt;h4 id=&quot;gallery&quot;&gt;Gallery&lt;/h4&gt;
@@ -100,16 +85,26 @@ This documentation needs some work.
     
       
       <item>
-        <title>Map report</title>
+        <title>Reports</title>
         
-          <description>&lt;p&gt;See &lt;a href=&quot;stack-analysis&quot;&gt;Stack report&lt;/a&gt; to display segment and stack db tables for a single stack.&lt;/p&gt;
+          <description>&lt;style&gt;
+table{
+    border-collapse: collapse;
+    border:1px solid #000000;
+    margin-left:50px
+}
 
+[1]: stack
+[2]: map-plot
+[3]: stack-browser
+[4]: reports
+&lt;/style&gt;
 </description>
         
         <pubDate>Sat, 25 Jul 2015 18:46:33 -0400</pubDate>
         <link>
-        /spine-dynamics</link>
-        <guid isPermaLink="true">/spine-dynamics</guid>
+        /reports</link>
+        <guid isPermaLink="true">/reports</guid>
       </item>
       
     

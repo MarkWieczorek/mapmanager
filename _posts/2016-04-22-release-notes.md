@@ -10,12 +10,16 @@ tags:
 
 ### 20160422 Update (file version 20151224)
 
+This is a major release with new features, improvements, and bug fixes. The file format has not changed but the options have. Please remake your options!
+
 #### New Features
 
 - Jumping spines
+Jumping spines are specified just like other persistent spines. select spines in both time-points and hit keyboard 'p'. When you make jumping spines, the source and destination spines are required to be subtraction and addition respectively.
+
 - Added jumping to map search
 
-Jumping spines are specified just like other persistent spines. select spines in both time-points and hit keyboard 'p'. When you make jumping spines, the source and destination spines are required to be subtraction and addition respectively.
+- No more limitation on length of file names when importing into stack browser
 
 - Plot run +/- now has option to set 'row' of run
 
@@ -27,26 +31,28 @@ Jumping spines are specified just like other persistent spines. select spines in
 - Main map manager panel now remembers its position
 - Main map plot now remembers its position
 
-- Conrol click on close all windows will now close tables
+- Conrol click on 'close all windows' will now close tables
 
 #### Improvements
 
-- No more limitation on length of file names when importing into stack browser
+- Fast left/right mouse click should no longer be a problem.
 
-- Fast left/right mouse click should no longer be a problem
+- User clicks during long operations like opening a run should no longer be a problem.
 
-- User clicks during long operations like opening a run should no longer be a problem
+- Updated coloring of spines in map plot. If there is no previous segment, spines are no longer marked as added (green). If there is no next segment, spines are no longer marked as subtracted (red). Same rules for transient (blue).
 
-- Right-click in map plot to make selection now works for (+/- from mask)
+- Map Plot. Snapping a marquee rectangle and right-click to make a selection now prints the mean/sd/se/n for both x and y axis.
+- Map Plot. Snapping a marquee rectangle and right-click to make a selection now works for +/- from mask.
 
-- Stats button in map plot will now report grand mean of all spine masks in plot (previously was only per segment)
+- Stats button in map plot will now report grand mean of all spine masks in plot (previously was only per segment).
 
-- All spine dynamics now plot following colors and size specified in table in options panel
-- The size of masks in map plots now follow 'pntSel' in main map manager options panel
+- All spine dynamics now plot following colors and size specified in table in options panel.
+- The size of masks in map plots now follow 'pntSel' in main map manager options panel.
 
-- Revamped example user file. tried to make it clear that this can be empty and that values specified will over-ride setting in main options panel
+- Revamped example user file. tried to make it clear that this can be empty and that values specified will over-ride setting in main options panel.
 
-- Added dynamics menu to right-click in map plot
+- Added 'dynamics' menu to right-click in map plot.
+- Added 'Edit Line' menu to right-click in main stack window 'Line Segments'.
 
 
 #### Bug Fixes

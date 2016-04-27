@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+
+        <title>Map Manager : Reports</title>
+        <meta name="description" content="">
+
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/mapmanager/css/syntax.css">
+        <link rel="stylesheet" href="/mapmanager/css/main.css">
+    </head>
+    <body>
+
+        <div class="container">
+            <div class=row-fluid>
+                <div id=header class=span12>
+                    <div class=no-print>
+
+<div style="float: right;"><A HREF="search.html">Search...</A></div>
+
+<h4>
+	<a class=brand href="/mapmanager/">Map Manager</a>
+    <small></small>
+</h4>
+
+
+<!--
+<div float=right>
+<a href="javascript:window.print()" float=right>print</a>
+</div>
+-->
+
+
+
+</div>
+
+                </div>
+            </div>
+
+            <div class=row-fluid>
+                
+                
+                    <div id=navigation class=span2>
+                        <ul class="nav nav-list">
+    <!-- <li><a href="/mapmanager/">Home</a></li> -->
+    <BR>
+    
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Workflows</li>
+            
+            <li data-order="5"><a href="/mapmanager/gallery">Gallery</a></li>
+        
+            
+            <li data-order="1"><a href="/mapmanager/getting-started">Getting started</a></li>
+        
+            
+            <li data-order="2"><a href="/mapmanager/making-a-map">Making a map</a></li>
+        
+            
+            <li data-order="1"><a href="/mapmanager/annotating-a-stack">Annotating a stack</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Imaging Core</li>
+            
+            <li data-order="4"><a href="/mapmanager/fitting-segments-in-fiji">Fitting segments in Fiji</a></li>
+        
+            
+            <li data-order="3"><a href="/mapmanager/stackdb-plot">Stack DB plot</a></li>
+        
+            
+            <li data-order="6"><a href="/mapmanager/layout-panel">Layout panel</a></li>
+        
+            
+            <li data-order="5"><a href="/mapmanager/contrast-panel">Contrast panel</a></li>
+        
+            
+            <li data-order="1"><a href="/mapmanager/stack-browser">Stack Browser</a></li>
+        
+            
+            <li data-order="2"><a href="/mapmanager/stack">Stack</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Interface Windows</li>
+            
+            <li data-order="4"><a href="/mapmanager/find-points-panel">Find Points</a></li>
+        
+            
+            <li data-order="6"><a href="/mapmanager/hdd-paths">Hard Drive Paths</a></li>
+        
+            
+            <li data-order="5"><a href="/mapmanager/stackdb-options-panel">Options</a></li>
+        
+            
+            <li data-order="2"><a href="/mapmanager/search-panel">Search panel</a></li>
+        
+            
+            <li data-order="3"><a href="/mapmanager/plot-panel">Plot panel</a></li>
+        
+            
+            <li data-order="1"><a href="/mapmanager/main-panel">Main panel</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Plots</li>
+            
+            <li data-order="1"><a href="/mapmanager/stack-plot">Stack plot</a></li>
+        
+            
+            <li data-order="3"><a href="/mapmanager/run-plot">Run plot</a></li>
+        
+            
+            <li data-order="2"><a href="/mapmanager/map-plot">Map plot</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Analysis</li>
+            
+            <li data-order="1"><a href="/mapmanager/reports">Reports</a></li>
+        
+            
+            <li data-order="2"><a href="/mapmanager/intensity">Intensity</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Blog Posts</li>
+            
+            <li data-order="2"><a href="/mapmanager/release-notes">Release Notes</a></li>
+        
+            
+            <li data-order="2"><a href="/mapmanager/faq">FAQ</a></li>
+        
+            
+            <li data-order=""><a href="/mapmanager/File-format">File format</a></li>
+        
+            
+            <li data-order="3"><a href="/mapmanager/user-files">User files</a></li>
+        
+            
+            <li data-order="3"><a href="/mapmanager/database-overview">Database overview</a></li>
+        
+    
+
+
+<!-- List additional links. It is recommended to add a divider
+    e.g. <li class=divider></li> first to break up the content. -->
+</ul>
+
+<!--    <A HREF="search.html">Search...</A> -->
+
+                    </div>
+
+                    <div id=content class=span10>
+                        <div class=page-header>
+    <h3>Reports
+        
+    </h3>
+</div>
+
+<style>
+table{
+    border-collapse: collapse;
+    border:1px solid #000000;
+    margin-left:50px
+}
+
+th{
+    border:1px solid #000000;
+    padding: 5px;
+}
+
+td{
+    border:1px solid #000000;
+    padding: 5px;
+}
+</style>
+
+<p>All reports will open a table of text that can be copy/pasted into another program for further analysis.</p>
+
+<p>There are three types of reports: <a href="#stackreports">stack reports</a>, <a href="#segmentreports">segment reports</a>, and <a href="#mapreports">map reports</a>.</p>
+
+<p><a name="stackreports"></a></p>
+
+<h3 id="stack-reports">Stack Reports</h3>
+
+<h4 id="segments">Segments</h4>
+
+<ul>
+  <li>Keyboard ‘e’ In the ‘Line Segments’ section of the main stack db panel to display a summary of each segment.</li>
+  <li>Keyboard ‘E’ In the ‘Line Segments’ section of the main stack db panel to display the entire line (all 3D points)</li>
+</ul>
+
+<h4 id="stack-db">Stack DB</h4>
+
+<ul>
+  <li>Keyboard ‘e’ In the ‘Points’ section of the main stack db panel to display the stack db as a table.</li>
+</ul>
+
+<h4 id="intensity-analysis">Intensity Analysis</h4>
+
+<ul>
+  <li>Keyboard ‘i’ In the ‘Points’ section of the main stack db panel to display intensity analysis as a table.</li>
+</ul>
+
+<p class="tip"><b>Tip.</b> Use keyboard '[' in any stack window to open and close the stack db panel.</p>
+
+<p><img class="img-float-left" src="images/mm3/stack-example-5.png" width="600" /></p>
+
+<div class="print-page-break"></div>
+
+<p><a name="segmentreports"></a></p>
+
+<h3 id="segment-reports">Segment Reports</h3>
+
+<h4 id="density-report">Density Report</h4>
+
+<p>A density report display statistics for each segment in a stack. It displays the length of the segment, the density of spines, and the x/y/z position of the segment. A density report can be generated for individual <a href="stack">stacks</a> or a map.</p>
+
+<p>To generate a density report for each segment in a stack</p>
+
+<ul>
+  <li>In a <a href="stack">stack window</a>, keyboard ‘o’ for <strong>o</strong>utput report.</li>
+  <li>In the <a href="stack-browser">Stack Browser</a>, select a stack in the list, keyboard ‘o’ for <strong>o</strong>utput report.</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Name</th>
+      <th style="text-align: left">Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">numSpines</td>
+      <td style="text-align: left">Total number of spines = goodSpines + badSpines</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">goodSpines</td>
+      <td style="text-align: left">Number of good spines.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">badSpines</td>
+      <td style="text-align: left">Number of bad spines.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">totalLen</td>
+      <td style="text-align: left">Total segment length (um)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">goodLen</td>
+      <td style="text-align: left">Segment length (um) from most distal good spines.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">totalDen</td>
+      <td style="text-align: left">Total density of all spines = numSpines / totalLen</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">goodDen</td>
+      <td style="text-align: left">Density of good spines = goodSpines / goodLen</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">totalLen3d</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">goodLen3d</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">totalDen3d</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">goodDen3d</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">zMin</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">zMax</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">zMean</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">zMedian</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">zAngle</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">xyAngle</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">tort</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">xMin</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">xMax</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">xMean</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">xMedian</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">yMin</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">yMax</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">yMean</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">yMedian</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><a name="mapreports"></a></p>
+
+<h3 id="map-reports">Map Reports</h3>
+
+<h4 id="dynamics-report">Dynamics Report</h4>
+
+<p>A dynamics report is used for a <a href="map-plot">map</a>. For each session in a map, it will calculate the length of each segment (um), the density of spines, the number of added spines, the number of subtracted spines, etc., etc.</p>
+
+<p>In any <a href="map-plot">map plot</a>, right-click and select ‘Dynamics Report’. If the map plot is displaying ‘All Segment’, a table for each segment will be opened. Otherwise, one table for the current ‘Map Segment ID’ will be opened.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Name</th>
+      <th style="text-align: left">Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">numSpines</td>
+      <td style="text-align: left">Total number of spines, goodSpines + badSpines</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">goodSpines</td>
+      <td style="text-align: left">Total number of good spines</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">badSpines</td>
+      <td style="text-align: left">Total number of bad spines</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">totalLen</td>
+      <td style="text-align: left">Total segment length (um)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">goodLen</td>
+      <td style="text-align: left">Segment length between most distal good spines.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">totalDen</td>
+      <td style="text-align: left">Total density = numSpines / totalLen</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">goodDen</td>
+      <td style="text-align: left">Density of good spines = goodSpines / goodLen</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">nAdd</td>
+      <td style="text-align: left">Number of added spines.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">nSub</td>
+      <td style="text-align: left">Number of subtracted spines (at the current session)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">nSub2</td>
+      <td style="text-align: left">Number of subtracted spines (from the previous session)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">tor</td>
+      <td style="text-align: left">Turn-over-ratio =</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">pAdd</td>
+      <td style="text-align: left">Percent added = nAdd / goodSpines from previous session * 100</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">pSub</td>
+      <td style="text-align: left">Percent subtracted =</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dAdd</td>
+      <td style="text-align: left">Density added =</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dSub</td>
+      <td style="text-align: left">Density subtracted =</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">np</td>
+      <td style="text-align: left">New persistent =</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">nt</td>
+      <td style="text-align: left">New transient =</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">lp</td>
+      <td style="text-align: left">Lost persistent =</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">lt</td>
+      <td style="text-align: left">Lost transient =</td>
+    </tr>
+  </tbody>
+</table>
+
+<!--
+
+### Details on Calculations
+
+#### Stack
+Each segment within a stack has a number of spines and a total traced dendritic length. From this we can calculate spine density.
+
+- Number of spines
+- Dendrite length
+- Spine density : number of spines / dendrite length
+
+#### Map
+From one session to the next, the number of added and subtracted spines are counted. From this, the percent and density changes are calculated.
+
+- Number Added 
+- Number Subtracted
+- % Added : # added / (number of spines in pervious session) * 100
+- % Subtracted :
+- Turn-over-ratio : A measure of total dynamics (both addition and subtraction)
+- Density Added : 
+- Density Subtracted : 
+
+#### Map Lifetime
+Observed 
+
+- observed sessions
+- observed seconds
+- observed days
+- observed hours
+
+Lifetime
+
+- sessions
+- seconds
+- days
+- hours
+
+Age
+
+- sessions
+- seconds
+- days
+- hours
+
+#### Svoboda style persistent and transient
+
+Threshold time can be specified as: sessions, seconds, days, or hours.
+
+- New Persistent : New spine that persists for > threshold time
+- New Transient :
+- Lost Persistent :
+- Lost Transient :
+- Always Present : Spines present in all sessions
+
+-->
+
+
+
+<div class="post-tags">
+  
+  
+  
+    <b>Tags:</b>  
+  
+  
+  
+    <a href="/mapmanager/tags/#Analysis">Analysis</a>
+  
+
+   <!--
+   <a href="javascript:window.print()">print</a>
+    -->
+
+   <!--
+   <BR>
+   <a href="_posts/2015-07-25-reports.pdf">print pdf</a>
+   <BR>
+   -->
+    
+</div>
+
+
+                    </div>
+                
+            </div>
+
+            
+
+            <div class=row-fluid>
+                <div id=footer class=span12>
+                      Copyright &copy; 2016 - Robert Cudmore -
+
+ <a href="http://robertcudmore.org/index.html">robertcudmore.org</a>
+
+<!--
+Documentation for <a href="https://github.com/cudmore/mapmanager">Map Manager</a>
+-->
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function orderNav() {
+                var list,
+                    section,
+                    header,
+                    sections = [],
+                    lists = {},
+                    headers = {};
+
+                var navUl = document.querySelectorAll('#navigation ul')[0],
+                    navLis = document.querySelectorAll('#navigation ul li');
+
+                if (!navUl) return;
+
+                for (var i = 0; i < navLis.length; i++) {
+                    var order, li = navLis[i];
+
+                    if (li.classList.contains('nav-header')) {
+                        section = li.textContent || li.innerText;
+                        sections.push(section);
+                        headers[section] = li;
+                        continue;
+                    }
+
+                    if (!lists[section]) {
+                        lists[section] = [];
+                    }
+
+                    order = parseFloat(li.getAttribute('data-order'))
+                    lists[section].push([order, li]);
+                    
+                    //console.log(order, li);
+                }
+
+                //20160327 removed, this was no doing anything???
+                for (var i = 0; i < sections.length; i++) {
+                    section = sections[i];
+                    //console.log(section);
+                    list = lists[section].sort(function(a, b) {
+                        return a[0] - b[0];
+                    });
+
+                    if (header = headers[section]) {
+                        navUl.appendChild(header);
+                    }
+                    for (var j = 0; j < list.length; j++) {
+                        navUl.appendChild(list[j][1]);
+                    }
+                }
+            }
+
+            if (document.querySelectorAll) orderNav();
+        </script>
+        
+    </body>
+</html>
