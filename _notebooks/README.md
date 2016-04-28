@@ -1,0 +1,1 @@
+Example Python code to extend Map Manager.
