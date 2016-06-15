@@ -186,7 +186,25 @@
     </h3>
 </div>
 
-<p><img class="img-float-left" src="images/imagingcore/stack-example-spines4.png" width="300" /><br />
+<style>
+table{
+    padding: 5px;
+    border:1px solid #000000;
+}
+
+th{
+    border:1px solid #000000;
+    background-color: #dddddd;
+    color: black;
+}
+
+td{
+    border:1px solid #000000;
+    padding: 5px;
+}
+</style>
+
+<p><img class="img-float-left" src="images/imagingcore/stack-example-spines4.png" width="300" />
 <img class="img-float-left" src="images/imagingcore/stack-example-vascular-4.png" width="300" /></p>
 
 <div class="print-page-break"></div>
@@ -306,77 +324,189 @@
 
 <h4 id="keyboard-commands">Keyboard commands</h4>
 
-<p>Map Manager makes heavy use of keyboard shortcuts. Use the right click menu to see the mapping between the function and the key. Here is a list of keyboard shortcuts.</p>
+<p>Map Manager makes heavy use of keyboard shortcuts. Use the right click menu to see the mapping between the function and the key. Here is a list of keyboard shortcuts. In a stack window, use keyboard ‘shift+h’ to print this table.</p>
 
 <table>
+  <thead>
+    <tr>
+      <th>Topic</th>
+      <th>Keyboard</th>
+      <th>Action</th>
+    </tr>
+  </thead>
   <tbody>
     <tr>
-      <td>Topics</td>
-      <td>Keyboard</td>
-      <td>Action</td>
+      <td><strong>Navigation</strong></td>
+      <td> </td>
+      <td> </td>
     </tr>
     <tr>
-      <td>—–</td>
-      <td>—–</td>
-      <td>—–</td>
-    </tr>
-    <tr>
-      <td>Navigation</td>
+      <td> </td>
       <td>arrow-keys</td>
-      <td>Pan</td>
+      <td>Pan image</td>
     </tr>
     <tr>
       <td> </td>
       <td>+/-</td>
-      <td>Zoom</td>
+      <td>Zoom image</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Enter</td>
+      <td>Full zoom image</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>]</td>
+      <td>Toggle between 2 different window sizes</td>
+    </tr>
+    <tr>
+      <td><strong>Image Display</strong></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>1</td>
+      <td>Channel 1</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>2</td>
+      <td>Channel 2</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>3</td>
+      <td>Sliding Z-Project - Channel 1</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>4</td>
+      <td>Sliding Z-Project - Channel 2</td>
+    </tr>
+    <tr>
+      <td><strong>Toolbars</strong></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>c</td>
+      <td>Toggle contrast toolbar (top)</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>[</td>
+      <td>Toggle scoring toolbar (left)</td>
+    </tr>
+    <tr>
+      <td><strong>New Windows</strong></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>h</td>
+      <td>Histogram</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>z</td>
+      <td>Maximal Z-Projection</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>shift+z</td>
+      <td>Maximal Z-Projection - Options</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>i</td>
+      <td>Object info panel</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>shift+i</td>
+      <td>Stack info panel</td>
+    </tr>
+    <tr>
+      <td><strong>Voxel Size</strong></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>shift+p</td>
+      <td>Set voxel size</td>
+    </tr>
+    <tr>
+      <td><strong>Other</strong></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>/</td>
+      <td>Start and stop movie of slices</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>shift+c</td>
+      <td>Toggle 4 different window candy options</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>shift+h</td>
+      <td>Print this help</td>
+    </tr>
+    <tr>
+      <td><strong>Object Scoring</strong></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>control + left arrow</td>
+      <td>Go to previous object</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>control + right arrow</td>
+      <td>Go to next object</td>
+    </tr>
+    <tr>
+      <td><strong>Map Run</strong></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>l</td>
+      <td>Link window (lower case ‘l’ as in link)</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>a</td>
+      <td>Make selected object addition</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>s</td>
+      <td>Make selected object subtraction</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>p</td>
+      <td>Make selected object persistent</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>b</td>
+      <td>Toggle selected object bad</td>
     </tr>
   </tbody>
 </table>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>=====     Stack Help     ===============
-  	Navigation
-  		arrow-keys : Pan
-  		+/- : zoom
-  		Enter : Full Zoom (reset zoom)
-  		] : Toggle between 2 different window sizes
-  	Image Display
-  		1 : Channel 1
-  		2 : Channel 2
-  		3 :  Sliding Z-Project, Channel 1
-  		4 : Sliding Z-Project, Channel 2
-  	Toolbars
-  		c : Toggle the contrast control bar
-  	Child Windows
-  		h : Histogram
-  		z :maximal z-projection
-  		shift+z : maximal z-projection (options)
-  		i : Object Info Panel
-  		shift+i : Stack Info Panel
-  		[ : Toggle the stack db control bar (the left control bar)
-  	Right-click menu
-  		Navigation  Window
-  		Export Quicktime Movie... (export avi on Microsoft Windows)
-  	Other
-  		shift+c : Cycle candy
-  		] : Switch between two default stack window sizes (Set in Map Manager Options)
-  		shift+p : Set pixel/voxel size
-  		/ : Start/Stop movie
-  		shift + h : Print this help
-  	Object (spine) Scoring
-  		[ : Toggle left control bar
-  		i : Object info panel
-  		control+left_arrow : Go to previous spine
-  		control+right_arrow : Go to next spine
-  		control+click on point : Display Point Run (e.g. control+click on a spine)
-  		control+click on line : Display Line Segment Run
-  		l : Link windows (lower-case 'L' as in link)
-  	Map (run plot)
-  		a : Selected object --&gt;&gt; Addition
-  		s : Selected object --&gt;&gt; Subtraction
-  		p : Selected object --&gt;&gt; Persistent (requires selection in previous timepoint)
-  		b : Selected object --&gt;&gt; Toggle bad on/off
-</code></pre>
-</div>
 
 
 

@@ -399,9 +399,14 @@ User files have been completely revamped. Global options can now be easily saved
       <item>
         <title>Stack</title>
         
-          <description>&lt;p&gt;&lt;img class=&quot;img-float-left&quot; src=&quot;images/imagingcore/stack-example-spines4.png&quot; width=&quot;300&quot; /&gt;&lt;br /&gt;
-&lt;img class=&quot;img-float-left&quot; src=&quot;images/imagingcore/stack-example-vascular-4.png&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
+          <description>&lt;style&gt;
+table{
+    padding: 5px;
+    border:1px solid #000000;
+}
 
+[2]: stackdb-options-panel
+&lt;/style&gt;
 </description>
         
         <pubDate>Fri, 30 Jan 2015 17:46:33 -0500</pubDate>
