@@ -203,26 +203,29 @@
 
 <div class="print-page-break"></div>
 
+<h4 id="voxel-size">Voxel size</h4>
+<p><img class="img-float-right" src="images/voxel-size-panel.png" width="300" /></p>
+
+<p>The x/y/z voxel size of each stack is set with keyboard ‘shift+p’. Setting the correct voxel size in µm is critical as MapManager performs many calculations in µm (NOT IN PIXELS). The voxel size must be set before annotations are created. Once annotations are created, you should not change the voxel size.</p>
+
+<h4 id="scale-bar">Scale bar</h4>
+<p>Each stack will display a white scale bar in µm. Control the length of the scale bar in <a href="stackdb-options-panel">Options</a>.</p>
+
+<div class="print-page-break"></div>
+
 <h4 id="viewing-multiple-channels">Viewing multiple channels</h4>
 
-<p>If your stack has more than one (color) channel. Keyboard ‘1’ and ‘2’ will switch between channels.</p>
+<p>Use keyboard ‘1’ and ‘2’ to switch between channels.</p>
 
 <h4 id="contrast-bar">Contrast bar</h4>
+<p><img class="img-float-right" src="images/contrast-bar.png" width="300" /></p>
+
+<p>The contrast bar is used to set the contrast of the images displayed in a stack window.</p>
+
 <ul>
   <li>Open the contrast bar with keyboard ‘c’</li>
   <li>Pixel intensity values below ‘min’ will be displayed as black</li>
   <li>Pixel intensity values above ‘max’ will be displayed as white</li>
-</ul>
-
-<h4 id="scale-bar">Scale bar</h4>
-<p>Control the scale bar in <a href="stackdb-options-panel">Options</a>.</p>
-
-<h4 id="window-candy">Window Candy</h4>
-<ul>
-  <li>There are five different window decorations or <strong>c</strong>andy options: (i) all, (ii) none, (iii) scale, (iv) scale + scroll, and (v) something else.</li>
-  <li>Cycle different window <strong>c</strong>andies with keyboard ‘shift+c’.</li>
-  <li>Set the default window <strong>c</strong>andy in <a href="stackdb-options-panel">Options</a>.</li>
-  <li>Note: The grid will only display when window <strong>c</strong>andy is set to ‘All’ (when the stack axis are visible).</li>
 </ul>
 
 <div class="print-page-break"></div>
@@ -240,6 +243,14 @@
 </ul>
 
 <div class="print-page-break"></div>
+
+<h4 id="window-candy">Window Candy</h4>
+<ul>
+  <li>There are five different window decorations or <strong>c</strong>andy options: (i) all, (ii) none, (iii) scale, (iv) scale + scroll, and (v) something else.</li>
+  <li>Cycle different window <strong>c</strong>andies with keyboard ‘shift+c’.</li>
+  <li>Set the default window <strong>c</strong>andy in <a href="stackdb-options-panel">Options</a>.</li>
+  <li>Note: The grid will only display when window <strong>c</strong>andy is set to ‘All’ (when the stack axis are visible).</li>
+</ul>
 
 <h4 id="making-z-projections">Making Z-Projections</h4>
 
@@ -297,6 +308,31 @@
 
 <p>Map Manager makes heavy use of keyboard shortcuts. Use the right click menu to see the mapping between the function and the key. Here is a list of keyboard shortcuts.</p>
 
+<table>
+  <tbody>
+    <tr>
+      <td>Topics</td>
+      <td>Keyboard</td>
+      <td>Action</td>
+    </tr>
+    <tr>
+      <td>—–</td>
+      <td>—–</td>
+      <td>—–</td>
+    </tr>
+    <tr>
+      <td>Navigation</td>
+      <td>arrow-keys</td>
+      <td>Pan</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>+/-</td>
+      <td>Zoom</td>
+    </tr>
+  </tbody>
+</table>
+
 <div class="highlighter-rouge"><pre class="highlight"><code>=====     Stack Help     ===============
   	Navigation
   		arrow-keys : Pan
@@ -321,9 +357,9 @@
   		Navigation  Window
   		Export Quicktime Movie... (export avi on Microsoft Windows)
   	Other
-  		shift+C : Cycle candy
+  		shift+c : Cycle candy
   		] : Switch between two default stack window sizes (Set in Map Manager Options)
-  		shift+P : Set pixel/voxel size
+  		shift+p : Set pixel/voxel size
   		/ : Start/Stop movie
   		shift + h : Print this help
   	Object (spine) Scoring
