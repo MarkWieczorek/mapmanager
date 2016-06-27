@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
 
-        <title>Map Manager : Stack plot</title>
+        <title>Map Manager : Point List</title>
         <meta name="description" content="">
 
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
@@ -184,27 +184,107 @@
 
                     <div id=content class=span10>
                         <div class=page-header>
-    <h3>Stack plot
+    <h3>Point List
         
     </h3>
 </div>
 
-<p>A stack plot shows a value/statistic for all 3D annotations in a single <a href="stack">stack</a>. Each point is a value/statistic for one 3D annotation in the stack.</p>
+<style>
+table{
+    border-collapse: collapse;
+    border:1px solid #000000;
+    margin-left:50px
+}
 
-<p>All stack plots are interactive. Selecting an annotation will propagate this selection to other stack and <a href="map-plot">map plots</a>.</p>
+th{
+    border:1px solid #000000;
+    padding: 5px;
+}
 
-<p>Make stack plots from the main <a href="plot-panel">plot panel</a>.</p>
+td{
+    border:1px solid #000000;
+    padding: 5px;
+}
+</style>
 
-<p><img class="img-float-left" src="images/mm3/mm3-stack1-plot.png" width="250" /></p>
-
-<p>Example stack plot of position of spines along a dendritic segment. Spines can be on different sides of the dendrite and are shown here on the left or right of the dendritic segment.</p>
+<p><img class="img-float-left" src="images/mm3/point-list2.png" width="800" /></p>
 
 <div class="print-page-break"></div>
-<p><img class="img-float-left" src="images/mm3/mm3-stack-plot.png" width="250" /></p>
 
-<p>Example stack plot of spine length in μm (sLen2d) versus spine index. Spine index is the order spines were created in 1, 2, 3, etc. etc.</p>
+<p>The point list panel displays a list of points for one stack.</p>
 
-<div class="print-page-break"></div>
+<p>To open a point list panel</p>
+
+<ul>
+  <li>Right-click a stack and select the menu ‘Windows … Point List’.</li>
+  <li>In a stack window, use the ‘Point List’ button in the left-panel. Open the left-panel with keyboard ‘[’.</li>
+</ul>
+
+<h3 id="interface">Interface</h3>
+
+<p>Select individual points in the list and the selection will propagate to open <a href="stack">stack windows</a>, <a href="stack-plot">stack</a> plots and <a href="map-plot">map</a> plot windows. Use the <strong>center on selection</strong> checkbox to automatically snap selected objects in their stack windw.</p>
+
+<h3 id="edit-user-type">Edit User Type</h3>
+
+<p>Turn this on and the point list window will respond to the following keystrokes. Setting the value of ‘userType’ as:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Index</th>
+      <th style="text-align: left">Key</th>
+      <th style="text-align: left">Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">0</td>
+      <td style="text-align: left">u</td>
+      <td style="text-align: left">Unknown</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">1</td>
+      <td style="text-align: left">m</td>
+      <td style="text-align: left">Mushroom</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">2</td>
+      <td style="text-align: left">f</td>
+      <td style="text-align: left">Filapodia</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">3</td>
+      <td style="text-align: left">l</td>
+      <td style="text-align: left">Long</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">4</td>
+      <td style="text-align: left">s</td>
+      <td style="text-align: left">Stubby</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Del</td>
+      <td style="text-align: left">-clear the entry-</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br />
+Counts for each of these user types are included in each segments <a href="reports">density report</a>.</p>
+
+<h3 id="plotting">Plotting</h3>
+
+<p>Right-click a column header and select <strong>Quick Plot</strong> to plot that stat versus the sequential number of each spine. The sequential number of each spine is the order they were created in, it is not the order along the dendrite.</p>
+
+<p>Any two columns can be plotted as X and Y. Right click a column and select <strong>Set X Stat</strong>, then right-click another column and select <strong>Set Y Stat</strong>. Then use the main <strong>Plot</strong> button to plot X versus Y.</p>
+
+<h3 id="columns">Columns</h3>
+
+<p>To make the table easier to read, columns can be turned on and off with the check-boxes in the <strong>Columns</strong> group.</p>
+
+<p>Clicking on a column will sort the table by that column.</p>
+
 
 
 <div class="post-tags">
@@ -215,7 +295,7 @@
   
   
   
-    <a href="/mapmanager/tags/#Plots">Plots</a>
+    <a href="/mapmanager/tags/#Analysis">Analysis</a>
   
 
    <!--
@@ -224,7 +304,7 @@
 
    <!--
    <BR>
-   <a href="_posts/2015-04-20-stack-plot.pdf">print pdf</a>
+   <a href="_posts/2016-06-26-point-list.pdf">print pdf</a>
    <BR>
    -->
     

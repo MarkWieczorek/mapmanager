@@ -100,6 +100,9 @@
             
                 <li class=nav-header>Interface Windows</li>
             
+            <li data-order="2"><a href="/mapmanager/point-list">Point List</a></li>
+        
+            
             <li data-order="4"><a href="/mapmanager/find-points-panel">Find Points</a></li>
         
             
@@ -212,26 +215,23 @@ td{
 
 <h3 id="stack-reports">Stack Reports</h3>
 
-<h4 id="segments">Segments</h4>
+<p>Reports can be generated directly from each stack window.</p>
+
+<p class="tip"><b>Tip.</b> Use keyboard '[' in any stack window to open and close the left stack db panel.</p>
+
+<h4 id="line-segments">Line Segments</h4>
 
 <ul>
   <li>Keyboard ‘e’ In the ‘Line Segments’ section of the main stack db panel to display a summary of each segment.</li>
   <li>Keyboard ‘E’ In the ‘Line Segments’ section of the main stack db panel to display the entire line (all 3D points)</li>
 </ul>
 
-<h4 id="stack-db">Stack DB</h4>
+<h4 id="points-stack-db">Points (stack db)</h4>
 
 <ul>
   <li>Keyboard ‘e’ In the ‘Points’ section of the main stack db panel to display the stack db as a table.</li>
-</ul>
-
-<h4 id="intensity-analysis">Intensity Analysis</h4>
-
-<ul>
   <li>Keyboard ‘i’ In the ‘Points’ section of the main stack db panel to display intensity analysis as a table.</li>
 </ul>
-
-<p class="tip"><b>Tip.</b> Use keyboard '[' in any stack window to open and close the stack db panel.</p>
 
 <p><img class="img-float-left" src="images/mm3/stack-example-5.png" width="600" /></p>
 
@@ -243,14 +243,18 @@ td{
 
 <h4 id="density-report">Density Report</h4>
 
-<p>A density report display statistics for each segment in a stack. It displays the length of the segment, the density of spines, and the x/y/z position of the segment. A density report can be generated for individual <a href="stack">stacks</a> or a map.</p>
+<p>A density report display statistics for each segment in a stack. It displays the length of the segment, the number and density of spines, the x/y/z position of the segment, and the number of each user spine type (e.g. mushroom, stubby, etc.). A density report can be generated for individual <a href="stack">stacks</a> or a map.</p>
 
 <p>To generate a density report for each segment in a stack</p>
 
 <ul>
   <li>In a <a href="stack">stack window</a>, keyboard ‘o’ for <strong>o</strong>utput report.</li>
   <li>In the <a href="stack-browser">Stack Browser</a>, select a stack in the list, keyboard ‘o’ for <strong>o</strong>utput report.</li>
+  <li>In the <a href="stack-browser">Stack Browser</a>, right click a stack in the list of stacks and select ‘Density Report’.</li>
+  <li>In the <a href="stack-browser">Stack Browser</a>, right click a folder in the list folders (on the left) and select ‘Density Report (All Stack)’.</li>
 </ul>
+
+<p>The columns in a density report are as follows</p>
 
 <table>
   <thead>
@@ -274,35 +278,35 @@ td{
     </tr>
     <tr>
       <td style="text-align: left">totalLen</td>
-      <td style="text-align: left">Total segment length (um)</td>
+      <td style="text-align: left">(2D) Total segment length (um)</td>
     </tr>
     <tr>
       <td style="text-align: left">goodLen</td>
-      <td style="text-align: left">Segment length (um) from most distal good spines.</td>
+      <td style="text-align: left">(2D) Segment length (um) from most distal good spines.</td>
     </tr>
     <tr>
       <td style="text-align: left">totalDen</td>
-      <td style="text-align: left">Total density of all spines = numSpines / totalLen</td>
+      <td style="text-align: left">(2D) Total density of all spines = numSpines / totalLen</td>
     </tr>
     <tr>
       <td style="text-align: left">goodDen</td>
-      <td style="text-align: left">Density of good spines = goodSpines / goodLen</td>
+      <td style="text-align: left">(2D) Density of good spines = goodSpines / goodLen</td>
     </tr>
     <tr>
       <td style="text-align: left">totalLen3d</td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left">(3D)</td>
     </tr>
     <tr>
       <td style="text-align: left">goodLen3d</td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left">(3D)</td>
     </tr>
     <tr>
       <td style="text-align: left">totalDen3d</td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left">(3D)</td>
     </tr>
     <tr>
       <td style="text-align: left">goodDen3d</td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left">(3D)</td>
     </tr>
     <tr>
       <td style="text-align: left">zMin</td>
@@ -363,6 +367,26 @@ td{
     <tr>
       <td style="text-align: left">yMedian</td>
       <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">nUnknown</td>
+      <td style="text-align: left">Number of spines with userType ‘Unknown’</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">nMushroom</td>
+      <td style="text-align: left">Number of spines with userType ‘Mushroom’</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">nFilapodia</td>
+      <td style="text-align: left">Number of spines with userType ‘Filapodia’</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">nLong</td>
+      <td style="text-align: left">Number of spines with userType ‘Long’</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">nStubby</td>
+      <td style="text-align: left">Number of spines with userType ‘Stubby’</td>
     </tr>
   </tbody>
 </table>

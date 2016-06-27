@@ -100,6 +100,9 @@
             
                 <li class=nav-header>Interface Windows</li>
             
+            <li data-order="2"><a href="/mapmanager/point-list">Point List</a></li>
+        
+            
             <li data-order="4"><a href="/mapmanager/find-points-panel">Find Points</a></li>
         
             
@@ -186,6 +189,24 @@
     </h3>
 </div>
 
+<style>
+table{
+    border-collapse: collapse;
+    border:1px solid #000000;
+    margin-left:50px
+}
+
+th{
+    border:1px solid #000000;
+    padding: 5px;
+}
+
+td{
+    border:1px solid #000000;
+    padding: 5px;
+}
+</style>
+
 <p>A map plot shows objects across multiple imaging sessions. Objects persisting from one session to the next are connected with a line.</p>
 
 <p>All map plots are interactive. Selecting an object will propagate this selection to other map and <a href="stack-plot">stack plots</a>.</p>
@@ -197,23 +218,103 @@
 <h3 id="interface">Interface</h3>
 
 <h4 id="keyboard">Keyboard</h4>
-  	Navigation
-  		arrow-keys : Pan
-  		+/- : zoom
-  		Enter : Full Zoom (reset zoom)
-  	Data
-  		esc : cancel selection (including masks)
-  		b : mark selected object as bad
-  		e : edit plotted data in a table
-  	General
-  		r : refresh plot
-  		d : toggle dynamics coloring
-  		f : toggle forced coloring
-  		c : toggle top control bar
-  		i : open/close object info panel
-  		h : display this help
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left"> </th>
+      <th style="text-align: left">Key</th>
+      <th style="text-align: left">Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Navigation</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Arrow-keys</td>
+      <td style="text-align: left">Pan</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">+/-</td>
+      <td style="text-align: left">Zoom in/out</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">mouse-wheel</td>
+      <td style="text-align: left">Zoom in/out</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">enter</td>
+      <td style="text-align: left">Full Zoom (reset zoom)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Data</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">esc</td>
+      <td style="text-align: left">Cancel selection (including masks)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">b</td>
+      <td style="text-align: left">Mark selected object as bad (press ‘b’ again to mark it good</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">e</td>
+      <td style="text-align: left">Edit plotted data in table</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">General</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">r</td>
+      <td style="text-align: left">refresh plot</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">d</td>
+      <td style="text-align: left">toggle dynamics coloring</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">f</td>
+      <td style="text-align: left">toggle forced coloring</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">c</td>
+      <td style="text-align: left">toggle top control bar</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">i</td>
+      <td style="text-align: left">open/close object info panel</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">h</td>
+      <td style="text-align: left">display help</td>
+    </tr>
+  </tbody>
+</table>
 
 <h4 id="colors">Colors</h4>
+
+<p>The colors of objects in a map denote their dynamics.</p>
+
 <ul>
   <li>Green : Added</li>
   <li>Red : Subtracted</li>

@@ -8,6 +8,32 @@
     
       
       <item>
+        <title>Point List</title>
+        
+          <description>&lt;style&gt;
+table{
+    border-collapse: collapse;
+    border:1px solid #000000;
+    margin-left:50px
+}
+
+[1]: stack
+[2]: map-plot
+[3]: stack-browser
+[4]: reports
+[5]: stack-plot
+&lt;/style&gt;
+</description>
+        
+        <pubDate>Sun, 26 Jun 2016 18:46:33 -0400</pubDate>
+        <link>
+        /point-list</link>
+        <guid isPermaLink="true">/point-list</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Release Notes</title>
         
           <description>&lt;h2 id=&quot;update-file-version-20151224&quot;&gt;20160422 Update (file version 20151224)&lt;/h2&gt;
@@ -279,8 +305,17 @@ User files have been completely revamped. Global options can now be easily saved
       <item>
         <title>Map plot</title>
         
-          <description>&lt;p&gt;A map plot shows objects across multiple imaging sessions. Objects persisting from one session to the next are connected with a line.&lt;/p&gt;
+          <description>&lt;style&gt;
+table{
+    border-collapse: collapse;
+    border:1px solid #000000;
+    margin-left:50px
+}
 
+[1]: plot-panel
+[2]: stack-plot
+[3]: main-panel
+&lt;/style&gt;
 </description>
         
         <pubDate>Mon, 20 Apr 2015 18:46:33 -0400</pubDate>
