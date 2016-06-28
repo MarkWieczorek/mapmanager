@@ -51,7 +51,7 @@ Select a loaded directory on the left  and the loaded stacks will be shown on th
 
 The list of stacks will respond to keyboard input
 
-  - 'o' to generate an **o**utput density report. See [spine dynamics][6].
+  - 'o' to generate an **o**utput segment report. See [spine dynamics][6].
   - 'e' to edit the list of stacks in a text table
   
 ### Additional features

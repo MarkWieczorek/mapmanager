@@ -16,11 +16,13 @@ A stack db plot provides an interface to edit and visualize a stack db for a sin
 
 All stack db plots are interactive. Selecting an object will propagate this selection to other [stack][4] and [map plots][3].
 
-Toggle the stack db interface in any [stack][2] using keyboard '['.
- 
+Toggle the stack db interface (the left control panel) in any [stack][2] using keyboard '['.
+
+For more information on creating and editing 3D points and lines, see [annotating a stack][5] 
 
 [1]: plot-panel
 [2]: stack
 [3]: map-plot
 [4]: stack-plot
+[5]: annotating-a-stack
 

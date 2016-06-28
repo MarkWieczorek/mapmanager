@@ -207,7 +207,7 @@ td{
 }
 </style>
 
-<p><img class="img-float-left" src="images/mm3/point-list2.png" width="800" /></p>
+<p><img class="img-float-left" src="images/mm3/point-list2.png" width="600" /></p>
 
 <div class="print-page-break"></div>
 
@@ -224,9 +224,13 @@ td{
 
 <p>Select individual points in the list and the selection will propagate to open <a href="stack">stack windows</a>, <a href="stack-plot">stack</a> plots and <a href="map-plot">map</a> plot windows. Use the <strong>center on selection</strong> checkbox to automatically snap selected objects in their stack windw.</p>
 
+<p>Keyboard ‘b’ will toggle the selected object between bad and good.</p>
+
+<p>When a point is selected, its text note will be displayed at the bottom of the window. The note can then be edited.</p>
+
 <h3 id="edit-user-type">Edit User Type</h3>
 
-<p>Turn this on and the point list window will respond to the following keystrokes. Setting the value of ‘userType’ as:</p>
+<p>Turn on the ‘Edit User Type’ checkbox and the point list window will respond to the following keystrokes to set the value of ‘userType’:</p>
 
 <table>
   <thead>
@@ -271,19 +275,83 @@ td{
 </table>
 
 <p><br />
-Counts for each of these user types are included in each segments <a href="reports">density report</a>.</p>
+Counts for each of these user types are included for each segment in each <a href="reports">segment report</a>.</p>
 
 <h3 id="plotting">Plotting</h3>
 
-<p>Right-click a column header and select <strong>Quick Plot</strong> to plot that stat versus the sequential number of each spine. The sequential number of each spine is the order they were created in, it is not the order along the dendrite.</p>
+<p><img class="img-float-right" src="images/mm3/point-list2-plot1.png" width="300" />
+Right-click a column header and select <strong>Quick Plot</strong> to plot that stat versus the sequential number of each spine. The sequential number of each spine is the order they were created in, it is not the order along the dendrite.</p>
 
 <p>Any two columns can be plotted as X and Y. Right click a column and select <strong>Set X Stat</strong>, then right-click another column and select <strong>Set Y Stat</strong>. Then use the main <strong>Plot</strong> button to plot X versus Y.</p>
+
+<p>For example, to plot ‘spine length 3d’ versus ‘background subtracted spine sum’.</p>
+
+<ul>
+  <li>Right-click on ‘sLen3d’ column and select ‘Set Y Stat’</li>
+  <li>Right-click on ‘ubssSum’ column and select ‘Set X Stat’</li>
+  <li>Click the main ‘Plot’ button.</li>
+</ul>
+
+<div class="print-page-break"></div>
 
 <h3 id="columns">Columns</h3>
 
 <p>To make the table easier to read, columns can be turned on and off with the check-boxes in the <strong>Columns</strong> group.</p>
 
-<p>Clicking on a column will sort the table by that column.</p>
+<p>Clicking on a column header will sort the table by that column. Shit+click the column header to reverse sort. Right click a column header to plot the values in the column.</p>
+
+<p>The <strong>error</strong> column will display errors encountered while running <a href="intensity">intensity analysis</a>.</p>
+
+<p>Here is a partial list of the meaning of each column. See <a href="stack-plot">intensity</a> for a list of the meaning of additional columns.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Column</th>
+      <th style="text-align: left">Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Idx</td>
+      <td style="text-align: left">The row in the table</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dbIdx</td>
+      <td style="text-align: left">The row in the stack db</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">roiType</td>
+      <td style="text-align: left">The type of the point (spineROI, controlPnt, otherROI)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">isBad</td>
+      <td style="text-align: left">A ‘1’ if the point is marked bad. Toggle this with keyboard ‘b’</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">intBad</td>
+      <td style="text-align: left">A ‘1’ if the point ismarked intensity bad</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">z</td>
+      <td style="text-align: left">The z-image plane the point is in</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">parentID</td>
+      <td style="text-align: left">The segment number a point (spine) belongs to</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dDist</td>
+      <td style="text-align: left">The distance (um) along the segment the point (spine) is attached to.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">pDist</td>
+      <td style="text-align: left">Only for maps, the distance (plus or minus) away from the pivot point</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br /></p>
 
 
 
