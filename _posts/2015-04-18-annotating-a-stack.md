@@ -54,7 +54,7 @@ Once 3D points are created, **the scale can not be changed**.
 
 ### Creating 3D objects
 
-Choose the type of object in the 'New Object' group and shift+click in the image to create the object. Different object types can be independently [searched][6], [plotted][7] and connect together in a [map][8].
+Choose the type of object in the 'New Object' group and shift+click in the image to create the object. All objects are 3D points, the z value of an object will be the currently viewed image plane when the object is create. Different object types can be independently [searched][6], [plotted][7] and connect together in a [map][8].
 
 <!-- <IMG class="img-float-right" SRC="images/mm3/mm3-object-types.png" WIDTH="100"> -->
 - **Spine** : A spine is always connected to a segment (its parent segment). Thus, to create a spine, its parent segment must first be selected..  
@@ -66,7 +66,7 @@ Choose the type of object in the 'New Object' group and shift+click in the image
 - other :    
   
   
-<p class="tip"><B>Tip.</B> All objects are 3D points. To create a new point with better precision, zoom in the stack window with keyboard '+'. The zoom will follow the mouse pointer. Zoom out again with keyboard '-' and return to the full view with keyboard 'enter'.
+<p class="tip"><B>Tip.</B> All objects are 3D points. The z position of a point is the imaging plane that is viewed when the point is created. To create a new point with better precision, zoom in the stack window with keyboard '+'. The zoom will follow the mouse pointer.
 </p>
 
 <IMG class="img-float-right" SRC="images/imagingcore/stack_db.png" WIDTH="600">
