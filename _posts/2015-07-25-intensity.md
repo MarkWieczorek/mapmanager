@@ -32,9 +32,11 @@ Please note, parameters controlling the grid of candidate background positions i
 
 ### Running Intensity Analysis
 
+For a **stack**, intensity analysis is run from a stack window using the 'Analyze Intensity' button. This button is in the left panel, open the left panel for a stack with keyboard '['.
+
 <IMG class="img-float-right" SRC="images/mm3/intensity/intensity-analysis-tab.png" WIDTH="450">
 
-Intensity analysis is run from the main [map manager panel][3] using the 'Intensity' tab.
+For a **map**, intensity analysis is run from the main [map manager panel][3] using the 'Intensity' tab.
 
 <div class="print-page-break"></div>
 
@@ -146,13 +148,21 @@ Clicking on the spine backgrond ROI will enable an edit mode where the user can 
 
 ### Errors and Warnings
 
-Intensity analysis should be run with 'Debug On Error' off. <strike>Set this with a procedure (code) window frontmost and select main menu 'Procedure - Debug On Error'</strike>
-
 When the intensity analysis has a problem analyzing a spine, errors and warnings will be set for that spine. Most errors are due to an ROI going off the image or in problems with drawing a valid backbone ROI (near the end of a segment).
 
-Browse Errors and Warnings using the 'Errors & Warnings' button in the [search panel][4].
+There are two ways to browse errors and warning:
 
-Errors and Warnings are
+ - Use the 'Errors & Warnings' button in the [search panel][4].
+ - Examine the 'Errors' column in a stacks [point list panel][5]
+
+Be careful of spines that are very close to each other. As spine density increases, the spine ROI of a spine will start to overlap with the spine ROI of its neighbors.
+
+There are two ways to check for nearby (high density spines). These are slightly different measurements, the first is examining closeness of the spine head as a 3D point, the second is examining closeness by looking at the connection point along a segment.
+
+ - Use the 'Closeness' button in the [search panel][4] too find **spine heads** that are close to other **spine heads**.
+ - Use the 'nnDist' column in the [point list panel][5] to find spines that are connected to a segment close to other spines connection points.
+ 
+#### Errors and Warnings are
 
 <TABLE cellpadding="0">
 <TR>
@@ -214,3 +224,4 @@ A spines intensity analysis becomes dirty when:
 [2]: stackdb-options-panel
 [3]: main-panel
 [4]: search-panel
+[5]: point-list

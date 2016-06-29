@@ -213,9 +213,11 @@
 
 <h3 id="running-intensity-analysis">Running Intensity Analysis</h3>
 
+<p>For a <strong>stack</strong>, intensity analysis is run from a stack window using the ‘Analyze Intensity’ button. This button is in the left panel, open the left panel for a stack with keyboard ‘[’.</p>
+
 <p><img class="img-float-right" src="images/mm3/intensity/intensity-analysis-tab.png" width="450" /></p>
 
-<p>Intensity analysis is run from the main <a href="main-panel">map manager panel</a> using the ‘Intensity’ tab.</p>
+<p>For a <strong>map</strong>, intensity analysis is run from the main <a href="main-panel">map manager panel</a> using the ‘Intensity’ tab.</p>
 
 <div class="print-page-break"></div>
 
@@ -331,13 +333,25 @@ utsmdodm	:	this spine mean divided by other dendrite mean
 
 <h3 id="errors-and-warnings">Errors and Warnings</h3>
 
-<p>Intensity analysis should be run with ‘Debug On Error’ off. <strike>Set this with a procedure (code) window frontmost and select main menu 'Procedure - Debug On Error'</strike></p>
-
 <p>When the intensity analysis has a problem analyzing a spine, errors and warnings will be set for that spine. Most errors are due to an ROI going off the image or in problems with drawing a valid backbone ROI (near the end of a segment).</p>
 
-<p>Browse Errors and Warnings using the ‘Errors &amp; Warnings’ button in the <a href="search-panel">search panel</a>.</p>
+<p>There are two ways to browse errors and warning:</p>
 
-<p>Errors and Warnings are</p>
+<ul>
+  <li>Use the ‘Errors &amp; Warnings’ button in the <a href="search-panel">search panel</a>.</li>
+  <li>Examine the ‘Errors’ column in a stacks <a href="point-list">point list panel</a></li>
+</ul>
+
+<p>Be careful of spines that are very close to each other. As spine density increases, the spine ROI of a spine will start to overlap with the spine ROI of its neighbors.</p>
+
+<p>There are two ways to check for nearby (high density spines). These are slightly different measurements, the first is examining closeness of the spine head as a 3D point, the second is examining closeness by looking at the connection point along a segment.</p>
+
+<ul>
+  <li>Use the ‘Closeness’ button in the <a href="search-panel">search panel</a> too find <strong>spine heads</strong> that are close to other <strong>spine heads</strong>.</li>
+  <li>Use the ‘nnDist’ column in the <a href="point-list">point list panel</a> to find spines that are connected to a segment close to other spines connection points.</li>
+</ul>
+
+<h4 id="errors-and-warnings-are">Errors and Warnings are</h4>
 
 <table cellpadding="0">
 <tr>

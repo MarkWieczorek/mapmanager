@@ -94,8 +94,9 @@ Here is a partial list of the meaning of each column. See [intensity][5] for a l
 |roiType		|The type of the point (spineROI, controlPnt, otherROI)
 |isBad		|A '1' if the point is marked bad. Toggle this with keyboard 'b'
 |intBad		|A '1' if the point ismarked intensity bad
-|z		|The z-image plane the point is in
-|parentID		|The segment number a point (spine) belongs to
+|z			|The z-image plane the point is in
+|parentID	|The segment number a point (spine) belongs to
+|nnDist		|Distance (um) to the nearest spine.
 |dDist		|The distance (um) along the segment the point (spine) is attached to.
 |pDist		|Only for maps, the distance (plus or minus) away from the pivot point
 
