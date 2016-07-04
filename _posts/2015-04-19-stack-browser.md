@@ -8,34 +8,32 @@ tags:
 - Imaging core
 ---
 
-<IMG class="img-float-left" SRC="images/mm3/mm3-stack-browser.png" WIDTH="800">
+<IMG class="img-float-left" SRC="images/mm3/mm3-stack-browser.png" WIDTH="750">
 
 <div class="print-page-break"></div>
 
  
-The stack browser provides an interface to load and browse directories of .tif [stacks][3].
+The stack browser is the main starting point for using Map Manager. The stack browser provides an interface to load and browse folders of .tif [stacks][3].
 
-The original documentation is [here][2]
+The list on the left is a list of loaded folders, each folder has a list of stacks. The list on the right shows the stacks in the selected folder. Select a folder on the left and the list on the right will show the individual stacks within that folder.
 
-The list on the left is a list of loaded folders, each folder has a list of stacks. Select a folder on the left and the list on the right will show the individual stacks within that folder.
-
-Double click on a stack in the list on the right and it will open a [stack][3] window to view the actual stack.
+Double click a stack to open a [stack][3] window.
 
 ### Loading stacks
 
-#### Load ScanImage Directory
+#### Load Generic Folder
 
-Load a folder of ScanImage .tif stack. The name of the folder will appear in the list on the left. Selecting this folder will populate the list of stacks imported. Double click on a stack (in the list on the right) to view the [stack][3].
+The **Load Generic Folder** button loads a folder of single-channel .tif stacks. Once loaded, the following should be filled in for each stack
+
+ 1. The stack scale can be automatically set for all imported stacks using the **um/pixel** x/y and z fields. This assumes all stacks in a folder have the same scale. The scale of individual stacks can then be set in the [stack][stack] window using shit+p.
+ 2. If the source .tif stack are multi-channel stacks, see [bAlignBatch][5] for a Fiji plugin to pre-process your .tif stacks into ch1/ch2 file pairs.
+ 
+#### Load ScanImage Folder
+
+The **Load ScanImage Folder** loads a folder of ScanImage .tif stacks.
 
 <p class="important"><B>Important.</B> When importing ScanImage .tif files, the scale is not set by ScanImage. You need to calculate your x/y voxel size (in um per voxel) when you scan at 1x magnification with 1024 by 1024 pixels. You then set this value in '2p um/pixel (1024@1x)'. Map Manager will use this value to calculate each stacks x/y scale for arbitrary ScanImage zoom settings.</p>
 
-#### Load Generic Directory
-
-Load a folder of .tif stacks ignoring any .tif header information. This has some consequences:
-
- 1. The stack will not have a scale. You can set the scale in a stack window with keyboard shift+p.
- 2. If the source .tif stack are multi-channel stacks, Map Manager will blindly import them as one big stack (usually with channels interleaved from slice to slice). Please see [bAlignBatch][5] for a Fiji plugin to pre-process your .tif stacks into ch1/ch2 file pairs.
- 3. The stacks will not have a date. Thus, [map plots][4] with date/days/hours will not be possible.
 
 #### Drag and drop
 
@@ -45,24 +43,51 @@ The simplest way to load a stack is to drag and drop a .tif file onto the Igor p
 
 ### Browsing loaded data
 
-Select a loaded directory on the left  and the loaded stacks will be shown on the right. Double click a stack in the list on the right to open a [stack][3] window.
+Select a loaded folder on the left and the stacks in that folder will be shown on the right. Double click a stack in the list on the right to open a [stack][3] window.
 
-### Keyboard shortcuts
 
-The list of stacks will respond to keyboard input
+<IMG class="img-float-right" SRC="images/mm3/mm3-stack-browser-rightclick1.png" WIDTH="200">
 
-  - 'o' to generate an **o**utput segment report. See [spine dynamics][6].
-  - 'e' to edit the list of stacks in a text table
-  
-### Additional features
-There are many things you can do to visualize your [stacks][3]
+### Right-click a folder in the folder list
 
-  - View a histogram (keyboard 'h').
-  - Set min/max contrast (keyboard 'c').
-  - Generate maximal Z-Projections (keyboard 'shift+z').
-  - Cycle through different window candy (keyboard 'shift+c').
-  - Igor is very good at copying and pasting the image you are viewing in a stack window. Try it out by pasting into Keynote, Powerpoint, or Illustrator.
-  
+Right-click a folder to open a contextual menu.
+
+**Unload Folder**. Unload the folder and all its stacks.
+
+**Segment Report (all stacks)**. Generate a segment [report][reports] for all stacks.
+
+**Export Analysis (all stacks)**. Generate a table with all analysis. This can then be further analyzed in other environments like Matlab or Python. Please see the example [Python code][7].
+
+**Intensity Analysis (all stacks)**. Analyze the intensity of all stacks in the folder. It is critical that each spine in the analysis is checked manually. Please see [Intensity Analysis][intensity].
+
+**Save (all stacks)**. Will save all dirty stacks in a folder. Dirty stacks are stacks that have been changed or modified since they were loaded. Dirty stacks are noted in the stack list with a red background in the 'D' column.
+
+**Show Folder On Disk**. Open the hard-drive folder the folder was originally loaded from. This opens a Finder window on OSX and an Explorer window on Microsoft Windows.
+
+**Refresh List**. To refresh the list of folders and the selected folder's list of stacks.
+
+<div class="print-page-break"></div>
+
+<IMG class="img-float-right" SRC="images/mm3/mm3-stack-browser-rightclick2.png" WIDTH="175">
+
+### Right-click a stack in the stack list
+
+Right-click a stack to open a contextual menu. These menu items can also be triggered using the indicated keyboard shortcuts.
+
+**Display Stack**. Open a [stack][stack] window. Same as double-click
+
+**Unload Stack**. Unload the raw data for a stack.
+
+**Segment Report**. Generate a segment report for all segments in a stack. See [reports][reports].
+
+<div class="print-page-break"></div>
+
+### What is next?
+
+Once a folder of .tif stacks is loaded
+
+ - Start scoring single timepoint stacks following [annotating a stack][8]
+ - Put the stacks into a time-series map following [making a map][9]
 
 
 [1]: stack-browser
@@ -71,3 +96,8 @@ There are many things you can do to visualize your [stacks][3]
 [4]: map-plot
 [5]: https://github.com/cudmore/bob-fiji-plugins
 [6]: spine-dynamics
+[reports]: reports
+[7]: https://github.com/cudmore/mapmanager/blob/gh-pages/_notebooks/MapManager.ipynb
+[intensity]: intensity
+[8]: annotating-a-stack
+[9]: making-a-map

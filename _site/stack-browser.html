@@ -189,35 +189,32 @@
     </h3>
 </div>
 
-<p><img class="img-float-left" src="images/mm3/mm3-stack-browser.png" width="800" /></p>
+<p><img class="img-float-left" src="images/mm3/mm3-stack-browser.png" width="750" /></p>
 
 <div class="print-page-break"></div>
 
-<p>The stack browser provides an interface to load and browse directories of .tif <a href="stack">stacks</a>.</p>
+<p>The stack browser is the main starting point for using Map Manager. The stack browser provides an interface to load and browse folders of .tif <a href="stack">stacks</a>.</p>
 
-<p>The original documentation is <a href="http://www.robertcudmore.org/maptracker/v2/stack-browser/">here</a></p>
+<p>The list on the left is a list of loaded folders, each folder has a list of stacks. The list on the right shows the stacks in the selected folder. Select a folder on the left and the list on the right will show the individual stacks within that folder.</p>
 
-<p>The list on the left is a list of loaded folders, each folder has a list of stacks. Select a folder on the left and the list on the right will show the individual stacks within that folder.</p>
-
-<p>Double click on a stack in the list on the right and it will open a <a href="stack">stack</a> window to view the actual stack.</p>
+<p>Double click a stack to open a <a href="stack">stack</a> window.</p>
 
 <h3 id="loading-stacks">Loading stacks</h3>
 
-<h4 id="load-scanimage-directory">Load ScanImage Directory</h4>
+<h4 id="load-generic-folder">Load Generic Folder</h4>
 
-<p>Load a folder of ScanImage .tif stack. The name of the folder will appear in the list on the left. Selecting this folder will populate the list of stacks imported. Double click on a stack (in the list on the right) to view the <a href="stack">stack</a>.</p>
-
-<p class="important"><b>Important.</b> When importing ScanImage .tif files, the scale is not set by ScanImage. You need to calculate your x/y voxel size (in um per voxel) when you scan at 1x magnification with 1024 by 1024 pixels. You then set this value in '2p um/pixel (1024@1x)'. Map Manager will use this value to calculate each stacks x/y scale for arbitrary ScanImage zoom settings.</p>
-
-<h4 id="load-generic-directory">Load Generic Directory</h4>
-
-<p>Load a folder of .tif stacks ignoring any .tif header information. This has some consequences:</p>
+<p>The <strong>Load Generic Folder</strong> button loads a folder of single-channel .tif stacks. Once loaded, the following should be filled in for each stack</p>
 
 <ol>
-  <li>The stack will not have a scale. You can set the scale in a stack window with keyboard shift+p.</li>
-  <li>If the source .tif stack are multi-channel stacks, Map Manager will blindly import them as one big stack (usually with channels interleaved from slice to slice). Please see <a href="https://github.com/cudmore/bob-fiji-plugins">bAlignBatch</a> for a Fiji plugin to pre-process your .tif stacks into ch1/ch2 file pairs.</li>
-  <li>The stacks will not have a date. Thus, <a href="map-plot">map plots</a> with date/days/hours will not be possible.</li>
+  <li>The stack scale can be automatically set for all imported stacks using the <strong>um/pixel</strong> x/y and z fields. This assumes all stacks in a folder have the same scale. The scale of individual stacks can then be set in the [stack][stack] window using shit+p.</li>
+  <li>If the source .tif stack are multi-channel stacks, see <a href="https://github.com/cudmore/bob-fiji-plugins">bAlignBatch</a> for a Fiji plugin to pre-process your .tif stacks into ch1/ch2 file pairs.</li>
 </ol>
+
+<h4 id="load-scanimage-folder">Load ScanImage Folder</h4>
+
+<p>The <strong>Load ScanImage Folder</strong> loads a folder of ScanImage .tif stacks.</p>
+
+<p class="important"><b>Important.</b> When importing ScanImage .tif files, the scale is not set by ScanImage. You need to calculate your x/y voxel size (in um per voxel) when you scan at 1x magnification with 1024 by 1024 pixels. You then set this value in '2p um/pixel (1024@1x)'. Map Manager will use this value to calculate each stacks x/y scale for arbitrary ScanImage zoom settings.</p>
 
 <h4 id="drag-and-drop">Drag and drop</h4>
 
@@ -227,26 +224,51 @@
 
 <h3 id="browsing-loaded-data">Browsing loaded data</h3>
 
-<p>Select a loaded directory on the left  and the loaded stacks will be shown on the right. Double click a stack in the list on the right to open a <a href="stack">stack</a> window.</p>
+<p>Select a loaded folder on the left and the stacks in that folder will be shown on the right. Double click a stack in the list on the right to open a <a href="stack">stack</a> window.</p>
 
-<h3 id="keyboard-shortcuts">Keyboard shortcuts</h3>
+<p><img class="img-float-right" src="images/mm3/mm3-stack-browser-rightclick1.png" width="200" /></p>
 
-<p>The list of stacks will respond to keyboard input</p>
+<h3 id="right-click-a-folder-in-the-folder-list">Right-click a folder in the folder list</h3>
+
+<p>Right-click a folder to open a contextual menu.</p>
+
+<p><strong>Unload Folder</strong>. Unload the folder and all its stacks.</p>
+
+<p><strong>Segment Report (all stacks)</strong>. Generate a segment <a href="reports">report</a> for all stacks.</p>
+
+<p><strong>Export Analysis (all stacks)</strong>. Generate a table with all analysis. This can then be further analyzed in other environments like Matlab or Python. Please see the example <a href="https://github.com/cudmore/mapmanager/blob/gh-pages/_notebooks/MapManager.ipynb">Python code</a>.</p>
+
+<p><strong>Intensity Analysis (all stacks)</strong>. Analyze the intensity of all stacks in the folder. It is critical that each spine in the analysis is checked manually. Please see <a href="intensity">Intensity Analysis</a>.</p>
+
+<p><strong>Save (all stacks)</strong>. Will save all dirty stacks in a folder. Dirty stacks are stacks that have been changed or modified since they were loaded. Dirty stacks are noted in the stack list with a red background in the ‘D’ column.</p>
+
+<p><strong>Show Folder On Disk</strong>. Open the hard-drive folder the folder was originally loaded from. This opens a Finder window on OSX and an Explorer window on Microsoft Windows.</p>
+
+<p><strong>Refresh List</strong>. To refresh the list of folders and the selected folder’s list of stacks.</p>
+
+<div class="print-page-break"></div>
+
+<p><img class="img-float-right" src="images/mm3/mm3-stack-browser-rightclick2.png" width="175" /></p>
+
+<h3 id="right-click-a-stack-in-the-stack-list">Right-click a stack in the stack list</h3>
+
+<p>Right-click a stack to open a contextual menu. These menu items can also be triggered using the indicated keyboard shortcuts.</p>
+
+<p><strong>Display Stack</strong>. Open a [stack][stack] window. Same as double-click</p>
+
+<p><strong>Unload Stack</strong>. Unload the raw data for a stack.</p>
+
+<p><strong>Segment Report</strong>. Generate a segment report for all segments in a stack. See <a href="reports">reports</a>.</p>
+
+<div class="print-page-break"></div>
+
+<h3 id="what-is-next">What is next?</h3>
+
+<p>Once a folder of .tif stacks is loaded</p>
 
 <ul>
-  <li>‘o’ to generate an <strong>o</strong>utput segment report. See <a href="spine-dynamics">spine dynamics</a>.</li>
-  <li>‘e’ to edit the list of stacks in a text table</li>
-</ul>
-
-<h3 id="additional-features">Additional features</h3>
-<p>There are many things you can do to visualize your <a href="stack">stacks</a></p>
-
-<ul>
-  <li>View a histogram (keyboard ‘h’).</li>
-  <li>Set min/max contrast (keyboard ‘c’).</li>
-  <li>Generate maximal Z-Projections (keyboard ‘shift+z’).</li>
-  <li>Cycle through different window candy (keyboard ‘shift+c’).</li>
-  <li>Igor is very good at copying and pasting the image you are viewing in a stack window. Try it out by pasting into Keynote, Powerpoint, or Illustrator.</li>
+  <li>Start scoring single timepoint stacks following <a href="annotating-a-stack">annotating a stack</a></li>
+  <li>Put the stacks into a time-series map following <a href="making-a-map">making a map</a></li>
 </ul>
 
 
