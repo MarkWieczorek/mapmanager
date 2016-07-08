@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
 
-        <title>Map Manager : Getting started</title>
+        <title>Map Manager : Algorithms</title>
         <meta name="description" content="">
 
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
@@ -187,58 +187,52 @@
 
                     <div id=content class=span10>
                         <div class=page-header>
-    <h3>Getting started
+    <h3>Algorithms
         
     </h3>
 </div>
 
-<h4 id="installing-igor-pro">Installing Igor Pro</h4>
+<p>Map Manager uses a range of algorithms at different stages of the analysis</p>
 
-<ul>
-  <li>Igor Pro is a cross platform program that runs on both Windows and Mac OS X.</li>
-  <li>You need to <a href="https://www.wavemetrics.com/order/order1.php?type=Academic">purchase</a> an Igor Pro license from <a href="https://www.wavemetrics.com/index.html">Wavemetrics</a>, <a href="https://www.wavemetrics.com/support/versions.htm">download</a> Igor Pro and install it.</li>
-  <li>To try out Igor Pro, download and install a fully functional but time limited <a href="https://www.wavemetrics.com/support/demos.htm">demo version</a>.</li>
-</ul>
+<h3 id="within-a-single-timepoint">Within a single timepoint</h3>
 
-<h4 id="installing-map-manager">Installing Map Manager</h4>
+<h4 id="calculating-distance-along-a-segment-and-segment-length">Calculating distance along a segment and segment length</h4>
 
-<ul>
-  <li>Once Igor Pro is installed, there is no formal installation of Map Manager</li>
-  <li>Get the source code from Bob.</li>
-  <li>The source code will be in a folder named ‘MapManager_date’ where ‘date’ is the date the software was created. The folder will be something like ‘MapManager_20151117’.</li>
-  <li>Run the software by double-clicking MapManager.ipf from within the source code folder.</li>
-  <li>To fit lines in FIJI you will have to specify a hard-drive path to FIJI and install a plugin in FIJI. Please see <a href="fitting-segments-in-fiji">fitting segments in fiji</a>.</li>
-</ul>
+<p>Each point in the 3D tracing of a segment is assigned a 3D distance from the start of the segment. For calculating the total segment length, used in <a href="reports">segment reports</a>, the Z values of the 3D line segment fit are first smoothed. For a segment running parallel to a single image plane, the actual Z-values of the fitted 3D line tend to jump up and down between adjacent imaging planes. This causes an accumulation of erronious length and the total length is thus an overestimate of the ‘real’ length. By smoothing the Z values of a segment (before segment length calculation) we reduce this additive error.</p>
 
-<h4 id="openingrunning-map-manager">Opening/Running Map Manager</h4>
+<h4 id="connecting-a-spine-to-its-segment">Connecting a spine to its segment</h4>
 
-<ul>
-  <li>Open MapManager.ipf into Igor Pro (just double click the MapManager.ipf file).</li>
-  <li>Once in Igor Pro, click in the command window to compile Map Manager and activate the main menus. The command window is in the lower left of your screen and has the window title ‘Untitled’.</li>
-  <li>To score a single timepoint stack, select the main menu ‘MapManager - Stack Browser’ to open the <a href="stack-browser">Stack Browser</a> panel. See <a href="annotating-a-stack">Annotating a stack</a> for more information.</li>
-  <li>To score a timeseries of stacks (a map), select the main menu ‘MapManager - Map Manager Panel’ to open the main <a href="main-panel">Map Manager panel</a>. See <a href="making-a-map">Making A Map</a> for more information.</li>
-</ul>
+<p>Spines are automatically connected to their respective dendritic segments by finding the line with the brightest pixels between the spine head and its segment.</p>
 
-<p><img class="img-float-right" src="images/mm3/quit-igor.png" width="400" /></p>
+<p>Starting from the closest point on the segment tracing, a number of candidate lines are drawn between the spine head and the nearby dendritic segment and the line with the brightest intensity is chosen. There will sometimes be errors in this calculation, especially when there is curvature in the dendritic segment, resulting in the starting point being mis-identified. These are easy to fix by right-clicking a spine, selecting ‘manually connect’ and then clicking on the center dendritic line to specify it connection point.</p>
 
-<h4 id="closingquiting-map-manager">Closing/Quiting Map Manager</h4>
+<p>The number of lines to search is a parameter.</p>
 
-<ul>
-  <li>Quit Igor Pro by selecting the main menu ‘Igor Pro - Quit Igor Pro’.</li>
-  <li>When you quit Igor Pro, you will always be prompted with the following dialog.</li>
-  <li>Always answer <strong>No</strong>. All Map Manager analysis is saved using the ‘Save’ buttons from within the Map Manager interface.</li>
-</ul>
+<div class="highlighter-rouge"><pre class="highlight"><code>Line Points To Search When Connecting Spine/Bouton
+</code></pre>
+</div>
 
-<h4 id="map-manager-options">Map Manager Options</h4>
+<h4 id="spine-intensity-analysis">Spine intensity analysis</h4>
 
-<ul>
-  <li>Global options are set in the <a href="stackdb-options-panel">Options Panel</a>.</li>
-  <li>There is one set of options that will be reloaded the next time Map Manager is run.</li>
-  <li>Save the current options with the ‘Save’ button in the <a href="stackdb-options-panel">Options</a> panel.</li>
-  <li>Options can also be saved and then loaded from a user file. Use ‘Save As…’ to save options into a user file.</li>
-</ul>
+<p>See <a href="intensity">intensity</a> analysis.</p>
 
-<div class="print-page-break"></div>
+<h3 id="in-a-time-series">In a time-series</h3>
+
+<h4 id="finding-corresponding-points">Finding corresponding points</h4>
+
+<p>Pivot points are used to identify corresponding regions between image stacks in a time-series. Pivot points are regular 3D annotations that must be manually positioned to correspond to a structure that is present in each stack of a time-series. Map Manager can then snap to corresponding regions of an image in multiple timepoints by snapping to the same 3D offset with respect to each image stacks 3D pivot point.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Connect points within this distance (um)
+</code></pre>
+</div>
+
+<h4 id="finding-corresponding-spines">Finding corresponding spines</h4>
+
+<p>Distance away from segment pivot point is used.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Connect spines within this distance (um)
+</code></pre>
+</div>
 
 
 
@@ -250,7 +244,7 @@
   
   
   
-    <a href="/mapmanager/tags/#Workflow">Workflow</a>
+    <a href="/mapmanager/tags/#Analysis">Analysis</a>
   
 
    <!--
@@ -259,7 +253,7 @@
 
    <!--
    <BR>
-   <a href="_posts/2015-07-30-getting-started.pdf">print pdf</a>
+   <a href="_posts/2016-07-07-Algorithms.pdf">print pdf</a>
    <BR>
    -->
     
