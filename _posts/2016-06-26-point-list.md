@@ -66,7 +66,7 @@ Counts for each of these user types are included for each segment in each [segme
 Turn on the 'Edit Pericyte' checkbox and the point list window will respond to the following keystrokes:
 
 |Key	|Sets	|Meaning
-| :-------------- | :-------------	| :-------------
+| :------ | :-------------- | :-------------
 |6		|user1					|Match
 |7		|user2					|No Match
 |8		|user3					|Partial Match
