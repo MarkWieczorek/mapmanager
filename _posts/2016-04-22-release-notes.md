@@ -8,6 +8,12 @@ tags:
 - faq
 ---
 
+### 20161012, Distributed MapManager to Julia (Linden)
+
+### 20160722. Distributed MapManager to Allen (Linden)
+
+### 20160630. Distributed MapManager to Mengnan (Huganir)
+
 ## 20160422 Update (file version 20151224)
 
 This is a major release with new features, improvements, and bug fixes. The file format has not changed but the options have. Please remake your options!
