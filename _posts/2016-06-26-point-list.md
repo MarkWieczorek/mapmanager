@@ -61,6 +61,21 @@ Turn on the 'Edit User Type' checkbox and the point list window will respond to 
 <BR>
 Counts for each of these user types are included for each segment in each [segment report][4].
 
+### Edit Pericyte
+
+Turn on the 'Edit Pericyte' checkbox and the point list window will respond to the following keystrokes:
+
+|Key	|Sets	|Meaning
+| :-------------- | :-------------	| :-------------
+|6		|user1					|Match
+|7		|user2					|No Match
+|8		|user3					|Partial Match
+|9		|userBool1				|Inverse Match
+|0		|-clear all entries-	|Clear
+
+<BR>
+Counts for each of these user types are included for each stack in each [stack report][4].
+
 ### Plotting
 
 <IMG class="img-float-right" SRC="images/mm3/point-list2-plot1.png" WIDTH="300">
