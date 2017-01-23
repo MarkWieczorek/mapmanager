@@ -61,9 +61,9 @@ Turn on the 'Edit User Type' checkbox and the point list window will respond to 
 <BR>
 Counts for each of these user types are included for each segment in each [segment report][4].
 
-### Edit Pericyte
+### Edit User 1/2/3
 
-Turn on the 'Edit Pericyte' checkbox and the point list window will respond to the following keystrokes:
+Turn on the 'Edit User 1/2/3' checkbox and the point list window will respond to the following keystrokes:
 
 |Key	|Sets	|Meaning
 | :------ | :-------------- | :-------------

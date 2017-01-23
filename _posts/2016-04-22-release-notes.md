@@ -8,6 +8,10 @@ tags:
 - faq
 ---
 
+### 20170123, Distributed MapManager to Zeng-You and Julia (Linden), Richard (Huganir)
+
+This is a major release with new features, improvements, and bug fixes. A full list of these will follow.
+
 ### 20161012, Distributed MapManager to Julia (Linden)
 
 ### 20160722. Distributed MapManager to Allen (Linden)
