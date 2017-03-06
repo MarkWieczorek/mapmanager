@@ -8,6 +8,21 @@
     
       
       <item>
+        <title>Plotting</title>
+        
+          <description>&lt;h2 id=&quot;this-was-started-on-march-6-2017-and-is-not-finished&quot;&gt;&lt;strong&gt;This was started on March 6, 2017 and is NOT FINISHED&lt;/strong&gt;&lt;/h2&gt;
+
+</description>
+        
+        <pubDate>Mon, 06 Mar 2017 05:10:33 -0500</pubDate>
+        <link>
+        /Plotting</link>
+        <guid isPermaLink="true">/Plotting</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Algorithms</title>
         
           <description>&lt;p&gt;Map Manager uses a range of algorithms at different stages of the analysis&lt;/p&gt;
@@ -53,7 +68,7 @@ table{
       <item>
         <title>Release Notes</title>
         
-          <description>&lt;h2 id=&quot;update-file-version-20151224&quot;&gt;20160422 Update (file version 20151224)&lt;/h2&gt;
+          <description>&lt;h3 id=&quot;distributed-mapmanager-to-zeng-you-and-julia-linden-richard-huganir&quot;&gt;20170123, Distributed MapManager to Zeng-You and Julia (Linden), Richard (Huganir)&lt;/h3&gt;
 
 </description>
         
@@ -191,8 +206,8 @@ table{
         
         <pubDate>Thu, 28 May 2015 18:01:06 -0400</pubDate>
         <link>
-        /File-format</link>
-        <guid isPermaLink="true">/File-format</guid>
+        /file-format</link>
+        <guid isPermaLink="true">/file-format</guid>
       </item>
       
     

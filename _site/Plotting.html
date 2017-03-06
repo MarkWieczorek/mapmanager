@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
 
-        <title>Map Manager : Layout panel</title>
+        <title>Map Manager : Plotting</title>
         <meta name="description" content="">
 
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
@@ -190,16 +190,74 @@
 
                     <div id=content class=span10>
                         <div class=page-header>
-    <h3>Layout panel
+    <h3>Plotting
         
     </h3>
 </div>
 
-<p>The layout panel provides an interface to tweak Igor plots.</p>
+<h2 id="this-was-started-on-march-6-2017-and-is-not-finished"><strong>This was started on March 6, 2017 and is NOT FINISHED</strong></h2>
 
-<p><img class="img-float-left" src="images/mm3/mm3-scale-panel.png" width="400" /></p>
+<h3 id="this-is-an-overview-please-see-the-main-plot-panelplot-panel-stack-plotstack-plot-and-map-plotmap-plot">This is an overview. Please see the main <a href="plot-panel">Plot Panel</a>, <a href="stack-plot">Stack Plot</a>, and <a href="map-plot">Map Plot</a>.</h3>
 
-<div class="print-page-break"></div>
+<p>Map Manager plots values for each 3D annotation. Plots can be made from a <a href="stack">stack</a>, a <a href="main-panel">map</a>, and a pool of maps. These plots are very powerful because they are linked to the raw data. If a plot point looks suspicious, one can always return to the raw image data. Finally, these plots are powerful as they are publication ready.</p>
+
+<h3 id="plotting-from-a-single-stack">Plotting from a single stack</h3>
+
+<p>For a single stack, open the <a href="point-list">Point List</a> window. Use the ‘Plot’ button to make Y vs X plots for values from the stack. Each point plotted is for a single 3D object (e.g. a spine). Right click on column row in the table and select ‘Set X Stat’ or ‘Set Y Stat’ to use the values in the column for plotting.</p>
+
+<h3 id="plotting-from-a-map">Plotting from a map</h3>
+
+<p>Use the ‘Plot’ tab in the main <a href="main-panel">time-series</a> window. There are default plots provided here including ‘Spine Length’ as well as intensity measures such as:</p>
+
+<ul>
+  <li>Spine Sum: sSum</li>
+  <li>Spine Background Sum: sbSum</li>
+  <li>Background Subtracted Spine Sum: bssSum</li>
+  <li>Dendrite Sum: dSum</li>
+  <li>Dendrite Background Sum: dbSum</li>
+  <li>Background Subtracted Dendrite Sum: bsdSum</li>
+</ul>
+
+<h3 id="advanced-plotting-with-the-plot-panelplot-panel">Advanced plotting with the <a href="plot-panel">Plot Panel</a></h3>
+
+<p>Open the main <a href="plot-panel">plot panel</a> from the main <a href="main-panel">time-series</a> window using the ‘Plot’ button.</p>
+
+<p>The general idea is to select a Y value from the list, a corresponding X value and make a plot. All plots will show the values for individual 3D annotations (one annotation per point in the plot). There are two types of plots</p>
+
+<ol>
+  <li>Spine Plot Map - To plot a Y value versus an X map value such as days or hours. <strong>Add example</strong></li>
+  <li>Session Plot (Map) - To plot values from 2 different sessions/timepoints. Use this to see how objects change from one time-point to the next. <strong>Add example</strong></li>
+</ol>
+
+<h3 id="plotting-a-map-pool">Plotting a map pool</h3>
+
+<p>A map pool will make one plot holding data from a number of maps. There are two types of map pools, just like there are two types of plots.</p>
+
+<ol>
+  <li>Time-series pool - Map Pool (Time-Series)</li>
+  <li>Session pool - Map Pool(Sessions)</li>
+</ol>
+
+<p>The interface to creating a map pool from a number of open maps is in the <a href="plot-panel">Plot Panel</a>.</p>
+
+<h3 id="plot-window-interface">Plot Window Interface</h3>
+
+<p>Once a plot is made from a stack or a map, Map Manager provides a unified interface.</p>
+
+<ul>
+  <li>To get back to the raw <a href="stack">stack</a>. Select a point, right-click and choose a menu option.
+    <ul>
+      <li>Plot Stack</li>
+      <li>Plot Spine</li>
+      <li>Plot Run +/- 1</li>
+      <li>Plot Run +/- All</li>
+      <li>Plot Run +/- n</li>
+    </ul>
+  </li>
+  <li>For spines, show only spines on a single dendrite or all dendrites. Do this by setting ‘Map Segment ID’ and/or the ‘All Segments’ checkbox.</li>
+  <li>Generate tables of numbers and statistics. Use the ‘Stats’ button. These can easily be copied and pasted into other analysis software.</li>
+  <li>Click and drag to visually select subsets of objects. There are three different selections, turn each one on with the 1/2/3 radio buttons. Once created, the ‘Stats’ button will include the statistics for these manual selections in the output table.</li>
+</ul>
 
 
 
@@ -211,7 +269,7 @@
   
   
   
-    <a href="/mapmanager/tags/#Imaging core">Imaging core</a>
+    <a href="/mapmanager/tags/#Analysis">Analysis</a>
   
 
    <!--
@@ -220,7 +278,7 @@
 
    <!--
    <BR>
-   <a href="_posts/2015-04-20-layout-panel.pdf">print pdf</a>
+   <a href="_posts/2017-03-06-Plotting.pdf">print pdf</a>
    <BR>
    -->
     
