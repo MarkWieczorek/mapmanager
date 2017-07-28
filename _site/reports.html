@@ -401,11 +401,7 @@ td{
 
 <h3 id="map-reports">Map Reports</h3>
 
-<h4 id="dynamics-report">Dynamics Report</h4>
-
-<p>A dynamics report is used for a <a href="map-plot">map</a>. For each session in a map, it will calculate the length of each segment (um), the density of spines, the number of added spines, the number of subtracted spines, etc., etc.</p>
-
-<p>In any <a href="map-plot">map plot</a>, right-click and select ‘Dynamics Report’. If the map plot is displaying ‘All Segment’, a table for each segment will be opened. Otherwise, one table for the current ‘Map Segment ID’ will be opened.</p>
+<p>There are two types of map reports, <strong>Dynamics</strong> and <strong>Survival</strong>. Each report begins with a header that gives information about each session in the report</p>
 
 <table>
   <thead>
@@ -416,40 +412,118 @@ td{
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left">numSpines</td>
-      <td style="text-align: left">Total number of spines, goodSpines + badSpines</td>
+      <td style="text-align: left">Idx</td>
+      <td style="text-align: left">Session Index</td>
     </tr>
     <tr>
-      <td style="text-align: left">goodSpines</td>
+      <td style="text-align: left">Map</td>
+      <td style="text-align: left">Name of the map</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">sessCond</td>
+      <td style="text-align: left">Session Condition</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">mapSegment</td>
+      <td style="text-align: left">Map specific segment index (different from stackSegment)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Stack</td>
+      <td style="text-align: left">Name of the stack (used internally)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">originalFile</td>
+      <td style="text-align: left">Original file name of the stack</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">stackSegment</td>
+      <td style="text-align: left">Stack specific segment index (different from mapSegment)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">date</td>
+      <td style="text-align: left">The date the stack was acquired</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">time</td>
+      <td style="text-align: left">The time the stack was acquired</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">seconds</td>
+      <td style="text-align: left">The seconds the stack was acquired (from 12:00 AM on Jan 1, 1904)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="dynamics-report">Dynamics Report</h4>
+
+<p>A dynamics report is used for a <a href="map-plot">map</a>. For each session in a map, it will calculate the length of each segment (um), the number of added and subtracted spines, the density of added and subtracted spines, etc. etc.</p>
+
+<p>In any <a href="map-plot">map plot</a>, right-click and select ‘Dynamics Report’. If the map plot is displaying ‘All Segment’, a table for each segment will be opened. Otherwise, one table for the current ‘Map Segment ID’ will be opened.</p>
+
+<p>The report is broken into different sections.</p>
+
+<h5 id="information-about-the-segment-tracing">Information about the segment tracing</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Name</th>
+      <th style="text-align: left">Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">totalLen2d</td>
+      <td style="text-align: left">Total 2D length of tracing (um)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">goodLen2d</td>
+      <td style="text-align: left">2D length of tracing between most distal ‘good’ objects (um)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">smoothPoints</td>
+      <td style="text-align: left">Boxcar smoothing for tracing z (0 means no smoothing)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">totalLen3d</td>
+      <td style="text-align: left">The smoothed total 3D length of tracing (um)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">goodLen3d</td>
+      <td style="text-align: left">The smoothed 3D length of tracing between most distal ‘good’ object (um)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="information-about-all-object-ignoring-user-type">Information about all object (ignoring user type)</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Name</th>
+      <th style="text-align: left">Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">=====</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">density</td>
+      <td style="text-align: left">density = nTotal / goodLen3d</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">nTotal</td>
+      <td style="text-align: left">Total number of spines (is same as nGood + nBad)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">nGood</td>
       <td style="text-align: left">Total number of good spines</td>
     </tr>
     <tr>
-      <td style="text-align: left">badSpines</td>
+      <td style="text-align: left">nBad</td>
       <td style="text-align: left">Total number of bad spines</td>
-    </tr>
-    <tr>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">totalLen</td>
-      <td style="text-align: left">Total segment length (um)</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">goodLen</td>
-      <td style="text-align: left">Segment length between most distal good spines.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">totalDen</td>
-      <td style="text-align: left">Total density = numSpines / totalLen</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">goodDen</td>
-      <td style="text-align: left">Density of good spines = goodSpines / goodLen</td>
     </tr>
     <tr>
       <td style="text-align: left"> </td>
@@ -468,51 +542,203 @@ td{
       <td style="text-align: left">Number of subtracted spines (from the previous session)</td>
     </tr>
     <tr>
-      <td style="text-align: left">tor</td>
-      <td style="text-align: left">Turn-over-ratio =</td>
-    </tr>
-    <tr>
       <td style="text-align: left"> </td>
       <td style="text-align: left"> </td>
     </tr>
     <tr>
       <td style="text-align: left">pAdd</td>
-      <td style="text-align: left">Percent added = nAdd / goodSpines from previous session * 100</td>
+      <td style="text-align: left">Percent added = nAdd / nGood from previous session * 100</td>
     </tr>
     <tr>
       <td style="text-align: left">pSub</td>
-      <td style="text-align: left">Percent subtracted =</td>
+      <td style="text-align: left">Percent subtracted = nSub / nGood from previous session * 100</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">pSub2</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
     </tr>
     <tr>
       <td style="text-align: left">dAdd</td>
-      <td style="text-align: left">Density added =</td>
+      <td style="text-align: left">Density added = nAdd / goodLen3d from previous session</td>
     </tr>
     <tr>
       <td style="text-align: left">dSub</td>
-      <td style="text-align: left">Density subtracted =</td>
+      <td style="text-align: left">Density subtracted = nSub / goodLen3d from previous session</td>
     </tr>
     <tr>
+      <td style="text-align: left">dSub2</td>
       <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">np</td>
-      <td style="text-align: left">New persistent =</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">nt</td>
-      <td style="text-align: left">New transient =</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">lp</td>
-      <td style="text-align: left">Lost persistent =</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">lt</td>
-      <td style="text-align: left">Lost transient =</td>
     </tr>
   </tbody>
 </table>
+
+<h5 id="information-about-user-type-0">Information about user type 0</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Name</th>
+      <th style="text-align: left">Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">=====</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">density_ut0</td>
+      <td style="text-align: left">Density of user type 0 = nTotal_ut0 / googLen3d</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">nTotal_ut0</td>
+      <td style="text-align: left">Total number of user type 0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">nGood_ut0</td>
+      <td style="text-align: left">Total number of good user type 0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">nBad_ut0</td>
+      <td style="text-align: left">Total number of bad user type 0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">nAdd_ut0</td>
+      <td style="text-align: left">Number of added user type 0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">nSub_ut0</td>
+      <td style="text-align: left">Number of subtracted user type 0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">nSub2_ut0</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">pAdd_ut0</td>
+      <td style="text-align: left">Percent of added user type 0 = nAdd_ut0 / nGood_ut0 from previous session *100</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">pSub_ut0</td>
+      <td style="text-align: left">Percent of subtracted user type 0 = nSub_ut2 / nGood_ut0 from previous session</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">pSub2_ut0</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dAdd_ut0</td>
+      <td style="text-align: left">Density of added user type 0 = nAdd_ut0 / goodLen3d from previous session</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dSub_ut0</td>
+      <td style="text-align: left">Density of subtracted user type 0 = nSub_ut0 / goodLen3d from previous session</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dSub2_ut0</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="information-about-user-type-1-2-3--5">Information about user type 1, 2, 3, … 5</h5>
+
+<p>Other sections will be appended to the report to give information about ‘user type 1’, ‘user type 2’, ‘user type 3’, …, ‘user type 5’</p>
+
+<h4 id="survival-report">Survival Report</h4>
+
+<p>A survival report calculates the number of objects remaining from an initial ‘seed’ session. Like a <strong>Dynamics</strong> report, it breaks down objects into different sections including all objects, followed by user type 0, followed by user type 1, etc. etc.</p>
+
+<h5 id="information-about-all-object-ignoring-user-type-1">Information about all object (ignoring user type)</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Name</th>
+      <th style="text-align: left">Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">surv_all_s0</td>
+      <td style="text-align: left">For each session, the number of surviving objects relative to seed session 0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">psurv_all_s0</td>
+      <td style="text-align: left">For each session, the fraction of surviving objects relative to seed session 0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"><strong>Note:</strong> This can continue with different seed sessions, for example, surv_all_s2 would give the number of surviving objects relative to seed session 2</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="information-about-user-type-0-1">Information about user type 0</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Name</th>
+      <th style="text-align: left">Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">surv_type0_s0</td>
+      <td style="text-align: left">For each session, the number of surviving <strong>user type 0</strong> objects relative to seed session 0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">psurv_type0_s0</td>
+      <td style="text-align: left">For each session, the fraction of surviving <strong>user type 0</strong> objects relative to seed session 0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"><strong>Note:</strong> This can continue with different seed sessions, for example, surv_type0_s2 would give the number of surviving <strong>user type 0</strong> objects relative to seed session 2</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="information-about-user-type-1">Information about user type 1</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Name</th>
+      <th style="text-align: left">Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">surv_type1_s0</td>
+      <td style="text-align: left">For each session, the number of surviving <strong>user type 1</strong> objects relative to seed session 0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">psurv_type1_s0</td>
+      <td style="text-align: left">For each session, the fraction of surviving <strong>user type 1</strong> objects relative to seed session 0</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="information-about-user-type-2-3-4-5">Information about user type 2, 3, 4, 5</h5>
+
+<p>Other sections will be appended to the report to give information about ‘user type 2’, ‘user type 3’, ‘user type 4’ and ‘user type 5’</p>
 
 <!--
 
