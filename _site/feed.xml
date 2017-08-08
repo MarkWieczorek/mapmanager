@@ -8,6 +8,21 @@
     
       
       <item>
+        <title>Map Pool</title>
+        
+          <description>&lt;p&gt;A map pool will plot multiple maps in the same plot and generate pooled statistics across these maps. The maps that go into a pool are specified by their ‘map condition’. In a normal map plot, the X-axis is often session or days. In a pooled plot, the X-axis is defined by each sessions ‘session condition’.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 07 Aug 2017 06:10:33 -0400</pubDate>
+        <link>
+        /Map-Pool</link>
+        <guid isPermaLink="true">/Map-Pool</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Plotting</title>
         
           <description>&lt;h2 id=&quot;this-was-started-on-march-6-2017-and-is-not-finished&quot;&gt;&lt;strong&gt;This was started on March 6, 2017 and is NOT FINISHED&lt;/strong&gt;&lt;/h2&gt;
