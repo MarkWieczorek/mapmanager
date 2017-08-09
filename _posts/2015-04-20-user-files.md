@@ -8,11 +8,11 @@ tags:
 - Posts
 ---
 
-<p class="important">
-User files have been completely revamped. Global options can now be easily saved and loaded using the 'Stack DB Options Panel'.
-</p>
+#### Please see the Map Manager [Options Panel][2]. User files have been depreciated. 
 
-See [Stack DB Options Panel][2]
+<p class="important">
+Map Manager options can now be easily saved and loaded using the 'Options Panel'. User files have been depreciated.
+</p>
 
 User files are text files where global options are specified and then loaded and applied within Map Manager. This is useful when you have mutiple users within one Map Manager installation.
 

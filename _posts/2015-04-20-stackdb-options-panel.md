@@ -8,63 +8,88 @@ tags:
 - Interface
 ---
 
+<style>
+table{
+    border-collapse: collapse;
+    border:1px solid #000000;
+    margin-left:50px
+}
 
-The Map Manager Options panel provides global options to control the behavior of Map Manager. Options can be saved and then loaded using the **User** section. Values shown in <font color="red"><strong>red</strong></font> will effect your analysis.
+th{
+    border:1px solid #000000;
+    padding: 5px;
+}
 
-To open the options panel
+td{
+    border:1px solid #000000;
+    padding: 5px;
+}
+</style>
 
-  - Select 'MapManager - Map Manager Options' in the main menu.
-  - 'Options' button in the left control panel of any stack.
-  - 'Options' button in main [Map Manager Panel][5].
-  - 'Options' button in the Map Manager Buttons panel.
+The Map Manager Options panel provides global options to control the behavior of Map Manager. Options can be saved using the **Save Options** button. Values shown in <font color="red"><strong>red</strong></font> will effect analysis and those in <font color="black"><strong>black</strong></font> effect program behavior..
 
-<IMG class="img-float-left" SRC="images/mm3/mm3-options.png" WIDTH="300">
+The options panel is opened from the main menu 'MapManager - Options'.
 
-The panel is very tall, scroll the panel up/down with the mouse wheel.
+<IMG class="img-float-left" SRC="images/mm3/options/options.png" WIDTH="800">
+<div class="print-page-break"></div>
 
-### User
 
-Interface to load and save [User Files][3].
+### General
 
-**Load.** Load a user file.
-
-**HD.** Show the 'User' folder on hard-disk.
-
-**Save.** Save the current options to the current user file. To reload this user file, use the 'Load' button.
-
-**Load Factory Defaults.**
-
-**Save As...** Save the current setting as a new user file.
-
+ - **Stack Browser On Open**. xxx
+ - **Time Series On Open**. yyy
+ - **Hide Code**. zzz
 
 ### Stack Display
 
-Options that control the display of the [stack db][2] in a [stack][1] window. Each time you change an option (e.g. 'Points') you need to press 'Apply To Top Stack Window' for the changes to take effect. Or, 'Refresh' the stack window with 'r'.
+<IMG class="img-float-right" SRC="images/mm3/options/options-stack-display.png" WIDTH="350">
 
-**Points.** Toggle stack db objects.
+Options that control the display of [stack][1] windows. Changes will be applied the next time a stack window is opened, or for already opened stack windows pressing keyboard 'r' will refresh the display.
 
-**Spine Line.** Toggle the line connecting the spine head to the segment radius.
+ - **Points.** Toggle stack db objects.
 
-**Point mask.** Turn point masking on/off. By default, stack db objects are shown and not shown (they are masked) based on the image plane you are viewing.
+ - **Spine Line.** Toggle the line connecting the spine head to the segment radius.
 
-**Use segment color for all points.** xxx
+ - **Point mask.** Turn point masking on/off. By default, stack db objects are shown and not shown (they are masked) based on the image plane you are viewing.
 
-**Line.** Toggle the segment backbone line and radii lines.
+ - **Segment Color For All Points.** xxx
 
-**Radii.** xxx
+ - **User Type**
+ 
+ - **Line.** Toggle the segment backbone line and radii lines.
 
-**Line Mask.** xxx
+ - **Radii.** xxx
 
-**Tag Font Size.** In a stack window, the tags are the stack db point number. In a map, the tags are the **run** number of the point.
+ - **Line Mask.** xxx
 
-**Scale Bar.** Displayed in the bottom right of all stack windows. Cycle through stack window display options with keyboard shift+c
+ - **Channel Order**
+ 
+ - **Tag Font Size.** In a stack window, the tags are the stack db point number. In a map, the tags are the **run** number of the point.
 
-**Display Control Points** xxx
+ - **Scale Bar.** Displayed in the bottom right of all stack windows. Cycle through stack window display options with keyboard shift+c
 
-**Control Point Help** Use the 'On' and 'Off' buttons for some additional visual cues about your segment line fits. The end of the line fit is shown in red. This is useful when making the same segment across timepoints in a map. It helps you fit each segment in the same direction.
-
+ - **Left/Right Arrows Will Scroll Through Line (Otherwise Pan)**
+ 
+ - **Mask Points**
+ 
+ - **Flash Ticks**
+ 
+ - **Window With 1/2**
+ 
+ - **Default Zoom**
+ 
+ - **Default Stack Candy**
+ 
+ - **Kill Stack (from memory) on window close**
+ 
+ - **Click and Drag**
+ 
+ - **Keyboard edits 'User Type'**
+ 
 
 ### Stack DB
+
+<IMG class="img-float-right" SRC="images/mm3/options/options-stackdb.png" WIDTH="350">
 
 **Warn On New Objects**
 **Warn On Delete Objects**
@@ -93,6 +118,8 @@ Options that control the display of the [stack db][2] in a [stack][1] window. Ea
 
 ### Object Map
 
+<IMG class="img-float-right" SRC="images/mm3/options/options-object-map.png" WIDTH="350">
+
 **Default Run +/-**. Set the number of sessions to display when selecting right-click menu 'Plot Run +- n'.
 
 **Check map before save**. xxx
@@ -115,6 +142,8 @@ Options that control the display of the [stack db][2] in a [stack][1] window. Ea
 <!-- <IMG class="img-float-left" SRC="images/mm3/mm3-options-bottom.png" WIDTH="300"> -->
 
 ### Intensity Analysis
+
+<IMG class="img-float-right" SRC="images/mm3/options/options-intensity-analysis.png" WIDTH="350">
 
 Turn [intensity analysis][4] on/off with the 'Intensity Analysis' checkbox. Be sure to refresh any open stack windows.
 
@@ -141,21 +170,65 @@ Turn [intensity analysis][4] on/off with the 'Intensity Analysis' checkbox. Be s
 
 ### Miscellaneous
 
-<IMG class="img-float-left" SRC="images/mm3/mmoptions-object-display.png" WIDTH="225">
+<IMG class="img-float-right" SRC="images/mm3/options/options-misc.png" WIDTH="275">
 
-A table to set how stack db points are displayed. Use the disclusure triangle in the upper-right of the options window to show the table.
+A table to set how annotations are displayed. Right-click on 'marker' or 'color' to set. Double-click on 'size' to set. Note, 'size' is in arbitrary Igor Pro centric units.
 
-Right-click on 'marker' or 'color' to set. Double-click on 'size' to set.
-
+|Idx      |Name		|Meaning
+| :-------------- | :------------- | :-------------
+|0	|spineROI		| Spine marker in stack and map plot
+|1	|boutonROI		| 
+|2	|controlPnt		| 	
+|3	|pivotPnt		| 
+|4	|lineROI		| 
+|5	|otherROI		| 
+|6	|pntSel			| User point selection
+|7	|runSel			| User run selection
+|8	|maskSel		| Mask selection
+|9	|flashSel		| Flashes to make selection more obvious
+|10	|globalPivot	| 
+|11	|lineSel		| 
+|12	|line			| Segment tracing line
+|13	|radius			| Segment tracing radius
+|14	|sROI			| Spine intensity ROI
+|15	|dROI			| Dendrite/segment intensity ROI
+|16	|sbROI			| Spine background ROI
+|17	|dbROI			| Dendrite/segment background ROI
+|18	|Bad			| Bad annotations
+|19	|Add			| Added
+|20	|Subtract		| Subtracted
+|21	|Persistent		| Persistent
+|22	|Transient		| Transient
+|23	|user1_1			| 
+|24	|user1_2			| 
+|25	|user1_3			| 
+|26	|user1_4			| 
+|27	|user1_5			| 
+|28	|User Type 0		| Markers for user type 0..9
+|29	|User Type 1		| 
+|30	|User Type 2		| 
+|31	|User Type 3		| 
+|32	|User Type 4		| 
+|33	|User Type 5		| 
+|34	|User Type 6		| 
+|35	|User Type 7		| 
+|36	|User Type 8		| 
+|37	|User Type 9		| 
+ 
 <div class="print-page-break"></div>
+
+### Load Stacks From Special Folder
+
+Each of the check boxes will redirect the loading of image stacks to different folders. In particular, the **channels8** option will load 8-bit versions which is useful to speed annotations of larger 16-bit images. See Fiji plugin bConvertTo8Bit_v5_.py to convert entire directories of tiff stacks to 8-bit.
 
 ### Stack Browser Options
 
+<IMG class="img-float-right" SRC="images/mm3/mm3-stack-browser-options.png" WIDTH="350">
+
 Additional option are available in the Stack Browser Options panel.
 
-Open the Stack Browser Options panel using the main menu 'MapManager - Stack Browser Options'
+Open the Stack Browser Options panel using the 'Options' button in the [stack browser][6].
 
-<IMG class="img-float-left" SRC="images/mm3/mm3-stack-browser-options.png" WIDTH="300">
 
 <div class="print-page-break"></div>
 
@@ -164,3 +237,4 @@ Open the Stack Browser Options panel using the main menu 'MapManager - Stack Bro
 [3]: user-files
 [4]: intensity
 [5]: main-panel
+[6]: stack-browser

@@ -198,7 +198,7 @@
     </h3>
 </div>
 
-<p><img class="img-float-left" src="images/mm3/mm3-stack-browser.png" width="750" /></p>
+<p><img class="img-float-left" src="images/mm3/stack-browser.png" width="800" /></p>
 
 <div class="print-page-break"></div>
 
@@ -210,16 +210,16 @@
 
 <h3 id="loading-stacks">Loading stacks</h3>
 
-<h4 id="load-generic-folder">Load Generic Folder</h4>
+<h4 id="generic-import">Generic Import</h4>
 
-<p>The <strong>Load Generic Folder</strong> button loads a folder of single-channel .tif stacks. Once loaded, the following should be filled in for each stack</p>
+<p>The <strong>Load Tiff Folder</strong> button loads a folder of single-channel .tif stacks. Once loaded, the following should be filled in for each stack</p>
 
 <ol>
-  <li>The stack scale can be automatically set for all imported stacks using the <strong>um/pixel</strong> x/y and z fields. This assumes all stacks in a folder have the same scale. The scale of individual stacks can then be set in the [stack][stack] window using shit+p.</li>
-  <li>If the source .tif stack are multi-channel stacks, see <a href="https://github.com/cudmore/bob-fiji-plugins">bAlignBatch</a> for a Fiji plugin to pre-process your .tif stacks into ch1/ch2 file pairs.</li>
+  <li>The stack scale can be automatically set for all imported stacks using the <strong>um/pixel</strong> x/y and z fields. This assumes all stacks in a folder have the same scale. The scale of individual stacks can then be set in the [stack][stack] window using keyboard shit+p.</li>
+  <li>If the source .tif stack are multi-channel stacks, see <a href="https://github.com/cudmore/bob-fiji-plugins">bAlignBatch</a> for a Fiji plugin to pre-process .tif stacks into ch1/ch2 file pairs.</li>
 </ol>
 
-<h4 id="load-scanimage-folder">Load ScanImage Folder</h4>
+<h4 id="scanimage-import">ScanImage Import</h4>
 
 <p>The <strong>Load ScanImage Folder</strong> loads a folder of ScanImage .tif stacks.</p>
 
@@ -227,47 +227,79 @@
 
 <h4 id="drag-and-drop">Drag and drop</h4>
 
-<p>The simplest way to load a stack is to drag and drop a .tif file onto the Igor program icon. Stacks opened in this way will appear in a special folder (in the list on the left) called ‘DragAndDrop’.</p>
+<p>The simplest way to load a single stack is to drag and drop a .tif file onto the Igor program icon. Stacks opened in this way will appear in a special folder (in the list on the left) called ‘DragAndDrop’.</p>
 
 <p class="tip"><b>Tip.</b> The order of stacks can be sorted by selecting columns in the stack list. To sort by date, select 'Date' in the columns header. <b>This ordering is critical when batch importing a list of stacks into a Map Manager map</b></p>
+<p>.</p>
 
 <h3 id="browsing-loaded-data">Browsing loaded data</h3>
 
-<p>Select a loaded folder on the left and the stacks in that folder will be shown on the right. Double click a stack in the list on the right to open a <a href="stack">stack</a> window.</p>
+<ul>
+  <li>Select a loaded folder on the left and the stacks in that folder will be shown on the right.</li>
+  <li>Double click a stack in the list on the right to open a <a href="stack">stack</a> window.</li>
+</ul>
 
-<p><img class="img-float-right" src="images/mm3/mm3-stack-browser-rightclick1.png" width="200" /></p>
+<p><img class="img-float-right" src="images/mm3/stack-browser/stack-browser-right-click-folder.png" width="225" /></p>
 
 <h3 id="right-click-a-folder-in-the-folder-list">Right-click a folder in the folder list</h3>
 
 <p>Right-click a folder to open a contextual menu.</p>
 
-<p><strong>Unload Folder</strong>. Unload the folder and all its stacks.</p>
-
-<p><strong>Segment Report (all stacks)</strong>. Generate a segment <a href="reports">report</a> for all stacks.</p>
-
-<p><strong>Export Analysis (all stacks)</strong>. Generate a table with all analysis. This can then be further analyzed in other environments like Matlab or Python. Please see the example <a href="https://github.com/cudmore/mapmanager/blob/gh-pages/_notebooks/MapManager.ipynb">Python code</a>.</p>
-
-<p><strong>Intensity Analysis (all stacks)</strong>. Analyze the intensity of all stacks in the folder. It is critical that each spine in the analysis is checked manually. Please see <a href="intensity">Intensity Analysis</a>.</p>
-
-<p><strong>Save (all stacks)</strong>. Will save all dirty stacks in a folder. Dirty stacks are stacks that have been changed or modified since they were loaded. Dirty stacks are noted in the stack list with a red background in the ‘D’ column.</p>
-
-<p><strong>Show Folder On Disk</strong>. Open the hard-drive folder the folder was originally loaded from. This opens a Finder window on OSX and an Explorer window on Microsoft Windows.</p>
-
-<p><strong>Refresh List</strong>. To refresh the list of folders and the selected folder’s list of stacks.</p>
+<ul>
+  <li>
+    <p><strong>Unload Folder</strong>. Unload the folder and all its stacks.</p>
+  </li>
+  <li>
+    <p><strong>Stack Report (all stacks)</strong>.</p>
+  </li>
+  <li>
+    <p><strong>Segment Report (all stacks)</strong>. Generate a segment <a href="reports">report</a> for all stacks.</p>
+  </li>
+  <li>
+    <p><strong>View Database (all stacks)</strong>. Generate a table with all analysis. This can be copied and pasted into other programs for analysis.</p>
+  </li>
+  <li>
+    <p><strong>Intensity Analysis (all stacks)</strong>. Analyze the intensity of all stacks in the folder. It is critical that each spine in the analysis is checked manually. Please see [Intensity Analysis][intensity].</p>
+  </li>
+  <li>
+    <p><strong>Save (all stacks)</strong>. Will save the annotations for all ‘dirty’ stacks in a folder. Dirty stacks are stacks that have been changed or modified since they were loaded. Dirty stacks are noted in the stack list with a <font color="red"><strong>red</strong></font> background in the ‘D’ column.</p>
+  </li>
+  <li>
+    <p><strong>Show Folder On Disk</strong>. Open the hard-drive folder the folder was originally loaded from. This opens a Finder window on OSX and an Explorer window on Microsoft Windows.</p>
+  </li>
+  <li>
+    <p><strong>Refresh List</strong>. To refresh the list of folders and the selected folder’s list of stacks. This is generally not needed.</p>
+  </li>
+</ul>
 
 <div class="print-page-break"></div>
 
-<p><img class="img-float-right" src="images/mm3/mm3-stack-browser-rightclick2.png" width="175" /></p>
-
 <h3 id="right-click-a-stack-in-the-stack-list">Right-click a stack in the stack list</h3>
+
+<p><img class="img-float-right" src="images/mm3/stack-browser/stack-browser-right-click-stack.png" width="200" /></p>
 
 <p>Right-click a stack to open a contextual menu. These menu items can also be triggered using the indicated keyboard shortcuts.</p>
 
-<p><strong>Display Stack</strong>. Open a [stack][stack] window. Same as double-click</p>
-
-<p><strong>Unload Stack</strong>. Unload the raw data for a stack.</p>
-
-<p><strong>Segment Report</strong>. Generate a segment report for all segments in a stack. See <a href="reports">reports</a>.</p>
+<ul>
+  <li>
+    <p><strong>Display Stack</strong>. Open a [stack][stack] window. Same as double-click.</p>
+  </li>
+  <li>
+    <p><strong>Unload Stack</strong>. Unload the raw data for a stack. <font color="red"><strong>Important</strong></font>, this unloads the raw data to conserve memory, it <strong>DOES NOT</strong> unload the stack annotations.</p>
+  </li>
+  <li>
+    <p><strong>Stack Report</strong>.</p>
+  </li>
+  <li>
+    <p><strong>Segment Report</strong>. Generate a segment report for all segments in a stack. See <a href="reports">reports</a>.</p>
+  </li>
+  <li>
+    <p><strong>View Database</strong>. Open a text table with all annotations in the stack. This can be copied and pasted into other programs for analysis.</p>
+  </li>
+  <li>
+    <p><strong>Experimental - Segment Length Plot</strong>. Make both 2D and 3D plots of segment length as a function of the Z-Smoothing parameter.</p>
+  </li>
+</ul>
 
 <div class="print-page-break"></div>
 

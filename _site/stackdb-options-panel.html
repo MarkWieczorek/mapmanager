@@ -198,62 +198,111 @@
     </h3>
 </div>
 
-<p>The Map Manager Options panel provides global options to control the behavior of Map Manager. Options can be saved and then loaded using the <strong>User</strong> section. Values shown in <font color="red"><strong>red</strong></font> will effect your analysis.</p>
+<style>
+table{
+    border-collapse: collapse;
+    border:1px solid #000000;
+    margin-left:50px
+}
 
-<p>To open the options panel</p>
+th{
+    border:1px solid #000000;
+    padding: 5px;
+}
+
+td{
+    border:1px solid #000000;
+    padding: 5px;
+}
+</style>
+
+<p>The Map Manager Options panel provides global options to control the behavior of Map Manager. Options can be saved using the <strong>Save Options</strong> button. Values shown in <font color="red"><strong>red</strong></font> will effect analysis and those in <font color="black"><strong>black</strong></font> effect program behavior..</p>
+
+<p>The options panel is opened from the main menu ‘MapManager - Options’.</p>
+
+<p><img class="img-float-left" src="images/mm3/options/options.png" width="800" /></p>
+<div class="print-page-break"></div>
+
+<h3 id="general">General</h3>
 
 <ul>
-  <li>Select ‘MapManager - Map Manager Options’ in the main menu.</li>
-  <li>‘Options’ button in the left control panel of any stack.</li>
-  <li>‘Options’ button in main <a href="main-panel">Map Manager Panel</a>.</li>
-  <li>‘Options’ button in the Map Manager Buttons panel.</li>
+  <li><strong>Stack Browser On Open</strong>. xxx</li>
+  <li><strong>Time Series On Open</strong>. yyy</li>
+  <li><strong>Hide Code</strong>. zzz</li>
 </ul>
-
-<p><img class="img-float-left" src="images/mm3/mm3-options.png" width="300" /></p>
-
-<p>The panel is very tall, scroll the panel up/down with the mouse wheel.</p>
-
-<h3 id="user">User</h3>
-
-<p>Interface to load and save <a href="user-files">User Files</a>.</p>
-
-<p><strong>Load.</strong> Load a user file.</p>
-
-<p><strong>HD.</strong> Show the ‘User’ folder on hard-disk.</p>
-
-<p><strong>Save.</strong> Save the current options to the current user file. To reload this user file, use the ‘Load’ button.</p>
-
-<p><strong>Load Factory Defaults.</strong></p>
-
-<p><strong>Save As…</strong> Save the current setting as a new user file.</p>
 
 <h3 id="stack-display">Stack Display</h3>
 
-<p>Options that control the display of the <a href="annotating-a-stack">stack db</a> in a <a href="stack">stack</a> window. Each time you change an option (e.g. ‘Points’) you need to press ‘Apply To Top Stack Window’ for the changes to take effect. Or, ‘Refresh’ the stack window with ‘r’.</p>
+<p><img class="img-float-right" src="images/mm3/options/options-stack-display.png" width="350" /></p>
 
-<p><strong>Points.</strong> Toggle stack db objects.</p>
+<p>Options that control the display of <a href="stack">stack</a> windows. Changes will be applied the next time a stack window is opened, or for already opened stack windows pressing keyboard ‘r’ will refresh the display.</p>
 
-<p><strong>Spine Line.</strong> Toggle the line connecting the spine head to the segment radius.</p>
-
-<p><strong>Point mask.</strong> Turn point masking on/off. By default, stack db objects are shown and not shown (they are masked) based on the image plane you are viewing.</p>
-
-<p><strong>Use segment color for all points.</strong> xxx</p>
-
-<p><strong>Line.</strong> Toggle the segment backbone line and radii lines.</p>
-
-<p><strong>Radii.</strong> xxx</p>
-
-<p><strong>Line Mask.</strong> xxx</p>
-
-<p><strong>Tag Font Size.</strong> In a stack window, the tags are the stack db point number. In a map, the tags are the <strong>run</strong> number of the point.</p>
-
-<p><strong>Scale Bar.</strong> Displayed in the bottom right of all stack windows. Cycle through stack window display options with keyboard shift+c</p>
-
-<p><strong>Display Control Points</strong> xxx</p>
-
-<p><strong>Control Point Help</strong> Use the ‘On’ and ‘Off’ buttons for some additional visual cues about your segment line fits. The end of the line fit is shown in red. This is useful when making the same segment across timepoints in a map. It helps you fit each segment in the same direction.</p>
+<ul>
+  <li>
+    <p><strong>Points.</strong> Toggle stack db objects.</p>
+  </li>
+  <li>
+    <p><strong>Spine Line.</strong> Toggle the line connecting the spine head to the segment radius.</p>
+  </li>
+  <li>
+    <p><strong>Point mask.</strong> Turn point masking on/off. By default, stack db objects are shown and not shown (they are masked) based on the image plane you are viewing.</p>
+  </li>
+  <li>
+    <p><strong>Segment Color For All Points.</strong> xxx</p>
+  </li>
+  <li>
+    <p><strong>User Type</strong></p>
+  </li>
+  <li>
+    <p><strong>Line.</strong> Toggle the segment backbone line and radii lines.</p>
+  </li>
+  <li>
+    <p><strong>Radii.</strong> xxx</p>
+  </li>
+  <li>
+    <p><strong>Line Mask.</strong> xxx</p>
+  </li>
+  <li>
+    <p><strong>Channel Order</strong></p>
+  </li>
+  <li>
+    <p><strong>Tag Font Size.</strong> In a stack window, the tags are the stack db point number. In a map, the tags are the <strong>run</strong> number of the point.</p>
+  </li>
+  <li>
+    <p><strong>Scale Bar.</strong> Displayed in the bottom right of all stack windows. Cycle through stack window display options with keyboard shift+c</p>
+  </li>
+  <li>
+    <p><strong>Left/Right Arrows Will Scroll Through Line (Otherwise Pan)</strong></p>
+  </li>
+  <li>
+    <p><strong>Mask Points</strong></p>
+  </li>
+  <li>
+    <p><strong>Flash Ticks</strong></p>
+  </li>
+  <li>
+    <p><strong>Window With 1/2</strong></p>
+  </li>
+  <li>
+    <p><strong>Default Zoom</strong></p>
+  </li>
+  <li>
+    <p><strong>Default Stack Candy</strong></p>
+  </li>
+  <li>
+    <p><strong>Kill Stack (from memory) on window close</strong></p>
+  </li>
+  <li>
+    <p><strong>Click and Drag</strong></p>
+  </li>
+  <li>
+    <p><strong>Keyboard edits ‘User Type’</strong></p>
+  </li>
+</ul>
 
 <h3 id="stack-db">Stack DB</h3>
+
+<p><img class="img-float-right" src="images/mm3/options/options-stackdb.png" width="350" /></p>
 
 <p><strong>Warn On New Objects</strong>
 <strong>Warn On Delete Objects</strong>
@@ -281,6 +330,8 @@
 
 <h3 id="object-map">Object Map</h3>
 
+<p><img class="img-float-right" src="images/mm3/options/options-object-map.png" width="350" /></p>
+
 <p><strong>Default Run +/-</strong>. Set the number of sessions to display when selecting right-click menu ‘Plot Run +- n’.</p>
 
 <p><strong>Check map before save</strong>. xxx</p>
@@ -302,6 +353,8 @@
 <!-- <IMG class="img-float-left" SRC="images/mm3/mm3-options-bottom.png" WIDTH="300"> -->
 
 <h3 id="intensity-analysis">Intensity Analysis</h3>
+
+<p><img class="img-float-right" src="images/mm3/options/options-intensity-analysis.png" width="350" /></p>
 
 <p>Turn <a href="intensity">intensity analysis</a> on/off with the ‘Intensity Analysis’ checkbox. Be sure to refresh any open stack windows.</p>
 
@@ -328,21 +381,225 @@
 
 <h3 id="miscellaneous">Miscellaneous</h3>
 
-<p><img class="img-float-left" src="images/mm3/mmoptions-object-display.png" width="225" /></p>
+<p><img class="img-float-right" src="images/mm3/options/options-misc.png" width="275" /></p>
 
-<p>A table to set how stack db points are displayed. Use the disclusure triangle in the upper-right of the options window to show the table.</p>
+<p>A table to set how annotations are displayed. Right-click on ‘marker’ or ‘color’ to set. Double-click on ‘size’ to set. Note, ‘size’ is in arbitrary Igor Pro centric units.</p>
 
-<p>Right-click on ‘marker’ or ‘color’ to set. Double-click on ‘size’ to set.</p>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Idx</th>
+      <th style="text-align: left">Name</th>
+      <th style="text-align: left">Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">0</td>
+      <td style="text-align: left">spineROI</td>
+      <td style="text-align: left">Spine marker in stack and map plot</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">1</td>
+      <td style="text-align: left">boutonROI</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">2</td>
+      <td style="text-align: left">controlPnt</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">3</td>
+      <td style="text-align: left">pivotPnt</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">4</td>
+      <td style="text-align: left">lineROI</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">5</td>
+      <td style="text-align: left">otherROI</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">6</td>
+      <td style="text-align: left">pntSel</td>
+      <td style="text-align: left">User point selection</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">7</td>
+      <td style="text-align: left">runSel</td>
+      <td style="text-align: left">User run selection</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">8</td>
+      <td style="text-align: left">maskSel</td>
+      <td style="text-align: left">Mask selection</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">9</td>
+      <td style="text-align: left">flashSel</td>
+      <td style="text-align: left">Flashes to make selection more obvious</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">10</td>
+      <td style="text-align: left">globalPivot</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">11</td>
+      <td style="text-align: left">lineSel</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">12</td>
+      <td style="text-align: left">line</td>
+      <td style="text-align: left">Segment tracing line</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">13</td>
+      <td style="text-align: left">radius</td>
+      <td style="text-align: left">Segment tracing radius</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">14</td>
+      <td style="text-align: left">sROI</td>
+      <td style="text-align: left">Spine intensity ROI</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">15</td>
+      <td style="text-align: left">dROI</td>
+      <td style="text-align: left">Dendrite/segment intensity ROI</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">16</td>
+      <td style="text-align: left">sbROI</td>
+      <td style="text-align: left">Spine background ROI</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">17</td>
+      <td style="text-align: left">dbROI</td>
+      <td style="text-align: left">Dendrite/segment background ROI</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">18</td>
+      <td style="text-align: left">Bad</td>
+      <td style="text-align: left">Bad annotations</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">19</td>
+      <td style="text-align: left">Add</td>
+      <td style="text-align: left">Added</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">20</td>
+      <td style="text-align: left">Subtract</td>
+      <td style="text-align: left">Subtracted</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">21</td>
+      <td style="text-align: left">Persistent</td>
+      <td style="text-align: left">Persistent</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">22</td>
+      <td style="text-align: left">Transient</td>
+      <td style="text-align: left">Transient</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">23</td>
+      <td style="text-align: left">user1_1</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">24</td>
+      <td style="text-align: left">user1_2</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">25</td>
+      <td style="text-align: left">user1_3</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">26</td>
+      <td style="text-align: left">user1_4</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">27</td>
+      <td style="text-align: left">user1_5</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">28</td>
+      <td style="text-align: left">User Type 0</td>
+      <td style="text-align: left">Markers for user type 0..9</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">29</td>
+      <td style="text-align: left">User Type 1</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">30</td>
+      <td style="text-align: left">User Type 2</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">31</td>
+      <td style="text-align: left">User Type 3</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">32</td>
+      <td style="text-align: left">User Type 4</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">33</td>
+      <td style="text-align: left">User Type 5</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">34</td>
+      <td style="text-align: left">User Type 6</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">35</td>
+      <td style="text-align: left">User Type 7</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">36</td>
+      <td style="text-align: left">User Type 8</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">37</td>
+      <td style="text-align: left">User Type 9</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+</table>
 
 <div class="print-page-break"></div>
 
+<h3 id="load-stacks-from-special-folder">Load Stacks From Special Folder</h3>
+
+<p>Each of the check boxes will redirect the loading of image stacks to different folders. In particular, the <strong>channels8</strong> option will load 8-bit versions which is useful to speed annotations of larger 16-bit images. See Fiji plugin bConvertTo8Bit_v5_.py to convert entire directories of tiff stacks to 8-bit.</p>
+
 <h3 id="stack-browser-options">Stack Browser Options</h3>
+
+<p><img class="img-float-right" src="images/mm3/mm3-stack-browser-options.png" width="350" /></p>
 
 <p>Additional option are available in the Stack Browser Options panel.</p>
 
-<p>Open the Stack Browser Options panel using the main menu ‘MapManager - Stack Browser Options’</p>
-
-<p><img class="img-float-left" src="images/mm3/mm3-stack-browser-options.png" width="300" /></p>
+<p>Open the Stack Browser Options panel using the ‘Options’ button in the <a href="stack-browser">stack browser</a>.</p>
 
 <div class="print-page-break"></div>
 
