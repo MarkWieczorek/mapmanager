@@ -216,15 +216,65 @@ td{
 }
 </style>
 
-<p>A map plot shows objects across multiple imaging sessions. Objects persisting from one session to the next are connected with a line.</p>
+<p><img class="img-float-right" src="images/mm3/map-plot/map-plot0.png" width="300" /></p>
 
-<p>All map plots are interactive. Selecting an object will propagate this selection to other map and <a href="stack-plot">stack plots</a>.</p>
+<p>A map plot shows annotations versus time-points. Objects persisting from one session to the next are connected with a line.</p>
 
-<p>A large number of map plots can be generated using the <a href="plot-panel">plot panel</a>.</p>
+<p>All map plots are highly interactive. Selecting an object will propagate this selection to other map and <a href="stack-plot">stack plots</a>. Right-click an object to <a href="run-plot">plot a run</a>.</p>
 
-<p>There are two special plots provided in the main <a href="time-series-panel">map manager panel</a>: Spine Map and Segment Map.</p>
+<p>There are two special plots provided in the <a href="time-series-panel">time-series panel</a>: Object Map and Segment Map.</p>
 
-<h3 id="interface">Interface</h3>
+<h4 id="colors">Colors</h4>
+
+<p>The colors of objects in a map denote their dynamics.</p>
+
+<ul>
+  <li><span style="color:green">Green</span> : Added</li>
+  <li><span style="color:red">Red</span> : Subtracted</li>
+  <li><span style="color:blue">Blue</span> : Transient (1 session)</li>
+  <li><span style="color:yellow">Yellow</span> : Persistent</li>
+  <li>White : Bad</li>
+</ul>
+
+<h4 id="top-control-bar">Top control bar</h4>
+
+<p>Toggle the top control bar on and off with keyboard ‘c’.</p>
+
+<ul>
+  <li><strong>Segment ID</strong>. Plot individual segments. Use ‘<strong>All Segments</strong>’ to plot all segment. This is only used for spine annotations.</li>
+  <li><strong>Bad</strong>. Toggle display of annotations tagged as bad.</li>
+  <li><strong>Int Bad</strong>. Toggle display of annotations tagged as intensity bad.</li>
+  <li><strong>Stats</strong>. Display a table of statistics (mean/sd/se/n) for plotted data.</li>
+  <li><strong>Raw</strong>. Display a table of raw data.</li>
+</ul>
+
+<h3 id="examples">Examples</h3>
+
+<p>There are two special plots provided in the <a href="time-series-panel">time-series panel</a>: Object Map and Segment Map. A large number of plots can be generated using the <a href="plot-panel">plot panel</a>.</p>
+
+<p><img class="img-float-left" src="images/mm3/map-plot/map-plot-days.png" width="500" /></p>
+
+<p>This is an example of a ‘Spine Map’ showing the position of each spine on its dendritic segment. The lines connect persistent spines across time-points. Added spines are green, subtracted are red, and transient are blue. Spines tagged bad are in white. This plot is showing each time-point as a function of the day it was acquired with the first time-point being the zero day.</p>
+
+<div class="print-page-break"></div>
+
+<p><img class="img-float-left" src="images/mm3/mm3-map1-plot.png" width="250" /></p>
+
+<p>A map plot of spine length in μm (sLen2d) versus map session.</p>
+
+<div class="print-page-break"></div>
+
+<p><img class="img-float-left" src="images/mm3/mm3-map2-plot.png" width="250" /></p>
+
+<p>A map plot of spine length in μm (sLen2d) for time-point 1 versus time-point 0. Each point is the length of a single spine measured in session 0 (bottom axis) and again in session 1 (left axis).</p>
+
+<div class="print-page-break"></div>
+
+<h4 id="right-click-menu">Right-click menu</h4>
+
+<p><img class="img-float-right" src="images/mm3/map-plot/map-plot-right-click.png" width="225" /></p>
+
+<div class="print-page-break"></div>
 
 <h4 id="keyboard">Keyboard</h4>
 
@@ -319,49 +369,6 @@ td{
     </tr>
   </tbody>
 </table>
-
-<h4 id="colors">Colors</h4>
-
-<p>The colors of objects in a map denote their dynamics.</p>
-
-<ul>
-  <li>Green : Added</li>
-  <li>Red : Subtracted</li>
-  <li>Blue : Transient (1 session)</li>
-  <li>Yellow : Persistent</li>
-  <li>White : Bad</li>
-</ul>
-
-<h4 id="top-control-bar">Top control bar</h4>
-<p>Toggle the top control bar on and off with keyboard ‘c’.</p>
-
-<ul>
-  <li><strong>Segment ID</strong>. Plot individual segments. Use ‘<strong>All Segments</strong>’ to plot all segment.</li>
-  <li><strong>Bad</strong>. Toggle display of bad objects.</li>
-  <li><strong>Stats</strong>. Display a table of statistics for plotted data.</li>
-  <li><strong>Raw</strong>. Display a table of raw data.</li>
-  <li><strong>Line fit</strong>.</li>
-</ul>
-
-<h3 id="examples">Examples</h3>
-
-<p>All plots can be generated using the <a href="plot-panel">plot panel</a>. There are two special plots provided in the main <a href="time-series-panel">map manager panel</a>: Spine Map and Segment Map.</p>
-
-<p><img class="img-float-left" src="images/mm3/mm3-map-plot.png" width="300" /></p>
-
-<p>This is an example of a ‘Spine Map’. It shows the position of each spine on its dendritic segment. The lines connect persistent spines across sessions. Added spines are in green, subtracted spines in red, and transient spines are in blue.</p>
-
-<div class="print-page-break"></div>
-
-<p><img class="img-float-left" src="images/mm3/mm3-map1-plot.png" width="250" /></p>
-
-<p>A map plot of spine length in μm (sLen2d) versus map session. The lines connect persistent spines across sessions. The colors are the same as the first example.</p>
-
-<div class="print-page-break"></div>
-
-<p><img class="img-float-left" src="images/mm3/mm3-map2-plot.png" width="250" /></p>
-
-<p>A map plot of spine length in μm (sLen2d) for session 1 versus session 0. Each point is the length of a single spine measured in session 0 (bottom axis) and again in session 1 (left axis).</p>
 
 <div class="print-page-break"></div>
 

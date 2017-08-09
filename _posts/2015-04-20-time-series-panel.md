@@ -11,7 +11,7 @@ tags:
 
 The Map Manager time-series panel provides an interface to load, save and browse Map Manager time-series (maps). Open the time-series panel using the menu 'MapManager - Time Series'
 
-Loaded maps are listed on the left and when a map is selected, its time-points (stack) are listed on the right.
+Loaded maps are listed on the left and when a map is selected, its time-points (stacks) are listed on the right.
 
 <IMG class="img-float-center" SRC="images/mm3/time-series/time-series-panel.png" WIDTH="700">
 
@@ -23,8 +23,8 @@ Loaded maps are listed on the left and when a map is selected, its time-points (
 
 
 #### Plot
- - **Object Map**. Open a [map plot][12]. For spines, this will show the position of each spine along its dendritic segment. For other annotations, this will show a xxx.
- - **Segment Map**. Open a [map plot][12] showing the segments within each session and the connectivity of segments across sessions.
+ - **Object Map**. Open a [map plot][12]. For spines, this will plot the position of each spine along its dendritic segment versus time-points (Sessions). For other annotations, this will plot annotations in their creation order. In both cases, these plots are crucial tools to visualize annotation dynamics.
+ - **Segment Map**. Open a [map plot][12] showing the segments within each session and the connectivity of segments across sessions. This is only for spine annotations that have segment tracings.
  - **X Axis**. Choose different X-Axis for Object and Segment map plots. Available X-Axis are:
     - Sessions 
     - Datetime
