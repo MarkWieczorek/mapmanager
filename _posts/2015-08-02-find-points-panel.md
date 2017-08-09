@@ -17,8 +17,8 @@ The find points panel allows you to browse objects between two timepoints/sessio
 To open the find points panel:
 
   - Right-click a spine in a map and selecting 'Find Points'.
-  - Right-click a session in the main Map Manager Panel and selecting 'Find Points'.
-  - Right-click a map in the main Map Manager Panel and selecting 'Find Points'.
+  - Right-click a session in the time-series panel and selecting 'Find Points'.
+  - Right-click a map in the time-series panel and selecting 'Find Points'.
 
 
 #### Overview

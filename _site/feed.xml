@@ -258,6 +258,21 @@ table{
     
       
       <item>
+        <title>Time Series Panel</title>
+        
+          <description>&lt;p&gt;The Map Manager time-series panel provides an interface to load, save and browse Map Manager time-series (maps). Open the time-series panel using the menu ‘MapManager - Time Series’&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 20 Apr 2015 18:46:33 -0400</pubDate>
+        <link>
+        /time-series-panel</link>
+        <guid isPermaLink="true">/time-series-panel</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Stack DB plot</title>
         
           <description>&lt;p&gt;&lt;img class=&quot;img-float-left&quot; src=&quot;images/mm3/mm3-stackdb-plot.png&quot; width=&quot;600&quot; /&gt;&lt;/p&gt;
@@ -286,7 +301,7 @@ table{
 [2]: annotating-a-stack
 [3]: user-files
 [4]: intensity
-[5]: main-panel
+[5]: time-series-panel
 [6]: stack-browser
 &lt;/style&gt;
 </description>
@@ -371,7 +386,7 @@ table{
 
 [1]: plot-panel
 [2]: stack-plot
-[3]: main-panel
+[3]: time-series-panel
 &lt;/style&gt;
 </description>
         
@@ -386,7 +401,7 @@ table{
       <item>
         <title>Making a map</title>
         
-          <description>&lt;p&gt;&lt;img class=&quot;img-float-left&quot; src=&quot;images/mm3/mm3-main-panel.png&quot; width=&quot;650&quot; /&gt;&lt;/p&gt;
+          <description>&lt;p&gt;&lt;img class=&quot;img-float-left&quot; src=&quot;images/mm3/time-series/time-series-panel.png&quot; width=&quot;650&quot; /&gt;&lt;/p&gt;
 
 </description>
         
@@ -394,21 +409,6 @@ table{
         <link>
         /making-a-map</link>
         <guid isPermaLink="true">/making-a-map</guid>
-      </item>
-      
-    
-      
-      <item>
-        <title>Main panel</title>
-        
-          <description>&lt;p&gt;The main map manager panel provides an interface to load, save and browse Map Manager maps. Open the main map manager panel using the menu ‘MapManager - Map Manager Panel’&lt;/p&gt;
-
-</description>
-        
-        <pubDate>Mon, 20 Apr 2015 18:46:33 -0400</pubDate>
-        <link>
-        /main-panel</link>
-        <guid isPermaLink="true">/main-panel</guid>
       </item>
       
     

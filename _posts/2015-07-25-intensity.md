@@ -222,6 +222,6 @@ A spines intensity analysis becomes dirty when:
 
 [1]: plot-panel
 [2]: stackdb-options-panel
-[3]: main-panel
+[3]: time-series-panel
 [4]: search-panel
 [5]: point-list

@@ -63,5 +63,5 @@ First select the type of object with 'Object Type' popup. Start by selecting 'Sp
 [3]: stack-plot
 [4]: run-plot
 [5]: intensity
-[6]: main-panel
+[6]: time-series-panel
 

@@ -52,7 +52,7 @@ tags:
 [2]: https://www.wavemetrics.com/order/order1.php?type=Academic
 [3]: https://www.wavemetrics.com/support/versions.htm
 [4]: https://www.wavemetrics.com/support/demos.htm
-[5]: main-panel
+[5]: time-series-panel
 [6]: stack-browser
 [7]: fitting-segments-in-fiji
 [8]: user-files

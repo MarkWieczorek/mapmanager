@@ -36,107 +36,94 @@ The options panel is opened from the main menu 'MapManager - Options'.
 
 ### General
 
- - **Stack Browser On Open**. xxx
- - **Time Series On Open**. yyy
- - **Hide Code**. zzz
+<IMG class="img-float-right" SRC="images/mm3/options/options-general.png" WIDTH="350">
+
+ - **Stack Browser On Open**. Open the [stack browser][6] when Map Manager is opened.
+ - **Time Series On Open**. Open the [time-series panel][5] when Map Manager is opened.
+ - **Hide Code**. Hide code windows when Map Manager is opened.
 
 ### Stack Display
 
 <IMG class="img-float-right" SRC="images/mm3/options/options-stack-display.png" WIDTH="350">
 
-Options that control the display of [stack][1] windows. Changes will be applied the next time a stack window is opened, or for already opened stack windows pressing keyboard 'r' will refresh the display.
+Options that control the display of [stack][1] windows. Changes will be applied the next time a stack window is opened. Already opened stack windows can be updated on-the-fly by pressing keyboard 'r' (in the stack window).
 
- - **Points.** Toggle stack db objects.
+ - **Points**. Toggle stack db objects.
 
- - **Spine Line.** Toggle the line connecting the spine head to the segment radius.
+ - **Spine Line**. Toggle the line connecting the spine head to the segment radius.
 
- - **Point mask.** Turn point masking on/off. By default, stack db objects are shown and not shown (they are masked) based on the image plane you are viewing.
+ - **Point mask**. Turn point masking on/off. If off, annotations will be shown in all image planes. If on, annotations will only be shown near the image plane corresponding to each annotations Z position. See **Mask Points**.
+ 
+ - **Segment Color For All Points**. Display all points using the segment color specified in the [stack][1] window.
 
- - **Segment Color For All Points.** xxx
+ - **User Type**.
+ 
+ - **Line and Radii**. Toggle the segment tracing and radius lines
+ 
+ - **Line Mask**. Similar to **Point mask**, toggle masking the line to only display around the image plane it is in.
 
- - **User Type**
+ - **Channel Order**.
  
- - **Line.** Toggle the segment backbone line and radii lines.
+ - **Tag Font Size**. In a stack window, the tags are the stack db point number. In a map, the tags are the **run** number of the point.
 
- - **Radii.** xxx
+ - **Scale Bar**. Displayed in the bottom right of all stack windows. Cycle through stack window candy options with keyboard shift+c.
 
- - **Line Mask.** xxx
+ - **Left/Right Arrows Will Scroll Through Line (Otherwise Pan)**.
+ 
+ - **Mask Points**. If **Point Mask** is on, this controls the number of image planes an annotation is visible above and below its Z position..
+ 
+ - **Flash Ticks**. A number that controls the speed that a point is flashed when selected. Smaller numbers are faster. Point flashing is used to make it easier to see where there is a point selection. See 'flashSel' to control the size and shape of the point that is flashed.
+ 
+ - **Window With 1/2**. Default stack window size. Each stack window has two sizes that can be cycled using keyboard ']'.
+ 
+ - **Default Zoom**. Default zoom (in um) to zoom points in a stack and run plot. This is used when an annotation is right-clicked and 'plot point' or 'plot run' is selected.
+ 
+<IMG class="img-float-right" SRC="images/mm3/options/options-stack-candy.png" WIDTH="150">
 
- - **Channel Order**
+ - **Default Stack Candy**. Default window candy for each stack. There are 5 options.
+     - **All**.
+     - **None**.
+     - **Scale**.
+     - **Scale + Label**.
+     - **Scale + Label + Axis**.
  
- - **Tag Font Size.** In a stack window, the tags are the stack db point number. In a map, the tags are the **run** number of the point.
-
- - **Scale Bar.** Displayed in the bottom right of all stack windows. Cycle through stack window display options with keyboard shift+c
-
- - **Left/Right Arrows Will Scroll Through Line (Otherwise Pan)**
+ - **Kill Stack (from memory) on window close**.
  
- - **Mask Points**
+ - **Click and Drag**.
  
- - **Flash Ticks**
- 
- - **Window With 1/2**
- 
- - **Default Zoom**
- 
- - **Default Stack Candy**
- 
- - **Kill Stack (from memory) on window close**
- 
- - **Click and Drag**
- 
- - **Keyboard edits 'User Type'**
+ - **Keyboard edits 'User Type'**.
  
 
 ### Stack DB
 
 <IMG class="img-float-right" SRC="images/mm3/options/options-stackdb.png" WIDTH="350">
 
-**Warn On New Objects**
-**Warn On Delete Objects**
-**New Objects On Mouse Click (no shift)**
-**Allow New Objects When Viewing Sliding Z-Projection**
-
-**Stack Window Size** Two default stack window sizes (screen pixels). Capture the size of an open Stack window with 'C' button.
-
-**Mask Points +/- Slices** The number of slices above and below each point to show the point in stack windows. 
-
-**Flash Ticks**
-
-**ScanImage, 1x zoom, 1024x1024 pixels (um/pixel)** The x/y voxel size in um/voxel for importing ScanImage files.
-**Line points to search when connecting spine/bouton**
-**Default Segment Radius (um)**
-
-
-**Left/Right arrows will scroll through line (otherwise pan)**
-**Show Pixel Intensity (display in history)** Prints the pixel intensity and x/y coordinates as mouse is moved over a stack window image.
-
-**Grid Spacing (um)** Display a grid on the images in a stack window. For the grid to display, stack window must be showing x/y axis. Use 'shift+c' to cycle through different stack window candy. Or set the default using 'Default Stack Candy' popup.
-
-**New Object (Shift+Click)** The default object to make on shift+click.
-**Default plot object**
-**Default Stack Candy**
+ - **Warn On New Objects**.
+ - **Warn On Delete Objects**.
+ - **New Objects On Mouse Click (no shift)**.
+ - **Allow New Objects When Viewing Sliding Z-Projection**.
+ - **Search line points when connecting spine/bouton**.
+ - **New Object (Shift+Click)**. The default object to make on shift+click.
+ - **Default plot object**.
 
 ### Object Map
 
 <IMG class="img-float-right" SRC="images/mm3/options/options-object-map.png" WIDTH="350">
 
-**Default Run +/-**. Set the number of sessions to display when selecting right-click menu 'Plot Run +- n'.
+ - **Connect points within this distance (um)**. When auto connecting points in a map and generating a Guess in Find points.
 
-**Check map before save**. xxx
+ - **Connect spines within this distance (um)**. When auto connecting spines in a map and generating a Guess in Find points. This is the distance from the segment pivot points along a dendritic segment (um). You can see this distance (pDist) in the Point Info panel of a [stack][1].
 
-**Run Window Width (pixels)**. The size of each window in a spine run.
+ - **Run Window Width (pixels)**. The size of each window in a spine run.
+ - **Show timepoint in stack window**.
+ - **Always show stack DB indices (tags)**. xxx
+ - **Fixed posiiton for each run window**. xxx
+ - **Lock segment selection in run plot**. xxx
+ - **Shift + left/right to go to prev/next timepoint**. xxx
+ - **Auto plot object map on load**. xxx
+ - **Check map before save**. xxx
+ - **Allow Jumping Objects**.
 
-**Default Zoom Width/Height (um)**. When snapping to a spine, the default zoom. The width/height of the image zoom in um.
-
-**Connect points within this distance (um)**. When auto connecting points in a map and generating a Guess in Find points.
-
-**Connect spines within this distance (um)**. When auto connecting spines in a map and generating a Guess in Find points. This is the distance from the segment pivot points along a dendritic segment (um). You can see this distance (pDist) in the Point Info panel of a [stack][1].
-
-**Always show stack DB indices (tags)**. xxx
-**Fixed posiiton for each run window**. xxx
-**Lock segment selection in run plot**. xxx
-**Shift + left/right to go to prev/next timepoint**. xxx
-**Auto plot object map on load**. xxx
 
 
 <!-- <IMG class="img-float-left" SRC="images/mm3/mm3-options-bottom.png" WIDTH="300"> -->
@@ -145,32 +132,39 @@ Options that control the display of [stack][1] windows. Changes will be applied 
 
 <IMG class="img-float-right" SRC="images/mm3/options/options-intensity-analysis.png" WIDTH="350">
 
-Turn [intensity analysis][4] on/off with the 'Intensity Analysis' checkbox. Be sure to refresh any open stack windows.
+See the [intensity analysis][4] page for a thouough decription.
 
-**Width (um)**
-**+/- Slices**
-**Extend Head (um)**
-**Extend Tail (um)**
-**+/- Segment (um)**
-
-**Debug**
-**Debug On Error**
+ - **Intensity Analysis**. Turn intensity analysis on/off. When on, spine selections will show intensity ROIs in the [stack][1] window.
+ - **Debug**.
+ - **Debug On Error**.
+ - **Width (um)**.
+ - **+/- Slices**.
+ - **Extend Head (um)**.
+ - **Extend Tail (um)**.
+ - **+/- Segment (um)**.
+ - **Background Candidates**
+     - **Both Sides**.
+     - **Rows and Row Mult**.
+     - **Columns and Column Mult**.
+  
 
 ### Importing Segments From FIJI
 
-**Default Segment Radius (um)**
+<IMG class="img-float-right" SRC="images/mm3/options/options-fiji-import.png" WIDTH="350">
 
-**Box Filter Line (points)**
+ - **Default Segment Radius (um)**.
 
-**Box Filter Radius (points)**
+ - **Box Filter Line (points)**.
 
-**Convert To 8-bit**. Will convert to 8-bit (in Fiji). This makes line fit much faster.
+ - **Box Filter Radius (points)**.
 
-**Close Fiji When Done**
+ - **Convert To 8-bit**. Will convert to 8-bit (in Fiji). This makes line fit much faster.
+
+ - **Close Fiji When Done**. Always leave this on. This has been depreciated and will be remove.
 
 ### Miscellaneous
 
-<IMG class="img-float-right" SRC="images/mm3/options/options-misc.png" WIDTH="275">
+<IMG class="img-float-right" SRC="images/mm3/options/options-misc.png" WIDTH="250">
 
 A table to set how annotations are displayed. Right-click on 'marker' or 'color' to set. Double-click on 'size' to set. Note, 'size' is in arbitrary Igor Pro centric units.
 
@@ -182,10 +176,10 @@ A table to set how annotations are displayed. Right-click on 'marker' or 'color'
 |3	|pivotPnt		| 
 |4	|lineROI		| 
 |5	|otherROI		| 
-|6	|pntSel			| User point selection
-|7	|runSel			| User run selection
-|8	|maskSel		| Mask selection
-|9	|flashSel		| Flashes to make selection more obvious
+|6	|pntSel			| Point selection marker
+|7	|runSel			| Run selection marker
+|8	|maskSel		| Mask selection marker
+|9	|flashSel		| Marker used to flash point selections (makes them easier to visually locate)
 |10	|globalPivot	| 
 |11	|lineSel		| 
 |12	|line			| Segment tracing line
@@ -199,27 +193,16 @@ A table to set how annotations are displayed. Right-click on 'marker' or 'color'
 |20	|Subtract		| Subtracted
 |21	|Persistent		| Persistent
 |22	|Transient		| Transient
-|23	|user1_1			| 
-|24	|user1_2			| 
-|25	|user1_3			| 
-|26	|user1_4			| 
-|27	|user1_5			| 
-|28	|User Type 0		| Markers for user type 0..9
-|29	|User Type 1		| 
-|30	|User Type 2		| 
-|31	|User Type 3		| 
-|32	|User Type 4		| 
-|33	|User Type 5		| 
-|34	|User Type 6		| 
-|35	|User Type 7		| 
-|36	|User Type 8		| 
-|37	|User Type 9		| 
+|28	|User Type 0..9		| Markers for user type 0..9
  
-<div class="print-page-break"></div>
 
 ### Load Stacks From Special Folder
 
+<IMG class="img-float-right" SRC="images/mm3/options/options-special-folder.png" WIDTH="250">
+
 Each of the check boxes will redirect the loading of image stacks to different folders. In particular, the **channels8** option will load 8-bit versions which is useful to speed annotations of larger 16-bit images. See Fiji plugin bConvertTo8Bit_v5_.py to convert entire directories of tiff stacks to 8-bit.
+
+<div class="print-page-break"></div>
 
 ### Stack Browser Options
 
@@ -236,5 +219,5 @@ Open the Stack Browser Options panel using the 'Options' button in the [stack br
 [2]: annotating-a-stack
 [3]: user-files
 [4]: intensity
-[5]: main-panel
+[5]: time-series-panel
 [6]: stack-browser

@@ -1,0 +1,116 @@
+---
+layout: page
+title: "Time Series Panel"
+category: interface
+date: 2015-04-20 22:46:33
+order: 1
+tags:
+- Interface
+---
+
+
+The Map Manager time-series panel provides an interface to load, save and browse Map Manager time-series (maps). Open the time-series panel using the menu 'MapManager - Time Series'
+
+Loaded maps are listed on the left and when a map is selected, its time-points (stack) are listed on the right.
+
+<IMG class="img-float-center" SRC="images/mm3/time-series/time-series-panel.png" WIDTH="700">
+
+<IMG class="img-float-right" SRC="images/mm3/time-series/time-series-minimized.png" WIDTH="225">
+
+ - **Load Map**. Load a map from the hard-drive. 
+ - **Save Map**. Save selected map to hard-drive. By default, map manager saves only parts of the map it thinks are dirty. Ctrl+click will save the entire map.
+ - **?**. Open the online Map Manager documentation.
+
+
+#### Plot
+ - **Object Map**. Open a [map plot][12]. For spines, this will show the position of each spine along its dendritic segment. For other annotations, this will show a xxx.
+ - **Segment Map**. Open a [map plot][12] showing the segments within each session and the connectivity of segments across sessions.
+ - **X Axis**. Choose different X-Axis for Object and Segment map plots. Available X-Axis are:
+    - Sessions 
+    - Datetime
+    - Days
+    - Hours
+    - Zero Sessions
+    - Zero Days
+    - Zero Hours
+ - **X-Axis Condition**.
+    
+Datetime, Days and Hours require stacks to have a date/time specified. A stacks date/time can be manually edited by turning on 'Edit Date/Time' in the Utility Tab. The X-Axis options 'Zero Sessions', 'Zero Days', 'Zeros Hours' use a session in the map as a zero timepoint. Specify this by right-clicking on a stack and selecting 'Zero Session'. The zero session for a map will have a '*' in its session list. Zero session is also used when plotting from time-series panel tabs including: Dynamics, Trajectory, and Intensity.
+    
+#### Panels
+
+ - **Search**. Open the [search panel][5].
+ - **Plot**. Open the [plot panel][6].
+ - **Pool**. Open the [map pool panel][16].
+ - **Map DB**. Open a map database panel to quickly browse and load maps from hard-drive. **No documentation yet**.
+
+
+#### Miscellaneous
+
+ - **Unload Stacks**. Unload all stacks in the selected map. Ctrl+click to unload all stacks in all open maps. Unloading a stack will unload the RAW IMAGE DATA. It DOES NOT unload the stack annotations or the map.
+ - **Close Windows**. Close all windows associated with the selected map.
+
+### Right-click on a map name in the list for a contextual menu.
+
+<IMG class="img-float-right" SRC="images/mm3/time-series/time-series-right-click-map.png" WIDTH="140">
+
+ - **Find Points**. Open [find points panel][15].
+ - **Density Report**. Generate a density report for the map. See [reports][17].
+ - **Dynamics Report**. Generate a dynamics report for the map. See [reports][17].
+ - **Survival Report**. Generate a survival report for the map. See [reports][17].
+ - **Edit map NV**. <span style="color:red">DO NOT USE</span>, this shows a map as a text table.
+ - **Export Map**. <span style="color:red">DO NOT USE</span> Exports a map to text files. Files are saved in the 'export/' folder.
+ - **Show on HDD**. Shows the hard-drive folder where the map is saved.
+ - **Unload map**. Close a map, removing all associated images and analysis from Igor memory.
+ - **Close Windows**. Close all open windows associated with a map.
+
+### Right-click on a stack name in the list for a contextual menu.
+
+<IMG class="img-float-right" SRC="images/mm3/time-series/time-series-right-click-stack.png" WIDTH="160">
+
+ - **Display Stack**. Display the stack in a [stack][2] window.
+ - **Plot Run +-1**. Plot a [run][11] of stacks from the selected stack.
+ - **Plot Run +- All**.
+ - **Plot Run +- n**.
+ - **Zero Session**. Set the selected stack to the zero session. Zero sessions are used when plotting a map with X-Axis set to 'Zero Session', 'Zero Days', and 'Zero Hours'. The zero session will have an Asterix (\*) before its session index in the list of sessions.
+ - **Find Points**. Open [find points panel][15].
+ - **Edit Table**. Edit annotations in a stack as a text table. This is useful to copy and paste annotations for further analysis.
+ - **Unload Stack**. Unload the raw image data for a stack. Unloading a stack will unload the RAW IMAGE DATA. It DOES NOT unload the stack annotations or the map.
+ 
+
+### Tabs
+
+#### Map Making
+
+#### Dynamics
+
+#### Trajectory
+
+#### Intensity
+
+#### Report
+
+#### Utility
+
+<div class="print-page-break"></div>
+
+
+[1]: stack-browser
+[2]: stack
+[3]: user-files
+[4]: annotating-a-stack
+[5]: search-panel
+[6]: plot-panel
+[7]: stackdb-options-panel
+[8]: contrast-panel
+[9]: stack-browser
+[10]: hdd-paths
+[11]: run-plot
+[12]: map-plot
+[13]: making-a-map
+[14]: scale-panel
+[15]: find-points-panel
+[16]: map-pool
+[17]: reports
+
+<div class="print-page-break"></div>

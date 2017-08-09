@@ -49,6 +49,6 @@ Saved plots are saved with the global map manager options in the main [map manag
 
 [1]: stack-plot
 [2]: map-plot
-[3]: main-panel
+[3]: time-series-panel
 [4]: stackdb-options-panel
 

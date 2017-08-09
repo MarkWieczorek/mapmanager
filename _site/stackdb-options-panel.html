@@ -109,6 +109,9 @@
             <li data-order="6"><a href="/mapmanager/hdd-paths">Hard Drive Paths</a></li>
         
             
+            <li data-order="1"><a href="/mapmanager/time-series-panel">Time Series Panel</a></li>
+        
+            
             <li data-order="5"><a href="/mapmanager/stackdb-options-panel">Options</a></li>
         
             
@@ -116,9 +119,6 @@
         
             
             <li data-order="3"><a href="/mapmanager/plot-panel">Plot panel</a></li>
-        
-            
-            <li data-order="1"><a href="/mapmanager/main-panel">Main panel</a></li>
         
     
         
@@ -225,130 +225,124 @@ td{
 
 <h3 id="general">General</h3>
 
+<p><img class="img-float-right" src="images/mm3/options/options-general.png" width="350" /></p>
+
 <ul>
-  <li><strong>Stack Browser On Open</strong>. xxx</li>
-  <li><strong>Time Series On Open</strong>. yyy</li>
-  <li><strong>Hide Code</strong>. zzz</li>
+  <li><strong>Stack Browser On Open</strong>. Open the <a href="stack-browser">stack browser</a> when Map Manager is opened.</li>
+  <li><strong>Time Series On Open</strong>. Open the <a href="time-series-panel">time-series panel</a> when Map Manager is opened.</li>
+  <li><strong>Hide Code</strong>. Hide code windows when Map Manager is opened.</li>
 </ul>
 
 <h3 id="stack-display">Stack Display</h3>
 
 <p><img class="img-float-right" src="images/mm3/options/options-stack-display.png" width="350" /></p>
 
-<p>Options that control the display of <a href="stack">stack</a> windows. Changes will be applied the next time a stack window is opened, or for already opened stack windows pressing keyboard ‘r’ will refresh the display.</p>
+<p>Options that control the display of <a href="stack">stack</a> windows. Changes will be applied the next time a stack window is opened. Already opened stack windows can be updated on-the-fly by pressing keyboard ‘r’ (in the stack window).</p>
 
 <ul>
   <li>
-    <p><strong>Points.</strong> Toggle stack db objects.</p>
+    <p><strong>Points</strong>. Toggle stack db objects.</p>
   </li>
   <li>
-    <p><strong>Spine Line.</strong> Toggle the line connecting the spine head to the segment radius.</p>
+    <p><strong>Spine Line</strong>. Toggle the line connecting the spine head to the segment radius.</p>
   </li>
   <li>
-    <p><strong>Point mask.</strong> Turn point masking on/off. By default, stack db objects are shown and not shown (they are masked) based on the image plane you are viewing.</p>
+    <p><strong>Point mask</strong>. Turn point masking on/off. If off, annotations will be shown in all image planes. If on, annotations will only be shown near the image plane corresponding to each annotations Z position. See <strong>Mask Points</strong>.</p>
   </li>
   <li>
-    <p><strong>Segment Color For All Points.</strong> xxx</p>
+    <p><strong>Segment Color For All Points</strong>. Display all points using the segment color specified in the <a href="stack">stack</a> window.</p>
   </li>
   <li>
-    <p><strong>User Type</strong></p>
+    <p><strong>User Type</strong>.</p>
   </li>
   <li>
-    <p><strong>Line.</strong> Toggle the segment backbone line and radii lines.</p>
+    <p><strong>Line and Radii</strong>. Toggle the segment tracing and radius lines</p>
   </li>
   <li>
-    <p><strong>Radii.</strong> xxx</p>
+    <p><strong>Line Mask</strong>. Similar to <strong>Point mask</strong>, toggle masking the line to only display around the image plane it is in.</p>
   </li>
   <li>
-    <p><strong>Line Mask.</strong> xxx</p>
+    <p><strong>Channel Order</strong>.</p>
   </li>
   <li>
-    <p><strong>Channel Order</strong></p>
+    <p><strong>Tag Font Size</strong>. In a stack window, the tags are the stack db point number. In a map, the tags are the <strong>run</strong> number of the point.</p>
   </li>
   <li>
-    <p><strong>Tag Font Size.</strong> In a stack window, the tags are the stack db point number. In a map, the tags are the <strong>run</strong> number of the point.</p>
+    <p><strong>Scale Bar</strong>. Displayed in the bottom right of all stack windows. Cycle through stack window candy options with keyboard shift+c.</p>
   </li>
   <li>
-    <p><strong>Scale Bar.</strong> Displayed in the bottom right of all stack windows. Cycle through stack window display options with keyboard shift+c</p>
+    <p><strong>Left/Right Arrows Will Scroll Through Line (Otherwise Pan)</strong>.</p>
   </li>
   <li>
-    <p><strong>Left/Right Arrows Will Scroll Through Line (Otherwise Pan)</strong></p>
+    <p><strong>Mask Points</strong>. If <strong>Point Mask</strong> is on, this controls the number of image planes an annotation is visible above and below its Z position..</p>
   </li>
   <li>
-    <p><strong>Mask Points</strong></p>
+    <p><strong>Flash Ticks</strong>. A number that controls the speed that a point is flashed when selected. Smaller numbers are faster. Point flashing is used to make it easier to see where there is a point selection. See ‘flashSel’ to control the size and shape of the point that is flashed.</p>
   </li>
   <li>
-    <p><strong>Flash Ticks</strong></p>
+    <p><strong>Window With 1/2</strong>. Default stack window size. Each stack window has two sizes that can be cycled using keyboard ‘]’.</p>
   </li>
   <li>
-    <p><strong>Window With 1/2</strong></p>
+    <p><strong>Default Zoom</strong>. Default zoom (in um) to zoom points in a stack and run plot. This is used when an annotation is right-clicked and ‘plot point’ or ‘plot run’ is selected.</p>
+  </li>
+</ul>
+
+<p><img class="img-float-right" src="images/mm3/options/options-stack-candy.png" width="150" /></p>
+
+<ul>
+  <li><strong>Default Stack Candy</strong>. Default window candy for each stack. There are 5 options.
+    <ul>
+      <li><strong>All</strong>.</li>
+      <li><strong>None</strong>.</li>
+      <li><strong>Scale</strong>.</li>
+      <li><strong>Scale + Label</strong>.</li>
+      <li><strong>Scale + Label + Axis</strong>.</li>
+    </ul>
   </li>
   <li>
-    <p><strong>Default Zoom</strong></p>
+    <p><strong>Kill Stack (from memory) on window close</strong>.</p>
   </li>
   <li>
-    <p><strong>Default Stack Candy</strong></p>
+    <p><strong>Click and Drag</strong>.</p>
   </li>
-  <li>
-    <p><strong>Kill Stack (from memory) on window close</strong></p>
-  </li>
-  <li>
-    <p><strong>Click and Drag</strong></p>
-  </li>
-  <li>
-    <p><strong>Keyboard edits ‘User Type’</strong></p>
-  </li>
+  <li><strong>Keyboard edits ‘User Type’</strong>.</li>
 </ul>
 
 <h3 id="stack-db">Stack DB</h3>
 
 <p><img class="img-float-right" src="images/mm3/options/options-stackdb.png" width="350" /></p>
 
-<p><strong>Warn On New Objects</strong>
-<strong>Warn On Delete Objects</strong>
-<strong>New Objects On Mouse Click (no shift)</strong>
-<strong>Allow New Objects When Viewing Sliding Z-Projection</strong></p>
-
-<p><strong>Stack Window Size</strong> Two default stack window sizes (screen pixels). Capture the size of an open Stack window with ‘C’ button.</p>
-
-<p><strong>Mask Points +/- Slices</strong> The number of slices above and below each point to show the point in stack windows.</p>
-
-<p><strong>Flash Ticks</strong></p>
-
-<p><strong>ScanImage, 1x zoom, 1024x1024 pixels (um/pixel)</strong> The x/y voxel size in um/voxel for importing ScanImage files.
-<strong>Line points to search when connecting spine/bouton</strong>
-<strong>Default Segment Radius (um)</strong></p>
-
-<p><strong>Left/Right arrows will scroll through line (otherwise pan)</strong>
-<strong>Show Pixel Intensity (display in history)</strong> Prints the pixel intensity and x/y coordinates as mouse is moved over a stack window image.</p>
-
-<p><strong>Grid Spacing (um)</strong> Display a grid on the images in a stack window. For the grid to display, stack window must be showing x/y axis. Use ‘shift+c’ to cycle through different stack window candy. Or set the default using ‘Default Stack Candy’ popup.</p>
-
-<p><strong>New Object (Shift+Click)</strong> The default object to make on shift+click.
-<strong>Default plot object</strong>
-<strong>Default Stack Candy</strong></p>
+<ul>
+  <li><strong>Warn On New Objects</strong>.</li>
+  <li><strong>Warn On Delete Objects</strong>.</li>
+  <li><strong>New Objects On Mouse Click (no shift)</strong>.</li>
+  <li><strong>Allow New Objects When Viewing Sliding Z-Projection</strong>.</li>
+  <li><strong>Search line points when connecting spine/bouton</strong>.</li>
+  <li><strong>New Object (Shift+Click)</strong>. The default object to make on shift+click.</li>
+  <li><strong>Default plot object</strong>.</li>
+</ul>
 
 <h3 id="object-map">Object Map</h3>
 
 <p><img class="img-float-right" src="images/mm3/options/options-object-map.png" width="350" /></p>
 
-<p><strong>Default Run +/-</strong>. Set the number of sessions to display when selecting right-click menu ‘Plot Run +- n’.</p>
-
-<p><strong>Check map before save</strong>. xxx</p>
-
-<p><strong>Run Window Width (pixels)</strong>. The size of each window in a spine run.</p>
-
-<p><strong>Default Zoom Width/Height (um)</strong>. When snapping to a spine, the default zoom. The width/height of the image zoom in um.</p>
-
-<p><strong>Connect points within this distance (um)</strong>. When auto connecting points in a map and generating a Guess in Find points.</p>
-
-<p><strong>Connect spines within this distance (um)</strong>. When auto connecting spines in a map and generating a Guess in Find points. This is the distance from the segment pivot points along a dendritic segment (um). You can see this distance (pDist) in the Point Info panel of a <a href="stack">stack</a>.</p>
-
-<p><strong>Always show stack DB indices (tags)</strong>. xxx
-<strong>Fixed posiiton for each run window</strong>. xxx
-<strong>Lock segment selection in run plot</strong>. xxx
-<strong>Shift + left/right to go to prev/next timepoint</strong>. xxx
-<strong>Auto plot object map on load</strong>. xxx</p>
+<ul>
+  <li>
+    <p><strong>Connect points within this distance (um)</strong>. When auto connecting points in a map and generating a Guess in Find points.</p>
+  </li>
+  <li>
+    <p><strong>Connect spines within this distance (um)</strong>. When auto connecting spines in a map and generating a Guess in Find points. This is the distance from the segment pivot points along a dendritic segment (um). You can see this distance (pDist) in the Point Info panel of a <a href="stack">stack</a>.</p>
+  </li>
+  <li><strong>Run Window Width (pixels)</strong>. The size of each window in a spine run.</li>
+  <li><strong>Show timepoint in stack window</strong>.</li>
+  <li><strong>Always show stack DB indices (tags)</strong>. xxx</li>
+  <li><strong>Fixed posiiton for each run window</strong>. xxx</li>
+  <li><strong>Lock segment selection in run plot</strong>. xxx</li>
+  <li><strong>Shift + left/right to go to prev/next timepoint</strong>. xxx</li>
+  <li><strong>Auto plot object map on load</strong>. xxx</li>
+  <li><strong>Check map before save</strong>. xxx</li>
+  <li><strong>Allow Jumping Objects</strong>.</li>
+</ul>
 
 <!-- <IMG class="img-float-left" SRC="images/mm3/mm3-options-bottom.png" WIDTH="300"> -->
 
@@ -356,32 +350,51 @@ td{
 
 <p><img class="img-float-right" src="images/mm3/options/options-intensity-analysis.png" width="350" /></p>
 
-<p>Turn <a href="intensity">intensity analysis</a> on/off with the ‘Intensity Analysis’ checkbox. Be sure to refresh any open stack windows.</p>
+<p>See the <a href="intensity">intensity analysis</a> page for a thouough decription.</p>
 
-<p><strong>Width (um)</strong>
-<strong>+/- Slices</strong>
-<strong>Extend Head (um)</strong>
-<strong>Extend Tail (um)</strong>
-<strong>+/- Segment (um)</strong></p>
-
-<p><strong>Debug</strong>
-<strong>Debug On Error</strong></p>
+<ul>
+  <li><strong>Intensity Analysis</strong>. Turn intensity analysis on/off. When on, spine selections will show intensity ROIs in the <a href="stack">stack</a> window.</li>
+  <li><strong>Debug</strong>.</li>
+  <li><strong>Debug On Error</strong>.</li>
+  <li><strong>Width (um)</strong>.</li>
+  <li><strong>+/- Slices</strong>.</li>
+  <li><strong>Extend Head (um)</strong>.</li>
+  <li><strong>Extend Tail (um)</strong>.</li>
+  <li><strong>+/- Segment (um)</strong>.</li>
+  <li><strong>Background Candidates</strong>
+    <ul>
+      <li><strong>Both Sides</strong>.</li>
+      <li><strong>Rows and Row Mult</strong>.</li>
+      <li><strong>Columns and Column Mult</strong>.</li>
+    </ul>
+  </li>
+</ul>
 
 <h3 id="importing-segments-from-fiji">Importing Segments From FIJI</h3>
 
-<p><strong>Default Segment Radius (um)</strong></p>
+<p><img class="img-float-right" src="images/mm3/options/options-fiji-import.png" width="350" /></p>
 
-<p><strong>Box Filter Line (points)</strong></p>
-
-<p><strong>Box Filter Radius (points)</strong></p>
-
-<p><strong>Convert To 8-bit</strong>. Will convert to 8-bit (in Fiji). This makes line fit much faster.</p>
-
-<p><strong>Close Fiji When Done</strong></p>
+<ul>
+  <li>
+    <p><strong>Default Segment Radius (um)</strong>.</p>
+  </li>
+  <li>
+    <p><strong>Box Filter Line (points)</strong>.</p>
+  </li>
+  <li>
+    <p><strong>Box Filter Radius (points)</strong>.</p>
+  </li>
+  <li>
+    <p><strong>Convert To 8-bit</strong>. Will convert to 8-bit (in Fiji). This makes line fit much faster.</p>
+  </li>
+  <li>
+    <p><strong>Close Fiji When Done</strong>. Always leave this on. This has been depreciated and will be remove.</p>
+  </li>
+</ul>
 
 <h3 id="miscellaneous">Miscellaneous</h3>
 
-<p><img class="img-float-right" src="images/mm3/options/options-misc.png" width="275" /></p>
+<p><img class="img-float-right" src="images/mm3/options/options-misc.png" width="250" /></p>
 
 <p>A table to set how annotations are displayed. Right-click on ‘marker’ or ‘color’ to set. Double-click on ‘size’ to set. Note, ‘size’ is in arbitrary Igor Pro centric units.</p>
 
@@ -427,22 +440,22 @@ td{
     <tr>
       <td style="text-align: left">6</td>
       <td style="text-align: left">pntSel</td>
-      <td style="text-align: left">User point selection</td>
+      <td style="text-align: left">Point selection marker</td>
     </tr>
     <tr>
       <td style="text-align: left">7</td>
       <td style="text-align: left">runSel</td>
-      <td style="text-align: left">User run selection</td>
+      <td style="text-align: left">Run selection marker</td>
     </tr>
     <tr>
       <td style="text-align: left">8</td>
       <td style="text-align: left">maskSel</td>
-      <td style="text-align: left">Mask selection</td>
+      <td style="text-align: left">Mask selection marker</td>
     </tr>
     <tr>
       <td style="text-align: left">9</td>
       <td style="text-align: left">flashSel</td>
-      <td style="text-align: left">Flashes to make selection more obvious</td>
+      <td style="text-align: left">Marker used to flash point selections (makes them easier to visually locate)</td>
     </tr>
     <tr>
       <td style="text-align: left">10</td>
@@ -510,88 +523,20 @@ td{
       <td style="text-align: left">Transient</td>
     </tr>
     <tr>
-      <td style="text-align: left">23</td>
-      <td style="text-align: left">user1_1</td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">24</td>
-      <td style="text-align: left">user1_2</td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">25</td>
-      <td style="text-align: left">user1_3</td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">26</td>
-      <td style="text-align: left">user1_4</td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">27</td>
-      <td style="text-align: left">user1_5</td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
       <td style="text-align: left">28</td>
-      <td style="text-align: left">User Type 0</td>
+      <td style="text-align: left">User Type 0..9</td>
       <td style="text-align: left">Markers for user type 0..9</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">29</td>
-      <td style="text-align: left">User Type 1</td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">30</td>
-      <td style="text-align: left">User Type 2</td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">31</td>
-      <td style="text-align: left">User Type 3</td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">32</td>
-      <td style="text-align: left">User Type 4</td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">33</td>
-      <td style="text-align: left">User Type 5</td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">34</td>
-      <td style="text-align: left">User Type 6</td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">35</td>
-      <td style="text-align: left">User Type 7</td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">36</td>
-      <td style="text-align: left">User Type 8</td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">37</td>
-      <td style="text-align: left">User Type 9</td>
-      <td style="text-align: left"> </td>
     </tr>
   </tbody>
 </table>
 
-<div class="print-page-break"></div>
-
 <h3 id="load-stacks-from-special-folder">Load Stacks From Special Folder</h3>
 
+<p><img class="img-float-right" src="images/mm3/options/options-special-folder.png" width="250" /></p>
+
 <p>Each of the check boxes will redirect the loading of image stacks to different folders. In particular, the <strong>channels8</strong> option will load 8-bit versions which is useful to speed annotations of larger 16-bit images. See Fiji plugin bConvertTo8Bit_v5_.py to convert entire directories of tiff stacks to 8-bit.</p>
+
+<div class="print-page-break"></div>
 
 <h3 id="stack-browser-options">Stack Browser Options</h3>
 

@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
 
-        <title>Map Manager : Main panel</title>
+        <title>Map Manager : Time Series Panel</title>
         <meta name="description" content="">
 
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
@@ -109,6 +109,9 @@
             <li data-order="6"><a href="/mapmanager/hdd-paths">Hard Drive Paths</a></li>
         
             
+            <li data-order="1"><a href="/mapmanager/time-series-panel">Time Series Panel</a></li>
+        
+            
             <li data-order="5"><a href="/mapmanager/stackdb-options-panel">Options</a></li>
         
             
@@ -116,9 +119,6 @@
         
             
             <li data-order="3"><a href="/mapmanager/plot-panel">Plot panel</a></li>
-        
-            
-            <li data-order="1"><a href="/mapmanager/main-panel">Main panel</a></li>
         
     
         
@@ -193,94 +193,105 @@
 
                     <div id=content class=span10>
                         <div class=page-header>
-    <h3>Main panel
+    <h3>Time Series Panel
         
     </h3>
 </div>
 
-<p>The main map manager panel provides an interface to load, save and browse Map Manager maps. Open the main map manager panel using the menu ‘MapManager - Map Manager Panel’</p>
+<p>The Map Manager time-series panel provides an interface to load, save and browse Map Manager time-series (maps). Open the time-series panel using the menu ‘MapManager - Time Series’</p>
 
-<p>Expand the main map manager panel to access the <a href="making-a-map">map making</a> interface. Use the disclosure triangle/+ at the top of the window near the help/? button.</p>
+<p>Loaded maps are listed on the left and when a map is selected, its time-points (stack) are listed on the right.</p>
 
-<p>Once a map is created and saved, the main map manager panel can be minimized again with the disclosure triangle.</p>
+<p><img class="img-float-center" src="images/mm3/time-series/time-series-panel.png" width="700" /></p>
 
-<p>The <span style="color:blue">blue</span> buttons operate on the selected map.</p>
-
-<p><img class="img-float-center" src="images/mm3/mm3-main-panel-big.png" width="700" /></p>
-
-<!--- <IMG class="img-float-left" SRC="images/mm3/mm3-main-panel-small.png" WIDTH="200"> -->
-
-<p><b>Load Map.</b> Load a map from the hard-drive.</p>
-
-<p><b>Save Map.</b> Save the selected map. Ctrl+click to save the entire map including all stackdb, lines, and intensity analysis.</p>
-
-<p><b>?.</b> Open map manager documentation in your default web browser.</p>
-
-<h3 id="plot">Plot</h3>
-
-<p><b>Object Map.</b> Open a <a href="map-plot">map plot</a> showing the position of spines along dendritic segments vs. session.</p>
-
-<p><b>Segment Map.</b>  Open a <a href="map-plot">map plot</a> showing the segments within each session and the connectivity of segments across sessions.</p>
-
-<p><b>X-Axis.</b> Choose different X-Axis for Object and Segment map plots. Available X-Axis are:</p>
+<p><img class="img-float-right" src="images/mm3/time-series/time-series-minimized.png" width="225" /></p>
 
 <ul>
-  <li>Sessions</li>
-  <li>Datetime</li>
-  <li>Days</li>
-  <li>Hours</li>
-  <li>Zero Sessions</li>
-  <li>Zero Days</li>
-  <li>Zero Hours</li>
+  <li><strong>Load Map</strong>. Load a map from the hard-drive.</li>
+  <li><strong>Save Map</strong>. Save selected map to hard-drive. By default, map manager saves only parts of the map it thinks are dirty. Ctrl+click will save the entire map.</li>
+  <li><strong>?</strong>. Open the online Map Manager documentation.</li>
 </ul>
 
-<p>Datetime, Days and Hours require stacks to have a date/time specified. Specify a custom date/time by turning on ‘Edit Date/Time’ in the Map Making Tab. The X-Axis options starting with ‘Zero’ use a session in the map as a zero timepoint. Specify this with ‘Zero Session’ in the expanded map manager panel. The zero session for a map will have a ‘*’ in its session list. Zero Session is also used by the <a href="plot-panel">Plot Panel</a>.</p>
+<h4 id="plot">Plot</h4>
+<ul>
+  <li><strong>Object Map</strong>. Open a <a href="map-plot">map plot</a>. For spines, this will show the position of each spine along its dendritic segment. For other annotations, this will show a xxx.</li>
+  <li><strong>Segment Map</strong>. Open a <a href="map-plot">map plot</a> showing the segments within each session and the connectivity of segments across sessions.</li>
+  <li><strong>X Axis</strong>. Choose different X-Axis for Object and Segment map plots. Available X-Axis are:
+    <ul>
+      <li>Sessions</li>
+      <li>Datetime</li>
+      <li>Days</li>
+      <li>Hours</li>
+      <li>Zero Sessions</li>
+      <li>Zero Days</li>
+      <li>Zero Hours</li>
+    </ul>
+  </li>
+  <li><strong>X-Axis Condition</strong>.</li>
+</ul>
 
-<h3 id="panels">Panels</h3>
+<p>Datetime, Days and Hours require stacks to have a date/time specified. A stacks date/time can be manually edited by turning on ‘Edit Date/Time’ in the Utility Tab. The X-Axis options ‘Zero Sessions’, ‘Zero Days’, ‘Zeros Hours’ use a session in the map as a zero timepoint. Specify this by right-clicking on a stack and selecting ‘Zero Session’. The zero session for a map will have a ‘*’ in its session list. Zero session is also used when plotting from time-series panel tabs including: Dynamics, Trajectory, and Intensity.</p>
 
-<p>Each of these buttons will open a different Map Manager panel.</p>
+<h4 id="panels">Panels</h4>
 
-<p><b>Search.</b> Open the <a href="search-panel">search panel</a>.</p>
+<ul>
+  <li><strong>Search</strong>. Open the <a href="search-panel">search panel</a>.</li>
+  <li><strong>Plot</strong>. Open the <a href="plot-panel">plot panel</a>.</li>
+  <li><strong>Pool</strong>. Open the <a href="map-pool">map pool panel</a>.</li>
+  <li><strong>Map DB</strong>. Open a map database panel to quickly browse and load maps from hard-drive. <strong>No documentation yet</strong>.</li>
+</ul>
 
-<p><b>Plot.</b> Open the <a href="plot-panel">plot panel</a>.</p>
+<h4 id="miscellaneous">Miscellaneous</h4>
 
-<p><b>Contrast.</b> Open the <a href="contrast-panel">contrast panel</a>.</p>
-
-<p><b>Map DB.</b> NOT DOCUMENTED YET..</p>
-
-<p><b>Find Points.</b> Open the <a href="find-points-panel">Find Points panel</a>.</p>
-
-<h3 id="miscellaneous">Miscellaneous</h3>
-
-<p><b>Unload stacks.</b> Unload all stacks in the selected map (from Igor memory). Ctrl+click to unload all stacks in all open maps.</p>
-
-<p><b>Close Windows.</b> Close all windows associated with the selected map.</p>
-
-<p><b>Username.</b> This can be specified in the <a href="stackdb-options-panel">map manager options panel</a>.</p>
-
-<p><b>Edit Segments.</b> When checked, all editing in a <a href="run-plot">run plot</a> will edit the persistence of segments (addition, subtraction, and persistent).</p>
+<ul>
+  <li><strong>Unload Stacks</strong>. Unload all stacks in the selected map. Ctrl+click to unload all stacks in all open maps. Unloading a stack will unload the RAW IMAGE DATA. It DOES NOT unload the stack annotations or the map.</li>
+  <li><strong>Close Windows</strong>. Close all windows associated with the selected map.</li>
+</ul>
 
 <h3 id="right-click-on-a-map-name-in-the-list-for-a-contextual-menu">Right-click on a map name in the list for a contextual menu.</h3>
 
-<p><img class="img-float-left" src="images/mm3/mm3-main-panel-map-right-click.png" width="100" /></p>
+<p><img class="img-float-right" src="images/mm3/time-series/time-series-right-click-map.png" width="140" /></p>
 
-<p><b>Show on HDD.</b> Shows the hard-drive folder where the map is saved.</p>
+<ul>
+  <li><strong>Find Points</strong>. Open <a href="find-points-panel">find points panel</a>.</li>
+  <li><strong>Density Report</strong>. Generate a density report for the map. See <a href="reports">reports</a>.</li>
+  <li><strong>Dynamics Report</strong>. Generate a dynamics report for the map. See <a href="reports">reports</a>.</li>
+  <li><strong>Survival Report</strong>. Generate a survival report for the map. See <a href="reports">reports</a>.</li>
+  <li><strong>Edit map NV</strong>. <span style="color:red">DO NOT USE</span>, this shows a map as a text table.</li>
+  <li><strong>Export Map</strong>. <span style="color:red">DO NOT USE</span> Exports a map to text files. Files are saved in the ‘export/’ folder.</li>
+  <li><strong>Show on HDD</strong>. Shows the hard-drive folder where the map is saved.</li>
+  <li><strong>Unload map</strong>. Close a map, removing all associated images and analysis from Igor memory.</li>
+  <li><strong>Close Windows</strong>. Close all open windows associated with a map.</li>
+</ul>
 
-<p><b>Map stats.</b> Not implemented</p>
+<h3 id="right-click-on-a-stack-name-in-the-list-for-a-contextual-menu">Right-click on a stack name in the list for a contextual menu.</h3>
 
-<p><b>Edit map NV.</b> <span style="color:red">ADVANCED USERS</span>, this shows a map as a text table.</p>
+<p><img class="img-float-right" src="images/mm3/time-series/time-series-right-click-stack.png" width="160" /></p>
 
-<p><b>Close map.</b> Close a map, removing it and all associated analysis from Igor memory.</p>
+<ul>
+  <li><strong>Display Stack</strong>. Display the stack in a <a href="stack">stack</a> window.</li>
+  <li><strong>Plot Run +-1</strong>. Plot a <a href="run-plot">run</a> of stacks from the selected stack.</li>
+  <li><strong>Plot Run +- All</strong>.</li>
+  <li><strong>Plot Run +- n</strong>.</li>
+  <li><strong>Zero Session</strong>. Set the selected stack to the zero session. Zero sessions are used when plotting a map with X-Axis set to ‘Zero Session’, ‘Zero Days’, and ‘Zero Hours’. The zero session will have an Asterix (*) before its session index in the list of sessions.</li>
+  <li><strong>Find Points</strong>. Open <a href="find-points-panel">find points panel</a>.</li>
+  <li><strong>Edit Table</strong>. Edit annotations in a stack as a text table. This is useful to copy and paste annotations for further analysis.</li>
+  <li><strong>Unload Stack</strong>. Unload the raw image data for a stack. Unloading a stack will unload the RAW IMAGE DATA. It DOES NOT unload the stack annotations or the map.</li>
+</ul>
 
-<h3 id="plot-tab">Plot Tab</h3>
+<h3 id="tabs">Tabs</h3>
 
-<h3 id="map-making-tab">Map Making Tab</h3>
+<h4 id="map-making">Map Making</h4>
 
-<h3 id="intensity-tab">Intensity Tab</h3>
+<h4 id="dynamics">Dynamics</h4>
 
-<h3 id="utility-tab">Utility Tab</h3>
+<h4 id="trajectory">Trajectory</h4>
 
-<h3 id="report-tab">Report Tab</h3>
+<h4 id="intensity">Intensity</h4>
+
+<h4 id="report">Report</h4>
+
+<h4 id="utility">Utility</h4>
 
 <div class="print-page-break"></div>
 
@@ -304,7 +315,7 @@
 
    <!--
    <BR>
-   <a href="_posts/2015-04-20-main-panel.pdf">print pdf</a>
+   <a href="_posts/2015-04-20-time-series-panel.pdf">print pdf</a>
    <BR>
    -->
     
