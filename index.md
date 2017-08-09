@@ -6,7 +6,7 @@ title: "Map Manager Documentation"
 <BR>
 
 <p style="font-size:20px">
-Map Manager is software to annotate and analyze time-series of 3D image stacks.
+Map Manager is software to annotate and analyze 3D image stack time-series
 </p>
 
 <BR>
@@ -15,24 +15,27 @@ Map Manager is software to annotate and analyze time-series of 3D image stacks.
 
 #### Main features
 
-- In vivo, ex vivo, and fixed tissue
-- Three dimensional image stacks, one and two color channels
-- Track 3D objects across multiple timepoints
-- Automatically registers objects in different timepoints
-- Written in [Igor Pro][1]
+- Track 3D annotations in time-series images.
+- Automatically aligns images and annotations across timepoints.
+- Works with any in vivo, ex vivo, and fixed tissue image volumes.
 
+#### Analysis
+ - Easily analyze the dynamics of annotations.
+ - Detailed spine intensity analysis.
+ - Powerful trajectory analysis.
+  
 #### Getting started
 
-- [Getting started][5]
+- [Getting started][5].
 
 #### Workflows
 
-- [Annotating a stack][3]
-- [Making a map][4]
+- [Annotating a stack][3].
+- [Making a map][4].
 
 #### About
 
-All code and documentation written by [Robert Cudmore][2]
+All code and documentation written by [Robert Cudmore][2].
 
 #### Links
 
