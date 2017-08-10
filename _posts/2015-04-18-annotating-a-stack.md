@@ -81,7 +81,7 @@ The stack db toolbar displays a list of line segments and a list of points. Open
 
 #### Selecting an object
 
-Single-click on the object. Selected object will appear as yellow circles. PRess keyboard 'esc' to cancel a selection.
+Single-click on the object. Selected object will appear as yellow circles. Keyboard 'esc' will cancel a selection.
 
 #### Moving an object
 
@@ -89,7 +89,7 @@ Select the object (single click), right-click and select 'Move'. Your next click
 
 #### Deleting an object
 
-Select the object (single click), right-click and select 'Delete'. ALternatively, select the object (single-click) and hit the 'del' key.
+Select the object (single click), right-click and select 'Delete'. Alternatively, select the object (single-click) and hit the 'del' key.
 
 #### Exporting data
 

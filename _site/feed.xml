@@ -215,8 +215,25 @@ table{
       <item>
         <title>File format</title>
         
-          <description>&lt;p&gt;Map Manager 3 can save two different types of files&lt;/p&gt;
+          <description>&lt;style&gt;
+table{
+    padding: 5px;
+    border:1px solid #000000;
+}
 
+[1]: https://www.hdfgroup.org/HDF5/
+[2]: http://www.mathworks.com/help/matlab/hdf5-files.html
+[3]: http://www.h5py.org
+[4]: http://www.wavemetrics.com/products/igorpro/dataaccess/hdf5.htm
+[5]: https://www.hdfgroup.org/products/hdf5_tools/# h5dist
+[6]: https://www.continuum.io/what-is-anaconda
+[7]: http://continuum.io/downloads
+[9]: stack
+[10]: time-series-panel
+[11]: https://github.com/cudmore/PyMapManager/tree/master/PyMapManager/examples
+[12]: https://github.com/cudmore/PyMapManager/
+[13]: http://blog.cudmore.io/PyMapManager/
+&lt;/style&gt;
 </description>
         
         <pubDate>Thu, 28 May 2015 18:01:06 -0400</pubDate>
@@ -500,6 +517,7 @@ table{
 
 [2]: stackdb-options-panel
 [3]: annotating-a-stack
+[4]: point-list
 &lt;/style&gt;
 </description>
         

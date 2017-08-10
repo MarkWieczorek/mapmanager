@@ -7,142 +7,139 @@ tags:
 - xxx
 ---
 
-Map Manager 3 can save two different types of files
+<style>
+table{
+    padding: 5px;
+    border:1px solid #000000;
+}
 
-- Text - Default
-- HDF5 - Experimental
+th{
+    border:1px solid #000000;
+    background-color: #dddddd;
+    color: black;
+}
 
-### Text
+td{
+    border:1px solid #000000;
+    padding: 5px;
+}
+</style>
 
-#### Python
+Map Manager saves all [stack][9] and time-series [map][10] files as plain text files. In this way, annotations created in Map Manager can easily be opened in a wide range of other programming environments for additional visualization and analysis.
 
-Map Manager saves files as plain text. Thus, it is relatively easy to extend the function of Map Manager by writing Python (or Matlab) code to load, parse, and analyze these text files. This is a very rapid and effective route to extending the functions of Map Manager with new analysis particular to your own data and ideas. Please have a look at an [example iPython notebook][9]. If you are interested in more information, please email Robert Cudmore.
+As an example of this, we have created a Python package [PyMapManager](#pymapmanager_package).
 
-It is suggested that you use the [Anaconda][6] python distribution as it comes with many useful packages pre-installed. Download Anaconda it [here][7].
+Please note, Map Manager never modifies raw .tif files, it only makes copies (in the case of a map).
 
-### HDF5
+<IMG class="img-float-right" SRC="images/mm3/file-format/stack-hard-drive.png" WIDTH="450">
+
+### Single time-point files
+ - The original .tif file is never modified
+ - Annotations are saved in a stackdb folder
+    - db2
+    - int1
+    - int2
+    - line
+    
+#### stackdb
+
+#### int1 and int2
+
+#### line
+
+<div class="print-page-break"></div>
+
+<IMG class="img-float-right" SRC="images/mm3/file-format/map-hard-drive.png" WIDTH="450">
+
+### Map files
+
+ - Maps are saved in a folder whose name is the same as the map name
+ - At the root of this folder are three map files
+    - map. see [format](#map_file)
+    - object map
+    - segment map (if there are segment)
+ - There are some folders
+    - line
+    - raw: The original .tif files are never modified, these are direct copies.
+    - stackdb
+
+<div class="print-page-break"></div>
+
+#### map
+
+#### object map
+
+#### segment map
+
+#### stack db
+
+#### line
+
+### <a id="pymapmanager_package"></a>PyMapManager package
+
+Map Manager saves files as plain text. Thus, it is relatively easy to extend the function of Map Manager by writing Python (or Matlab) code to load, parse, and analyze these text files. This is a very rapid and effective route to extending the functions of Map Manager with new analysis particular to your own data and ideas.
+
+ - [PyMapManager on GitHub][12]
+ - PyMapManager [API documentation][13]
+ - IPython notebook [examples][11]
+
+If you are on a Mac, python comes pre-installed and you are good to go. In general, [Anaconda][6] is a useful starting point as it pre-installes most Python packages you might need. Download Anaconda [here][7].
+
+### [FUTURE] HDF5
 
 [HDF5][1] is an open source cross platform binary file format. It can be read from [Matlab][2], [Python][3], [Igor Pro][4] and from a [command line][5].
 
-As of Sept 2015, Map Manager is not saving files in the HDF5 format. If you are interested in turning on this feature, please email Robert Cudmore.
-
-#### Python
-
-It is suggested that you use the [Anaconda][6] python distribution as it comes with many useful packages pre-installed including hdf5 for python. Download Anaconda it [here][7].
-
-    import h5py
-    import numpy as np
-    
-    # open h5 file
-    f = h5py.File('a5n.hdf5', 'r')
-    
-    # get list of top level groups (these are mm3 maps)
-    for g in f:
-        print g
-        
-    # assign myMap to top level map
-    for myMap in f: print myMap
-    
-    # get list of objects within a map
-    # these objects include {objmap, stackdb, int, line, linedb}
-    # keys() returns a list [0], [1], [2], ...
-    for key in f[myMap].keys():
-        print key
-        
-    # datasets within group 'a104'
-    for ds in f[myMap].values():
-        print ds
-        
-    
-    # get an object
-    objectIndex = 4
-    f[myMap].values()[objectIndex][:][:]
-    
-    # get the value of a spine from an object
-    objectIndex = 4
-    spineIndex = 10
-    f[myMap].values()[objectIndex][spineIndex]
-    
-    # attributes of a dataset
-    objectIndex= 4
-    for a in f[myMap].values()[objectIndex].attrs:
-        print a
-
-    # this is trying to pull form an intensity object
-    # for some reaosn i can't transpose the rows
-    f[myMap].values()[9].values()[0][0][:]
-    
-    # spine 0, spineLen2 (spineLen2 is in column 1)
-    f[myMap].values()[9].values()[0][0][1]
-    
-    # spine 1, spineLen2
-    f[myMap].values()[9].values()[0][1][1]
-
-In [64]: f[myMap].values()[9].values()
-Out[64]: 
-[<HDF5 dataset "a5n_s0_Int1": shape (385, 41), type "<f4">,
- <HDF5 dataset "a5n_s0_Int2": shape (385, 41), type "<f4">,
- <HDF5 dataset "a5n_s0_db2": shape (385, 44), type "|O8">,
- <HDF5 dataset "a5n_s0_l": shape (3903, 19), type "<f4">,
- <HDF5 dataset "a5n_s1_Int1": shape (378, 41), type "<f4">,
- <HDF5 dataset "a5n_s1_Int2": shape (378, 41), type "<f4">,
- <HDF5 dataset "a5n_s1_db2": shape (378, 44), type "|O8">,
- <HDF5 dataset "a5n_s1_l": shape (3871, 19), type "<f4">,
- <HDF5 dataset "a5n_s2_Int1": shape (369, 41), type "<f4">,
- <HDF5 dataset "a5n_s2_Int2": shape (369, 41), type "<f4">,
- <HDF5 dataset "a5n_s2_db2": shape (369, 44), type "|O8">,
- <HDF5 dataset "a5n_s2_l": shape (3742, 19), type "<f4">,
- <HDF5 dataset "a5n_s3_Int1": shape (364, 41), type "<f4">,
- <HDF5 dataset "a5n_s3_Int2": shape (364, 41), type "<f4">,
- <HDF5 dataset "a5n_s3_db2": shape (364, 44), type "|O8">,
- <HDF5 dataset "a5n_s3_l": shape (3837, 19), type "<f4">]
-
-i got 385 from shape (how do i do this with code?)
-
-In [82]: for a in range(385):
-    print f[myMap].values()[9].values()[0][a][1]
+Out of the box, Map Manager is not saving files in the HDF5 format. If you are interested in turning on this feature, please email Robert Cudmore.
 
 
-### this is working
+### Each file has the following format
 
-    mya=np.arange(385, dtype=np.float32)
-    for a in range(385):
-        mya[a] = f[myMap].values()[9].values()[0][a][1]
-    
-    import matplotlib.pyplot as plt
-    plt.plot(mya, 'ro')
-    plt.xlabel('Spine Index')
-    plt.ylabel('Spine Length 2D (um)')
-    plt.show()
-    
-        
-#### Use the Python hdf5Manager
+#### <a id="map_file"></a>Map file format
 
-For now this is not very useful for my hdf5 files but is a proof of concept.
+| index             | 0            | 1            | 2            | 3            | 4            | 5            | 6            | 7            | 8            |
+|-------------------|--------------|--------------|--------------|--------------|--------------|--------------|--------------|--------------|--------------|
+| hsType            | mm3          | mm3          | mm3          | mm3          | mm3          | mm3          | mm3          | mm3          | mm3          |
+| hsStack           | rr30a_s0     | rr30a_s1     | rr30a_s2     | rr30a_s3     | rr30a_s4     | rr30a_s5     | rr30a_s6     | rr30a_s7     | rr30a_s8     |
+| hsdb              | rr30a_s0_db2 | rr30a_s1_db2 | rr30a_s2_db2 | rr30a_s3_db2 | rr30a_s4_db2 | rr30a_s5_db2 | rr30a_s6_db2 | rr30a_s7_db2 | rr30a_s8_db2 |
+| hsStackNV         | rr30a_s0     | rr30a_s1     | rr30a_s2     | rr30a_s3     | rr30a_s4     | rr30a_s5     | rr30a_s6     | rr30a_s7     | rr30a_s8     |
+| date              | 20141009     | 20141013     | 20141016     | 20141017     | 20141018     | 20141020     | 20141021     | 20141022     | 20141029     |
+| time              | 20:01:40     | 22:24:04     | 19:49:05     | 20:30:39     | 16:18:59     | 19:25:41     | 18:36:19     | 19:47:00     | 19:05:27     |
+| hsStackSeconds    | 3495729700   | 3496083844   | 3496333745   | 3496422639   | 3496493939   | 3496677941   | 3496761379   | 3496852020   | 3497454327   |
+| fiducPnt          | 0            | 0            | 0            | 0            | 0            | 0            | 0            | 0            | 0            |
+| numChannels       | 2            | 2            | 2            | 2            | 2            | 2            | 2            | 2            | 2            |
+| defaultChannel    | 2            | 2            | 2            | 2            | 2            | 2            | 2            | 2            | 2            |
+| px                | 1024         | 1024         | 1024         | 1024         | 1024         | 1024         | 1024         | 1024         | 1024         |
+| py                | 1024         | 1024         | 1024         | 1024         | 1024         | 1024         | 1024         | 1024         | 1024         |
+| pz                | 70           | 65           | 70           | 70           | 70           | 80           | 70           | 80           | 70           |
+| dx                | 0.12         | 0.12         | 0.12         | 0.12         | 0.12         | 0.12         | 0.12         | 0.12         | 0.12         |
+| dy                | 0.12         | 0.12         | 0.12         | 0.12         | 0.12         | 0.12         | 0.12         | 0.12         | 0.12         |
+| dz                | 1            | 1            | 1            | 1            | 1            | 1            | 1            | 1            | 1            |
+| stackdbVersion    | 20151224     |              |              |              |              |              |              |              |              |
+| numSeg            | 5            |              |              |              |              |              |              |              |              |
+| numObj            | 2467         |              |              |              |              |              |              |              |              |
+| numSpine          | 1227         |              |              |              |              |              |              |              |              |
+| importedStackName | RR30a_S0     | RR30a_S1     | RR30a_S2     | RR30a_S3     | RR30a_S4     | RR30a_S5     | RR30a_S6     | RR30a_S7     | RR30a_S8     |
+| condStr           | a1           | a2           | e            | b1           | b2           | b            | c1           | c2           | c3           |
+| zeroSession       | 0            |              |              |              |              |              |              |              |              |
+| sessions          | 0            | 1            | 2            | 3            | 4            | 5            | 6            | 7            | 8            |
+| datetime          | 3495729700   | 3496083844   | 3496333745   | 3496422639   | 3496493939   | 3496677941   | 3496761379   | 3496852020   | 3497454327   |
+| days              | 0            | 4.0989       | 6.9913       | 8.0201       | 8.8454       | 10.975       | 11.941       | 12.99        | 19.961       |
+| hours             | 0            | 98.373       | 167.79       | 192.48       | 212.29       | 263.4        | 286.58       | 311.76       | 479.06       |
+| zsessions         | 0            | 1            | 2            | 3            | 4            | 5            | 6            | 7            | 8            |
+| zdays             | 0            | 4.0989       | 6.9913       | 8.0201       | 8.8454       | 10.975       | 11.941       | 12.99        | 19.961       |
+| zhours            | 0            | 98.373       | 167.79       | 192.48       | 212.29       | 263.4        | 286.58       | 311.76       | 479.06       |
+| mapCond           | mc1          |              |              |              |              |              |              |              |              |
 
-1. Download hdf5 manager [here][8].
-
-2. Run it
-
-    python h5_manager.py 
-
-3. Getting h5_manager to work  
-    
-    
-        # install pyqt4 in anaconda
-        conda install pyqt
-        # update anaconda (h5_manager was failing to import matplotlib)
-        conda update --prefix /Users/cudmore/anaconda anaconda
-        # run h5_manager
-        python h5_manager.py 
-    
     
 [1]: https://www.hdfgroup.org/HDF5/
 [2]: http://www.mathworks.com/help/matlab/hdf5-files.html
 [3]: http://www.h5py.org
 [4]: http://www.wavemetrics.com/products/igorpro/dataaccess/hdf5.htm
 [5]: https://www.hdfgroup.org/products/hdf5_tools/# h5dist
-[6]: https://store.continuum.io/cshop/anaconda/
+[6]: https://www.continuum.io/what-is-anaconda
 [7]: http://continuum.io/downloads
-[8]: https://github.com/mgraupe/hdf5Manager
-[9]: https://github.com/cudmore/mapmanager/blob/gh-pages/_notebooks/MapManager.ipynb
+[9]: stack
+[10]: time-series-panel
+[11]: https://github.com/cudmore/PyMapManager/tree/master/PyMapManager/examples
+[12]: https://github.com/cudmore/PyMapManager/
+[13]: http://blog.cudmore.io/PyMapManager/
