@@ -98,8 +98,22 @@ table{
       <item>
         <title>Gallery</title>
         
-          <description>&lt;h3 id=&quot;annotating-a-stack&quot;&gt;Annotating a stack&lt;/h3&gt;
+          <description>&lt;style&gt;
+#videotable {
+    /*float: right;*/
+    border: 0px solid #ddd;
+    padding: 5px;
+    /* font-family: &quot;Trebuchet MS&quot;, Arial, Helvetica, sans-serif; */
+    /* border-collapse: collapse; */
+    /* width: 100%; */
+}
 
+[1]: stack-browser
+[2]: making-a-map
+[3]: annotating-a-stack
+[4]: run-plot
+[5]: stack
+&lt;/style&gt;
 </description>
         
         <pubDate>Sun, 15 Nov 2015 17:46:33 -0500</pubDate>
