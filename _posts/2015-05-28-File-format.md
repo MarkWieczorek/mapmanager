@@ -25,11 +25,33 @@ td{
 }
 </style>
 
+### Moving Map Manager files to another folder or computer
+
+If you want to move your analysis into a different folder or a different computer, please follow these simple rules
+
+#### Moving a single-time point analysis
+
+ - Move the original .tif stack along with its associated _db2.txt, _int1.txt, _int2.txt, and _l.txt files contained in the enclosed 'stackdb' folder.
+
+#### Moving a map analysis
+ - Move the main map file .ibw and its folder to a new location or computer.
+  
+
+### Reading Map Manager files in other programming environments
+
 Map Manager saves all [stack][9] and time-series [map][10] files as plain text files. In this way, annotations created in Map Manager can easily be opened in a wide range of other programming environments for additional visualization and analysis.
 
-As an example of this, we have created a Python package [PyMapManager](#pymapmanager_package).
+We provide a Python package, [PyMapManager][12], to do this. Please have a look at this package as a starting point for custom analysis and visualization using existing Map Manager files.
 
-Please note, Map Manager never modifies raw .tif files, it only makes copies (in the case of a map).
+ - [PyMapManager on GitHub][12]
+ - PyMapManager [API documentation][13]
+ - IPython notebook [examples][11]
+
+If you are on a Mac, python comes pre-installed and you are good to go. In general, [Anaconda][6] is a useful starting point as it pre-installes most Python packages you might need. Download Anaconda [here][7].
+
+### Map Manager file format
+
+For the intrepid data scientist (e.g. data analyst) we are providing the details of the Map Manager file format for both single time-points and maps. If you want to get started importing these files into Matlab, please contact Robert Cudmore and we can share some  rudimentary code snippets to read these files. Again, we strongly suggest you get started with the [PyMapManager][12] Python package.
 
 <IMG class="img-float-right" SRC="images/mm3/file-format/stack-hard-drive.png" WIDTH="450">
 
@@ -74,16 +96,6 @@ Please note, Map Manager never modifies raw .tif files, it only makes copies (in
 #### stack db
 
 #### line
-
-### <a id="pymapmanager_package"></a>PyMapManager package
-
-Map Manager saves files as plain text. Thus, it is relatively easy to extend the function of Map Manager by writing Python (or Matlab) code to load, parse, and analyze these text files. This is a very rapid and effective route to extending the functions of Map Manager with new analysis particular to your own data and ideas.
-
- - [PyMapManager on GitHub][12]
- - PyMapManager [API documentation][13]
- - IPython notebook [examples][11]
-
-If you are on a Mac, python comes pre-installed and you are good to go. In general, [Anaconda][6] is a useful starting point as it pre-installes most Python packages you might need. Download Anaconda [here][7].
 
 ### [FUTURE] HDF5
 

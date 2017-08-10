@@ -216,11 +216,38 @@ td{
 }
 </style>
 
+<h3 id="moving-map-manager-files-to-another-folder-or-computer">Moving Map Manager files to another folder or computer</h3>
+
+<p>If you want to move your analysis into a different folder or a different computer, please follow these simple rules</p>
+
+<h4 id="moving-a-single-time-point-analysis">Moving a single-time point analysis</h4>
+
+<ul>
+  <li>Move the original .tif stack along with its associated _db2.txt, _int1.txt, _int2.txt, and _l.txt files contained in the enclosed ‘stackdb’ folder.</li>
+</ul>
+
+<h4 id="moving-a-map-analysis">Moving a map analysis</h4>
+<ul>
+  <li>Move the main map file .ibw and its folder to a new location or computer.</li>
+</ul>
+
+<h3 id="reading-map-manager-files-in-other-programming-environments">Reading Map Manager files in other programming environments</h3>
+
 <p>Map Manager saves all <a href="stack">stack</a> and time-series <a href="time-series-panel">map</a> files as plain text files. In this way, annotations created in Map Manager can easily be opened in a wide range of other programming environments for additional visualization and analysis.</p>
 
-<p>As an example of this, we have created a Python package <a href="#pymapmanager_package">PyMapManager</a>.</p>
+<p>We provide a Python package, <a href="https://github.com/cudmore/PyMapManager/">PyMapManager</a>, to do this. Please have a look at this package as a starting point for custom analysis and visualization using existing Map Manager files.</p>
 
-<p>Please note, Map Manager never modifies raw .tif files, it only makes copies (in the case of a map).</p>
+<ul>
+  <li><a href="https://github.com/cudmore/PyMapManager/">PyMapManager on GitHub</a></li>
+  <li>PyMapManager <a href="http://blog.cudmore.io/PyMapManager/">API documentation</a></li>
+  <li>IPython notebook <a href="https://github.com/cudmore/PyMapManager/tree/master/PyMapManager/examples">examples</a></li>
+</ul>
+
+<p>If you are on a Mac, python comes pre-installed and you are good to go. In general, <a href="https://www.continuum.io/what-is-anaconda">Anaconda</a> is a useful starting point as it pre-installes most Python packages you might need. Download Anaconda <a href="http://continuum.io/downloads">here</a>.</p>
+
+<h3 id="map-manager-file-format">Map Manager file format</h3>
+
+<p>For the intrepid data scientist (e.g. data analyst) we are providing the details of the Map Manager file format for both single time-points and maps. If you want to get started importing these files into Matlab, please contact Robert Cudmore and we can share some  rudimentary code snippets to read these files. Again, we strongly suggest you get started with the <a href="https://github.com/cudmore/PyMapManager/">PyMapManager</a> Python package.</p>
 
 <p><img class="img-float-right" src="images/mm3/file-format/stack-hard-drive.png" width="450" /></p>
 
@@ -278,18 +305,6 @@ td{
 <h4 id="stack-db">stack db</h4>
 
 <h4 id="line-1">line</h4>
-
-<h3 id="a-idpymapmanagerpackageapymapmanager-package"><a id="pymapmanager_package"></a>PyMapManager package</h3>
-
-<p>Map Manager saves files as plain text. Thus, it is relatively easy to extend the function of Map Manager by writing Python (or Matlab) code to load, parse, and analyze these text files. This is a very rapid and effective route to extending the functions of Map Manager with new analysis particular to your own data and ideas.</p>
-
-<ul>
-  <li><a href="https://github.com/cudmore/PyMapManager/">PyMapManager on GitHub</a></li>
-  <li>PyMapManager <a href="http://blog.cudmore.io/PyMapManager/">API documentation</a></li>
-  <li>IPython notebook <a href="https://github.com/cudmore/PyMapManager/tree/master/PyMapManager/examples">examples</a></li>
-</ul>
-
-<p>If you are on a Mac, python comes pre-installed and you are good to go. In general, <a href="https://www.continuum.io/what-is-anaconda">Anaconda</a> is a useful starting point as it pre-installes most Python packages you might need. Download Anaconda <a href="http://continuum.io/downloads">here</a>.</p>
 
 <h3 id="future-hdf5">[FUTURE] HDF5</h3>
 
