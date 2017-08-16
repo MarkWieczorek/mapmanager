@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
 
-        <title>Map Manager : Stack DB plot</title>
+        <title>Map Manager : Stack Annotations</title>
         <meta name="description" content="">
 
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
@@ -78,7 +78,7 @@
             <li data-order="4"><a href="/mapmanager/fitting-segments-in-fiji">Fitting segments in Fiji</a></li>
         
             
-            <li data-order="3"><a href="/mapmanager/stackdb-plot">Stack DB plot</a></li>
+            <li data-order="3"><a href="/mapmanager/stack-annotations">Stack Annotations</a></li>
         
             
             <li data-order="6"><a href="/mapmanager/layout-panel">Layout panel</a></li>
@@ -193,22 +193,102 @@
 
                     <div id=content class=span10>
                         <div class=page-header>
-    <h3>Stack DB plot
+    <h3>Stack Annotations
         
     </h3>
 </div>
 
-<p><img class="img-float-left" src="images/mm3/mm3-stackdb-plot.png" width="600" /></p>
+<p><img class="img-float-left" src="images/mm3/stack-annotations.png" width="600" /></p>
 
 <div class="print-page-break"></div>
 
-<p>A stack db plot provides an interface to edit and visualize a stack db for a single <a href="stack">stack</a>.</p>
+<h3 id="creating-3d-objects">Creating 3D objects</h3>
 
-<p>All stack db plots are interactive. Selecting an object will propagate this selection to other <a href="stack-plot">stack</a> and <a href="map-plot">map plots</a>.</p>
+<p>Choose the type of object in the ‘New Object’ group and shift+click in the image to create the object. All objects are 3D points, the z value of an object will be the currently viewed image plane when the object is create. Different object types can be independently <a href="search-panel">searched</a>, <a href="plot-panel">plotted</a> and connect together in a <a href="map-plot">map</a>.</p>
 
-<p>Toggle the stack db interface (the left control panel) in any <a href="stack">stack</a> using keyboard ‘[’.</p>
+<!-- <IMG class="img-float-right" SRC="images/mm3/mm3-object-types.png" WIDTH="100"> -->
+<ul>
+  <li><strong>Spine</strong> : A spine is always connected to a segment (its parent segment). Thus, to create a spine, its parent segment must first be selected..</li>
+  <li><strong>Bouton</strong> : This also requires a parent</li>
+  <li>vBranch :</li>
+  <li>soma :</li>
+  <li>peri :</li>
+  <li><strong>controlPnt</strong> : Points along a segment that are used to fit a line in FIJI.</li>
+  <li>other :</li>
+</ul>
 
-<p>For more information on creating and editing 3D points and lines, see <a href="annotating-a-stack">annotating a stack</a></p>
+<p class="tip"><b>Tip.</b> All objects are 3D points. The z position of a point is the imaging plane that is viewed when the point is created. To create a new point with better precision, zoom in the stack window with keyboard '+'. The zoom will follow the mouse pointer.
+</p>
+
+<p><img class="img-float-right" src="images/imagingcore/stack_db.png" width="600" /></p>
+
+<h3 id="editing-3d-objects">Editing 3D objects</h3>
+
+<h4 id="stack-db-toolbar">Stack DB toolbar</h4>
+
+<p>The stack db toolbar displays a list of line segments and a list of points. Open and close the stack db toolbar with keyboard ‘[’.</p>
+
+<h4 id="selecting-an-object">Selecting an object</h4>
+
+<p>Single-click on the object. Selected object will appear as yellow circles. Keyboard ‘esc’ will cancel a selection.</p>
+
+<h4 id="moving-an-object">Moving an object</h4>
+
+<p>Select the object (single click), right-click and select ‘Move’. Your next click will be the new 3D position of the object. You are given feedback in the bottom of the stack window. Press ‘esc’ to cancel a move.</p>
+
+<h4 id="deleting-an-object">Deleting an object</h4>
+
+<p>Select the object (single click), right-click and select ‘Delete’. Alternatively, select the object (single-click) and hit the ‘del’ key.</p>
+
+<h4 id="exporting-data">Exporting data</h4>
+
+<p>It is very easy to export the 3D coordinates of the points in a stack DB.</p>
+
+<p>In the stack db toolbar of the main stack window, click on the list of points and then press keyboard ‘e’. This will open a text table of all points in the stack db, you can copy and paste it into your favorite analysis program. See <a href="reports">stack report</a> for more information.</p>
+
+<p>When you save a stack db you are saving all the points in a single text file. The file can be found in a folder named ‘stackdb’ in the hard-drive folder of your original stack. See <a href="file-format">File formats</a> for more information.</p>
+
+<h3 id="line-segments">Line Segments</h3>
+
+<p><strong><em>Line segments are fit in Fiji using a special plugin, please see <a href="fitting-segments-in-fiji">Fitting segments in Fiji</a> to install this plugin.</em></strong></p>
+
+<p>Existing line segments are listed in the ‘Line Segment’ group. Each line segment has a length (um), a number of objects (nObj), a radius (r), and a color (c).</p>
+
+<h4 id="creating-line-segments">Creating line segments</h4>
+
+<ol>
+  <li>Make sure ‘Edit Segments ‘ is turned on.</li>
+  <li>Create a new (empty) line segment<br />
+  Click ‘+’ button in the ‘Line Segment’ group. This will create an empty line segment.</li>
+  <li>Make a series of 3D <strong>control point</strong> objects along your dendrite/axon
+    <ul>
+      <li>Select ‘New Object -&gt; Other -&gt; Control Point’</li>
+      <li>Shift-click in the image to create a <strong>control point</strong>.</li>
+      <li>Continue making <strong>control points</strong> along the desired line segment in the image.</li>
+    </ul>
+  </li>
+  <li>Fit the line in FIJI and import the resulting line segment back into map manager
+    <ul>
+      <li>Right-click on the new line segment (in the top left list) and select ‘Make From Control Points - FIJI’. This will open the ‘Bob Neurite Tracer’ plugin in FIJI, fit a line to your <strong>control points</strong> and open the fitted line segment in the map manager stack window.</li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>Important:</strong> When making control points, they need to be in order along a segment. If you double-back a control point on the segment, the line fit with dumbly follow this ordering of control points. If it all gets confusing you can just delete all your control points and start over.</p>
+
+<p><strong>Important:</strong> When making a map, you will be associating individual line segments  from one session to the next. For segments that you will connect together in a map, make sure your control points are in the same general direction along each segment. If your control points go left to right in session 1, they should also go left to right in session 2.</p>
+
+<h4 id="line-segment-radius">Line segment radius</h4>
+
+<p>Each line segment has a fixed radius in um. Spines are connected to this radius. To change the radius, double-click the radius for a segment and enter a new number. The radius of each segment is displayed in the ‘r’ column. Setting the radius will reconnect all your spines to that new radius while preserving the spine connection point to the line. To set all the radii of a run of connected segments, right click on the segment in the list and select ‘Set run to same radius’.</p>
+
+<h4 id="line-segment-pivot-points">Line segment pivot points</h4>
+
+<p>When in a map, line segments need a ‘pivot point’. Specify a pivot point for a segment by clicking a point in the segment, right-click and select the ‘Set As Segment Pivot’ menu.</p>
+
+<p>The pivot point should specify a region of the segment that is the same in all sessions. A good strategy is to choose a region of the segment near an obvious spine that is present in all sessions. Another strategy is to choose a pivot point where some other segment (dendrite) crosses near your segment as these tend to remain stable across time. Try and put the pivot point near the center of the segment, do not place it at either end. The pivot point is used to calculate a line distance along the segment (in um) which in turn will be used to auto-guess connections between objects (spines) across sessions.</p>
+
+<div class="print-page-break"></div>
 
 
 
@@ -229,7 +309,7 @@
 
    <!--
    <BR>
-   <a href="_posts/2015-04-20-stackdb-plot.pdf">print pdf</a>
+   <a href="_posts/2015-04-20-stack-annotations.pdf">print pdf</a>
    <BR>
    -->
     

@@ -51,7 +51,7 @@ Line segments are first specified with control points and then fit using a custo
 See [Fitting Segment In Fiji][15] for help on FIJI versions, installing the plugin and specifying the FIJI application path in Map Manager.
 
  1. Double-click the first session in your map (in the time-series panel) to open a [stack][2] window.
- 2. Create a line segment by follow the instruction in [annotating a stack][4].
+ 2. Create a line segment by follow the instruction in [stack annotations][4].
     - Turn on Segment Editing with the checkbox next to 'Line Segments'.
     - Click the '+' button to create a new (empty) segment.
     - Create Control Points along a segment with shift+click. Remember, all points are in 3D, make sure the points are in the correct imaging plane.
@@ -78,7 +78,7 @@ See [Fitting Segment In Fiji][15] for help on FIJI versions, installing the plug
 #### 5. Mark spines in each timepoint
  1. Make sure 'Edit Segments' is off.
  2. Open a single timepoint by double clicking a session in the list.
- 3. Follow [annotating a stack][4] to mark spines along your new segment.
+ 3. See [stack annotations][4] to mark spines along your new segment.
  
 <p class="tip"><B>Tip.</B> As you are working, keep your eye on the Igor command window. Each action you perform in Map Manager should report a few lines of text here. If this starts to spit out 1000's of lines there is probably a problem.</p>
    
@@ -112,50 +112,14 @@ This is the core of Map Manager and you will spend most of your time doing this.
  - In the search panel, make sure 'map' is slected and search for all spine additions with the 'Additions' button.
  - All added spines will appear as a list in the search results.
  - Right-click on a spine and select 'plot run +- 1' to bring up a spine run. [HERE I NEED TO CHANGE THE INTERFACE. I NEED A QUICKER WAY OF BRINING UP A SPINE RUN!!!]
- 
-**THIS IS WHERE I AM ENDING FOR NOW ON July 29, 2015 ... THIS NEEDS TO BE EXPANDED**
- 
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-
-## DO NOT READ BELOW HERE !!!!
-
-### [ADVANCED]: Importing a bSpine map
-
-<IMG class="img-float-left" SRC="images/mm3/mm3-import-bspine.png" WIDTH="275">
-
-Importing bSpine maps is tricky. The problem is if your original maps for one time-series (_d1, _d2, etc.) have different sessions. For example, _d1 has sessions from dates 1,2,3 but _d2 has sessions from dates 1,2,6,12 there <span style="color:red">will be an error</span>.
-
-Thus, there are two cases:
-
- 1. Your maps _d1, _d2 etc. all have the same exact sessions
- 	This is simple, use 'Batch import bSpine map'. You will be prompted for the first map (you should select _d1). Once this is done, you need to hit all the buttons in '(2) fix' to complete the import and then 'save map' in the time-series panel.
- 	
- 2. Your maps _d1, _d2 etc. have different sessions.
-	<span style="color:red">This DOES NOT WORK.</span>
-
-
- **This documentation is not done**
- 
- #### Import group
- 
- - **Import One bSpine map.** ... not done
- 
- - **Append One bSpine map.** ... not done
- 
- #### Fix group
- 
-  - ** I am sick of writing documentation. Please see Bob for instructions. **
+  
  
 
 
 [1]: stack-browser
 [2]: stack
 [3]: user-files
-[4]: annotating-a-stack
+[4]: stack-annotations
 [5]: search-panel
 [6]: plot-panel
 [7]: stackdb-options-panel

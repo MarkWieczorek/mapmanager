@@ -304,21 +304,6 @@ table{
     
       
       <item>
-        <title>Stack DB plot</title>
-        
-          <description>&lt;p&gt;&lt;img class=&quot;img-float-left&quot; src=&quot;images/mm3/mm3-stackdb-plot.png&quot; width=&quot;600&quot; /&gt;&lt;/p&gt;
-
-</description>
-        
-        <pubDate>Mon, 20 Apr 2015 18:46:33 -0400</pubDate>
-        <link>
-        /stackdb-plot</link>
-        <guid isPermaLink="true">/stackdb-plot</guid>
-      </item>
-      
-    
-      
-      <item>
         <title>Options</title>
         
           <description>&lt;style&gt;
@@ -356,6 +341,21 @@ table{
         <link>
         /stack-plot</link>
         <guid isPermaLink="true">/stack-plot</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Stack Annotations</title>
+        
+          <description>&lt;p&gt;&lt;img class=&quot;img-float-left&quot; src=&quot;images/mm3/stack-annotations.png&quot; width=&quot;600&quot; /&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 20 Apr 2015 18:46:33 -0400</pubDate>
+        <link>
+        /stack-annotations</link>
+        <guid isPermaLink="true">/stack-annotations</guid>
       </item>
       
     

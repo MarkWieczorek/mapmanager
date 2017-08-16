@@ -78,7 +78,7 @@
             <li data-order="4"><a href="/mapmanager/fitting-segments-in-fiji">Fitting segments in Fiji</a></li>
         
             
-            <li data-order="3"><a href="/mapmanager/stackdb-plot">Stack DB plot</a></li>
+            <li data-order="3"><a href="/mapmanager/stack-annotations">Stack Annotations</a></li>
         
             
             <li data-order="6"><a href="/mapmanager/layout-panel">Layout panel</a></li>
@@ -254,7 +254,7 @@
 
 <ol>
   <li>Double-click the first session in your map (in the time-series panel) to open a <a href="stack">stack</a> window.</li>
-  <li>Create a line segment by follow the instruction in <a href="annotating-a-stack">annotating a stack</a>.
+  <li>Create a line segment by follow the instruction in <a href="stack-annotations">stack annotations</a>.
     <ul>
       <li>Turn on Segment Editing with the checkbox next to ‘Line Segments’.</li>
       <li>Click the ‘+’ button to create a new (empty) segment.</li>
@@ -290,7 +290,7 @@
 <ol>
   <li>Make sure ‘Edit Segments’ is off.</li>
   <li>Open a single timepoint by double clicking a session in the list.</li>
-  <li>Follow <a href="annotating-a-stack">annotating a stack</a> to mark spines along your new segment.</li>
+  <li>See <a href="stack-annotations">stack annotations</a> to mark spines along your new segment.</li>
 </ol>
 
 <p class="tip"><b>Tip.</b> As you are working, keep your eye on the Igor command window. Each action you perform in Map Manager should report a few lines of text here. If this starts to spit out 1000's of lines there is probably a problem.</p>
@@ -329,54 +329,6 @@
   <li>In the search panel, make sure ‘map’ is slected and search for all spine additions with the ‘Additions’ button.</li>
   <li>All added spines will appear as a list in the search results.</li>
   <li>Right-click on a spine and select ‘plot run +- 1’ to bring up a spine run. [HERE I NEED TO CHANGE THE INTERFACE. I NEED A QUICKER WAY OF BRINING UP A SPINE RUN!!!]</li>
-</ul>
-
-<p><strong>THIS IS WHERE I AM ENDING FOR NOW ON July 29, 2015 … THIS NEEDS TO BE EXPANDED</strong></p>
-
-<p><br />
-<br />
-<br />
-<br />
-<br /></p>
-
-<h2 id="do-not-read-below-here-">DO NOT READ BELOW HERE !!!!</h2>
-
-<h3 id="advanced-importing-a-bspine-map">[ADVANCED]: Importing a bSpine map</h3>
-
-<p><img class="img-float-left" src="images/mm3/mm3-import-bspine.png" width="275" /></p>
-
-<p>Importing bSpine maps is tricky. The problem is if your original maps for one time-series (_d1, _d2, etc.) have different sessions. For example, _d1 has sessions from dates 1,2,3 but _d2 has sessions from dates 1,2,6,12 there <span style="color:red">will be an error</span>.</p>
-
-<p>Thus, there are two cases:</p>
-
-<ol>
-  <li>
-    <p>Your maps _d1, _d2 etc. all have the same exact sessions
- 	This is simple, use ‘Batch import bSpine map’. You will be prompted for the first map (you should select _d1). Once this is done, you need to hit all the buttons in ‘(2) fix’ to complete the import and then ‘save map’ in the time-series panel.</p>
-  </li>
-  <li>
-    <p>Your maps _d1, _d2 etc. have different sessions.
-<span style="color:red">This DOES NOT WORK.</span></p>
-  </li>
-</ol>
-
-<p><strong>This documentation is not done</strong></p>
-
-<p>#### Import group</p>
-
-<ul>
-  <li>
-    <p><strong>Import One bSpine map.</strong> … not done</p>
-  </li>
-  <li>
-    <p><strong>Append One bSpine map.</strong> … not done</p>
-  </li>
-</ul>
-
-<p>#### Fix group</p>
-
-<ul>
-  <li>** I am sick of writing documentation. Please see Bob for instructions. **</li>
 </ul>
 
 

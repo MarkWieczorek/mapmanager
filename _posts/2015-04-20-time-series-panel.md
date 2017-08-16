@@ -13,9 +13,9 @@ The Map Manager time-series panel provides an interface to load, save and browse
 
 Loaded maps are listed on the left and when a map is selected, its time-points (stacks) are listed on the right.
 
-<IMG class="img-float-center" SRC="images/mm3/time-series/time-series-panel.png" WIDTH="700">
+<IMG class="img-float-center" SRC="images/mm3/time-series/ts-big.png" WIDTH="700">
 
-<IMG class="img-float-right" SRC="images/mm3/time-series/time-series-minimized.png" WIDTH="225">
+<IMG class="img-float-right" SRC="images/mm3/time-series/ts-small.png" WIDTH="225">
 
  - **Load Map**. Load a map from the hard-drive. 
  - **Save Map**. Save selected map to hard-drive. By default, map manager saves only parts of the map it thinks are dirty. Ctrl+click will save the entire map.
@@ -82,15 +82,40 @@ Datetime, Days and Hours require stacks to have a date/time specified. A stacks 
 
 #### Map Making
 
+<IMG class="img-float-right" SRC="images/mm3/time-series/ts-mapmaking.png" WIDTH="475">
+
+
+<div class="print-page-break"></div>
+
 #### Dynamics
+
+<IMG class="img-float-right" SRC="images/mm3/time-series/ts-dynamics.png" WIDTH="475">
+
+
+<div class="print-page-break"></div>
 
 #### Trajectory
 
+<IMG class="img-float-right" SRC="images/mm3/time-series/ts-trajectory.png" WIDTH="475">
+
+
+<div class="print-page-break"></div>
+
 #### Intensity
+
+<IMG class="img-float-right" SRC="images/mm3/time-series/ts-intensity.png" WIDTH="475">
+
+
+<div class="print-page-break"></div>
 
 #### Report
 
+
+<div class="print-page-break"></div>
+
 #### Utility
+
+<IMG class="img-float-right" SRC="images/mm3/time-series/ts-utility.png" WIDTH="475">
 
 <div class="print-page-break"></div>
 

@@ -78,7 +78,7 @@
             <li data-order="4"><a href="/mapmanager/fitting-segments-in-fiji">Fitting segments in Fiji</a></li>
         
             
-            <li data-order="3"><a href="/mapmanager/stackdb-plot">Stack DB plot</a></li>
+            <li data-order="3"><a href="/mapmanager/stack-annotations">Stack Annotations</a></li>
         
             
             <li data-order="6"><a href="/mapmanager/layout-panel">Layout panel</a></li>
@@ -225,145 +225,48 @@
 <p>Each stack can have a list of 3D annotations, we call this a stack database (stack db).</p>
 
 <ul>
-  <li>In a <a href="stack">stack</a> window, open the stack db toolbar with keyboard ‘[’.</li>
+  <li>In a <a href="stack">stack</a> window, open the annotation toolbar with keyboard ‘[’.</li>
   <li>Add a new 3D point with shift+click.</li>
   <li>Delete a point by selecting the point (mouse left-click) and hitting keyboard ‘Delete’ or ‘Backspace’.</li>
-  <li>Each point can have a textual note, select the point and fill in a note in the field below the list of points.</li>
+  <li>Each point can have a textual note, select the point and press keyboard ‘n’ to enter a note..</li>
+  <li>See the <a href="stack-annotations">stack annotations</a> page for complete information.</li>
 </ul>
 
 <h4 id="save-your-work">5. Save your work</h4>
 
 <ul>
-  <li>Save a stack db using the ‘Save’ button.</li>
-  <li>Load a previously saved stack db with the ‘Load’ button.</li>
-  <li><b>Important:</b> You are responsible for saving your stack db. Use the ‘Save’ button.</li>
+  <li>Save stack annotations using the ‘Save’ button.</li>
+  <li>Load saved stack annotations with the ‘Load’ button.</li>
+  <li><b>Important:</b> You are responsible for saving your annotations. Use the ‘Save’ button.</li>
 </ul>
 
-<h3 id="stack-scale">Stack scale</h3>
+<h3 id="important-concepts">Important concepts</h3>
 
-<p>Please set the proper X/Y/Z scale before making any stack db points. Set the X/Y/Z stack scale in the main stack window with keyboard ‘shift+p’.</p>
+<h4 id="stack-scale">Stack scale</h4>
+
+<p>Please set the proper X/Y/Z scale before making any annotations. Set the X/Y/Z stack scale in the main stack window with keyboard ‘shift+p’.</p>
 
 <p>Once 3D points are created, <strong>the scale can not be changed</strong>.</p>
 
-<p class="important">You need to set the proper X/Y/Z stack scale, in um, with keyboard 'shift+p'. This is a critical step in Map Manager as many measurements are made using um. Once stack db points are reated the scale can not be changed.</p>
+<p class="important">You need to set the proper X/Y/Z stack scale, in um, with keyboard 'shift+p'. This is a critical step in Map Manager as many measurements are made using um. Once annotations are reated the scale can not be changed.</p>
 
-<h3 id="creating-3d-objects">Creating 3D objects</h3>
+<h4 id="searching">Searching</h4>
 
-<p>Choose the type of object in the ‘New Object’ group and shift+click in the image to create the object. All objects are 3D points, the z value of an object will be the currently viewed image plane when the object is create. Different object types can be independently <a href="search-panel">searched</a>, <a href="plot-panel">plotted</a> and connect together in a <a href="map-plot">map</a>.</p>
+<p>Open the <a href="search-panel">Search panel</a> from the left annotation toolbar using the ‘Search’ button.</p>
 
-<!-- <IMG class="img-float-right" SRC="images/mm3/mm3-object-types.png" WIDTH="100"> -->
-<ul>
-  <li><strong>Spine</strong> : A spine is always connected to a segment (its parent segment). Thus, to create a spine, its parent segment must first be selected..</li>
-  <li><strong>Bouton</strong> : This also requires a parent</li>
-  <li>vBranch :</li>
-  <li>soma :</li>
-  <li>peri :</li>
-  <li><strong>controlPnt</strong> : Points along a segment that are used to fit a line in FIJI.</li>
-  <li>other :</li>
-</ul>
-
-<p class="tip"><b>Tip.</b> All objects are 3D points. The z position of a point is the imaging plane that is viewed when the point is created. To create a new point with better precision, zoom in the stack window with keyboard '+'. The zoom will follow the mouse pointer.
-</p>
-
-<p><img class="img-float-right" src="images/imagingcore/stack_db.png" width="600" /></p>
-
-<h3 id="editing-3d-objects">Editing 3D objects</h3>
-
-<h4 id="stack-db-toolbar">Stack DB toolbar</h4>
-
-<p>The stack db toolbar displays a list of line segments and a list of points. Open and close the stack db toolbar with keyboard ‘[’.</p>
-
-<h4 id="selecting-an-object">Selecting an object</h4>
-
-<p>Single-click on the object. Selected object will appear as yellow circles. Keyboard ‘esc’ will cancel a selection.</p>
-
-<h4 id="moving-an-object">Moving an object</h4>
-
-<p>Select the object (single click), right-click and select ‘Move’. Your next click will be the new 3D position of the object. You are given feedback in the bottom of the stack window. Press ‘esc’ to cancel a move.</p>
-
-<h4 id="deleting-an-object">Deleting an object</h4>
-
-<p>Select the object (single click), right-click and select ‘Delete’. Alternatively, select the object (single-click) and hit the ‘del’ key.</p>
-
-<h4 id="exporting-data">Exporting data</h4>
-
-<p>It is very easy to export the 3D coordinates of the points in a stack DB.</p>
-
-<p>In the stack db toolbar of the main stack window, click on the list of points and then press keyboard ‘e’. This will open a text table of all points in the stack db, you can copy and paste it into your favorite analysis program. See <a href="reports">stack report</a> for more information.</p>
-
-<p>When you save a stack db you are saving all the points in a single text file. The file can be found in a folder named ‘stackdb’ in the hard-drive folder of your original stack. See <a href="file-format">File formats</a> for more information.</p>
-
-<h3 id="line-segments">Line Segments</h3>
-
-<p><strong><em>Line segments are fit in Fiji using a special plugin, please see <a href="fitting-segments-in-fiji">Fitting segments in Fiji</a> to install this plugin.</em></strong></p>
-
-<p>Existing line segments are listed in the ‘Line Segment’ group. Each line segment has a length (um), a number of objects (nObj), a radius (r), and a color (c).</p>
-
-<h4 id="creating-line-segments">Creating line segments</h4>
-
-<ol>
-  <li>Make sure ‘Edit Segments ‘ is turned on.</li>
-  <li>Create a new (empty) line segment<br />
-  Click ‘+’ button in the ‘Line Segment’ group. This will create an empty line segment.</li>
-  <li>Make a series of 3D <strong>control point</strong> objects along your dendrite/axon
-    <ul>
-      <li>Select ‘New Object -&gt; Other -&gt; Control Point’</li>
-      <li>Shift-click in the image to create a <strong>control point</strong>.</li>
-      <li>Continue making <strong>control points</strong> along the desired line segment in the image.</li>
-    </ul>
-  </li>
-  <li>Fit the line in FIJI and import the resulting line segment back into map manager
-    <ul>
-      <li>Right-click on the new line segment (in the top left list) and select ‘Make From Control Points - FIJI’. This will open the ‘Bob Neurite Tracer’ plugin in FIJI, fit a line to your <strong>control points</strong> and open the fitted line segment in the map manager stack window.</li>
-    </ul>
-  </li>
-</ol>
-
-<p><strong>Important:</strong> When making control points, they need to be in order along a segment. If you double-back a control point on the segment, the line fit with dumbly follow this ordering of control points. If it all gets confusing you can just delete all your control points and start over.</p>
-
-<p><strong>Important:</strong> When making a map, you will be associating individual line segments  from one session to the next. For segments that you will connect together in a map, make sure your control points are in the same general direction along each segment. If your control points go left to right in session 1, they should also go left to right in session 2.</p>
-
-<h4 id="line-segment-radius">Line segment radius</h4>
-
-<p>Each line segment has a fixed radius in um. Spines are connected to this radius. To change the radius, double-click the radius for a segment and enter a new number. The radius of each segment is displayed in the ‘r’ column. Setting the radius will reconnect all your spines to that new radius while preserving the spine connection point to the line. To set all the radii of a run of connected segments, right click on the segment in the list and select ‘Set run to same radius’.</p>
-
-<h4 id="line-segment-pivot-points">Line segment pivot points</h4>
-
-<p>When in a map, line segments need a ‘pivot point’. Specify a pivot point for a segment by clicking a point in the segment, right-click and select the ‘Set As Segment Pivot’ menu.</p>
-
-<p>The pivot point should specify a region of the segment that is the same in all sessions. A good strategy is to choose a region of the segment near an obvious spine that is present in all sessions. Another strategy is to choose a pivot point where some other segment (dendrite) crosses near your segment as these tend to remain stable across time. Try and put the pivot point near the center of the segment, do not place it at either end. The pivot point is used to calculate a line distance along the segment (in um) which in turn will be used to auto-guess connections between objects (spines) across sessions.</p>
-
-<div class="print-page-break"></div>
-
-<h3 id="search-panel">Search panel</h3>
-
-<p><img class="img-float-right" src="images/imagingcore/stack_db_search.png" width="500" /></p>
-
-<p>Open the <a href="search-panel">Search panel</a> from the stack db toolbar using the ‘Search’ button.</p>
-
-<p>The search panel will search a stack db and return a list of points. Once generated, clicking on a point in the search results will display the point in the main stack window.</p>
+<p>The search panel will search stack annotations and return a list of annotations. Once generated, clicking on an annotation in the search results will display the annotation in the main stack window.</p>
 
 <p>Different types of searches are performed with buttons:</p>
 
 <ul>
-  <li>All : Generate a list of all stack db points.</li>
-  <li>Notes : Generate a list of stack db points with notes.</li>
-  <li>Close : Search for points that have other points that are close.</li>
+  <li>All : Generate a list of all annotations in a stack.</li>
+  <li>Notes : Generate a list of all annotations with notes.</li>
+  <li>Close : Search for annotations that have other annotations within a 3D distance.</li>
 </ul>
 
-<p>Once a search is performed, the search panel will display a list of results. Each row in the list of results is a point in the stack db. Single-click on a point in the list and it will be selected in the main stack window.</p>
+<p>If you zoom the stack window (ctrl+mouse wheel or keyboard +) you can snap to different points while maintaining the zoom using the search panel ‘Snap’ checkbox.</p>
 
-<p>If you zoom the stack window (keyboard +) you can snap to different points while maintaining the zoom using the search panel ‘Snap’ checkbox.</p>
-
-<p>The search results are a static output report. Once a search is performed, if points in the main stack window are modified (add, delete, move) the search results will not be automatically updated. If the points are modified in the main stack window and you want to use the search results, regenerate the search.</p>
-
-<div class="print-page-break"></div>
-
-<h3 id="options-panel">Options panel</h3>
-
-<p><img class="img-float-right" src="images/imagingcore/stack_db_options.png" width="300" /></p>
-
-<p>Open the <a href="stackdb-options-panel">Stack DB Options Panel</a> from the stack db toolbar using the ‘Options’ button.</p>
+<p>The search results are a static output report. Once a search is performed, if points in the main stack window are modified (add, delete, move) the search results will not be automatically updated. If the points are modified in the main stack window, simply perform the search again.</p>
 
 <div class="print-page-break"></div>
 
