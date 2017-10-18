@@ -8,7 +8,7 @@ tags:
 - Imaging core
 ---
 
-<IMG class="img-float-left" SRC="images/mm3/stack-annotations.png" WIDTH="600">
+<IMG class="img-float-left" SRC="images/mm3/stack-annotations.png" WIDTH="500">
 
 <div class="print-page-break"></div>
 
@@ -33,11 +33,11 @@ Choose the type of object in the 'New Object' group and shift+click in the image
 
 ### Editing 3D objects
 
-
-#### Stack DB toolbar
-
-
 The stack db toolbar displays a list of line segments and a list of points. Open and close the stack db toolbar with keyboard '['.
+
+#### Creating an object
+
+Shift+click in the image to create an object. Remember, all annotations are 3D. Take care in choosing the imaging plane where you create an object. For spines, the point should mark the membrane limit near the tip of the spine.
 
 #### Selecting an object
 
@@ -68,20 +68,20 @@ Existing line segments are listed in the 'Line Segment' group. Each line segment
 
 #### Creating line segments
 
- 1. Make sure 'Edit Segments ' is turned on.
+ 1. Make sure 'Segments' edit checkbox is turned on. This is in the left control bar which can be opened with keyboard '['.
  2. Create a new (empty) line segment  
-  Click '+' button in the 'Line Segment' group. This will create an empty line segment.
+  Click '+' button in the 'Segment' group. This will create an empty line segment.
  3. Make a series of 3D **control point** objects along your dendrite/axon  
-  - Select 'New Object -> Other -> Control Point'  
+  <strike>- Select 'New Object -> Other -> Control Point'</strike>
   - Shift-click in the image to create a **control point**.
   - Continue making **control points** along the desired line segment in the image.
   
  4. Fit the line in FIJI and import the resulting line segment back into map manager  
-  - Right-click on the new line segment (in the top left list) and select 'Make From Control Points - FIJI'. This will open the 'Bob Neurite Tracer' plugin in FIJI, fit a line to your **control points** and open the fitted line segment in the map manager stack window.
+  - Right-click on the new line segment (in the top left list of segment) and select 'Make From Control Points - FIJI'. This will open the 'Bob Neurite Tracer' plugin in FIJI, fit a line to your **control points** and open the fitted line segment in the map manager stack window.
 
 **Important:** When making control points, they need to be in order along a segment. If you double-back a control point on the segment, the line fit with dumbly follow this ordering of control points. If it all gets confusing you can just delete all your control points and start over.
 
-**Important:** When making a map, you will be associating individual line segments  from one session to the next. For segments that you will connect together in a map, make sure your control points are in the same general direction along each segment. If your control points go left to right in session 1, they should also go left to right in session 2.
+**Important:** When making a map, you will be connecting (e.g. making persistent) individual line segments  from one timepoint to the next. For segments that you will connect together in a map, make sure your control points are in the same direction along each segment. If your control points go left to right in session 1, they should also go left to right in session 2.
 
 #### Line segment radius
 

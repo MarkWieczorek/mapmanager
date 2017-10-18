@@ -8,10 +8,6 @@ tags:
 - Interface
 ---
 
-<p class="tip"><B>New in October, 2015.</B>
-This documentation needs some work.
-</p>
-
 The find points panel allows you to browse objects between two timepoints/sessions, will show you the best-guess for putative connections, and allow you to connect/disconnect objects across timepoints/sessions.
 
 To open the find points panel:

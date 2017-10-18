@@ -127,9 +127,7 @@ table{
       <item>
         <title>Find Points</title>
         
-          <description>&lt;p class=&quot;tip&quot;&gt;&lt;b&gt;New in October, 2015.&lt;/b&gt;
-This documentation needs some work.
-&lt;/p&gt;
+          <description>&lt;p&gt;The find points panel allows you to browse objects between two timepoints/sessions, will show you the best-guess for putative connections, and allow you to connect/disconnect objects across timepoints/sessions.&lt;/p&gt;
 
 </description>
         
@@ -261,7 +259,7 @@ table{
       <item>
         <title>Fitting segments in Fiji</title>
         
-          <description>&lt;p&gt;Line segments are fit in FIJI using Map Manager specified control points.&lt;/p&gt;
+          <description>&lt;h3 id=&quot;span-stylecolorredas-of-20171010-map-manager-has-a-simplified-workflow-to-fit-dendritic-segment-tracings-in-fiji-please-ignore-this-pagespan&quot;&gt;&lt;span style=&quot;color:red&quot;&gt;As of 20171010 Map Manager has a simplified workflow to fit dendritic segment tracings in Fiji. Please ignore this page.&lt;/span&gt;&lt;/h3&gt;
 
 </description>
         
@@ -348,7 +346,7 @@ table{
       <item>
         <title>Stack Annotations</title>
         
-          <description>&lt;p&gt;&lt;img class=&quot;img-float-left&quot; src=&quot;images/mm3/stack-annotations.png&quot; width=&quot;600&quot; /&gt;&lt;/p&gt;
+          <description>&lt;p&gt;&lt;img class=&quot;img-float-left&quot; src=&quot;images/mm3/stack-annotations.png&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
 
 </description>
         

@@ -13,7 +13,9 @@ tags:
 
 <div class="print-page-break"></div>
 
-The contrast panel provides an interface to set global display parameters for a [stack][1]. The values specified in this panel will be used each time a new stack window is opened. These values are also saved when stack db options are saved in the [stack db options panel][2].
+The contrast panel provides an interface to set global display parameters for a [stack][1]. The values specified in this panel will be used each time a new stack window is opened.
+
+These values are saved when options are saved in the Map Manager [Options Panel][2] or the main Map Manager menu 'MapManager - Save Options...'..
 
 [1]: stack
 [2]: stackdb-options-panel

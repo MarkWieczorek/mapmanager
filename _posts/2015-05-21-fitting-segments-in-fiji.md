@@ -5,7 +5,9 @@ category: imagingcore
 date: 2015-04-21 22:01:06
 order: 4
 ---
- 
+
+### <span style="color:red">As of 20171010 Map Manager has a simplified workflow to fit dendritic segment tracings in Fiji. Please ignore this page.</span>
+
 Line segments are fit in FIJI using Map Manager specified control points.
 
 ### The version of Fiji is critical
