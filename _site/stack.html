@@ -199,6 +199,7 @@
 </div>
 
 <style>
+
 table{
     padding: 5px;
     border:1px solid #000000;
@@ -250,19 +251,24 @@ td{
 
 <p><img class="img-float-right" src="images/imagingcore/stack-example-spines4.png" width="350" /></p>
 
-<h3 id="overview">Overview</h3>
 <p>A stack window displays a 3D image stack, one image plane (slice) at a time.</p>
 
-<ul>
-  <li>Use the mouse-wheel to <strong>scroll</strong> up and down through images.</li>
-  <li>Click and drag will <strong>pan</strong> the image. Arrow keys will also pan.</li>
-  <li>Ctrl+mouse wheel to <strong>zoom</strong> in and out. Keyboard +/- will also zoom in and out. All zooming is done by following the mouse pointer.</li>
-  <li>Image <strong>contrast</strong> is critical, open the contrast control bar with keyboard ‘c’ and adjust min/max contrast with sliders. If contrast is not set properly you may not see dim but potentially important structures in your images.</li>
-  <li>View a pixel intensity <strong>histogram</strong> with keyboard ‘h’.</li>
-  <li>Right-click a stack for a contextual menu for most of the features described below.</li>
-</ul>
+<h3 id="navigating">Navigating</h3>
 
-<p>Please have a look through all of these image visualization features. Try them all out on an actual stack, they are designed to make workflows more efficient. Finally, please don’t forget <a href="#stack-annotations">stack annotations</a>.</p>
+<h4 id="scrolling">Scrolling</h4>
+<p>Mouse-wheel to <strong>scroll</strong> up and down through images.</p>
+
+<h4 id="panning">Panning</h4>
+<p>Click and drag will <strong>pan</strong> the image. Keyboard <kbd>arrow-keys</kbd> will also pan.</p>
+
+<h4 id="zooming">Zooming</h4>
+<p>Ctrl+mouse wheel to <strong>zoom</strong> in and out. Keyboard <kbd>+</kbd>/<kbd>-</kbd> will also zoom in and out. All zooming is done by following the mouse pointer. Keyboard <kbd>Enter</kbd> will return image to full zoom.</p>
+
+<h4 id="selecting-annotations">Selecting annotations</h4>
+<p>Single mouse click will <strong>select</strong> an annotation. Selected annotations are highlighted in yellow. Right-click will show context menu for selected annotation.</p>
+
+<h4 id="canceling-annotation-selection">Canceling annotation selection</h4>
+<p>Keyboard <kbd>esc</kbd> will <strong>cancel</strong> all selections.</p>
 
 <div class="print-page-break"></div>
 
@@ -273,7 +279,7 @@ td{
 
 <h3 id="image-contrast">Image contrast</h3>
 
-<p>The contrast bar is used to set image contrast in a stack window.</p>
+<p>The contrast bar is used to set image contrast in a stack window. Image <strong>contrast</strong> is critical, if contrast is not set properly you may not see dim but potentially important structures in your images.</p>
 
 <ul>
   <li>Open the contrast bar with keyboard ‘c’ or use the right-click menu</li>

@@ -522,10 +522,6 @@ table{
         <title>Stack</title>
         
           <description>&lt;style&gt;
-table{
-    padding: 5px;
-    border:1px solid #000000;
-}
 
 [2]: stackdb-options-panel
 [3]: annotating-a-stack
