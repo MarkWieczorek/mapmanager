@@ -1,9 +1,9 @@
 ---
 layout: page
-title: "Time Series Panel"
+title: "Time Series"
 category: interface
 date: 2015-04-20 22:46:33
-order: 1
+order: 2
 tags:
 - Interface
 ---

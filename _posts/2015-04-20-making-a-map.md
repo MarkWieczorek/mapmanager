@@ -142,7 +142,6 @@ You need to verify the connectivity of spines between **all** timepoints in the 
 [12]: map-plot
 [13]: time-series-panel
 [14]: https://github.com/cudmore/bob-fiji-plugins
-[15]: fitting-segments-in-fiji
 [16]: find-points-panel
 [17]: reports
 [18]: intensity

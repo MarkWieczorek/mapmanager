@@ -18,72 +18,51 @@ This is a major release with new features, improvements, and bug fixes. A full l
 
 ### 20160630. Distributed MapManager to Mengnan (Huganir)
 
-## 20160422 Update (file version 20151224)
+### 20160422 Update (file version 20151224)
 
 This is a major release with new features, improvements, and bug fixes. The file format has not changed but the options have. Please remake your options!
 
 #### New Features
 
-- Jumping spines
-Jumping spines are specified just like other persistent spines. select spines in both time-points and hit keyboard 'p'. When you make jumping spines, the source and destination spines are required to be subtraction and addition respectively.
-
-- Added jumping to map search
-
 - No more limitation on length of file names when importing into stack browser
-
 - Plot run +/- now has option to set 'row' of run
-
 - Added 'Div' option to plot panel.
 - Added option to normalize all spines to a constant value
-
 - Segment density report now has segment position information {zMin, zMax, zMean, zMedian, xyAngle, tort}
-
 - Main map manager panel now remembers its position
 - Main map plot now remembers its position
-
 - Conrol click on 'close all windows' will now close tables
+- Jumping spines
+Jumping spines are specified just like other persistent spines. select spines in both time-points and hit keyboard 'p'. When you make jumping spines, the source and destination spines are required to be subtraction and addition respectively.
+- Added jumping to map search
 
 #### Improvements
 
 - Fast left/right mouse click should no longer be a problem.
-
 - User clicks during long operations like opening a run should no longer be a problem.
-
 - Updated coloring of spines in map plot. If there is no previous segment, spines are no longer marked as added (green). If there is no next segment, spines are no longer marked as subtracted (red). Same rules for transient (blue).
-
 - Map Plot. Snapping a marquee rectangle and right-click to make a selection now prints the mean/sd/se/n for both x and y axis.
 - Map Plot. Snapping a marquee rectangle and right-click to make a selection now works for +/- from mask.
-
 - Stats button in map plot will now report grand mean of all spine masks in plot (previously was only per segment).
-
 - All spine dynamics now plot following colors and size specified in table in options panel.
 - The size of masks in map plots now follow 'pntSel' in main map manager options panel.
-
 - Revamped example user file. tried to make it clear that this can be empty and that values specified will over-ride setting in main options panel.
-
 - Added 'dynamics' menu to right-click in map plot.
 - Added 'Edit Line' menu to right-click in main stack window 'Line Segments'.
 
 
 #### Bug Fixes
 
-- Fixed export to text.
-If there is an error during export. 'Clear User' then 'Analyze User Map' and try export again. 
-
+- Fixed export to text. If there is an error during export. 'Clear User' then 'Analyze User Map' and try export again. 
 - Replotting a run while existing run is linked will continue to correctly link
-
 - Linked windows +/- zoom now works when some windows have left control bar and some do not
 
-## 20160126
+### 20160126
 
 #### New Features
 - Opening a stack will now display a floating dialog while stack is loading (it is yellow)
 - Exposed interface to set defaults for intensity background candidates.
-
-We can now set # rows, # cols, row mult, col mult, and a boolean to include other side of dendrite.
-When you include candidates on the other side of the dendrite, you are doubling the # of candidated.
-Due to this increased analysis, spine/second is dropping down to ~8 spines/second
-
+- We can now set # rows, # cols, row mult, col mult, and a boolean to include other side of dendrite. When you include candidates on the other side of the dendrite, you are doubling the # of candidated. Due to this increased analysis, spine/second is dropping down to ~8 spines/second
 - Added 'segment ends' search to return spines close to the end of each segment
 
 #### New Interface
@@ -117,7 +96,7 @@ Due to this increased analysis, spine/second is dropping down to ~8 spines/secon
 - 'Export map' has a bug if size of int analysis is different between stacks in a map. This happens if int analysis fails half way through and user 'u' stats are added to some but not other stacks. Solution is to clear and then re analyze intensity for the offending stacks. Be careful, when you clear, you lose your manual setting (individual spine background position, spine width, etc).
 
 
-## 20160119 Update (sent to users on 20160115 / 20160118)
+### 20160119 Update (sent to users on 20160115 / 20160118)
 
 This is the first MapManager version of intensity analysis
 	
@@ -148,7 +127,7 @@ This is the first MapManager version of intensity analysis
 
 
 
-## 20150731 Sent first version of Map Manager to Richard and Yong
+### 20150731 Sent first version of Map Manager to Richard and Yong
 
-- This is a COMPLETE rewrite of original bSPine program
+- This is a COMPLETE rewrite of original bSpine program that was used in Zhang et al, 2015.
 - Did not hear back

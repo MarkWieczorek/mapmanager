@@ -1,9 +1,9 @@
 ---
 layout: page
-title: "Search panel"
+title: "Search"
 category: interface
 date: 2015-04-20 22:46:33
-order: 2
+order: 3
 tags:
 - Interface
 ---

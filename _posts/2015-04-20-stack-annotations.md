@@ -8,80 +8,77 @@ tags:
 - Imaging core
 ---
 
-<IMG class="img-float-left" SRC="images/mm3/stack-annotations.png" WIDTH="500">
+3D Annotations are the core of Map Manager. They are easy to create, edit, and in a map to connect them between time-points. Annotations can be [searched][6], [plotted][8], and exported.
 
-<div class="print-page-break"></div>
+### Creating and Editing 3D annotations
 
-### Creating 3D objects
+<IMG class="img-float-right" SRC="images/imagingcore/stack_db.png" WIDTH="500">
 
-Choose the type of object in the 'New Object' group and shift+click in the image to create the object. All objects are 3D points, the z value of an object will be the currently viewed image plane when the object is create. Different object types can be independently [searched][6], [plotted][7] and connect together in a [map][8].
+#### Creating an annotation
 
-<!-- <IMG class="img-float-right" SRC="images/mm3/mm3-object-types.png" WIDTH="100"> -->
-- **Spine** : A spine is always connected to a segment (its parent segment). Thus, to create a spine, its parent segment must first be selected..  
-- **Bouton** : This also requires a parent  
-- vBranch :  
-- soma :  
-- peri :  
-- **controlPnt** : Points along a segment that are used to fit a line in FIJI. 
-- other :    
-  
-  
-<p class="tip"><B>Tip.</B> All objects are 3D points. The z position of a point is the imaging plane that is viewed when the point is created. To create a new point with better precision, zoom in the stack window with keyboard '+'. The zoom will follow the mouse pointer.
+Shift+click in the image to create a new annotation. Remember, all annotations are 3D. Take care in choosing the imaging plane where you create an object. For spines, the point should mark the membrane limit near the tip of the spine.
+
+
+#### Selecting an annotation
+
+Single-click on an annotation to select it. The selected annotation is shown as a yellow circle. Only one annotation can be selected at a time. Keyboard <kbd>esc</kbd> will cancel the annotation selection.
+
+#### Moving an annotation
+
+Select the annotation (single click), right-click and select 'Move'. Your next click will be the new 3D position of the annotation. You are given feedback in the bottom of the stack window. Press keyboard <kbd>esc</kbd> to cancel a move.
+
+#### Deleting an annotation
+
+Select the annotation (single click), right-click and select 'Delete'. Alternatively, select the annotation (single-click) and hit the <kbd>del</kbd> key.
+
+<p class="tip"><B>Tip.</B> All annotations are 3D points. When an annotation is created, the x/y position is specified by the position of the mouse cursor and the z position is the currently viewed image plane. To create a new point with better precision, zoom in the stack window with ctrl + mouse-wheel or keyboard '+'. As always, zooming will follow the mouse pointer.
 </p>
 
-<IMG class="img-float-right" SRC="images/imagingcore/stack_db.png" WIDTH="600">
+#### Tagging annotations with 'bad' and 'user type'
 
-### Editing 3D objects
+Each annotation can be marked with different tags. To see most of the tagging options, right-click a selected annotation and look at the contextual popup menu.
 
-The stack db toolbar displays a list of line segments and a list of points. Open and close the stack db toolbar with keyboard '['.
+ - ##### Tagging an annotation 'bad'
+ All annotations tagged with 'bad' will **not** be included in the analysis performed in [reports][11] and their visibility can be toggled in all [plots][8]. In general, stacks should be over annotated and 'bad' should be used to remove an annotation from the analysis but not from the database of annotations. In this way, as data sets grow (and time passes) when you return to something that looks promising (but is not), it will already have a 'bad' annotation.
 
-#### Creating an object
+ - ##### Tagging and annotation with a 'user type'
+ Each annotation can be tagged with one user type, from user type 1 through user type 10. This is useful for organizing annotations into different groups. Annotation user type can  be [searched][6], used to plot subsets of annotations, and used to create a mask of annotations to overlay over a plot. For example, long spines cold be taged with 'user type 1' and then [reports][11] can be generated that break down the dynamics of all versus 'user type 1' spines.
+ 
 
-Shift+click in the image to create an object. Remember, all annotations are 3D. Take care in choosing the imaging plane where you create an object. For spines, the point should mark the membrane limit near the tip of the spine.
+#### Exporting annotations
 
-#### Selecting an object
+It is very easy to export the 3D coordinates of annotations.
 
-Single-click on the object. Selected object will appear as yellow circles. Keyboard 'esc' will cancel a selection.
+ - Open the left control bar with keyboard <kbd>[</kbd>, click on the list of annotations and then press keyboard <kbd>e</kbd>. This will open a text table of all annotations in the stack, you can copy and paste it into your favorite analysis program. See [stack report][11] for more information.
 
-#### Moving an object
+ - When you save a stack or a map, all the annotations in each stack is saved in a single text file. The file can be found in a folder named 'stackdb' in the hard-drive folder of your original stack. See [File formats][10] for more information.
 
-Select the object (single click), right-click and select 'Move'. Your next click will be the new 3D position of the object. You are given feedback in the bottom of the stack window. Press 'esc' to cancel a move.
-
-#### Deleting an object
-
-Select the object (single click), right-click and select 'Delete'. Alternatively, select the object (single-click) and hit the 'del' key.
-
-#### Exporting data
-
-It is very easy to export the 3D coordinates of the points in a stack DB.
-
-In the stack db toolbar of the main stack window, click on the list of points and then press keyboard 'e'. This will open a text table of all points in the stack db, you can copy and paste it into your favorite analysis program. See [stack report][11] for more information.
-
-When you save a stack db you are saving all the points in a single text file. The file can be found in a folder named 'stackdb' in the hard-drive folder of your original stack. See [File formats][10] for more information.
+ - We provide, [Map Manager - Matlab][12], an easy to use Matlab class library that allows all Map Manager analysis to be extended using Matlab.
 
 
-### Line Segments
+<a id="creating-line-segments"></a>
 
-***Line segments are fit in Fiji using a special plugin, please see [Fitting segments in Fiji][9] to install this plugin.***
+### Creating and editing line segments
 
-Existing line segments are listed in the 'Line Segment' group. Each line segment has a length (um), a number of objects (nObj), a radius (r), and a color (c).
+Line segments are fit using a custom Fiji plugin from within Map Manager, there is no need to manually interact with Fiji. The path to Fiji does need to be set in the [hard drive paths][13] panel.
+
+All the line segments in a stack are listed in the 'Line Segment' group. Each line segment has a length (um), a number of objects (nObj), a radius (r), and a color (c).
 
 #### Creating line segments
 
- 1. Make sure 'Segments' edit checkbox is turned on. This is in the left control bar which can be opened with keyboard '['.
+ 1. Make sure 'Segments' edit checkbox is turned on. This is in the left control bar which can be opened with keyboard <kbd>[</kbd>.
  2. Create a new (empty) line segment  
-  Click '+' button in the 'Segment' group. This will create an empty line segment.
- 3. Make a series of 3D **control point** objects along your dendrite/axon  
-  <strike>- Select 'New Object -> Other -> Control Point'</strike>
-  - Shift-click in the image to create a **control point**.
-  - Continue making **control points** along the desired line segment in the image.
+  Click the <kbd>+</kbd> button in the 'Segment' group.
+ 3. Make a series of 3D **control point** annotations along a dendritic segment.  
+    - Shift-click in the image to create a **control point**.
+    - Continue making **control points** along the dendritic segment.
   
- 4. Fit the line in FIJI and import the resulting line segment back into map manager  
-  - Right-click on the new line segment (in the top left list of segment) and select 'Make From Control Points - FIJI'. This will open the 'Bob Neurite Tracer' plugin in FIJI, fit a line to your **control points** and open the fitted line segment in the map manager stack window.
+ 4. Fit the line segment in FIJI
+    - Right-click on the new line segment (in the top left list of segment) and select 'Make From Control Points - FIJI'. This will open the 'Bob Neurite Tracer' plugin in FIJI, fit a line to your **control points** and open the fitted line segment in the map manager stack window.
 
 **Important:** When making control points, they need to be in order along a segment. If you double-back a control point on the segment, the line fit with dumbly follow this ordering of control points. If it all gets confusing you can just delete all your control points and start over.
 
-**Important:** When making a map, you will be connecting (e.g. making persistent) individual line segments  from one timepoint to the next. For segments that you will connect together in a map, make sure your control points are in the same direction along each segment. If your control points go left to right in session 1, they should also go left to right in session 2.
+**Important:** When making a map, you will be connecting (e.g. making persistent) individual line segments  from one timepoint to the next. For segments that you will connect together in a map, make sure your control points are in the same direction along each segment. If your control points go left to right in time-point 1, they should also go left to right in time-point 2.
 
 #### Line segment radius
 
@@ -91,7 +88,7 @@ Each line segment has a fixed radius in um. Spines are connected to this radius.
 
 When in a map, line segments need a 'pivot point'. Specify a pivot point for a segment by clicking a point in the segment, right-click and select the 'Set As Segment Pivot' menu.
 
-The pivot point should specify a region of the segment that is the same in all sessions. A good strategy is to choose a region of the segment near an obvious spine that is present in all sessions. Another strategy is to choose a pivot point where some other segment (dendrite) crosses near your segment as these tend to remain stable across time. Try and put the pivot point near the center of the segment, do not place it at either end. The pivot point is used to calculate a line distance along the segment (in um) which in turn will be used to auto-guess connections between objects (spines) across sessions.
+The pivot point should mark a region of the segment that is visually similar and identifiable in all time-points. A good strategy is to choose a region of the segment near a large spine that is present in all time-points. Another strategy is to choose a pivot point where some other segment (dendrite) crosses near your segment as these tend to remain stable across time. Try and put the pivot point near the center of the segment, do not place it at either end. The pivot point is used to calculate a line distance along the segment (in um) which in turn will be used to auto-guess connections between objects (spines) across time-points.
 
 <div class="print-page-break"></div>
 
@@ -105,6 +102,7 @@ The pivot point should specify a region of the segment that is the same in all s
 [6]: search-panel
 [7]: plot-panel
 [8]: map-plot
-[9]: fitting-segments-in-fiji
 [10]: file-format
 [11]: reports
+[12]: map-manager-matlab
+[13]: hdd-paths

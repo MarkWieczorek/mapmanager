@@ -56,9 +56,6 @@
             
                 <li class=nav-header>Workflows</li>
             
-            <li data-order="5"><a href="/mapmanager/gallery">Gallery</a></li>
-        
-            
             <li data-order="1"><a href="/mapmanager/getting-started">Getting started</a></li>
         
             
@@ -75,19 +72,7 @@
             
                 <li class=nav-header>Imaging Core</li>
             
-            <li data-order="4"><a href="/mapmanager/fitting-segments-in-fiji">Fitting segments in Fiji</a></li>
-        
-            
             <li data-order="3"><a href="/mapmanager/stack-annotations">Stack Annotations</a></li>
-        
-            
-            <li data-order="6"><a href="/mapmanager/layout-panel">Layout panel</a></li>
-        
-            
-            <li data-order="5"><a href="/mapmanager/contrast-panel">Contrast panel</a></li>
-        
-            
-            <li data-order="1"><a href="/mapmanager/stack-browser">Stack Browser</a></li>
         
             
             <li data-order="2"><a href="/mapmanager/stack">Stack</a></li>
@@ -100,25 +85,34 @@
             
                 <li class=nav-header>Interface Windows</li>
             
-            <li data-order="2"><a href="/mapmanager/point-list">Point List</a></li>
+            <li data-order="4"><a href="/mapmanager/point-list">Point List</a></li>
         
             
-            <li data-order="4"><a href="/mapmanager/find-points-panel">Find Points</a></li>
+            <li data-order="5"><a href="/mapmanager/find-points-panel">Find Points</a></li>
         
             
-            <li data-order="6"><a href="/mapmanager/hdd-paths">Hard Drive Paths</a></li>
+            <li data-order="8"><a href="/mapmanager/hdd-paths">Hard Drive Paths</a></li>
         
             
-            <li data-order="1"><a href="/mapmanager/time-series-panel">Time Series Panel</a></li>
+            <li data-order="2"><a href="/mapmanager/time-series-panel">Time Series</a></li>
         
             
-            <li data-order="5"><a href="/mapmanager/stackdb-options-panel">Options</a></li>
+            <li data-order="7"><a href="/mapmanager/stackdb-options-panel">Options</a></li>
         
             
-            <li data-order="2"><a href="/mapmanager/search-panel">Search panel</a></li>
+            <li data-order="3"><a href="/mapmanager/search-panel">Search</a></li>
         
             
-            <li data-order="3"><a href="/mapmanager/plot-panel">Plot panel</a></li>
+            <li data-order="10"><a href="/mapmanager/plot-panel">Plot panel</a></li>
+        
+            
+            <li data-order="9"><a href="/mapmanager/layout-panel">Layout panel</a></li>
+        
+            
+            <li data-order="6"><a href="/mapmanager/contrast-panel">Contrast panel</a></li>
+        
+            
+            <li data-order="1"><a href="/mapmanager/stack-browser">Stack Browser</a></li>
         
     
         
@@ -166,16 +160,22 @@
             
                 <li class=nav-header>Blog Posts</li>
             
+            <li data-order="2"><a href="/mapmanager/map-manager-matlab">Map Manager Matlab</a></li>
+        
+            
+            <li data-order="2"><a href="/mapmanager/fiji-plugins">Fiji plugins</a></li>
+        
+            
             <li data-order="2"><a href="/mapmanager/release-notes">Release Notes</a></li>
+        
+            
+            <li data-order="5"><a href="/mapmanager/gallery">Gallery</a></li>
         
             
             <li data-order="2"><a href="/mapmanager/faq">FAQ</a></li>
         
             
             <li data-order=""><a href="/mapmanager/file-format">File format</a></li>
-        
-            
-            <li data-order="3"><a href="/mapmanager/user-files">User files</a></li>
         
             
             <li data-order="3"><a href="/mapmanager/database-overview">Database overview</a></li>
@@ -208,66 +208,38 @@
 
 <h3 id="distributed-mapmanager-to-mengnan-huganir">20160630. Distributed MapManager to Mengnan (Huganir)</h3>
 
-<h2 id="update-file-version-20151224">20160422 Update (file version 20151224)</h2>
+<h3 id="update-file-version-20151224">20160422 Update (file version 20151224)</h3>
 
 <p>This is a major release with new features, improvements, and bug fixes. The file format has not changed but the options have. Please remake your options!</p>
 
 <h4 id="new-features">New Features</h4>
 
 <ul>
-  <li>
-    <p>Jumping spines
-Jumping spines are specified just like other persistent spines. select spines in both time-points and hit keyboard ‘p’. When you make jumping spines, the source and destination spines are required to be subtraction and addition respectively.</p>
-  </li>
-  <li>
-    <p>Added jumping to map search</p>
-  </li>
-  <li>
-    <p>No more limitation on length of file names when importing into stack browser</p>
-  </li>
-  <li>
-    <p>Plot run +/- now has option to set ‘row’ of run</p>
-  </li>
+  <li>No more limitation on length of file names when importing into stack browser</li>
+  <li>Plot run +/- now has option to set ‘row’ of run</li>
   <li>Added ‘Div’ option to plot panel.</li>
-  <li>
-    <p>Added option to normalize all spines to a constant value</p>
-  </li>
-  <li>
-    <p>Segment density report now has segment position information {zMin, zMax, zMean, zMedian, xyAngle, tort}</p>
-  </li>
+  <li>Added option to normalize all spines to a constant value</li>
+  <li>Segment density report now has segment position information {zMin, zMax, zMean, zMedian, xyAngle, tort}</li>
   <li>Main map manager panel now remembers its position</li>
-  <li>
-    <p>Main map plot now remembers its position</p>
-  </li>
+  <li>Main map plot now remembers its position</li>
   <li>Conrol click on ‘close all windows’ will now close tables</li>
+  <li>Jumping spines
+Jumping spines are specified just like other persistent spines. select spines in both time-points and hit keyboard ‘p’. When you make jumping spines, the source and destination spines are required to be subtraction and addition respectively.</li>
+  <li>Added jumping to map search</li>
 </ul>
 
 <h4 id="improvements">Improvements</h4>
 
 <ul>
-  <li>
-    <p>Fast left/right mouse click should no longer be a problem.</p>
-  </li>
-  <li>
-    <p>User clicks during long operations like opening a run should no longer be a problem.</p>
-  </li>
-  <li>
-    <p>Updated coloring of spines in map plot. If there is no previous segment, spines are no longer marked as added (green). If there is no next segment, spines are no longer marked as subtracted (red). Same rules for transient (blue).</p>
-  </li>
+  <li>Fast left/right mouse click should no longer be a problem.</li>
+  <li>User clicks during long operations like opening a run should no longer be a problem.</li>
+  <li>Updated coloring of spines in map plot. If there is no previous segment, spines are no longer marked as added (green). If there is no next segment, spines are no longer marked as subtracted (red). Same rules for transient (blue).</li>
   <li>Map Plot. Snapping a marquee rectangle and right-click to make a selection now prints the mean/sd/se/n for both x and y axis.</li>
-  <li>
-    <p>Map Plot. Snapping a marquee rectangle and right-click to make a selection now works for +/- from mask.</p>
-  </li>
-  <li>
-    <p>Stats button in map plot will now report grand mean of all spine masks in plot (previously was only per segment).</p>
-  </li>
+  <li>Map Plot. Snapping a marquee rectangle and right-click to make a selection now works for +/- from mask.</li>
+  <li>Stats button in map plot will now report grand mean of all spine masks in plot (previously was only per segment).</li>
   <li>All spine dynamics now plot following colors and size specified in table in options panel.</li>
-  <li>
-    <p>The size of masks in map plots now follow ‘pntSel’ in main map manager options panel.</p>
-  </li>
-  <li>
-    <p>Revamped example user file. tried to make it clear that this can be empty and that values specified will over-ride setting in main options panel.</p>
-  </li>
+  <li>The size of masks in map plots now follow ‘pntSel’ in main map manager options panel.</li>
+  <li>Revamped example user file. tried to make it clear that this can be empty and that values specified will over-ride setting in main options panel.</li>
   <li>Added ‘dynamics’ menu to right-click in map plot.</li>
   <li>Added ‘Edit Line’ menu to right-click in main stack window ‘Line Segments’.</li>
 </ul>
@@ -275,31 +247,18 @@ Jumping spines are specified just like other persistent spines. select spines in
 <h4 id="bug-fixes">Bug Fixes</h4>
 
 <ul>
-  <li>
-    <p>Fixed export to text.
-If there is an error during export. ‘Clear User’ then ‘Analyze User Map’ and try export again.</p>
-  </li>
-  <li>
-    <p>Replotting a run while existing run is linked will continue to correctly link</p>
-  </li>
-  <li>
-    <p>Linked windows +/- zoom now works when some windows have left control bar and some do not</p>
-  </li>
+  <li>Fixed export to text. If there is an error during export. ‘Clear User’ then ‘Analyze User Map’ and try export again.</li>
+  <li>Replotting a run while existing run is linked will continue to correctly link</li>
+  <li>Linked windows +/- zoom now works when some windows have left control bar and some do not</li>
 </ul>
 
-<h2 id="section">20160126</h2>
+<h3 id="section">20160126</h3>
 
 <h4 id="new-features-1">New Features</h4>
 <ul>
   <li>Opening a stack will now display a floating dialog while stack is loading (it is yellow)</li>
   <li>Exposed interface to set defaults for intensity background candidates.</li>
-</ul>
-
-<p>We can now set # rows, # cols, row mult, col mult, and a boolean to include other side of dendrite.
-When you include candidates on the other side of the dendrite, you are doubling the # of candidated.
-Due to this increased analysis, spine/second is dropping down to ~8 spines/second</p>
-
-<ul>
+  <li>We can now set # rows, # cols, row mult, col mult, and a boolean to include other side of dendrite. When you include candidates on the other side of the dendrite, you are doubling the # of candidated. Due to this increased analysis, spine/second is dropping down to ~8 spines/second</li>
   <li>Added ‘segment ends’ search to return spines close to the end of each segment</li>
 </ul>
 
@@ -341,7 +300,7 @@ Due to this increased analysis, spine/second is dropping down to ~8 spines/secon
   <li>‘Export map’ has a bug if size of int analysis is different between stacks in a map. This happens if int analysis fails half way through and user ‘u’ stats are added to some but not other stacks. Solution is to clear and then re analyze intensity for the offending stacks. Be careful, when you clear, you lose your manual setting (individual spine background position, spine width, etc).</li>
 </ul>
 
-<h2 id="update-sent-to-users-on-20160115--20160118">20160119 Update (sent to users on 20160115 / 20160118)</h2>
+<h3 id="update-sent-to-users-on-20160115--20160118">20160119 Update (sent to users on 20160115 / 20160118)</h3>
 
 <p>This is the first MapManager version of intensity analysis</p>
 
@@ -379,10 +338,10 @@ Due to this increased analysis, spine/second is dropping down to ~8 spines/secon
   <li>After int analysis, if no background is found (error #99) it is not possible to have user set manual background</li>
 </ul>
 
-<h2 id="sent-first-version-of-map-manager-to-richard-and-yong">20150731 Sent first version of Map Manager to Richard and Yong</h2>
+<h3 id="sent-first-version-of-map-manager-to-richard-and-yong">20150731 Sent first version of Map Manager to Richard and Yong</h3>
 
 <ul>
-  <li>This is a COMPLETE rewrite of original bSPine program</li>
+  <li>This is a COMPLETE rewrite of original bSpine program that was used in Zhang et al, 2015.</li>
   <li>Did not hear back</li>
 </ul>
 

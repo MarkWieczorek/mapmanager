@@ -1,9 +1,9 @@
 ---
 layout: page
 title: "Layout panel"
-category: imagingcore
+category: interface
 date: 2015-04-20 22:46:33
-order: 6
+order: 9
 tags:
 - Imaging core
 ---

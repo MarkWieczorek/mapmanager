@@ -8,6 +8,36 @@
     
       
       <item>
+        <title>Map Manager Matlab</title>
+        
+          <description>&lt;p&gt;&lt;a href=&quot;https://github.com/cudmore/MapManager-Matlab&quot;&gt;Map Manager - Matlab&lt;/a&gt; is an easy to use Matlab class library that will open and plot Map Manager (Igor) files. The reason we created this was to allow the user to extend the analysis of Map Manager annotations in the familiar Matlab environment.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 21 Oct 2017 20:00:01 -0400</pubDate>
+        <link>
+        /map-manager-matlab</link>
+        <guid isPermaLink="true">/map-manager-matlab</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Fiji plugins</title>
+        
+          <description>&lt;p&gt;Map Manager uses a number of custom Fiji plugins to fit segment tracing and convert raw data into a format that can be imported into Map MAnager.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 21 Oct 2017 20:00:01 -0400</pubDate>
+        <link>
+        /fiji-plugins</link>
+        <guid isPermaLink="true">/fiji-plugins</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Map Pool</title>
         
           <description>&lt;p&gt;A map pool will plot multiple maps in the same plot and generate pooled statistics across these maps. The maps that go into a pool are specified by their ‘map condition’. In a normal map plot, the X-axis is often session or days. In a pooled plot, the X-axis is defined by each sessions ‘session condition’.&lt;/p&gt;
@@ -257,37 +287,7 @@ table{
     
       
       <item>
-        <title>Fitting segments in Fiji</title>
-        
-          <description>&lt;h3 id=&quot;span-stylecolorredas-of-20171010-map-manager-has-a-simplified-workflow-to-fit-dendritic-segment-tracings-in-fiji-please-ignore-this-pagespan&quot;&gt;&lt;span style=&quot;color:red&quot;&gt;As of 20171010 Map Manager has a simplified workflow to fit dendritic segment tracings in Fiji. Please ignore this page.&lt;/span&gt;&lt;/h3&gt;
-
-</description>
-        
-        <pubDate>Tue, 21 Apr 2015 18:01:06 -0400</pubDate>
-        <link>
-        /fitting-segments-in-fiji</link>
-        <guid isPermaLink="true">/fitting-segments-in-fiji</guid>
-      </item>
-      
-    
-      
-      <item>
-        <title>User files</title>
-        
-          <description>&lt;h4 id=&quot;please-see-the-map-manager-options-panel2-user-files-have-been-depreciated&quot;&gt;Please see the Map Manager &lt;a href=&quot;stackdb-options-panel&quot;&gt;Options Panel&lt;/a&gt;. User files have been depreciated.&lt;/h4&gt;
-
-</description>
-        
-        <pubDate>Mon, 20 Apr 2015 18:46:33 -0400</pubDate>
-        <link>
-        /user-files</link>
-        <guid isPermaLink="true">/user-files</guid>
-      </item>
-      
-    
-      
-      <item>
-        <title>Time Series Panel</title>
+        <title>Time Series</title>
         
           <description>&lt;p&gt;The Map Manager time-series panel provides an interface to load, save and browse Map Manager time-series (maps). Open the time-series panel using the menu ‘MapManager - Time Series’&lt;/p&gt;
 
@@ -346,7 +346,7 @@ table{
       <item>
         <title>Stack Annotations</title>
         
-          <description>&lt;p&gt;&lt;img class=&quot;img-float-left&quot; src=&quot;images/mm3/stack-annotations.png&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
+          <description>&lt;p&gt;3D Annotations are the core of Map Manager. They are easy to create, edit, and in a map to connect them between time-points. Annotations can be &lt;a href=&quot;search-panel&quot;&gt;searched&lt;/a&gt;, &lt;a href=&quot;map-plot&quot;&gt;plotted&lt;/a&gt;, and exported.&lt;/p&gt;
 
 </description>
         
@@ -359,7 +359,7 @@ table{
     
       
       <item>
-        <title>Search panel</title>
+        <title>Search</title>
         
           <description>&lt;p&gt;&lt;img class=&quot;img-float-left&quot; src=&quot;images/mm3/mm3-search-panel.png&quot; width=&quot;900&quot; /&gt;&lt;/p&gt;
 
@@ -376,7 +376,7 @@ table{
       <item>
         <title>Run plot</title>
         
-          <description>&lt;p&gt;&lt;img class=&quot;img-float-center&quot; src=&quot;images/mm3/example-spine-run.png&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
+          <description>&lt;p&gt;A run plot is a sequence of &lt;a href=&quot;stack&quot;&gt;stack&lt;/a&gt; windows, one for each session in a timeseries. The purpose of a run plot is to visualize the dynamics between annotations. The image below shows a run plot of spines. Spine # 201 is selected in each of three stack windows corresponding to timepoints.&lt;/p&gt;
 
 </description>
         
@@ -506,7 +506,7 @@ table{
       <item>
         <title>Annotating a stack</title>
         
-          <description>&lt;p&gt;This describes a workflow for annotating 3D points in a &lt;strong&gt;single stack&lt;/strong&gt;. Please see &lt;a href=&quot;making-a-map&quot;&gt;making a map&lt;/a&gt; to collect a sequence of stacks into a timeseries map.&lt;/p&gt;
+          <description>&lt;p&gt;This describes a workflow for annotating 3D annotations in a &lt;strong&gt;single stack&lt;/strong&gt;. To annotate a timeseries of stacks, please see &lt;a href=&quot;making-a-map&quot;&gt;making a map&lt;/a&gt;.&lt;/p&gt;
 
 </description>
         
@@ -524,7 +524,7 @@ table{
           <description>&lt;style&gt;
 
 [2]: stackdb-options-panel
-[3]: annotating-a-stack
+[3]: stack-annotations
 [4]: point-list
 &lt;/style&gt;
 </description>
