@@ -31,16 +31,16 @@ In all these plugins, great care was taken to extract the voxel size, date, and 
 <p class="important"><B>Important:</B> When stacks are first imported into the stack browser, please verify the voxel size, date, and time are set correctly.
 </p>
 
-#### Coverting Zeis LSM/CZI
+#### Zeis LSM/CZI
 
-xxx
+bFolder2MapManager
 
-#### Converting Prairie View
+#### Prairie View
 
-yyy
+bAlignBatch
 
-#### Converting ScanImage (Vidreo)
+#### ScanImage (Vidreo)
 
-zzz  
+bAlignBatch  
 
 [1]: https://github.com/cudmore/bob-fiji-plugins

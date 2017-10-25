@@ -17,16 +17,16 @@ A map is a time-series of [stacks][2]. You create a map by appending stacks from
 The time-series panel shows a list of open maps on the left. When a map is selected (het3b in this example), a list of sessions in the map are shown on the right (in this example there are 12 sessions).
 
 ### Pre-process your raw data
-Map Manager will only import single channel .tif stacks. If your stacks have two or more color channels, they need to be de-interleaved into separate .tif files, one .tif file per color channel. We have Fiji plugins to do exactly this for Zeiss LSM/CZI, Prairie View, and ScanImage.
+Map Manager will only import single channel .tif stacks. If your stacks have two or more color channels, they need to be de-interleaved into separate .tif files, one .tif file per color channel. We have [Fiji plugins][21] to do exactly this for Zeiss LSM/CZI, Prairie View, and ScanImage.
 
- - ScanImage, use **bAlignBatch**
- - Zeiss, use **bFolder2MapManager**
- - Prairie, use **bPrairie2tif**
-
-<p class="important"><B>Important.</B> Map Manager will only work with Igor Pro 6. Please make sure you have Igor Pro 6 and <A HREF="https://www.wavemetrics.com/order/order_igordownloads6.htm">download a trial version of Igor Pro 6.3</A> if necessary.
-</p>
+ - ScanImage, use **[bAlignBatch][21]**
+ - Zeiss, use **[bFolder2MapManager][21]**
+ - Prairie, use **[bPrairie2tif][21]**
 
 ### 1. Open and initialize Map Manager 
+
+<p class="important"><B>Important.</B> Map Manager will only work with Igor Pro 6. Please make sure you have Igor Pro 6 or <A HREF="https://www.wavemetrics.com/order/order_igordownloads6.htm">download a trial version of Igor Pro 6.3</A>.
+</p>
 
  1. Open Igor Pro with MapManager.ipf
  2. Click on the empty command window to activate Map Manager and its menus
@@ -41,20 +41,15 @@ In the time-series window 'Map Making' tab
  2. Create a new map with '<span style="color:green">New Map</span>'.
  
 #### 2.1 Appending stacks to your map
- 1. In the stack browser, double-click each channel in a stack to open the actual image data.
- 2. In the stack browser window, select the first color channel of the stack to append. The first color channel ends in '_ch1'. Expand the window so you can see the full name of each stack.
- 3. In the time-series panel 'Map Making' tab, press 'Append Stack' button.
- 4. Repeat for each stack you want in your map.
-
-As you append stacks to your map you need to close the image data (in the stack browser) from the previous stack you just appended. Once a stack is appeneded to your new map and before opening the next, close the stack windows and in the stack browser unload the stack with right-click 'Unload Stack'. In the stack browser, stacks with loaded image data are indicated with an 'X' in the 'D' column. Once the image data is unloaded, the 'X' will be removed. You need to do this for each color channel (_ch1, _ch2, _ch3) in a stack.
+ 1. In the stack browser, select the stack you want to append to a map. If your stacks have more than one color channel, you can select any of the color channels.
+ 2. In the time-series panel 'Map Making' tab, press 'Append Stack' button.
+ 3. Repeat for each stack you want in your map.
 
 
 #### <span style="color:red">Important</span>
  - **Number of channels is important.** When you make a map, you need to choose the 'Number Of Channels'. Map Manager will only allow one choice of 'Number Of Channels' per map. You cannot mix stacks with different numbers of channels within a map.
  - **Stack scale is important.** Make sure the scale of each imported stack is correct. It is hard to change the scale later. If you use the provided Fiji plugins this should be taken care of. If necessary, set the scale of a stack in its stack window with <kbd>shift</kbd>+<kbd>p</kbd>.
  - **The order of stacks is important.** Make sure the timepoints in your map are imported in the correct order. It is hard to change the order later.
- - **All color channels must be loaded.** All color channels in a stack must be loaded before it can be appended to a map. Load each color channel for a stack be double clicking each color channel (_ch1, _ch2, _ch3) in the [stack browser][1].
- - **Conserving memory is important.** Once you have appended a stack to a map you need to use the stack browser to unload the raw data for that stack. Close each stack window, then right-click each channel in the stack browser list and select 'Unload Stack'.
  
 #### 2.2 Save your map
 
@@ -191,3 +186,4 @@ You need to verify the connectivity of annotations between **all** timepoints in
 [18]: intensity
 [19]: stack-annotations#creating-line-segments
 [20]: https://www.wavemetrics.com/order/order_igordownloads6.htm
+[21]: fiji-plugins

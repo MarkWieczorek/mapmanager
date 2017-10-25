@@ -14,6 +14,9 @@ tags:
  - You need to [purchase][2] an Igor Pro license from [Wavemetrics][1], [download][3] Igor Pro and install it.
  - To try out Igor Pro, download and install a fully functional but time limited [demo version][4].
 
+<p class="important"><B>Important.</B> Map Manager will only work with Igor Pro 6. Please make sure you have Igor Pro 6 or <A HREF="https://www.wavemetrics.com/order/order_igordownloads6.htm">download a trial version of Igor Pro 6.3</A>.
+</p>
+
 #### Installing Map Manager
 
  - Once Igor Pro is installed, there is no formal installation of Map Manager
