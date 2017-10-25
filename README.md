@@ -1,6 +1,9 @@
 
-This is documentation for Map Manager.
+Map Manager is software to annotate and analyze 3D image time-series.
 
-Read the docs: http://cudmore.github.io/mapmanager/
+Please [read the docs][1].
 
-Example Python code to extend Map Manager: https://github.com/cudmore/mapmanager/tree/gh-pages/_notebooks
+This repository is the [Jekyll][2] source code for Map Manager documentation.
+
+[1]: http://blog.cudmore.io/mapmanager
+[2]: https://jekyllrb.com/
