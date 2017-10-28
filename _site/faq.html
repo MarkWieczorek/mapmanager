@@ -75,6 +75,9 @@
             <li data-order="3"><a href="/mapmanager/stack-annotations">Stack Annotations</a></li>
         
             
+            <li data-order="3"><a href="/mapmanager/buttons">Buttons</a></li>
+        
+            
             <li data-order="2"><a href="/mapmanager/stack">Stack</a></li>
         
     
@@ -160,7 +163,7 @@
             
                 <li class=nav-header>Blog Posts</li>
             
-            <li data-order="2"><a href="/mapmanager/map-manager-matlab">Map Manager Matlab</a></li>
+            <li data-order="2"><a href="/mapmanager/map-manager-matlab">Matlab class library</a></li>
         
             
             <li data-order="2"><a href="/mapmanager/fiji-plugins">Fiji plugins</a></li>
@@ -175,10 +178,7 @@
             <li data-order="2"><a href="/mapmanager/faq">FAQ</a></li>
         
             
-            <li data-order=""><a href="/mapmanager/File-format">File format</a></li>
-        
-            
-            <li data-order="3"><a href="/mapmanager/database-overview">Database overview</a></li>
+            <li data-order=""><a href="/mapmanager/file-format">File format</a></li>
         
     
 
@@ -198,16 +198,13 @@
     </h3>
 </div>
 
-<h3 id="limitations">Limitations</h3>
+<h3 id="limitations">(1) Limitations</h3>
 
 <h4 id="importing">Importing</h4>
 
 <ul>
   <li>
-    <p>Map Manager is designed to import single color channel 3D .tif files. For other file types (e.g. .lsm) or for other cases like 2 color channel .tif files we have some FIJI plugins that should get you started.</p>
-  </li>
-  <li>
-    <p>To import 2 color channel .tif files, the files need to be split into 2 separate .tif files (with _ch1 and _ch2 in their names). See <a href="https://github.com/cudmore/bob-fiji-plugins">bAlignBatch</a>, a FIJI plugin that does this for you.</p>
+    <p>Map Manager is designed to import single color channel 3D .tif files. To import 2-3 color channel .tif files, the files need to be split into 2-3 separate .tif files. See our <a href="fiji-plugins">Fiji plugins</a> to do this for you.</p>
   </li>
   <li>
     <p>Does <strong>not</strong> handle .tif stacks with multiple repeats per images plane. Map Manager will import these stacks fine but does not know about the repeats. You want to strip out repeats before importing into Map Manager.</p>
@@ -228,6 +225,16 @@
 <ul>
   <li>Will only display one channel at a time. For most purposes this is fine. You can quickly switch between the color channels and run intensity analysis on both channels independently. To visualize a merged or composite image, use FIJI.</li>
 </ul>
+
+<h3 id="moving-map-manager-files-to-another-location">(2) Moving Map Manager files to another location</h3>
+
+<h4 id="moving-a-single-time-point-analysis">Moving a single-time point analysis</h4>
+
+<p>Move the original .tif stack along with its associated _db2.txt, _int1.txt, _int2.txt, and _l.txt files contained in the enclosed ‘stackdb’ folder.</p>
+
+<h4 id="moving-a-map-analysis">Moving a map analysis</h4>
+
+<p>Move the main map file .ibw and its folder to a new location or computer.</p>
 
 
 

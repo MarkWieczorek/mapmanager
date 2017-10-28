@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Map Manager Matlab"
+title: "Matlab class library"
 category: post
 date: 2017-10-22 00:00:01
 order: 2

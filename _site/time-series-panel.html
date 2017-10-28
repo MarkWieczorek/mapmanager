@@ -75,6 +75,9 @@
             <li data-order="3"><a href="/mapmanager/stack-annotations">Stack Annotations</a></li>
         
             
+            <li data-order="3"><a href="/mapmanager/buttons">Buttons</a></li>
+        
+            
             <li data-order="2"><a href="/mapmanager/stack">Stack</a></li>
         
     
@@ -160,7 +163,7 @@
             
                 <li class=nav-header>Blog Posts</li>
             
-            <li data-order="2"><a href="/mapmanager/map-manager-matlab">Map Manager Matlab</a></li>
+            <li data-order="2"><a href="/mapmanager/map-manager-matlab">Matlab class library</a></li>
         
             
             <li data-order="2"><a href="/mapmanager/fiji-plugins">Fiji plugins</a></li>
@@ -175,10 +178,7 @@
             <li data-order="2"><a href="/mapmanager/faq">FAQ</a></li>
         
             
-            <li data-order=""><a href="/mapmanager/File-format">File format</a></li>
-        
-            
-            <li data-order="3"><a href="/mapmanager/database-overview">Database overview</a></li>
+            <li data-order=""><a href="/mapmanager/file-format">File format</a></li>
         
     
 
@@ -207,10 +207,12 @@
 <p><img class="img-float-right" src="images/mm3/time-series/ts-small.png" width="225" /></p>
 
 <ul>
-  <li><strong>Load Map</strong>. Load a map from the hard-drive.</li>
-  <li><strong>Save Map</strong>. Save selected map to hard-drive. By default, map manager saves only parts of the map it thinks are dirty. Ctrl+click will save the entire map.</li>
-  <li><strong>?</strong>. Open the online Map Manager documentation.</li>
+  <li><strong>Open Map</strong>. Open/Load a map from the hard-drive.</li>
+  <li><strong>Save Map</strong>. Save selected map to hard-drive. By default, only the portions of the map that need saving are saved. Ctrl+click will save the entire map.</li>
 </ul>
+
+<p class="important"><b>Opening Maps.</b> When opening a map, select the maps '.ipf' file. If a map is named 'mymap', load 'mymap.ipf'.
+</p>
 
 <h4 id="plot">Plot</h4>
 <ul>
@@ -257,10 +259,9 @@
   <li><strong>Density Report</strong>. Generate a density report for the map. See <a href="reports">reports</a>.</li>
   <li><strong>Dynamics Report</strong>. Generate a dynamics report for the map. See <a href="reports">reports</a>.</li>
   <li><strong>Survival Report</strong>. Generate a survival report for the map. See <a href="reports">reports</a>.</li>
-  <li><strong>Edit map NV</strong>. <span style="color:red">DO NOT USE</span>, this shows a map as a text table.</li>
   <li><strong>Export Map</strong>. <span style="color:red">DO NOT USE</span> Exports a map to text files. Files are saved in the ‘export/’ folder.</li>
   <li><strong>Show on HDD</strong>. Shows the hard-drive folder where the map is saved.</li>
-  <li><strong>Unload map</strong>. Close a map, removing all associated images and analysis from Igor memory.</li>
+  <li><strong>Close map</strong>. Close a map, removing all associated images and analysis from Igor memory.</li>
   <li><strong>Close Windows</strong>. Close all open windows associated with a map.</li>
 </ul>
 
@@ -276,7 +277,7 @@
   <li><strong>Zero Session</strong>. Set the selected stack to the zero session. Zero sessions are used when plotting a map with X-Axis set to ‘Zero Session’, ‘Zero Days’, and ‘Zero Hours’. The zero session will have an Asterix (*) before its session index in the list of sessions.</li>
   <li><strong>Find Points</strong>. Open <a href="find-points-panel">find points panel</a>.</li>
   <li><strong>Edit Table</strong>. Edit annotations in a stack as a text table. This is useful to copy and paste annotations for further analysis.</li>
-  <li><strong>Unload Stack</strong>. Unload the raw image data for a stack. Unloading a stack will unload the RAW IMAGE DATA. It DOES NOT unload the stack annotations or the map.</li>
+  <li><strong>Unload Stack</strong>. Unload the raw image data for a stack. Unloading a stack does not unload the stack annotations.</li>
 </ul>
 
 <h3 id="tabs">Tabs</h3>
@@ -285,11 +286,15 @@
 
 <p><img class="img-float-right" src="images/mm3/time-series/ts-mapmaking.png" width="475" /></p>
 
+<p>Interface to create maps and manage time-points. See <a href="making-a-map">making a map</a>.</p>
+
 <div class="print-page-break"></div>
 
 <h4 id="dynamics">Dynamics</h4>
 
 <p><img class="img-float-right" src="images/mm3/time-series/ts-dynamics.png" width="475" /></p>
+
+<p>Interface to plot the dynamics of annotations. See <a href="reports">reports</a> to create tabular reports of annotation dynamics.</p>
 
 <div class="print-page-break"></div>
 
@@ -297,21 +302,29 @@
 
 <p><img class="img-float-right" src="images/mm3/time-series/ts-trajectory.png" width="475" /></p>
 
+<p>Interface to analyze and plot the trajectories of annotations.</p>
+
 <div class="print-page-break"></div>
 
 <h4 id="intensity">Intensity</h4>
 
 <p><img class="img-float-right" src="images/mm3/time-series/ts-intensity.png" width="475" /></p>
 
+<p>Interface to plot intensity analysis of spine annotations. See <a href="intensity">intensity</a>.</p>
+
 <div class="print-page-break"></div>
 
 <h4 id="report">Report</h4>
+
+<p>See <a href="reports">reports</a>.</p>
 
 <div class="print-page-break"></div>
 
 <h4 id="utility">Utility</h4>
 
 <p><img class="img-float-right" src="images/mm3/time-series/ts-utility.png" width="475" /></p>
+
+<p>Interface for advanced and internal debugging. In general there is no need to use this.</p>
 
 <div class="print-page-break"></div>
 

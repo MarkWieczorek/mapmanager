@@ -30,8 +30,8 @@ Map Manager will only import single channel .tif stacks. If your stacks have two
 
  1. Open Igor Pro with MapManager.ipf
  2. Click on the empty command window to activate Map Manager and its menus
- 3. Open the stack browser window with menu 'MapManager - Stack Browser'.
- 4. Open the time-series window with menu 'MapManager - Time series'.
+ 3. Open the [stack browser][1] window with menu 'MapManager - Stack Browser'.
+ 4. Open the [time-series][13] window with menu 'MapManager - Time series'.
  
 ### 2. Make a new map
 In the time-series window 'Map Making' tab
@@ -51,12 +51,15 @@ In the time-series window 'Map Making' tab
  - **Stack scale is important.** Make sure the scale of each imported stack is correct. It is hard to change the scale later. If you use the provided Fiji plugins this should be taken care of. If necessary, set the scale of a stack in its stack window with <kbd>shift</kbd>+<kbd>p</kbd>.
  - **The order of stacks is important.** Make sure the timepoints in your map are imported in the correct order. It is hard to change the order later.
  
-#### 2.2 Save your map
+#### 2.2 Saving a map
 
 Save the map with 'Save Map' button. New maps are saved to a default hard-drive folder specified in the [Hard Drive Paths][10] panel.
 
+#### 2.3 Opening a map
 
-#### 2.3 Congratulations, you just made a Map Manager map.
+Open a Map Manager map using the 'Open Map' button in the [time-series][13] panel. When you open a map named 'mymap', you need to open the file 'mymap.ipf'.
+
+#### 2.4 Congratulations, you just made a Map Manager map.
 
 The rest of this workflow covers tracing dendritic segments, adding spines, and connecting spines across timepoints. Before you do any of this, play with the stacks in your map. From the time-series window, open a run of stacks by right-clicking on a session and selecting 'Plot Run +- 1'.
 

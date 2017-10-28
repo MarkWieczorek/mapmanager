@@ -17,10 +17,11 @@ Loaded maps are listed on the left and when a map is selected, its time-points (
 
 <IMG class="img-float-right" SRC="images/mm3/time-series/ts-small.png" WIDTH="225">
 
- - **Load Map**. Load a map from the hard-drive. 
- - **Save Map**. Save selected map to hard-drive. By default, map manager saves only parts of the map it thinks are dirty. Ctrl+click will save the entire map.
- - **?**. Open the online Map Manager documentation.
+ - **Open Map**. Open/Load a map from the hard-drive.
+ - **Save Map**. Save selected map to hard-drive. By default, only the portions of the map that need saving are saved. Ctrl+click will save the entire map.
 
+<p class="important"><B>Opening Maps.</B> When opening a map, select the maps '.ipf' file. If a map is named 'mymap', load 'mymap.ipf'.
+</p>
 
 #### Plot
  - **Object Map**. Open a [map plot][12]. For spines, this will plot the position of each spine along its dendritic segment versus time-points (Sessions). For other annotations, this will plot annotations in their creation order. In both cases, these plots are crucial tools to visualize annotation dynamics.
@@ -58,10 +59,9 @@ Datetime, Days and Hours require stacks to have a date/time specified. A stacks 
  - **Density Report**. Generate a density report for the map. See [reports][17].
  - **Dynamics Report**. Generate a dynamics report for the map. See [reports][17].
  - **Survival Report**. Generate a survival report for the map. See [reports][17].
- - **Edit map NV**. <span style="color:red">DO NOT USE</span>, this shows a map as a text table.
  - **Export Map**. <span style="color:red">DO NOT USE</span> Exports a map to text files. Files are saved in the 'export/' folder.
  - **Show on HDD**. Shows the hard-drive folder where the map is saved.
- - **Unload map**. Close a map, removing all associated images and analysis from Igor memory.
+ - **Close map**. Close a map, removing all associated images and analysis from Igor memory.
  - **Close Windows**. Close all open windows associated with a map.
 
 ### Right-click on a stack name in the list for a contextual menu.
@@ -75,7 +75,7 @@ Datetime, Days and Hours require stacks to have a date/time specified. A stacks 
  - **Zero Session**. Set the selected stack to the zero session. Zero sessions are used when plotting a map with X-Axis set to 'Zero Session', 'Zero Days', and 'Zero Hours'. The zero session will have an Asterix (\*) before its session index in the list of sessions.
  - **Find Points**. Open [find points panel][15].
  - **Edit Table**. Edit annotations in a stack as a text table. This is useful to copy and paste annotations for further analysis.
- - **Unload Stack**. Unload the raw image data for a stack. Unloading a stack will unload the RAW IMAGE DATA. It DOES NOT unload the stack annotations or the map.
+ - **Unload Stack**. Unload the raw image data for a stack. Unloading a stack does not unload the stack annotations.
  
 
 ### Tabs
@@ -84,13 +84,16 @@ Datetime, Days and Hours require stacks to have a date/time specified. A stacks 
 
 <IMG class="img-float-right" SRC="images/mm3/time-series/ts-mapmaking.png" WIDTH="475">
 
+Interface to create maps and manage time-points. See [making a map][13].
 
 <div class="print-page-break"></div>
+
 
 #### Dynamics
 
 <IMG class="img-float-right" SRC="images/mm3/time-series/ts-dynamics.png" WIDTH="475">
 
+Interface to plot the dynamics of annotations. See [reports][17] to create tabular reports of annotation dynamics.
 
 <div class="print-page-break"></div>
 
@@ -98,6 +101,7 @@ Datetime, Days and Hours require stacks to have a date/time specified. A stacks 
 
 <IMG class="img-float-right" SRC="images/mm3/time-series/ts-trajectory.png" WIDTH="475">
 
+Interface to analyze and plot the trajectories of annotations.
 
 <div class="print-page-break"></div>
 
@@ -105,17 +109,21 @@ Datetime, Days and Hours require stacks to have a date/time specified. A stacks 
 
 <IMG class="img-float-right" SRC="images/mm3/time-series/ts-intensity.png" WIDTH="475">
 
+Interface to plot intensity analysis of spine annotations. See [intensity][18].
 
 <div class="print-page-break"></div>
 
 #### Report
 
+See [reports][17].
 
 <div class="print-page-break"></div>
 
 #### Utility
 
 <IMG class="img-float-right" SRC="images/mm3/time-series/ts-utility.png" WIDTH="475">
+
+Interface for advanced and internal debugging. In general there is no need to use this.
 
 <div class="print-page-break"></div>
 
@@ -137,5 +145,6 @@ Datetime, Days and Hours require stacks to have a date/time specified. A stacks 
 [15]: find-points-panel
 [16]: map-pool
 [17]: reports
+[18]: intensity
 
 <div class="print-page-break"></div>

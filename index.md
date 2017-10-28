@@ -13,7 +13,7 @@ Map Manager is software to annotate and analyze 3D image time-series
 
 <IMG class="img-float-right" SRC="/mapmanager/images/imagingcore/stack_example_spines.jpg" width="400">
 
-### Main features
+### Features
 
 - Track 3D annotations in time-series images.
 - Automatically aligns images and annotations across timepoints.
@@ -24,16 +24,14 @@ Map Manager is software to annotate and analyze 3D image time-series
  - Detailed spine intensity analysis.
  - Powerful trajectory analysis.
   
+### Gallery
+
+- Please see the [Gallery][6] for movies and screen shots of Map Manager in action.
+
+
 ### Getting started
 
 - [Getting started][5].
-
-### Gallery
-
-- Please see the [Gallery][6] for movies of Map Manager in action..
-
-### Workflows
-
 - [Annotating a stack][3].
 - [Making a map][4].
 

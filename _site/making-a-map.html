@@ -75,6 +75,9 @@
             <li data-order="3"><a href="/mapmanager/stack-annotations">Stack Annotations</a></li>
         
             
+            <li data-order="3"><a href="/mapmanager/buttons">Buttons</a></li>
+        
+            
             <li data-order="2"><a href="/mapmanager/stack">Stack</a></li>
         
     
@@ -160,7 +163,7 @@
             
                 <li class=nav-header>Blog Posts</li>
             
-            <li data-order="2"><a href="/mapmanager/map-manager-matlab">Map Manager Matlab</a></li>
+            <li data-order="2"><a href="/mapmanager/map-manager-matlab">Matlab class library</a></li>
         
             
             <li data-order="2"><a href="/mapmanager/fiji-plugins">Fiji plugins</a></li>
@@ -175,10 +178,7 @@
             <li data-order="2"><a href="/mapmanager/faq">FAQ</a></li>
         
             
-            <li data-order=""><a href="/mapmanager/File-format">File format</a></li>
-        
-            
-            <li data-order="3"><a href="/mapmanager/database-overview">Database overview</a></li>
+            <li data-order=""><a href="/mapmanager/file-format">File format</a></li>
         
     
 
@@ -223,8 +223,8 @@
 <ol>
   <li>Open Igor Pro with MapManager.ipf</li>
   <li>Click on the empty command window to activate Map Manager and its menus</li>
-  <li>Open the stack browser window with menu ‘MapManager - Stack Browser’.</li>
-  <li>Open the time-series window with menu ‘MapManager - Time series’.</li>
+  <li>Open the <a href="stack-browser">stack browser</a> window with menu ‘MapManager - Stack Browser’.</li>
+  <li>Open the <a href="time-series-panel">time-series</a> window with menu ‘MapManager - Time series’.</li>
 </ol>
 
 <h3 id="make-a-new-map">2. Make a new map</h3>
@@ -250,11 +250,15 @@
   <li><strong>The order of stacks is important.</strong> Make sure the timepoints in your map are imported in the correct order. It is hard to change the order later.</li>
 </ul>
 
-<h4 id="save-your-map">2.2 Save your map</h4>
+<h4 id="saving-a-map">2.2 Saving a map</h4>
 
 <p>Save the map with ‘Save Map’ button. New maps are saved to a default hard-drive folder specified in the <a href="hdd-paths">Hard Drive Paths</a> panel.</p>
 
-<h4 id="congratulations-you-just-made-a-map-manager-map">2.3 Congratulations, you just made a Map Manager map.</h4>
+<h4 id="opening-a-map">2.3 Opening a map</h4>
+
+<p>Open a Map Manager map using the ‘Open Map’ button in the <a href="time-series-panel">time-series</a> panel. When you open a map named ‘mymap’, you need to open the file ‘mymap.ipf’.</p>
+
+<h4 id="congratulations-you-just-made-a-map-manager-map">2.4 Congratulations, you just made a Map Manager map.</h4>
 
 <p>The rest of this workflow covers tracing dendritic segments, adding spines, and connecting spines across timepoints. Before you do any of this, play with the stacks in your map. From the time-series window, open a run of stacks by right-clicking on a session and selecting ‘Plot Run +- 1’.</p>
 

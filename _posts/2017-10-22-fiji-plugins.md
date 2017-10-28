@@ -8,17 +8,19 @@ tags:
 - Fiji
 ---
 
-Map Manager uses a number of custom Fiji plugins to fit segment tracing and convert raw data into a format that can be imported into Map MAnager.
+Map Manager uses a number of custom [Fiji][6] plugins to convert raw data into a format that can be imported into Map Manager.
 
-### Tracing segments
+Map Manager also has an internal Fiji plugin to fit dendritic segments.
 
-This is done seemlesly and only requires an installed Fiji program to be identified in [hard drive paths][2].
+### Fitting dendritic segments
 
-### Converting raw data to single channel .tif files
+This is done seemlesly from within Map Manager and only requires an installed Fiji program to be specified in [hard drive paths][2].
 
-Map Manager can import 3D .tif image stack with 1, 2, or 3 color channels.
+The Map Manager code to fit dendritic segments is a modified version of the [Simple Neurite Tracer][5] Fiji plugin.
 
-Here are the rules:
+### Converting raw 3D data to open in Map Manager
+
+Map Manager can open 3D .tif image stack with 1, 2, or 3 color channels.
 
  - Map Manager **will** open single color channel 3D .tif files.
  - Map Manager will <span style="color:red">not</span> open 3D volumes that have interleaved color channels.
@@ -26,7 +28,7 @@ Here are the rules:
 
 Fiji plugins are provided to make these conversions fast and easy.
 
-In all these plugins, great care was taken to extract the voxel size, date, and time. This is critical for rapid workflows to always score annotations in um and to make time-series in the correct order.
+In all these plugins, great care was taken to extract the voxel size, date, and time. This is critical for rapid workflows to always score annotations in um and to make time-series in the correct order. If the voxel size, date, or time is not correct, please contact Robert Cudmore directly and we can make them work for your raw data.
 
 <p class="important"><B>Important:</B> When stacks are first imported into the stack browser, please verify the voxel size, date, and time are set correctly.
 </p>
@@ -35,12 +37,17 @@ In all these plugins, great care was taken to extract the voxel size, date, and 
 
 bFolder2MapManager
 
-#### Prairie View
+#### Prairie View ([Bruker][4])
 
-bAlignBatch
+bPrairie2tif
 
-#### ScanImage (Vidreo)
+#### ScanImage ([Vidrio][3])
 
-bAlignBatch  
+bFolder2MapManager  
 
 [1]: https://github.com/cudmore/bob-fiji-plugins
+[2]: hdd-paths
+[3]: http://scanimage.vidriotechnologies.com/display/SIH/ScanImage+Home
+[4]: https://www.bruker.com/products/fluorescence-microscopes/ultima-multiphoton-microscopy.html
+[5]: https://imagej.net/Simple_Neurite_Tracer
+[6]: http://fiji.sc/

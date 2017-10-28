@@ -25,21 +25,15 @@ td{
 }
 </style>
 
-### Moving Map Manager files to another folder or computer
-
-If you want to move your analysis into a different folder or a different computer, please follow these simple rules
-
-#### Moving a single-time point analysis
-
- - Move the original .tif stack along with its associated _db2.txt, _int1.txt, _int2.txt, and _l.txt files contained in the enclosed 'stackdb' folder.
-
-#### Moving a map analysis
- - Move the main map file .ibw and its folder to a new location or computer.
-  
-
 ### Reading Map Manager files in other programming environments
 
 Map Manager saves all [stack][9] and time-series [map][10] files as plain text files. In this way, annotations created in Map Manager can easily be opened in a wide range of other programming environments for additional visualization and analysis.
+
+#### Map Manager - Matlab
+
+add description
+
+#### PyMapManager
 
 We provide a Python package, [PyMapManager][12], to do this. Please have a look at this package as a starting point for custom analysis and visualization using existing Map Manager files.
 
@@ -51,60 +45,45 @@ If you are on a Mac, python comes pre-installed and you are good to go. In gener
 
 ### Map Manager file format
 
-For the intrepid data scientist (e.g. data analyst) we are providing the details of the Map Manager file format for both single time-points and maps. If you want to get started importing these files into Matlab, please contact Robert Cudmore and we can share some  rudimentary code snippets to read these files. Again, we strongly suggest you get started with the [PyMapManager][12] Python package.
+For the intrepid data scientist (e.g. data analyst) we are providing the details of the Map Manager file format for both single time-points and maps.
 
 <IMG class="img-float-right" SRC="images/mm3/file-format/stack-hard-drive.png" WIDTH="450">
 
-### Single time-point files
+#### Single time-point files
  - The original .tif file is never modified
  - Annotations are saved in a stackdb folder
-    - db2
-    - int1
-    - int2
-    - line
+    - **_db2.txt** : Table of annotation values, one line per annotation
+    - **_Int1.txt** : Table of intensity analysis for channel 1, one line per annotation
+    - **_Int2.txt** : 
+    - **_Int3.txt** : 
+    - **_l.txt** : Table of line segment fits
     
-#### stackdb
-
-#### int1 and int2
-
-#### line
-
 <div class="print-page-break"></div>
 
 <IMG class="img-float-right" SRC="images/mm3/file-format/map-hard-drive.png" WIDTH="450">
 
-### Map files
+#### Map files
 
  - Maps are saved in a folder whose name is the same as the map name
  - At the root of this folder are three map files
-    - map. see [format](#map_file)
-    - object map
-    - segment map (if there are segment)
+    - **mapname.txt** : See [format](#map_file) below
+    - **_objMap.txt** : 
+    - **_segMap.txt** : Segment map (if there are segment)
  - There are some folders
-    - line
-    - raw: The original .tif files are never modified, these are direct copies.
-    - stackdb
+    - **line** : Contains tabular data of line tracing, one file per timepoint
+    - **raw**: The original .tif files are never modified, these are direct copies.
+    - **stackdb** : Same format as for 'Single time-point files'
 
 <div class="print-page-break"></div>
 
-#### map
+### HDF5
 
-#### object map
-
-#### segment map
-
-#### stack db
-
-#### line
-
-### [FUTURE] HDF5
-
-[HDF5][1] is an open source cross platform binary file format. It can be read from [Matlab][2], [Python][3], [Igor Pro][4] and from a [command line][5].
+We are working on saving Map Manager files in the HDF5 format. [HDF5][1] is an open source cross platform binary file format. It can be read from [Matlab][2], [Python][3], [Igor Pro][4] and from a [command line][5].
 
 Out of the box, Map Manager is not saving files in the HDF5 format. If you are interested in turning on this feature, please email Robert Cudmore.
 
 
-### Each file has the following format
+### Each mapname.txt file has the following format
 
 #### <a id="map_file"></a>Map file format
 

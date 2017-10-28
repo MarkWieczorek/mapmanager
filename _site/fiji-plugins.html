@@ -75,6 +75,9 @@
             <li data-order="3"><a href="/mapmanager/stack-annotations">Stack Annotations</a></li>
         
             
+            <li data-order="3"><a href="/mapmanager/buttons">Buttons</a></li>
+        
+            
             <li data-order="2"><a href="/mapmanager/stack">Stack</a></li>
         
     
@@ -160,7 +163,7 @@
             
                 <li class=nav-header>Blog Posts</li>
             
-            <li data-order="2"><a href="/mapmanager/map-manager-matlab">Map Manager Matlab</a></li>
+            <li data-order="2"><a href="/mapmanager/map-manager-matlab">Matlab class library</a></li>
         
             
             <li data-order="2"><a href="/mapmanager/fiji-plugins">Fiji plugins</a></li>
@@ -175,10 +178,7 @@
             <li data-order="2"><a href="/mapmanager/faq">FAQ</a></li>
         
             
-            <li data-order=""><a href="/mapmanager/File-format">File format</a></li>
-        
-            
-            <li data-order="3"><a href="/mapmanager/database-overview">Database overview</a></li>
+            <li data-order=""><a href="/mapmanager/file-format">File format</a></li>
         
     
 
@@ -198,17 +198,19 @@
     </h3>
 </div>
 
-<p>Map Manager uses a number of custom Fiji plugins to fit segment tracing and convert raw data into a format that can be imported into Map MAnager.</p>
+<p>Map Manager uses a number of custom <a href="http://fiji.sc/">Fiji</a> plugins to convert raw data into a format that can be imported into Map Manager.</p>
 
-<h3 id="tracing-segments">Tracing segments</h3>
+<p>Map Manager also has an internal Fiji plugin to fit dendritic segments.</p>
 
-<p>This is done seemlesly and only requires an installed Fiji program to be identified in [hard drive paths][2].</p>
+<h3 id="fitting-dendritic-segments">Fitting dendritic segments</h3>
 
-<h3 id="converting-raw-data-to-single-channel-tif-files">Converting raw data to single channel .tif files</h3>
+<p>This is done seemlesly from within Map Manager and only requires an installed Fiji program to be specified in <a href="hdd-paths">hard drive paths</a>.</p>
 
-<p>Map Manager can import 3D .tif image stack with 1, 2, or 3 color channels.</p>
+<p>The Map Manager code to fit dendritic segments is a modified version of the <a href="https://imagej.net/Simple_Neurite_Tracer">Simple Neurite Tracer</a> Fiji plugin.</p>
 
-<p>Here are the rules:</p>
+<h3 id="converting-raw-3d-data-to-open-in-map-manager">Converting raw 3D data to open in Map Manager</h3>
+
+<p>Map Manager can open 3D .tif image stack with 1, 2, or 3 color channels.</p>
 
 <ul>
   <li>Map Manager <strong>will</strong> open single color channel 3D .tif files.</li>
@@ -218,7 +220,7 @@
 
 <p>Fiji plugins are provided to make these conversions fast and easy.</p>
 
-<p>In all these plugins, great care was taken to extract the voxel size, date, and time. This is critical for rapid workflows to always score annotations in um and to make time-series in the correct order.</p>
+<p>In all these plugins, great care was taken to extract the voxel size, date, and time. This is critical for rapid workflows to always score annotations in um and to make time-series in the correct order. If the voxel size, date, or time is not correct, please contact Robert Cudmore directly and we can make them work for your raw data.</p>
 
 <p class="important"><b>Important:</b> When stacks are first imported into the stack browser, please verify the voxel size, date, and time are set correctly.
 </p>
@@ -227,13 +229,13 @@
 
 <p>bFolder2MapManager</p>
 
-<h4 id="prairie-view">Prairie View</h4>
+<h4 id="prairie-view-bruker4">Prairie View (<a href="https://www.bruker.com/products/fluorescence-microscopes/ultima-multiphoton-microscopy.html">Bruker</a>)</h4>
 
-<p>bAlignBatch</p>
+<p>bPrairie2tif</p>
 
-<h4 id="scanimage-vidreo">ScanImage (Vidreo)</h4>
+<h4 id="scanimage-vidrio3">ScanImage (<a href="http://scanimage.vidriotechnologies.com/display/SIH/ScanImage+Home">Vidrio</a>)</h4>
 
-<p>bAlignBatch</p>
+<p>bFolder2MapManager</p>
 
 
 

@@ -20,10 +20,10 @@ This describes a workflow for annotating 3D annotations in a **single stack**. T
 - Open the [Stack Browser][2] window by selecting the main menu 'MapManager - Stack Browser'.
 
 #### 2. Load a stack
-- Either  
-    Load a folder of .tif files using the 'Load Tiff Folder' button.
-- Or  
-    Drag and drop a single .tif stack onto the Igor Pro program icon.
+
+Load a folder of .tif files in the [Stack Browser][2] using the 'Load Tiff Folder' button.
+
+<p class="important">You need to set the proper X/Y/Z stack scale, in um, with keyboard shift+p. This is a critical step in Map Manager as many measurements are made using um. Once annotations are created the scale can not be changed.</p>
 
 #### 3. Display a stack
 
@@ -36,28 +36,20 @@ Once a stack is loaded in the [Stack Browser][2], double-click on its name in th
 - Each annotation can have a textual note, select the annotation and press keyboard <kbd>n</kbd> to enter a note. Notes can then be searched using the [search][6] panel.
 - See [stack annotations][12] for more information.
 
-#### 5. Save your work
+#### 5. Saving and loading annotations
 
 - Save stack annotations using the 'Save Stack' button.
-- <b>Important:</b> You are responsible for saving your annotations. Use the 'Save Stack' button.
+- The next time a folder of .tif files is opened, the annotations for each stack will automatically be opened
 
-### Important concepts
+#### 6. Generating reports
 
-#### Stack scale
+Map Manager provides tabular reports for annotation density. See [reports][11].
 
-Please set the proper X/Y/Z scale before making any annotations. Set the X/Y/Z stack scale in the stack window with keyboard <kbd>shift</kbd>+<kbd>p</kbd>.
-
-Once 3D annotations are created, **the scale can not be changed**.
-
-<p class="important">You need to set the proper X/Y/Z stack scale, in um, with keyboard 'shift+p'. This is a critical step in Map Manager as many measurements are made using um. Once annotations are reated the scale can not be changed.</p>
-
-
-
-#### Searching annotations
+#### 7. Searching annotations
 
 Open the [Search][6] panel from the main menus 'Map Manager - Search'.
 
-The search panel will search all annotations in a stack and return a list of annotations. Once generated, clicking on an annotation in the search results will display the annotation in the stack window.
+The search panel will search all annotations in a stack and return a list of annotations. Once generated, clicking on an annotation in the search results will display the annotation in the [stack][1] window.
 
 Different types of searches are performed with buttons:  
 
@@ -68,6 +60,7 @@ Different types of searches are performed with buttons:
 If you zoom the stack window (ctrl+mouse wheel or keyboard <kbd>+</kbd>) you can snap to different points while maintaining the zoom using the search panel 'Snap' checkbox.
 
 The search results are a static output report. Once a search is performed, if annotations in the stack window are modified (added, deleted, moved, etc.) the search results will not be automatically updated. If the annotations are modified in the stack window, simply regnerate the search results by perform the search again.
+
 
 
 <div class="print-page-break"></div>

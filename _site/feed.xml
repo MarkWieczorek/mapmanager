@@ -8,7 +8,7 @@
     
       
       <item>
-        <title>Map Manager Matlab</title>
+        <title>Matlab class library</title>
         
           <description>&lt;p&gt;&lt;a href=&quot;https://github.com/cudmore/MapManager-Matlab&quot;&gt;Map Manager - Matlab&lt;/a&gt; is an easy to use Matlab class library that will open and plot Map Manager (Igor) files. The reason we created this was to allow the user to extend the analysis of Map Manager annotations in the familiar Matlab environment.&lt;/p&gt;
 
@@ -25,7 +25,7 @@
       <item>
         <title>Fiji plugins</title>
         
-          <description>&lt;p&gt;Map Manager uses a number of custom Fiji plugins to fit segment tracing and convert raw data into a format that can be imported into Map MAnager.&lt;/p&gt;
+          <description>&lt;p&gt;Map Manager uses a number of custom &lt;a href=&quot;http://fiji.sc/&quot;&gt;Fiji&lt;/a&gt; plugins to convert raw data into a format that can be imported into Map Manager.&lt;/p&gt;
 
 </description>
         
@@ -187,7 +187,7 @@ table{
       <item>
         <title>FAQ</title>
         
-          <description>&lt;h3 id=&quot;limitations&quot;&gt;Limitations&lt;/h3&gt;
+          <description>&lt;h3 id=&quot;limitations&quot;&gt;(1) Limitations&lt;/h3&gt;
 
 </description>
         
@@ -280,8 +280,8 @@ table{
         
         <pubDate>Thu, 28 May 2015 18:01:06 -0400</pubDate>
         <link>
-        /File-format</link>
-        <guid isPermaLink="true">/File-format</guid>
+        /file-format</link>
+        <guid isPermaLink="true">/file-format</guid>
       </item>
       
     
@@ -459,21 +459,6 @@ table{
     
       
       <item>
-        <title>Database overview</title>
-        
-          <description>&lt;p&gt;Map Manager builds a database of 3D objects and line segments within a single &lt;a href=&quot;stack&quot;&gt;stack&lt;/a&gt;. Stacks and their associated 3D objects and line segments can then be connected together into a time-series with a &lt;a href=&quot;map-plot&quot;&gt;map&lt;/a&gt;.&lt;/p&gt;
-
-</description>
-        
-        <pubDate>Mon, 20 Apr 2015 18:46:33 -0400</pubDate>
-        <link>
-        /database-overview</link>
-        <guid isPermaLink="true">/database-overview</guid>
-      </item>
-      
-    
-      
-      <item>
         <title>Contrast panel</title>
         
           <description>&lt;p&gt;&lt;img class=&quot;img-float-left&quot; src=&quot;images/mm3/mm3-process-panel.png&quot; width=&quot;400&quot; /&gt;&lt;/p&gt;
@@ -514,6 +499,21 @@ table{
         <link>
         /annotating-a-stack</link>
         <guid isPermaLink="true">/annotating-a-stack</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Buttons</title>
+        
+          <description>&lt;p&gt;&lt;img class=&quot;img-float-right&quot; src=&quot;images/mm3/buttons.png&quot; width=&quot;200&quot; /&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 30 Jan 2015 17:46:33 -0500</pubDate>
+        <link>
+        /buttons</link>
+        <guid isPermaLink="true">/buttons</guid>
       </item>
       
     

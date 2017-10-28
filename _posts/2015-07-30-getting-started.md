@@ -19,17 +19,20 @@ tags:
 
 #### Installing Map Manager
 
- - Once Igor Pro is installed, there is no formal installation of Map Manager
- - Get the source code from Bob.
- - The source code will be in a folder named 'MapManager_date' where 'date' is the date the software was created. The folder will be something like 'MapManager_20171021'.
- - Run the software by double-clicking MapManager.ipf from within the source code folder.
+ - Once Igor Pro is installed, there is no formal installation of Map Manager.
+ - Until its final release, you need to get the source code from Robert Cudmore.
+ - The source code will be in a folder named `'MapManager_<date>'` where `<date>` is the date the software was created. The folder will be something like `'MapManager_20171021'`.
+ - The source code folder can be placed anywhere on your hard-drive.
  
 #### Opening/Running Map Manager
 
- - Open MapManager.ipf into Igor Pro (just double click the MapManager.ipf file).
+ - Open Map Manager by double-clicking `'MapManager_<date>.ipf'` from within the source code folder. You can make a desktop shortcut to `'MapManager_<date>.ipf'` to make running Map Manager easier.
  - Once in Igor Pro, click in the command window to compile Map Manager and activate the main menus. The command window is in the lower left of your screen and has the window title 'Untitled'.
- - To score a single timepoint stack, select the main menu 'MapManager - Stack Browser' to open the [Stack Browser][6] panel. See [Annotating a stack][10] for more information.
- - To score a timeseries of stacks (a map), select the main menu 'MapManager - Time Series' to open the main [time series][5] panel. See [Making A Map][11] for more information.
+ 
+#### Creating annotations
+
+ - To score a single timepoint stack, open the [Stack Browser][6] with the main menu 'MapManager - Stack Browser'. See [Annotating a stack][10] for more information.
+ - To score a timeseries (a map), open the [time series][5] panel with the main menu 'MapManager - Time Series'. See [Making A Map][11] for more information.
 
 <IMG class="img-float-right" SRC="images/mm3/quit-igor.png" WIDTH="400">
 

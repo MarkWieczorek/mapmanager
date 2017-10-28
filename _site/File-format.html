@@ -75,6 +75,9 @@
             <li data-order="3"><a href="/mapmanager/stack-annotations">Stack Annotations</a></li>
         
             
+            <li data-order="3"><a href="/mapmanager/buttons">Buttons</a></li>
+        
+            
             <li data-order="2"><a href="/mapmanager/stack">Stack</a></li>
         
     
@@ -160,7 +163,7 @@
             
                 <li class=nav-header>Blog Posts</li>
             
-            <li data-order="2"><a href="/mapmanager/map-manager-matlab">Map Manager Matlab</a></li>
+            <li data-order="2"><a href="/mapmanager/map-manager-matlab">Matlab class library</a></li>
         
             
             <li data-order="2"><a href="/mapmanager/fiji-plugins">Fiji plugins</a></li>
@@ -175,10 +178,7 @@
             <li data-order="2"><a href="/mapmanager/faq">FAQ</a></li>
         
             
-            <li data-order=""><a href="/mapmanager/File-format">File format</a></li>
-        
-            
-            <li data-order="3"><a href="/mapmanager/database-overview">Database overview</a></li>
+            <li data-order=""><a href="/mapmanager/file-format">File format</a></li>
         
     
 
@@ -216,24 +216,15 @@ td{
 }
 </style>
 
-<h3 id="moving-map-manager-files-to-another-folder-or-computer">Moving Map Manager files to another folder or computer</h3>
-
-<p>If you want to move your analysis into a different folder or a different computer, please follow these simple rules</p>
-
-<h4 id="moving-a-single-time-point-analysis">Moving a single-time point analysis</h4>
-
-<ul>
-  <li>Move the original .tif stack along with its associated _db2.txt, _int1.txt, _int2.txt, and _l.txt files contained in the enclosed ‘stackdb’ folder.</li>
-</ul>
-
-<h4 id="moving-a-map-analysis">Moving a map analysis</h4>
-<ul>
-  <li>Move the main map file .ibw and its folder to a new location or computer.</li>
-</ul>
-
 <h3 id="reading-map-manager-files-in-other-programming-environments">Reading Map Manager files in other programming environments</h3>
 
 <p>Map Manager saves all <a href="stack">stack</a> and time-series <a href="time-series-panel">map</a> files as plain text files. In this way, annotations created in Map Manager can easily be opened in a wide range of other programming environments for additional visualization and analysis.</p>
+
+<h4 id="map-manager---matlab">Map Manager - Matlab</h4>
+
+<p>add description</p>
+
+<h4 id="pymapmanager">PyMapManager</h4>
 
 <p>We provide a Python package, <a href="https://github.com/cudmore/PyMapManager/">PyMapManager</a>, to do this. Please have a look at this package as a starting point for custom analysis and visualization using existing Map Manager files.</p>
 
@@ -247,72 +238,57 @@ td{
 
 <h3 id="map-manager-file-format">Map Manager file format</h3>
 
-<p>For the intrepid data scientist (e.g. data analyst) we are providing the details of the Map Manager file format for both single time-points and maps. If you want to get started importing these files into Matlab, please contact Robert Cudmore and we can share some  rudimentary code snippets to read these files. Again, we strongly suggest you get started with the <a href="https://github.com/cudmore/PyMapManager/">PyMapManager</a> Python package.</p>
+<p>For the intrepid data scientist (e.g. data analyst) we are providing the details of the Map Manager file format for both single time-points and maps.</p>
 
 <p><img class="img-float-right" src="images/mm3/file-format/stack-hard-drive.png" width="450" /></p>
 
-<h3 id="single-time-point-files">Single time-point files</h3>
+<h4 id="single-time-point-files">Single time-point files</h4>
 <ul>
   <li>The original .tif file is never modified</li>
   <li>Annotations are saved in a stackdb folder
     <ul>
-      <li>db2</li>
-      <li>int1</li>
-      <li>int2</li>
-      <li>line</li>
+      <li><strong>_db2.txt</strong> : Table of annotation values, one line per annotation</li>
+      <li><strong>_Int1.txt</strong> : Table of intensity analysis for channel 1, one line per annotation</li>
+      <li><strong>_Int2.txt</strong> :</li>
+      <li><strong>_Int3.txt</strong> :</li>
+      <li><strong>_l.txt</strong> : Table of line segment fits</li>
     </ul>
   </li>
 </ul>
-
-<h4 id="stackdb">stackdb</h4>
-
-<h4 id="int1-and-int2">int1 and int2</h4>
-
-<h4 id="line">line</h4>
 
 <div class="print-page-break"></div>
 
 <p><img class="img-float-right" src="images/mm3/file-format/map-hard-drive.png" width="450" /></p>
 
-<h3 id="map-files">Map files</h3>
+<h4 id="map-files">Map files</h4>
 
 <ul>
   <li>Maps are saved in a folder whose name is the same as the map name</li>
   <li>At the root of this folder are three map files
     <ul>
-      <li>map. see <a href="#map_file">format</a></li>
-      <li>object map</li>
-      <li>segment map (if there are segment)</li>
+      <li><strong>mapname.txt</strong> : See <a href="#map_file">format</a> below</li>
+      <li><strong>_objMap.txt</strong> :</li>
+      <li><strong>_segMap.txt</strong> : Segment map (if there are segment)</li>
     </ul>
   </li>
   <li>There are some folders
     <ul>
-      <li>line</li>
-      <li>raw: The original .tif files are never modified, these are direct copies.</li>
-      <li>stackdb</li>
+      <li><strong>line</strong> : Contains tabular data of line tracing, one file per timepoint</li>
+      <li><strong>raw</strong>: The original .tif files are never modified, these are direct copies.</li>
+      <li><strong>stackdb</strong> : Same format as for ‘Single time-point files’</li>
     </ul>
   </li>
 </ul>
 
 <div class="print-page-break"></div>
 
-<h4 id="map">map</h4>
+<h3 id="hdf5">HDF5</h3>
 
-<h4 id="object-map">object map</h4>
-
-<h4 id="segment-map">segment map</h4>
-
-<h4 id="stack-db">stack db</h4>
-
-<h4 id="line-1">line</h4>
-
-<h3 id="future-hdf5">[FUTURE] HDF5</h3>
-
-<p><a href="https://www.hdfgroup.org/HDF5/">HDF5</a> is an open source cross platform binary file format. It can be read from <a href="http://www.mathworks.com/help/matlab/hdf5-files.html">Matlab</a>, <a href="http://www.h5py.org">Python</a>, <a href="http://www.wavemetrics.com/products/igorpro/dataaccess/hdf5.htm">Igor Pro</a> and from a <a href="https://www.hdfgroup.org/products/hdf5_tools/# h5dist">command line</a>.</p>
+<p>We are working on saving Map Manager files in the HDF5 format. <a href="https://www.hdfgroup.org/HDF5/">HDF5</a> is an open source cross platform binary file format. It can be read from <a href="http://www.mathworks.com/help/matlab/hdf5-files.html">Matlab</a>, <a href="http://www.h5py.org">Python</a>, <a href="http://www.wavemetrics.com/products/igorpro/dataaccess/hdf5.htm">Igor Pro</a> and from a <a href="https://www.hdfgroup.org/products/hdf5_tools/# h5dist">command line</a>.</p>
 
 <p>Out of the box, Map Manager is not saving files in the HDF5 format. If you are interested in turning on this feature, please email Robert Cudmore.</p>
 
-<h3 id="each-file-has-the-following-format">Each file has the following format</h3>
+<h3 id="each-mapnametxt-file-has-the-following-format">Each mapname.txt file has the following format</h3>
 
 <h4 id="a-idmapfileamap-file-format"><a id="map_file"></a>Map file format</h4>
 
@@ -726,7 +702,7 @@ td{
 
    <!--
    <BR>
-   <a href="_posts/2015-05-28-File-format.pdf">print pdf</a>
+   <a href="_posts/2015-05-28-file-format.pdf">print pdf</a>
    <BR>
    -->
     

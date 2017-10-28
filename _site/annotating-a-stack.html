@@ -75,6 +75,9 @@
             <li data-order="3"><a href="/mapmanager/stack-annotations">Stack Annotations</a></li>
         
             
+            <li data-order="3"><a href="/mapmanager/buttons">Buttons</a></li>
+        
+            
             <li data-order="2"><a href="/mapmanager/stack">Stack</a></li>
         
     
@@ -160,7 +163,7 @@
             
                 <li class=nav-header>Blog Posts</li>
             
-            <li data-order="2"><a href="/mapmanager/map-manager-matlab">Map Manager Matlab</a></li>
+            <li data-order="2"><a href="/mapmanager/map-manager-matlab">Matlab class library</a></li>
         
             
             <li data-order="2"><a href="/mapmanager/fiji-plugins">Fiji plugins</a></li>
@@ -175,10 +178,7 @@
             <li data-order="2"><a href="/mapmanager/faq">FAQ</a></li>
         
             
-            <li data-order=""><a href="/mapmanager/File-format">File format</a></li>
-        
-            
-            <li data-order="3"><a href="/mapmanager/database-overview">Database overview</a></li>
+            <li data-order=""><a href="/mapmanager/file-format">File format</a></li>
         
     
 
@@ -209,12 +209,10 @@
 </ul>
 
 <h4 id="load-a-stack">2. Load a stack</h4>
-<ul>
-  <li>Either<br />
-  Load a folder of .tif files using the ‘Load Tiff Folder’ button.</li>
-  <li>Or<br />
-  Drag and drop a single .tif stack onto the Igor Pro program icon.</li>
-</ul>
+
+<p>Load a folder of .tif files in the <a href="stack-browser">Stack Browser</a> using the ‘Load Tiff Folder’ button.</p>
+
+<p class="important">You need to set the proper X/Y/Z stack scale, in um, with keyboard shift+p. This is a critical step in Map Manager as many measurements are made using um. Once annotations are created the scale can not be changed.</p>
 
 <h4 id="display-a-stack">3. Display a stack</h4>
 
@@ -229,28 +227,22 @@
   <li>See <a href="stack-annotations">stack annotations</a> for more information.</li>
 </ul>
 
-<h4 id="save-your-work">5. Save your work</h4>
+<h4 id="saving-and-loading-annotations">5. Saving and loading annotations</h4>
 
 <ul>
   <li>Save stack annotations using the ‘Save Stack’ button.</li>
-  <li><b>Important:</b> You are responsible for saving your annotations. Use the ‘Save Stack’ button.</li>
+  <li>The next time a folder of .tif files is opened, the annotations for each stack will automatically be opened</li>
 </ul>
 
-<h3 id="important-concepts">Important concepts</h3>
+<h4 id="generating-reports">6. Generating reports</h4>
 
-<h4 id="stack-scale">Stack scale</h4>
+<p>Map Manager provides tabular reports for annotation density. See <a href="reports">reports</a>.</p>
 
-<p>Please set the proper X/Y/Z scale before making any annotations. Set the X/Y/Z stack scale in the stack window with keyboard <kbd>shift</kbd>+<kbd>p</kbd>.</p>
-
-<p>Once 3D annotations are created, <strong>the scale can not be changed</strong>.</p>
-
-<p class="important">You need to set the proper X/Y/Z stack scale, in um, with keyboard 'shift+p'. This is a critical step in Map Manager as many measurements are made using um. Once annotations are reated the scale can not be changed.</p>
-
-<h4 id="searching-annotations">Searching annotations</h4>
+<h4 id="searching-annotations">7. Searching annotations</h4>
 
 <p>Open the <a href="search-panel">Search</a> panel from the main menus ‘Map Manager - Search’.</p>
 
-<p>The search panel will search all annotations in a stack and return a list of annotations. Once generated, clicking on an annotation in the search results will display the annotation in the stack window.</p>
+<p>The search panel will search all annotations in a stack and return a list of annotations. Once generated, clicking on an annotation in the search results will display the annotation in the <a href="stack">stack</a> window.</p>
 
 <p>Different types of searches are performed with buttons:</p>
 
