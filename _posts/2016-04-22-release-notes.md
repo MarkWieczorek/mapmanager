@@ -8,6 +8,57 @@ tags:
 - faq
 ---
 
+### 20171030
+
+Working on new version and have seeded it to the following people
+
+ - Daisuke (Cirelli & Tononi, Wisc-Madison), 20171030
+ - Richard (Huganir), 20171029
+ - Zeng You (Linden), 20170818
+ - Amit (Bergles), 20170817 (plus one earlier version from feb?)
+
+#### New Features
+ - Each annotation can be tagged with 1 of 10 'user type'.
+    - right-click on annotation in stack window
+    - right-click on annotation in map to set run
+    - search for user type
+    - dynamics and survival report now break down dynamics based on user type
+    - masks are automatically created and available in trajectory analysis
+
+ - Survival report
+ - Birth/death plot. Right-click on intensity plots
+ - Map plot now has 'transform' to transform y-data to: Raw, %, Abs, Diff, etc
+ - Buttons window to expose all the features of stack and map plots
+ - Options panel noew has 'default scoring' for: spines, cell bodies, prairie line scan
+ - Trajectory analysis
+    - Uses concept of stack pivot (rather than segment pivot)
+    - 2d/3d distance is distance an annotation moves between timepoints
+    - Cum 2d/3d distance
+    - Masks are automatically created: added, subtracted, always present, user type, etc. etc.
+    - Plot with mask allows plotting subsets of annotations: added, subtracted, user type, etc
+    - Overlay mask over existing plot and get stats for each mask
+
+ - New Fiji plugin to fit tracings (written in Jython) will work with all versions of FIji and does not require user to explicitly install a plugin
+ - New Fiji plugins to convert raw data to .tif for import
+    - Zeiss LSM/CZI
+    - Prairie View
+
+ - [Matlab](https://github.com/cudmore/MapManager-Matlab) code to open, plot, and add new analysis to Map Manager files
+    - see: https://github.com/cudmore/MapManager-Matlab
+ 
+#### Improvements
+ - When adding stacks to a map from Stack Browser, no longer need to open channels.
+ - Map DB now searches 2x deep, will handle a folder with condition folders (that then have the maps)
+ - Simplified interface to stack browser and time series. All column options are now in a right-click menu
+ - Standardized voxel size in stack browser and time series, they are now: vx, vy, vz
+ - Large rewrite of online help including recipes, stack, etc
+ 
+#### Bug fixes
+ -  No longer allowed to delete an annotation while in 'move' or 'manual connect'. This was causing unexpected results.
+ - Intensity analysis channel 2, utssdtds was incorrect. See code comment '20171005 intensity bug in utssdtds'
+ - fixed errors when initially opening search panel
+ - fixed search for added
+ 
 ### 20170123, Distributed MapManager to Zeng-You and Julia (Linden), Richard (Huganir)
 
 This is a major release with new features, improvements, and bug fixes. A full list of these will follow.

@@ -198,6 +198,74 @@
     </h3>
 </div>
 
+<h3 id="section">20171030</h3>
+
+<p>Working on new version and have seeded it to the following people</p>
+
+<ul>
+  <li>Daisuke (Cirelli &amp; Tononi, Wisc-Madison), 20171030</li>
+  <li>Richard (Huganir), 20171029</li>
+  <li>Zeng You (Linden), 20170818</li>
+  <li>Amit (Bergles), 20170817 (plus one earlier version from feb?)</li>
+</ul>
+
+<h4 id="new-features">New Features</h4>
+<ul>
+  <li>Each annotation can be tagged with 1 of 10 ‘user type’.
+    <ul>
+      <li>right-click on annotation in stack window</li>
+      <li>right-click on annotation in map to set run</li>
+      <li>search for user type</li>
+      <li>dynamics and survival report now break down dynamics based on user type</li>
+      <li>masks are automatically created and available in trajectory analysis</li>
+    </ul>
+  </li>
+  <li>Survival report</li>
+  <li>Birth/death plot. Right-click on intensity plots</li>
+  <li>Map plot now has ‘transform’ to transform y-data to: Raw, %, Abs, Diff, etc</li>
+  <li>Buttons window to expose all the features of stack and map plots</li>
+  <li>Options panel noew has ‘default scoring’ for: spines, cell bodies, prairie line scan</li>
+  <li>Trajectory analysis
+    <ul>
+      <li>Uses concept of stack pivot (rather than segment pivot)</li>
+      <li>2d/3d distance is distance an annotation moves between timepoints</li>
+      <li>Cum 2d/3d distance</li>
+      <li>Masks are automatically created: added, subtracted, always present, user type, etc. etc.</li>
+      <li>Plot with mask allows plotting subsets of annotations: added, subtracted, user type, etc</li>
+      <li>Overlay mask over existing plot and get stats for each mask</li>
+    </ul>
+  </li>
+  <li>New Fiji plugin to fit tracings (written in Jython) will work with all versions of FIji and does not require user to explicitly install a plugin</li>
+  <li>New Fiji plugins to convert raw data to .tif for import
+    <ul>
+      <li>Zeiss LSM/CZI</li>
+      <li>Prairie View</li>
+    </ul>
+  </li>
+  <li><a href="https://github.com/cudmore/MapManager-Matlab">Matlab</a> code to open, plot, and add new analysis to Map Manager files
+    <ul>
+      <li>see: https://github.com/cudmore/MapManager-Matlab</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="improvements">Improvements</h4>
+<ul>
+  <li>When adding stacks to a map from Stack Browser, no longer need to open channels.</li>
+  <li>Map DB now searches 2x deep, will handle a folder with condition folders (that then have the maps)</li>
+  <li>Simplified interface to stack browser and time series. All column options are now in a right-click menu</li>
+  <li>Standardized voxel size in stack browser and time series, they are now: vx, vy, vz</li>
+  <li>Large rewrite of online help including recipes, stack, etc</li>
+</ul>
+
+<h4 id="bug-fixes">Bug fixes</h4>
+<ul>
+  <li>No longer allowed to delete an annotation while in ‘move’ or ‘manual connect’. This was causing unexpected results.</li>
+  <li>Intensity analysis channel 2, utssdtds was incorrect. See code comment ‘20171005 intensity bug in utssdtds’</li>
+  <li>fixed errors when initially opening search panel</li>
+  <li>fixed search for added</li>
+</ul>
+
 <h3 id="distributed-mapmanager-to-zeng-you-and-julia-linden-richard-huganir">20170123, Distributed MapManager to Zeng-You and Julia (Linden), Richard (Huganir)</h3>
 
 <p>This is a major release with new features, improvements, and bug fixes. A full list of these will follow.</p>
@@ -212,7 +280,7 @@
 
 <p>This is a major release with new features, improvements, and bug fixes. The file format has not changed but the options have. Please remake your options!</p>
 
-<h4 id="new-features">New Features</h4>
+<h4 id="new-features-1">New Features</h4>
 
 <ul>
   <li>No more limitation on length of file names when importing into stack browser</li>
@@ -228,7 +296,7 @@ Jumping spines are specified just like other persistent spines. select spines in
   <li>Added jumping to map search</li>
 </ul>
 
-<h4 id="improvements">Improvements</h4>
+<h4 id="improvements-1">Improvements</h4>
 
 <ul>
   <li>Fast left/right mouse click should no longer be a problem.</li>
@@ -244,7 +312,7 @@ Jumping spines are specified just like other persistent spines. select spines in
   <li>Added ‘Edit Line’ menu to right-click in main stack window ‘Line Segments’.</li>
 </ul>
 
-<h4 id="bug-fixes">Bug Fixes</h4>
+<h4 id="bug-fixes-1">Bug Fixes</h4>
 
 <ul>
   <li>Fixed export to text. If there is an error during export. ‘Clear User’ then ‘Analyze User Map’ and try export again.</li>
@@ -252,9 +320,9 @@ Jumping spines are specified just like other persistent spines. select spines in
   <li>Linked windows +/- zoom now works when some windows have left control bar and some do not</li>
 </ul>
 
-<h3 id="section">20160126</h3>
+<h3 id="section-1">20160126</h3>
 
-<h4 id="new-features-1">New Features</h4>
+<h4 id="new-features-2">New Features</h4>
 <ul>
   <li>Opening a stack will now display a floating dialog while stack is loading (it is yellow)</li>
   <li>Exposed interface to set defaults for intensity background candidates.</li>
@@ -286,7 +354,7 @@ Jumping spines are specified just like other persistent spines. select spines in
   <li>Rewrote ‘dynamics report’ to include 3d segment length and density. Previously lengths were calculated from 2d projections, now they are true 3d lengths. New columns are: {totalLen3d, goodLen3d, totalDen3d, goodDen3d}</li>
 </ul>
 
-<h4 id="bug-fixes-1">Bug Fixes</h4>
+<h4 id="bug-fixes-2">Bug Fixes</h4>
 <ul>
   <li>setting the segment pivot point will be correctly saved. Previous versions (not all of them) were not doing this correctly.</li>
   <li>Fixed bug where the backbone roi was ‘looping around’ to previous backbone segment. This was happening for spines at the beginning of a segment (not at the end). Now, spines at both the beginning and end of a segment get the correct backbone ROI.</li>
@@ -304,7 +372,7 @@ Jumping spines are specified just like other persistent spines. select spines in
 
 <p>This is the first MapManager version of intensity analysis</p>
 
-<h4 id="new-features-2">New Features</h4>
+<h4 id="new-features-3">New Features</h4>
 <ul>
   <li>Complete rewrite of intensity analysis</li>
   <li>Depending on the size of your stacks, intensity analysis should do ~15 spines/sec for large stacks and ~50 spines/sec for smaller stack. Loading stacks is the rate limiting factor.</li>
