@@ -204,20 +204,13 @@
 
 <p>The stack browser is the main starting point for using Map Manager. The stack browser provides an interface to load and browse folders of .tif <a href="stack">stacks</a>.</p>
 
-<p>The list on the left is a list of loaded folders, each folder has a list of stacks. The list on the right shows the stacks in the selected folder. Select a folder on the left and the list on the right will show the individual stacks within that folder.</p>
-
-<p>Double click a stack to open a <a href="stack">stack</a> window.</p>
+<p>The list on the left is a list of loaded folders. Select a folder (on the left) and the list on the right will show the individual stacks within that folder. Double click a stack to open a <a href="stack">stack</a> window.</p>
 
 <h3 id="loading-stacks">Loading stacks</h3>
 
-<h4 id="generic-import">Generic Import</h4>
+<h4 id="load-tiff-folder">Load Tiff Folder</h4>
 
-<p>The <strong>Load Tiff Folder</strong> button loads a folder of single-channel .tif stacks. Once loaded, the following should be filled in for each stack</p>
-
-<ol>
-  <li>The stack scale can be automatically set for all imported stacks using the <strong>um/pixel</strong> x/y and z fields. This assumes all stacks in a folder have the same scale. The scale of individual stacks can then be set in the [stack][stack] window using keyboard shit+p.</li>
-  <li>If the source .tif stack are multi-channel stacks, see <a href="https://github.com/cudmore/bob-fiji-plugins">bAlignBatch</a> for a Fiji plugin to pre-process .tif stacks into ch1/ch2 file pairs.</li>
-</ol>
+<p>Load a folder of single channel .tif files from hard-drive. If these .tif files have been converted with one of the <a href="fiji-plugins">Map Manager Fiji plugins</a>, the voxel size, date, and time should be correctly set.</p>
 
 <h4 id="scanimage-import">ScanImage Import</h4>
 
@@ -227,7 +220,7 @@
 
 <h4 id="drag-and-drop">Drag and drop</h4>
 
-<p>The simplest way to load a single stack is to drag and drop a .tif file onto the Igor program icon. Stacks opened in this way will appear in a special folder (in the list on the left) called ‘DragAndDrop’.</p>
+<p>A simplest way to load a single stack is to drag and drop a .tif file onto the Igor program icon. Stacks opened in this way will appear in a special folder (in the list on the left) called ‘DragAndDrop’.</p>
 
 <p class="tip"><b>Tip.</b> The order of stacks can be sorted by selecting columns in the stack list. To sort by date, select 'Date' in the columns header. <b>This ordering is critical when batch importing a list of stacks into a Map Manager map</b></p>
 <p>.</p>
@@ -235,15 +228,13 @@
 <h3 id="browsing-loaded-data">Browsing loaded data</h3>
 
 <ul>
-  <li>Select a loaded folder on the left and the stacks in that folder will be shown on the right.</li>
-  <li>Double click a stack in the list on the right to open a <a href="stack">stack</a> window.</li>
+  <li>Select a loaded folder (on the left) and the stacks in that folder will be shown (on the right).</li>
+  <li>Double click a stack to open a <a href="stack">stack</a> window.</li>
 </ul>
 
-<p><img class="img-float-right" src="images/mm3/stack-browser/stack-browser-right-click-folder.png" width="225" /></p>
+<p><img class="img-float-right" src="images/mm3/stack-browser/stack-browser-right-click-folder.png" width="200" /></p>
 
-<h3 id="right-click-a-folder-in-the-folder-list">Right-click a folder in the folder list</h3>
-
-<p>Right-click a folder to open a contextual menu.</p>
+<h3 id="right-click-a-folder-for-a-context-menu">Right-click a folder for a context menu</h3>
 
 <ul>
   <li>
@@ -262,7 +253,10 @@
     <p><strong>Intensity Analysis (all stacks)</strong>. Analyze the intensity of all stacks in the folder. It is critical that each spine in the analysis is checked manually. Please see [Intensity Analysis][intensity].</p>
   </li>
   <li>
-    <p><strong>Save (all stacks)</strong>. Will save the annotations for all ‘dirty’ stacks in a folder. Dirty stacks are stacks that have been changed or modified since they were loaded. Dirty stacks are noted in the stack list with a <font color="red"><strong>red</strong></font> background in the ‘D’ column.</p>
+    <p><strong>Save all stacks</strong>. Will save the annotations for all ‘dirty’ stacks in a folder. Dirty stacks are stacks that have been changed or modified since they were loaded. Dirty stacks are noted in the stack list with a <font color="red"><strong>red</strong></font> background in the ‘D’ column.</p>
+  </li>
+  <li>
+    <p><strong>Unload all stacks</strong>. Unload the raw image data for all stacks in the list.</p>
   </li>
   <li>
     <p><strong>Show Folder On Disk</strong>. Open the hard-drive folder the folder was originally loaded from. This opens a Finder window on OSX and an Explorer window on Microsoft Windows.</p>
@@ -274,9 +268,9 @@
 
 <div class="print-page-break"></div>
 
-<h3 id="right-click-a-stack-in-the-stack-list">Right-click a stack in the stack list</h3>
+<p><img class="img-float-right" src="images/mm3/stack-browser/sb-right-click-stack.png" width="160" /></p>
 
-<p><img class="img-float-right" src="images/mm3/stack-browser/stack-browser-right-click-stack.png" width="200" /></p>
+<h3 id="right-click-a-stack-for-a-context-menu">Right-click a stack for a context menu</h3>
 
 <p>Right-click a stack to open a contextual menu. These menu items can also be triggered using the indicated keyboard shortcuts.</p>
 
@@ -286,6 +280,12 @@
   </li>
   <li>
     <p><strong>Unload Stack</strong>. Unload the raw data for a stack. <font color="red"><strong>Important</strong></font>, this unloads the raw data to conserve memory, it <strong>DOES NOT</strong> unload the stack annotations.</p>
+  </li>
+  <li>
+    <p><strong>Unload Stack DB</strong>.</p>
+  </li>
+  <li>
+    <p><strong>Stack Info</strong>.</p>
   </li>
   <li>
     <p><strong>Stack Report</strong>.</p>
@@ -300,6 +300,14 @@
     <p><strong>Experimental - Segment Length Plot</strong>. Make both 2D and 3D plots of segment length as a function of the Z-Smoothing parameter.</p>
   </li>
 </ul>
+
+<div class="print-page-break"></div>
+
+<p><img class="img-float-right" src="images/mm3/stack-browser/sb-right-click-header.png" width="160" /></p>
+
+<h3 id="right-click-headers-in-the-stack-list-for-a-context-menu">Right-click headers in the stack list for a context menu</h3>
+
+<p>This menu will toggle the columns that are displayed in the stack list. These setting are saved with the main Map MAnager Options.</p>
 
 <div class="print-page-break"></div>
 

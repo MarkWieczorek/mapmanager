@@ -51,9 +51,11 @@ Datetime, Days and Hours require stacks to have a date/time specified. A stacks 
  - **Unload Stacks**. Unload all stacks in the selected map. Ctrl+click to unload all stacks in all open maps. Unloading a stack will unload the RAW IMAGE DATA. It DOES NOT unload the stack annotations or the map.
  - **Close Windows**. Close all windows associated with the selected map.
 
-### Right-click on a map name in the list for a contextual menu.
+### Right-click for context menus
 
 <IMG class="img-float-right" SRC="images/mm3/time-series/time-series-right-click-map.png" WIDTH="140">
+
+#### Right-click on a map name.
 
  - **Find Points**. Open [find points panel][15].
  - **Density Report**. Generate a density report for the map. See [reports][17].
@@ -64,9 +66,11 @@ Datetime, Days and Hours require stacks to have a date/time specified. A stacks 
  - **Close map**. Close a map, removing all associated images and analysis from Igor memory.
  - **Close Windows**. Close all open windows associated with a map.
 
-### Right-click on a stack name in the list for a contextual menu.
+<div class="print-page-break"></div>
 
 <IMG class="img-float-right" SRC="images/mm3/time-series/time-series-right-click-stack.png" WIDTH="160">
+
+#### Right-click on a stack name.
 
  - **Display Stack**. Display the stack in a [stack][2] window.
  - **Plot Run +-1**. Plot a [run][11] of stacks from the selected stack.
@@ -76,7 +80,15 @@ Datetime, Days and Hours require stacks to have a date/time specified. A stacks 
  - **Find Points**. Open [find points panel][15].
  - **Edit Table**. Edit annotations in a stack as a text table. This is useful to copy and paste annotations for further analysis.
  - **Unload Stack**. Unload the raw image data for a stack. Unloading a stack does not unload the stack annotations.
- 
+
+<IMG class="img-float-right" SRC="images/mm3/time-series/ts-right-click-header.png" WIDTH="140">
+
+#### Right-click on the headers in the stack list.
+
+ - Columns can be toggled on and off.
+ - **Edit Condition**. Turns on editing of map and session conditions.
+
+<div class="print-page-break"></div>
 
 ### Tabs
 
@@ -110,6 +122,8 @@ Interface to analyze and plot the trajectories of annotations.
 <IMG class="img-float-right" SRC="images/mm3/time-series/ts-intensity.png" WIDTH="475">
 
 Interface to plot intensity analysis of spine annotations. See [intensity][18].
+
+Right-click on plot buttons to plot 'lifetime' and 'death'.
 
 <div class="print-page-break"></div>
 
